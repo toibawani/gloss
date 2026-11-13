@@ -11,7 +11,9 @@ test('a visited chapter reloads with no network', async ({ page, context }) => {
       if (names.length === 0) return false
       const cache = await caches.open(names[0])
       const keys = await cache.keys()
-      return keys.some((r) => r.url.endsWith('.js')) && keys.some((r) => r.url.endsWith('/'))
+      // Wait for the chapter's own chunk, not any script: the shell's JS is cached before the
+      // chapter bundle arrives, and reloading in between is not the case this test claims.
+      return keys.some((r) => r.url.includes('bio-11-ch8')) && keys.some((r) => r.url.endsWith('/'))
     },
     undefined,
     { timeout: 15_000 },

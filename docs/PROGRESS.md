@@ -32,6 +32,15 @@ gzip, contrast script passes in both themes.
 **Bug found and fixed here:** Vitest was collecting the Playwright specs (5 failing files hidden by
 a `| tail` check). `vite.config.ts` now includes only `src/**/*.test.ts`.
 
-**Next:** merge this branch, then `feature/app-shell-landing`: public landing with the live
+**Physics and chemistry added (`feature/physics-chemistry-content`, PR #13):** Class 11 Physics 1
+(Units and Measurements) and Chemistry 1 (Some Basic Concepts of Chemistry), six draft paragraphs
+each, with diagrams. Content is now 4 chapters, 46 paragraphs, 135 words.
+
+**Subject covers and shell (`feature/subject-covers`):** drawn subject covers tinted with the
+subject ink, a Library screen, a shared chapter row component, `#/s/<subject>`, and a five item
+bottom tab bar on phones with labels. Fixed: SVG shapes defaulted to black fill, so every new
+diagram rendered as a blob until the base rule set `fill: none`.
+
+**Next:** `feature/app-shell-landing`: public landing with the live
 paragraph demo, bottom tab bar on phones and a left rail on desktop, Today and Library screens,
 drawn subject covers, then the reader redesign with the margin sheet.
