@@ -606,9 +606,10 @@ fieldset.field > legend {
 @media (min-width: 900px) {
   .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-    column-gap: 4rem;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    column-gap: 3rem;
     align-items: end;
+    max-width: none;
   }
 
   .hero .hero-subject {
@@ -616,7 +617,7 @@ fieldset.field > legend {
   }
 
   .hero h1 {
-    max-width: 14ch;
+    max-width: none;
   }
 
   .hero .lede {
