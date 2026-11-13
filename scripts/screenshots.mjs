@@ -38,6 +38,8 @@ const pages = [
   ['home', '/'],
   ['reader', '/#/c/bio-11-ch8/cell-theory'],
   ['reader-visual', '/#/c/bio-11-ch8/what-is-a-cell'],
+  ['reader-physics', '/#/c/phy-11-ch1/si-base-units'],
+  ['library', '/#/library'],
   ['words', '/#/words'],
   ['revise', '/#/revise'],
   ['search', '/#/search'],
