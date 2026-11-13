@@ -1,0 +1,302 @@
+{
+  "id": "chem-11-ch1",
+  "subject": "Chemistry",
+  "class": 11,
+  "title": "Some Basic Concepts of Chemistry",
+  "book": "NCERT Chemistry Class XI",
+  "paragraphs": [
+    {
+      "id": "classifying-matter",
+      "ncert_ref": "Ch 1, Some Basic Concepts of Chemistry: nature of matter",
+      "key_phrase": "mixtures can be separated, compounds cannot",
+      "meaning": "Matter is either a pure substance or a mixture. A mixture holds two or more substances in no fixed ratio and can be separated by physical means, while a pure substance is an element, one kind of atom, or a compound, two or more elements in a fixed ratio by mass. That fixed ratio is why water is always about 1 part hydrogen to 8 parts oxygen by mass, and why a mixture of the two gases can be any ratio at all.",
+      "words": [
+        {
+          "term": "mixture",
+          "meaning": "Two or more substances together with no fixed composition.",
+          "breakdown": "Latin miscere = to mix. Homogeneous mixtures look uniform; heterogeneous ones do not.",
+          "trap": "A homogeneous mixture is still a mixture, not a compound. Salt water can be separated by evaporation."
+        },
+        {
+          "term": "compound",
+          "meaning": "Two or more elements chemically joined in a fixed ratio by mass.",
+          "breakdown": "Latin componere = to put together. The parts lose their own properties.",
+          "trap": "A compound's elements are in a fixed mass ratio; a mixture's are not. That is the test."
+        },
+        {
+          "term": "element",
+          "meaning": "A pure substance made of only one kind of atom.",
+          "breakdown": "There are 118 confirmed elements, each with one atomic number.",
+          "trap": "Oxygen gas is an element even though it travels as O2. The molecule has two atoms of one kind."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='20'>matter</text><path class='d-line' d='M56 26v14M56 40h-40M56 40h56'/><text class='d-label' x='4' y='62'>mixtures</text><text class='d-label' x='96' y='62'>pure substances</text><path class='d-muted' d='M0 70v12M0 82h-2M0 82h28M124 70v12M124 82h-8M124 82h30'/><text class='d-label' x='-4' y='104'>separated by</text><text class='d-label' x='-4' y='118'>physical means</text><text class='d-label' x='120' y='104'>elements</text><text class='d-label' x='200' y='104'>compounds</text><text class='d-label' x='200' y='118'>fixed mass ratio</text><path class='d-accent' d='M200 126h92'/></svg>",
+      "visual_alt": "A tree from matter to mixtures and pure substances, then to elements and compounds, marking that only compounds have a fixed mass ratio.",
+      "hook": "Salt water is a crowd. Water is a marriage: the partners are always in the same ratio.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions ask you to classify a sample and to justify it with a separation method or a mass ratio. The distractor is usually a homogeneous mixture offered as a compound.",
+      "trap": "A homogeneous mixture looks like one substance but does not have a fixed composition. Tea, air and salt water are mixtures.",
+      "recall": [
+        {
+          "q": "Which of these is a compound?",
+          "options": ["Air", "Brass", "Water", "Salt water"],
+          "answer": 2,
+          "why": "Water is hydrogen and oxygen combined in a fixed ratio by mass. Air, brass and salt water are mixtures whose composition can vary."
+        },
+        {
+          "q": "A mixture differs from a compound mainly because",
+          "options": [
+            "Its components can be separated by physical means",
+            "It always contains a gas",
+            "It has a fixed melting point",
+            "Its components lose their properties"
+          ],
+          "answer": 0,
+          "why": "A mixture's components keep their properties and can be separated physically. A compound's elements are chemically joined and lose their individual properties."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Confirm the classification tree matches the one printed in your copy."
+    },
+    {
+      "id": "the-mole",
+      "ncert_ref": "Ch 1, Some Basic Concepts of Chemistry: mole concept",
+      "key_phrase": "one mole is a counting unit",
+      "meaning": "A mole is a count, like a dozen but far larger: one mole holds 6.022 × 10^23 entities, the number of atoms in exactly 12 grams of carbon-12. Because atoms cannot be counted one by one, chemistry counts in moles and then weighs them. One mole of any substance holds the same number of particles, but different substances have different masses, so a mole of water and a mole of oxygen weigh different amounts.",
+      "words": [
+        {
+          "term": "mole",
+          "meaning": "The amount of a substance that contains 6.022 × 10^23 entities.",
+          "breakdown": "Latin moles = a mass. The symbol is mol, and it counts particles, not grams.",
+          "trap": "A mole is not a mass and not a volume. It is a number of particles, whatever they are."
+        },
+        {
+          "term": "Avogadro constant",
+          "meaning": "The number of entities in one mole, 6.022 × 10^23 per mole.",
+          "breakdown": "Named after Amedeo Avogadro, who argued that equal volumes of gases hold equal numbers of molecules.",
+          "trap": "The constant has units, per mole. A bare number without the unit is incomplete."
+        },
+        {
+          "term": "entity",
+          "meaning": "Whatever particle you are counting: atoms, molecules, ions or electrons.",
+          "breakdown": "One mole of sodium atoms is 6.022 × 10^23 atoms. One mole of water molecules is 6.022 × 10^23 molecules.",
+          "trap": "One mole of water contains one mole of molecules but three moles of atoms. Read what is being counted."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='16' y='26' width='112' height='88'/><text class='d-label' x='24' y='46'>1 mol</text><text class='d-label' x='24' y='66'>6.022 × 10^23</text><text class='d-label' x='24' y='86'>entities</text><text class='d-label' x='24' y='106'>any substance</text><path class='d-accent' d='M146 70h28M166 64l8 6-8 6'/><text class='d-label' x='188' y='40'>same count</text><text class='d-label' x='188' y='64'>18 g of water</text><text class='d-label' x='188' y='88'>32 g of oxygen</text><text class='d-label' x='188' y='112'>different masses</text></svg>",
+      "visual_alt": "A box holding one mole and the Avogadro number, an arrow to two notes: eighteen grams of water and thirty-two grams of oxygen hold the same count but different masses.",
+      "hook": "A dozen eggs and a dozen buses are both twelve. One mole of water and one mole of oxygen are both 6.022 × 10^23, and their weights are not close.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Both exams test the difference between moles of molecules and moles of atoms, and ask you to convert a mass into a particle count.",
+      "trap": "One mole of water has 6.022 × 10^23 molecules but 3 × 6.022 × 10^23 atoms, because each molecule holds two hydrogen atoms and one oxygen atom.",
+      "recall": [
+        {
+          "q": "One mole of water contains how many hydrogen atoms?",
+          "options": ["6.022 × 10^23", "1.2044 × 10^24", "1.8066 × 10^24", "3.011 × 10^23"],
+          "answer": 1,
+          "why": "Each water molecule has two hydrogen atoms, so one mole of molecules holds two moles of hydrogen atoms, which is 1.2044 × 10^24 atoms."
+        },
+        {
+          "q": "The mole is best described as",
+          "options": ["A unit of mass", "A unit of volume", "A counting unit for particles", "A unit of concentration"],
+          "answer": 2,
+          "why": "The mole counts entities. Its mass or volume depends on which substance you are counting, so it cannot be a unit of mass or volume."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the value and the definition of the mole used in your printing."
+    },
+    {
+      "id": "molar-mass",
+      "ncert_ref": "Ch 1, Some Basic Concepts of Chemistry: molar mass and percentage composition",
+      "key_phrase": "grams per mole",
+      "meaning": "Molar mass is the mass of one mole of a substance in grams per mole, found by adding the atomic masses of every atom in the formula. Water, H2O, is 2 × 1.008 + 16.00, about 18.02 grams per mole. One equation ties the three together, moles equal mass divided by molar mass, and it converts between the gram scale of a balance and the particle scale of a reaction.",
+      "words": [
+        {
+          "term": "molar mass",
+          "meaning": "The mass of one mole of a substance in grams per mole.",
+          "breakdown": "molar mass of CO2 = 12.01 + 2 × 16.00 = 44.01 g/mol",
+          "trap": "Molar mass is not the mass of one molecule. It is the mass of a mole of them."
+        },
+        {
+          "term": "atomic mass unit",
+          "meaning": "One twelfth of the mass of a carbon-12 atom, about 1.66 × 10^-24 g.",
+          "breakdown": "The atomic masses on the periodic table are relative to carbon-12 by definition.",
+          "trap": "Atomic mass is dimensionless relative mass, not grams. Only molar mass carries grams."
+        },
+        {
+          "term": "percentage composition",
+          "meaning": "The mass percentage of each element in a compound.",
+          "breakdown": "For water, hydrogen is 2.02 / 18.02, about 11 percent by mass.",
+          "trap": "Percentage composition is by mass, not by number of atoms. Water is two thirds hydrogen atoms but only about 11 percent hydrogen by mass."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='24'>moles = mass / molar mass</text><rect class='d-line' x='12' y='40' width='84' height='34'/><text class='d-label' x='20' y='62'>mass, g</text><text class='d-label' x='106' y='62'>÷</text><rect class='d-line' x='122' y='40' width='96' height='34'/><text class='d-label' x='130' y='62'>molar mass</text><text class='d-label' x='228' y='62'>=</text><rect class='d-accent' x='242' y='40' width='66' height='34'/><text class='d-label' x='250' y='62'>moles</text><text class='d-label' x='12' y='108'>H2O: 2(1.008) + 16.00</text><text class='d-label' x='12' y='130'>= 18.02 g per mole</text></svg>",
+      "visual_alt": "The relation moles equals mass divided by molar mass, with the water calculation of two hydrogen atoms plus one oxygen atom giving 18.02 grams per mole.",
+      "hook": "The molar mass is the bridge between the weighing scale and the particle count.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions give a mass and a formula and ask for moles, molecules or volume of gas. Almost all of them start with the same division.",
+      "trap": "For a compound, multiply each atomic mass by the number of that atom. Forgetting the subscript is the most common arithmetic error.",
+      "recall": [
+        {
+          "q": "What is the molar mass of carbon dioxide, CO2?",
+          "options": ["28.01 g/mol", "44.01 g/mol", "32.00 g/mol", "12.01 g/mol"],
+          "answer": 1,
+          "why": "Carbon is 12.01 and oxygen is 16.00. So 12.01 + 2 × 16.00 = 44.01 grams per mole."
+        },
+        {
+          "q": "How many moles are in 36.04 g of water?",
+          "options": ["1", "2", "18", "0.5"],
+          "answer": 1,
+          "why": "Water has a molar mass of about 18.02 g/mol. Dividing 36.04 by 18.02 gives 2 moles."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the atomic masses used in your printed periodic table."
+    },
+    {
+      "id": "empirical-molecular-formula",
+      "ncert_ref": "Ch 1, Some Basic Concepts of Chemistry: empirical and molecular formulae",
+      "key_phrase": "simplest ratio versus actual number",
+      "meaning": "An empirical formula gives the simplest whole-number ratio of atoms, while a molecular formula gives the actual number in one molecule. Glucose is C6H12O6 by molecule and CH2O by ratio, and dividing every subscript by the highest common factor gives the empirical formula. To go back, divide the molar mass by the empirical formula mass and multiply every subscript by that whole number.",
+      "words": [
+        {
+          "term": "empirical formula",
+          "meaning": "The simplest whole-number ratio of atoms in a compound.",
+          "breakdown": "Latin empiricus = based on observation. It comes from percentage composition by mass.",
+          "trap": "The empirical formula is not always a real molecule. CH2O does not exist as a stable molecule on its own."
+        },
+        {
+          "term": "molecular formula",
+          "meaning": "The actual number of each kind of atom in one molecule.",
+          "breakdown": "C6H12O6 for glucose: six carbons, twelve hydrogens, six oxygens.",
+          "trap": "A molecular formula is always a whole-number multiple of the empirical formula, never a fraction of it."
+        },
+        {
+          "term": "empirical formula mass",
+          "meaning": "The mass of the empirical formula in grams per mole.",
+          "breakdown": "For CH2O: 12.01 + 2.02 + 16.00 = 30.03 g/mol",
+          "trap": "Use the empirical mass, not the molar mass, in the division. Swapping them inverts the multiplier."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 140'><text class='d-label' x='12' y='22'>glucose</text><rect class='d-line' x='12' y='32' width='80' height='28'/><text class='d-label' x='20' y='51'>CH2O</text><text class='d-label' x='14' y='78'>30.03 g/mol</text><text class='d-label' x='108' y='51'>× 6</text><path class='d-accent' d='M146 46h18M156 40l8 6-8 6'/><rect class='d-line' x='172' y='32' width='100' height='28'/><text class='d-label' x='180' y='51'>C6H12O6</text><text class='d-label' x='180' y='78'>180.16 g/mol</text><text class='d-label' x='12' y='112'>180.16 / 30.03 = 6</text><text class='d-label' x='12' y='132'>the multiplier is a whole number</text></svg>",
+      "visual_alt": "Glucose shown as the empirical formula CH2O of mass 30.03, multiplied by six, giving C6H12O6 of mass 180.16.",
+      "hook": "The empirical formula is the recipe ratio. The molecular formula is how many batches you actually cooked.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "A standard numerical gives percentage composition and molar mass, then asks for both formulae. The mark is lost if the multiplier is rounded to the nearest whole number without justification.",
+      "trap": "The multiplier from molar mass divided by empirical mass must come out very close to a whole number. If it does not, your percentage composition or molar mass is wrong.",
+      "recall": [
+        {
+          "q": "A compound has the empirical formula CH2O and a molar mass of 180 g/mol. Its molecular formula is",
+          "options": ["CH2O", "C2H4O2", "C6H12O6", "C3H6O3"],
+          "answer": 2,
+          "why": "The empirical formula mass is about 30. Dividing 180 by 30 gives 6, so every subscript is multiplied by six: C6H12O6."
+        },
+        {
+          "q": "The empirical formula of a compound expresses",
+          "options": ["The actual number of atoms in a molecule", "The simplest whole-number ratio of atoms", "The mass of one mole", "The number of bonds"],
+          "answer": 1,
+          "why": "The empirical formula gives the simplest ratio. The molecular formula gives the actual count in a molecule."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the glucose example and the molar masses against your printed table."
+    },
+    {
+      "id": "limiting-reagent",
+      "ncert_ref": "Ch 1, Some Basic Concepts of Chemistry: stoichiometry and limiting reagent",
+      "key_phrase": "the reagent that runs out first",
+      "meaning": "A balanced equation gives the mole ratio in which substances react, so 2 H2 + O2 gives 2 H2O means two moles of hydrogen need one mole of oxygen. If you have two moles of each, hydrogen runs out first and caps the water formed, which makes it the limiting reagent while the oxygen is in excess. Finding the limiting reagent means comparing moles available against the ratio the equation demands, never comparing raw masses.",
+      "words": [
+        {
+          "term": "stoichiometry",
+          "meaning": "The mole ratios in which substances react and are produced.",
+          "breakdown": "Greek stoicheion = element, metron = measure. It is bookkeeping with moles.",
+          "trap": "Stoichiometry uses moles. Grams must be converted first, or the ratio is meaningless."
+        },
+        {
+          "term": "limiting reagent",
+          "meaning": "The reactant that is used up first and caps the amount of product.",
+          "breakdown": "Compare the moles available with the moles the equation requires.",
+          "trap": "The limiting reagent is not always the one with the smaller mass. Compare moles, then divide by the coefficients."
+        },
+        {
+          "term": "excess reagent",
+          "meaning": "A reactant left over after the limiting reagent is consumed.",
+          "breakdown": "In 2 H2 + O2 with excess oxygen, some oxygen remains at the end.",
+          "trap": "Excess does not mean unreactive. It means there is more than the reaction can use."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='20'>2 H2 + O2 = 2 H2O</text><circle class='d-fill' cx='28' cy='54' r='7'/><circle class='d-fill' cx='46' cy='54' r='7'/><circle class='d-line' cx='64' cy='54' r='7'/><circle class='d-line' cx='82' cy='84' r='7'/><circle class='d-line' cx='100' cy='84' r='7'/><text class='d-label' x='12' y='118'>have: 2 mol H2, 2 mol O2</text><text class='d-label' x='12' y='140'>needs: 1 mol O2 for 2 mol H2</text><path class='d-accent' d='M150 52h20'/><text class='d-label' x='184' y='56'>H2 runs out first</text><text class='d-label' x='184' y='78'>it is the limiting reagent</text></svg>",
+      "visual_alt": "The equation for hydrogen burning in oxygen, with the hydrogen marked as the reagent that runs out first when two moles of each are present.",
+      "hook": "Two cars and one driver. The driver is the limiting reagent, and the extra car does not help.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "A standard numerical gives masses of two reactants and asks for the product mass. The whole mark depends on identifying the limiting reagent before calculating.",
+      "trap": "Compare moles after dividing by the coefficients. Comparing raw masses can pick the wrong reagent entirely.",
+      "recall": [
+        {
+          "q": "For 2 H2 + O2 gives 2 H2O, you have 4 mol H2 and 1 mol O2. Which is limiting?",
+          "options": ["H2", "O2", "Neither", "Both equally"],
+          "answer": 1,
+          "why": "Four moles of hydrogen would need two moles of oxygen. Only one mole is present, so oxygen runs out first and limits the water formed."
+        },
+        {
+          "q": "The limiting reagent is the reactant that",
+          "options": ["Has the smallest molar mass", "Is present in the smallest mass", "Is completely consumed first", "Produces the most product per mole"],
+          "answer": 2,
+          "why": "It is the one used up first, so it caps the product. Neither mass nor molar mass on its own decides it."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the worked limiting-reagent example matches your copy."
+    },
+    {
+      "id": "concentration",
+      "ncert_ref": "Ch 1, Some Basic Concepts of Chemistry: concentration of solutions",
+      "key_phrase": "moles of solute per litre of solution",
+      "meaning": "Concentration says how much solute sits in a given amount of solution. Molarity is moles of solute per litre of solution, molality is moles per kilogram of solvent, and mole fraction is one component's moles divided by the total. Molarity is the laboratory favourite, and it changes when a solution warms and expands, because the volume grows while the amount of solute does not.",
+      "words": [
+        {
+          "term": "molarity",
+          "meaning": "Moles of solute per litre of solution, written M.",
+          "breakdown": "molarity = moles of solute / volume of solution in litres",
+          "trap": "The volume is the solution's, not the solvent's. Adding solute changes the final volume."
+        },
+        {
+          "term": "molality",
+          "meaning": "Moles of solute per kilogram of solvent, written m.",
+          "breakdown": "molality = moles of solute / mass of solvent in kilograms",
+          "trap": "Molality is per kilogram of solvent, molarity is per litre of solution. They are not interchangeable."
+        },
+        {
+          "term": "mole fraction",
+          "meaning": "The moles of one component divided by the total moles in the mixture.",
+          "breakdown": "The mole fractions of all components add up to one.",
+          "trap": "Mole fraction has no unit. Writing mol/L beside it is a sign the definition was never learned."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 34h64l-8 76a18 18 0 0 1-18 16H66a18 18 0 0 1-18-16z'/><path class='d-muted' d='M44 96h56'/><circle class='d-fill' cx='60' cy='108' r='4'/><circle class='d-fill' cx='76' cy='112' r='4'/><circle class='d-fill' cx='88' cy='104' r='4'/><text class='d-label' x='30' y='146'>1 L of solution</text><text class='d-label' x='130' y='50'>molarity, M</text><text class='d-label' x='130' y='72'>= mol solute / L solution</text><text class='d-label' x='130' y='106'>molality, m</text><text class='d-label' x='130' y='128'>= mol solute / kg solvent</text></svg>",
+      "visual_alt": "A flask holding one litre of solution with solute particles marked, next to the definitions of molarity and molality.",
+      "hook": "Molarity measures the room. Molality measures the furniture. Heating the room changes one and not the other.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Both exams ask for molarity after a dilution or after mixing two solutions, and test the molarity versus molality distinction in a definition question.",
+      "trap": "When you dilute, the moles stay the same and the volume changes. Use M1V1 = M2V2 rather than recomputing from mass.",
+      "recall": [
+        {
+          "q": "Molarity is defined as moles of solute per",
+          "options": ["Kilogram of solvent", "Litre of solution", "Litre of solvent", "Kilogram of solution"],
+          "answer": 1,
+          "why": "Molarity divides moles by the volume of the whole solution in litres. Per kilogram of solvent is molality."
+        },
+        {
+          "q": "On warming a solution, its molarity usually",
+          "options": ["Increases", "Decreases", "Stays exactly the same", "Becomes equal to molality"],
+          "answer": 1,
+          "why": "The solution expands, so its volume rises while the moles of solute stay the same. Dividing the same moles by a larger volume lowers the molarity."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Confirm the concentration definitions and units match your printing."
+    }
+  ]
+}
