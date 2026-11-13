@@ -4,6 +4,7 @@ import { useChapter } from '../hooks'
 import { Card } from '../components/Card'
 import { Empty, Skeleton } from '../components/States'
 import { Icon } from '../icons'
+import { Meter } from '../components/Meter'
 
 export function Reader({ id, para }: { id: string; para?: string }) {
   const { ch, error, loading } = useChapter(id)
@@ -111,7 +112,7 @@ export function Reader({ id, para }: { id: string; para?: string }) {
           <p className="pager-count">
             {i + 1} of {n}
           </p>
-          <progress className="progress" max={n} value={i + 1} aria-label="Paragraph progress" />
+          <Meter value={i + 1} max={n} label="Paragraph progress" />
         </div>
         <button className="btn btn-icon btn-quiet" onClick={() => go(1)} disabled={i === n - 1} aria-label="Next paragraph">
           <Icon name="right" />

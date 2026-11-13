@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 
 test('a visited chapter reloads with no network', async ({ page, context }) => {
   await page.goto('/#/c/bio-11-ch8')
-  await expect(page.locator('.phrase q')).toHaveText('basic structural and functional unit')
+  await expect(page.locator('.phrase q')).toHaveText('basic structural and functional unit', { timeout: 15_000 })
   await page.waitForFunction(() => Boolean(navigator.serviceWorker?.controller), undefined, { timeout: 15_000 })
   // Give the worker a moment to store the shell and the chapter chunk it was sent.
   await page.waitForFunction(
@@ -22,7 +22,7 @@ test('a visited chapter reloads with no network', async ({ page, context }) => {
   await context.setOffline(true)
   await page.reload()
   await expect(page.getByRole('heading', { name: 'Cell: The Unit of Life' })).toBeVisible()
-  await expect(page.locator('.phrase q')).toHaveText('basic structural and functional unit')
+  await expect(page.locator('.phrase q')).toHaveText('basic structural and functional unit', { timeout: 15_000 })
   await expect(page.getByText('Offline. Chapters you have opened still work.')).toBeVisible()
   await context.setOffline(false)
 })

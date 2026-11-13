@@ -1,5 +1,6 @@
 import type { ChapterMeta } from '../content'
 import { Icon } from '../icons'
+import { Meter } from './Meter'
 
 /** One ruled row per chapter. No boxes; the rule is the separator. */
 export function ChapterList({
@@ -36,11 +37,11 @@ export function ChapterList({
                   </span>
                   <span>{read} read</span>
                 </span>
-                <progress
-                  className="progress"
-                  max={c.paragraphs}
+                <Meter
                   value={read}
-                  aria-label={`${c.title}: ${read} of ${c.paragraphs} paragraphs read`}
+                  max={c.paragraphs}
+                  label={`${c.title}: ${read} of ${c.paragraphs} paragraphs read`}
+                  className="meter"
                 />
               </span>
               <span className="chapter-go" aria-hidden="true">

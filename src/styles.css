@@ -3,26 +3,29 @@
 /* ------------------------------------------------------------------ tokens */
 
 :root {
-  --paper: #f4eee0;
-  --panel: #fbf7ec;
-  --band: #ede5d2;
-  --ink: #1f1a14;
-  --muted: #5c5142;
-  --rule: #d6c9ae;
-  --rule-strong: #b4a281;
-  --accent: #8a3b1e;
+  --paper: #f4f5f2;
+  --panel: #fbfcfa;
+  --band: #e8ebe5;
+  --ink: #12161a;
+  --muted: #525c66;
+  --rule: #d5dad3;
+  --rule-strong: #afb7ae;
+  --accent: #0f4c81;
   --pencil: #3f5b73;
-  --ok: #2f5d3a;
-  --bad: #8c2a2a;
+  --ok: #1f6b45;
+  --bad: #a32b32;
 
-  --bio: #2e4a34;
-  --phy: #26405f;
-  --chem: #8a3b24;
+  --bio: #1f6a4d;
+  --phy: #3a3f7a;
+  --chem: #9a3038;
   --hist: #7a5a1e;
   --subject: var(--ink);
-  --subject-wash: #e6dfcb;
+  --subject-wash: #e6ebe6;
 
   --r: 3px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --fast: 140ms;
+  --med: 280ms;
 
   /* 4, 8, 12, 16, 24, 32, 48, 72 */
   --s-1: 0.25rem;
@@ -61,45 +64,45 @@
 }
 
 :root[data-theme='dark'] {
-  --paper: #15120d;
-  --panel: #1d1912;
-  --band: #221d15;
-  --ink: #f2e9d6;
-  --muted: #c3b49a;
-  --rule: #3f372a;
-  --rule-strong: #5d5340;
-  --accent: #f0b58d;
+  --paper: #0f1216;
+  --panel: #161a1f;
+  --band: #1d232a;
+  --ink: #e9edf1;
+  --muted: #a6b1bc;
+  --rule: #2c343d;
+  --rule-strong: #47525d;
+  --accent: #82b4e4;
   --pencil: #a9c9e2;
-  --ok: #9ed6ab;
-  --bad: #f4a9a9;
+  --ok: #7fc79e;
+  --bad: #e79aa0;
 
-  --bio: #8fbb96;
-  --phy: #94b6dd;
-  --chem: #e7a184;
-  --hist: #d8b979;
-  --subject-wash: #2a2419;
+  --bio: #79c6a6;
+  --phy: #a3abee;
+  --chem: #e6a0a6;
+  --hist: #d9b978;
+  --subject-wash: #232a26;
   color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root[data-theme='system'] {
-    --paper: #15120d;
-    --panel: #1d1912;
-    --band: #221d15;
-    --ink: #f2e9d6;
-    --muted: #c3b49a;
-    --rule: #3f372a;
-    --rule-strong: #5d5340;
-    --accent: #f0b58d;
+    --paper: #0f1216;
+    --panel: #161a1f;
+    --band: #1d232a;
+    --ink: #e9edf1;
+    --muted: #a6b1bc;
+    --rule: #2c343d;
+    --rule-strong: #47525d;
+    --accent: #82b4e4;
     --pencil: #a9c9e2;
-    --ok: #9ed6ab;
-    --bad: #f4a9a9;
+    --ok: #7fc79e;
+    --bad: #e79aa0;
 
-    --bio: #8fbb96;
-    --phy: #94b6dd;
-    --chem: #e7a184;
-    --hist: #d8b979;
-    --subject-wash: #2a2419;
+    --bio: #79c6a6;
+    --phy: #a3abee;
+    --chem: #e6a0a6;
+    --hist: #d9b978;
+    --subject-wash: #232a26;
     color-scheme: dark;
   }
 }
@@ -598,6 +601,30 @@ fieldset.field > legend {
   border-bottom: 1px solid var(--rule);
 }
 
+/* On a wide screen the promise and the explanation sit side by side, bottom aligned, so the
+   opening fills the page instead of hugging the left edge. */
+@media (min-width: 900px) {
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    column-gap: 4rem;
+    align-items: end;
+  }
+
+  .hero .hero-subject {
+    grid-column: 1 / -1;
+  }
+
+  .hero h1 {
+    max-width: 14ch;
+  }
+
+  .hero .lede {
+    margin-top: 0;
+    padding-bottom: 0.35rem;
+  }
+}
+
 .hero-subject {
   font-size: var(--fs-sm);
   color: var(--subject);
@@ -666,8 +693,16 @@ fieldset.field > legend {
   text-decoration: none;
 }
 
+.chapter-row {
+  transition: background var(--fast) var(--ease);
+}
+
 .chapter-row:hover {
   background: var(--panel);
+}
+
+.chapter-row:hover .chapter-name {
+  color: var(--accent);
 }
 
 .chapter-no {
@@ -742,6 +777,24 @@ fieldset.field > legend {
 
 .progress[value='0'] {
   background: var(--rule);
+}
+
+/* The fill animates on mount and on change. Two pixels, one job: show position. */
+.meter {
+  position: relative;
+  height: 2px;
+  margin-top: var(--s-2);
+  background: var(--rule);
+  overflow: hidden;
+}
+
+.meter-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--subject);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--med) var(--ease);
 }
 
 .sample {
@@ -1195,6 +1248,7 @@ fieldset.field > legend {
   font-size: var(--fs-sm);
   line-height: 1.6;
   color: var(--muted);
+  animation: reveal var(--med) var(--ease) both;
 }
 
 /* ------------------------------------------------------------------ review */
@@ -1599,6 +1653,16 @@ fieldset.field > legend {
   background: color-mix(in srgb, var(--subject) 7%, var(--paper));
   color: var(--ink);
   text-decoration: none;
+  transition: background var(--med) var(--ease), transform var(--fast) var(--ease);
+}
+
+.cover-card:hover {
+  background: color-mix(in srgb, var(--subject) 12%, var(--paper));
+  transform: translateY(-2px);
+}
+
+.cover-card:hover .cover-art {
+  color: var(--subject);
 }
 
 .cover-card:last-child {
@@ -1702,6 +1766,7 @@ fieldset.field > legend {
   }
 
   .tabbar a {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1712,6 +1777,24 @@ fieldset.field > legend {
     font-size: 0.6875rem;
     letter-spacing: 0.01em;
     text-decoration: none;
+    transition: color var(--fast) var(--ease);
+  }
+
+  .tabbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 22%;
+    right: 22%;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--med) var(--ease);
+  }
+
+  .tabbar a[aria-current='page']::before {
+    transform: scaleX(1);
   }
 
   .tabbar a[aria-current='page'] {
@@ -1728,6 +1811,44 @@ fieldset.field > legend {
 
   .foot {
     margin-bottom: 3.5rem;
+  }
+}
+
+/* ------------------------------------------------------------------ motion */
+
+@keyframes reveal {
+  from {
+    transform: translateY(-4px);
+  }
+}
+
+/* Route changes cross-fade with a small vertical move, which reads as turning a page rather
+   than as a loading state. Only the browser's view transition API runs this. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--med);
+  animation-timing-function: var(--ease);
+}
+
+::view-transition-old(root) {
+  animation-name: page-out;
+}
+
+::view-transition-new(root) {
+  animation-name: page-in;
+}
+
+@keyframes page-out {
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
 }
 

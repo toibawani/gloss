@@ -44,3 +44,19 @@ diagram rendered as a blob until the base rule set `fill: none`.
 **Next:** `feature/app-shell-landing`: public landing with the live
 paragraph demo, bottom tab bar on phones and a left rail on desktop, Today and Library screens,
 drawn subject covers, then the reader redesign with the margin sheet.
+
+**Palette and motion, content expansion (this session).** The cream and rust palette was rejected
+as looking dated, so the tokens are now a cool paper `#f4f5f2` with ink `#12161a` and deep blue
+`#0f4c81` for actions, plus subject inks in green, indigo, oxide red and ochre. Motion was added
+with a job: hash routes cross-fade inside `document.startViewTransition`, the progress meter
+animates on mount, the tab bar slides its underline, chapter rows lift their plate on hover, and
+answers reveal on open. Reduced motion cancels all of it. Four chapters were added, each four draft
+paragraphs with a diagram: Physics 2 (Motion in a Straight Line), Physics 4 (Laws of Motion),
+Chemistry 2 (Structure of Atom), plus Chemical Bonding and Class 11 Biology Cell Cycle and Cell
+Division. Content is now 9 chapters, 66 paragraphs, 195 words, all `draft`.
+
+Verified this session: lint 0, 49 unit tests, build 0, 23 e2e, contrast script passes both themes,
+`node scripts/build-content.mjs` 13 warnings 0 errors, initial JS 111.69 kB gzip. Screenshots
+regenerated and reviewed at 360 and 1280. Not verified: any page or line reference, because no
+NCERT edition or PDF has been supplied, and the accounts work, which is still blocked on a
+Supabase project.
