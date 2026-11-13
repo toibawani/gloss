@@ -8,6 +8,7 @@ import { Icon } from '../icons'
 export function Reader({ id, para }: { id: string; para?: string }) {
   const { ch, error, loading } = useChapter(id)
   const [i, setI] = useState(0)
+  const [ready, setReady] = useState(false)
   const [dir, setDir] = useState<1 | -1>(1)
   const x0 = useRef(0)
   const n = ch?.paragraphs.length ?? 0
@@ -18,10 +19,13 @@ export function Reader({ id, para }: { id: string; para?: string }) {
     setI((v) => Math.min(n - 1, Math.max(0, v + d)))
   }
 
+  // Resolve the deep link before the first card mounts, so the paragraph at the top of the
+  // chapter is not marked as read on the way to the linked one.
   useEffect(() => {
-    if (!ch || !para) return
-    const at = ch.paragraphs.findIndex((p) => p.id === para)
-    if (at >= 0) setI(at)
+    if (!ch) return
+    const at = para ? ch.paragraphs.findIndex((p) => p.id === para) : 0
+    setI(at >= 0 ? at : 0)
+    setReady(true)
   }, [ch, para])
 
   useEffect(() => {
@@ -41,12 +45,20 @@ export function Reader({ id, para }: { id: string; para?: string }) {
     return () => removeEventListener('keydown', f)
   })
 
-  if (loading) {
+  if (loading || !ready) {
+    // The title comes from the index, so the page paints its heading before the chapter
+    // chunk arrives. That keeps the largest text on screen early and the layout stable.
     return (
       <section>
-        <div className="reader-head">
-          <Skeleton lines={2} />
-        </div>
+        <header className="reader-head">
+          <a className="back" href="#/">
+            <Icon name="left" size={16} /> Chapters
+          </a>
+          <h1 className="chapter-title">{meta?.title ?? 'Opening chapter'}</h1>
+          <p className="chapter-sub">
+            {meta ? `Class ${meta.class} ${meta.subject} · ${meta.paragraphs} paragraphs` : 'Loading the index'}
+          </p>
+        </header>
         <Skeleton lines={9} rail />
       </section>
     )
