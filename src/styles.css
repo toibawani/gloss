@@ -748,17 +748,17 @@ fieldset.field > legend {
   animation: from-left 150ms ease-out;
 }
 
+/* Slide only. Fading text would drop contrast while the card moves, and the words
+   should be readable the whole time. */
 @keyframes from-right {
   from {
     transform: translateX(14px);
-    opacity: 0;
   }
 }
 
 @keyframes from-left {
   from {
     transform: translateX(-14px);
-    opacity: 0;
   }
 }
 
@@ -790,7 +790,9 @@ fieldset.field > legend {
   border-radius: var(--r);
   background: var(--paper);
   color: var(--ink);
-  max-width: var(--measure);
+  /* Diagrams are drawn on a 320-unit grid. Capping the width keeps their labels the
+     same size as the body text instead of blowing them up on a wide screen. */
+  max-width: 24rem;
 }
 
 .visual {
@@ -1252,6 +1254,8 @@ fieldset.field > legend {
   border-radius: var(--r);
   background: var(--panel);
   padding: var(--s-5) var(--s-4);
+  /* Hold roughly the height of a real card so the footer does not jump when it lands. */
+  min-height: 34rem;
 }
 
 .skel {

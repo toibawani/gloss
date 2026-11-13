@@ -1,162 +1,106 @@
 # Gloss
 
-**Margin notes for every NCERT paragraph.**
+Margin notes for NCERT paragraphs. Gloss explains a textbook paragraph line by line, in the margin
+beside it, for students preparing for NEET, JEE and UPSC. It works offline and keeps everything on
+the device it runs on.
 
-Gloss explains NCERT textbooks line by line for students preparing for NEET, JEE and UPSC. You read the book. Gloss sits beside it and tells you what the paragraph means, which words will trip you, how to remember it and how the exam asks about it. Then it quizzes you until it sticks.
+![The reader on a phone: paragraph above, margin note below](public/screenshot-mobile.png)
 
-NCERT is the base for all three exams, but the language is dense, it is easy to get lost, and it is easy to forget. Video lectures are not tied to the exact line you are stuck on. Gloss is.
+![The margin rail beside the paragraph on a laptop](public/screenshot-wide.png)
 
-## What you get for every paragraph
+## Status
 
-| Part | What it does |
-| --- | --- |
-| Reference | The NCERT section, page and line, plus a short key phrase so you find the spot in your book in seconds. |
-| Plain meaning | Two or three sentences in simple English that reads naturally to a Hinglish-speaking student. It explains the idea instead of rewording the textbook. |
-| Tricky words | Tap an underlined word for its simple meaning, where it comes from (endo = inside, plasmic = fluid) and where students usually trip. |
-| Visual | One hand-built SVG diagram that shows the idea. No stock images, no decoration. |
-| Never-forget hook | A mnemonic, analogy or tiny story made for that exact concept. |
-| Exam lens | How the concept shows up in NEET, JEE or UPSC, plus one classic trap. |
-| Recall check | Two questions with explanations, scheduled again after 1, 3, 7 and 21 days. |
+Usable for reading and revision, with two honest limits:
 
-## Ground rules
+- **All content is draft.** 34 paragraphs across Class 11 Biology chapters 8 and 9 have not been
+  checked by a subject expert. The app says so on every card.
+- **Page and line references are unverified.** They stay out until the exact NCERT edition is
+  supplied. `npm run content:verify` reports SKIPPED until then.
 
-- **It sits beside the book.** Gloss never reproduces NCERT text. It stores a reference and a short key phrase (80 characters at most). Every explanation is original writing.
-- **It is honest about quality.** Every paragraph is marked `draft` until a subject expert has checked it. Only `expert_reviewed` paragraphs show the "Reviewed by expert" mark.
-- **It is private by default.** No accounts, no names, no emails, no trackers. Progress lives in your browser on your device.
-- **It is built for cheap phones and bad networks.** Installable PWA, built for offline use after the first load, and only three runtime dependencies.
+There is no backend, no account and no telemetry. Chapter text never leaves the bundle; progress,
+saved words and review dates live in `localStorage`.
 
-## Screens
+## Features
 
-- **Home:** subjects, chapters and how much of each you have read.
-- **Reader:** one paragraph card at a time. Swipe, tap the buttons or use the arrow keys. A progress bar shows where you are.
-- **Word bank:** every tricky word you have opened, searchable.
-- **Revision:** the recall questions that are due today.
-- **Terms of Service and Privacy Policy:** plain-language drafts, linked in the footer.
+- A reader built around one paragraph at a time: meaning, tricky words, exam lens, a diagram and a
+  memory hook in the margin rail on tablet and desktop, stacked under the paragraph on a phone.
+- 34 draft paragraphs in two chapters, loaded on demand as separate 15 kB chunks.
+- Spaced repetition on a day boundary (1, 3, 7, 21 days) with a revision screen that explains an
+  empty day.
+- Local search across paragraphs, tricky words and hooks.
+- Export and import of all local data as validated JSON, with a migration from the 0.1 format.
+- Settings for theme, text size, line spacing and exam goal, applied before first paint.
+- Installable PWA with a hand-written service worker: visited chapters reopen with no network, and
+  the update bar waits for a tap before reloading.
+- Self-hosted fonts, a hand-drawn icon set, and a paper-and-ink palette with one 3px radius.
 
-Light and dark themes follow your device setting. The design is an annotated book page: paper tones, serif reading text, pencil-style underlines for tricky words, handwritten hooks, solid colors and borders instead of shadows and gradients.
+## Stack
+
+React 19, Vite 8, TypeScript 7, Zod 4. Content is JSON, validated against a schema in the build and
+again when it loads. Hash routing, `localStorage`, an SVG allow-list renderer and a service worker
+of about 100 lines. No UI framework, no CSS framework, no icon package.
 
 ## Quick start
 
-You need Node 20 or newer.
-
 ```bash
-git clone https://github.com/toibawani/gloss.git
-cd gloss
-npm install
+npm ci
+npm ci --prefix tools/lint   # lint has its own TypeScript 6 toolchain
+npx playwright install chromium
 npm run dev
 ```
 
-Open http://localhost:5173. To try it on your phone on the same wifi, run `npm run dev -- --host` and open the network URL it prints.
-
 | Command | What it does |
 | --- | --- |
-| `npm run dev` | Start the dev server. |
-| `npm test` | Run the Vitest tests for the content schema, the review scheduler and saved progress. |
-| `npm run typecheck` | TypeScript check with no output files. |
-| `npm run build` | Typecheck, then build to `dist/`. |
-| `npm run preview` | Serve the production build at http://localhost:4173. |
+| `npm run dev` | dev server on 5173 |
+| `npm test` | 47 unit tests |
+| `npm run test:e2e` | 23 Playwright tests against a production build |
+| `npm run lint` | ESLint with jsx-a11y and react-hooks |
+| `npm run build` | content check, typecheck, bundle into `dist/` |
+| `npm run content:check` | rebuild indexes and lint content |
+| `npm run screenshots` | review shots at 360/390/768/1280, light and dark |
+| `npm run lighthouse` | Lighthouse CI budgets (needs Chrome) |
 
-The service worker only runs in a production build. To test offline, run `npm run build` and `npm run preview`, load the page once, turn off your network and reload.
+## Measured, not claimed
 
-## How spaced repetition works
+From `npm run build` and `npm run lighthouse` on 13 November 2026:
 
-Answer a recall question and it gets scheduled. Each correct answer moves it to the next gap. A wrong answer sends it back to one day.
-
-| Correct answers in a row | Comes back after |
-| --- | --- |
-| 1 | 1 day |
-| 2 | 3 days |
-| 3 | 7 days |
-| 4 or more | 21 days |
-
-Everything is stored locally. Due questions show up on the Revision screen.
-
-## Content format
-
-Content is plain JSON, one file per chapter, in `src/content/`. Each file is checked with Zod when the app loads. A file that fails is skipped and the Home screen shows a short, generic notice. Details stay out of the UI.
-
-```text
-chapter
-  id, subject, class, title, paragraphs[]
-
-paragraph
-  id, ncert_ref, key_phrase (80 characters max), meaning
-  words[]         term, meaning, breakdown, trap
-  visual_svg, visual_alt
-  hook
-  exam_tags[]     NEET | JEE | UPSC
-  exam_note, trap
-  recall[]        exactly 2: q, options[], answer (index), why
-  review_status   draft | expert_reviewed
-  review_note     optional
-```
-
-SVG is never injected as raw HTML. It is parsed and rebuilt from an allow-list of basic shapes, paths and text, and anything else is dropped. Use `currentColor` so diagrams follow the theme.
+- Initial JavaScript: 354,252 B raw, **106,598 B gzip**.
+- Home: Lighthouse 100 performance, 100 accessibility, 100 best practices.
+- Chapter route: 96–97 performance, 100 accessibility.
+- Cumulative layout shift 0.000; total blocking time 3 ms on the chapter route.
+- Largest contentful paint on the chapter route is 2.6 s against a 2.5 s budget. The full audit,
+  including what was not tested, is in [`docs/AUDIT.md`](docs/AUDIT.md).
 
 ## Add a chapter
 
 1. Copy `src/content/bio-11-ch8.json` to a new file in `src/content/`.
-2. Change `id`, `subject`, `class` and `title`, then write your paragraphs.
-3. Keep `review_status` as `draft`. Put anything you are unsure about in `review_note`.
-4. Run `npm test`, then `npm run dev` and read your chapter on a phone-sized window.
-
-No code changes are needed. Any subject, class or chapter works.
+2. Change `id`, `subject`, `class`, `title` and fill `paragraphs`. Each paragraph needs two recall
+   questions and a key phrase of 80 characters or less. Never paste NCERT text.
+3. Keep SVGs to basic shapes, paths and text, coloured with `currentColor`. Only allow-listed tags
+   and attributes are rendered.
+4. Keep `review_status` as `draft` with a `review_note`. Run `npm run content:check` and
+   `npm test`.
 
 ## Expert review
 
-A paragraph can be marked `expert_reviewed` only after a subject expert has checked:
+A paragraph becomes `expert_reviewed` only after a subject expert checks every fact, the page and
+line reference against the current NCERT edition, and each recall answer. Record who reviewed it
+and when in the pull request. Until then it stays draft. See
+[`docs/SCIENCE-REVIEW.md`](docs/SCIENCE-REVIEW.md) and [`content/REVIEW.md`](content/REVIEW.md).
 
-- every fact in the meaning, hook, exam note and trap
-- the page and line reference against the current NCERT edition
-- each recall answer and its explanation
+## Security
 
-Record who reviewed it and when in the pull request. Until then it stays `draft` and the app shows it as a draft.
+`public/_headers` carries the CSP, `X-Content-Type-Options`, `Referrer-Policy`,
+`Permissions-Policy`, HSTS and `frame-ancestors`. Netlify and Cloudflare Pages read this file;
+GitHub Pages cannot set response headers, so use one of those hosts or a proxy. The CSP has no
+`unsafe-inline`, so do not add inline scripts or styles. Content SVG is rebuilt from an allow-list
+and never injected as HTML. Report problems as described in [`SECURITY.md`](SECURITY.md).
 
-## Project structure
+## Docs
 
-```text
-src/
-  App.tsx        screens and routing
-  content.ts     loads and validates chapters
-  content/       one JSON file per chapter
-  schema.ts      Zod schema for chapters and paragraphs
-  srs.ts         review scheduler
-  store.ts       localStorage with validation on read
-  Visual.tsx     safe SVG renderer
-  Legal.tsx      Terms and Privacy pages
-public/
-  sw.js          service worker
-  _headers       security headers for the host
-  manifest.webmanifest
-```
-
-Stack: React, Vite, TypeScript, Zod, Vitest. Routing and the service worker are hand-written to keep dependencies small.
-
-## Deploying
-
-`npm run build` writes a static site to `dist/`. It is built with relative paths, so it works from a subfolder.
-
-Security headers live in `public/_headers`: Content Security Policy, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, HSTS and `frame-ancestors`. Netlify and Cloudflare Pages read this file. GitHub Pages cannot set response headers, so use one of those two or put a proxy in front.
-
-The CSP does not allow inline scripts or inline styles. Do not add them.
-
-## Status
-
-Early. Content is draft until an expert reviews it, and NCERT page and line references need checking against the printed book.
-
-Planned next:
-
-- more chapters and subjects
-- scripts that verify references against your own copy of the book
-- end-to-end tests and Lighthouse checks in CI
-- optional progress sync, only after legal review, because many students are under 18 and India's Digital Personal Data Protection Act 2023 needs verifiable parental consent for children's data
-
-## Contributing
-
-Found a wrong fact or a confusing explanation? Open an issue at github.com/toibawani/gloss/issues and name the paragraph id.
-
-For code and content changes, branch as `feature/<name>` or `bugfix/<name>`, keep commits small, and write them as `type(scope): imperative description`, lowercase, under 72 characters. Types are feat, fix, refactor, style, docs, chore, test and perf. Open a pull request using the template: Summary, Key changes, How to test.
-
-## Disclaimer
-
-Gloss is not affiliated with or endorsed by NCERT. NCERT text belongs to NCERT. Gloss points to it with short references and explains it in original words. Use Gloss as a study aid and check facts against your textbook before an exam.
+- [`docs/RUNBOOK.md`](docs/RUNBOOK.md): setup, content pipeline, releasing, deploying, problems.
+- [`docs/AUDIT.md`](docs/AUDIT.md): performance, accessibility and dependency audit.
+- [`docs/PENTEST.md`](docs/PENTEST.md): the manual security pass and what it did not cover.
+- [`docs/SCIENCE-REVIEW.md`](docs/SCIENCE-REVIEW.md): what draft means and how review works.
+- [`docs/BRANCHING.md`](docs/BRANCHING.md): branches, commits, pull requests, releases.
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CHANGELOG.md`](CHANGELOG.md).

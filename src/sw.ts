@@ -7,6 +7,7 @@ let waiting: ServiceWorker | null = null
 const listeners = new Set<() => void>()
 const emit = () => listeners.forEach((l) => l())
 let reloading = false
+let userAppliedUpdate = false
 
 export function initServiceWorker() {
   if (!('serviceWorker' in navigator) || !import.meta.env.PROD) return
@@ -27,17 +28,21 @@ export function initServiceWorker() {
         })
       })
       navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (reloading) return
+        // The first install also claims this page. Reloading there would throw away the
+        // student's scroll position for no reason, so only reload after an explicit tap.
+        if (!userAppliedUpdate || reloading) return
         reloading = true
         location.reload()
       })
-      // Cache the shell that this first visit actually used.
-      navigator.serviceWorker.ready.then(() => {
+      // Cache the shell that this first visit actually used. On a first visit the page is
+      // claimed a moment after ready resolves, so message the active worker directly.
+      navigator.serviceWorker.ready.then((ready) => {
         const urls = performance
           .getEntriesByType('resource')
           .map((e) => e.name)
           .filter((u) => u.startsWith(location.origin) && /\.(js|css|woff2|png|webmanifest)$/.test(u))
-        navigator.serviceWorker.controller?.postMessage({ type: 'CACHE_URLS', urls: [location.href, ...urls] })
+        const target = navigator.serviceWorker.controller ?? ready.active
+        target?.postMessage({ type: 'CACHE_URLS', urls: [location.href, ...urls] })
       })
       setInterval(() => void reg.update().catch(() => {}), 60 * 60 * 1000)
     })
@@ -47,6 +52,7 @@ export function initServiceWorker() {
 }
 
 export function applyUpdate() {
+  userAppliedUpdate = true
   waiting?.postMessage({ type: 'SKIP_WAITING' })
   waiting = null
   emit()

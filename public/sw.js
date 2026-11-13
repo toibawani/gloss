@@ -1,11 +1,17 @@
 // Gloss service worker. Same-origin GET only, ok responses only, versioned cache, explicit updates.
 // Bump VERSION whenever this file changes so old caches are dropped.
-const VERSION = 'gloss-v4'
-const SHELL = './'
+const VERSION = 'gloss-v6'
+// Absolute shell URL. The navigation fallback matches this key exactly.
+const SHELL = new URL('./index.html', self.location.href).href
 const PRECACHE = ['./', './index.html', './manifest.webmanifest']
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(VERSION).then((cache) => cache.addAll(PRECACHE)).catch(() => undefined))
+  event.waitUntil(
+    caches.open(VERSION).then(async (cache) => {
+      // One bad URL must not abort the whole install, so each entry is added on its own.
+      await Promise.all(PRECACHE.map((url) => cache.add(url).catch(() => undefined)))
+    }),
+  )
 })
 
 self.addEventListener('activate', (event) => {
@@ -90,7 +96,14 @@ self.addEventListener('fetch', (event) => {
           return response
         } catch {
           const cache = await caches.open(VERSION)
-          return (await cache.match(SHELL)) ?? (await cache.match(request)) ?? Response.error()
+          return (
+            (await cache.match(SHELL, { ignoreVary: true })) ??
+            (await cache.match(request, { ignoreVary: true })) ??
+            new Response('<!doctype html><title>Gloss is offline</title><p>This page is not saved yet. Reconnect once and open it again.', {
+              status: 503,
+              headers: { 'Content-Type': 'text/html; charset=utf-8' },
+            })
+          )
         }
       })(),
     )
@@ -100,7 +113,9 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     (async () => {
       const cache = await caches.open(VERSION)
-      const hit = await cache.match(request)
+      // Compressed responses carry Vary: Accept-Encoding, so a plain match can miss even
+      // though the body is already cached.
+      const hit = await cache.match(request, { ignoreVary: true })
       if (hit) {
         // Hashed assets never change, so a hit is safe to return and refresh quietly.
         fetch(request)
