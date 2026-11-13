@@ -31,5 +31,5 @@ test('a wrong answer resets the card to one day', async ({ page }) => {
 test('revision screen explains an empty day', async ({ page }) => {
   await page.goto('/#/revise')
   await expect(page.getByRole('heading', { name: 'Nothing due' })).toBeVisible()
-  await expect(page.getByRole('link', { name: 'Open a chapter' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Read a paragraph' })).toBeVisible()
 })
