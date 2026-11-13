@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: lint, content, unit, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # typescript-eslint does not support TypeScript 7 yet, so lint has its own pinned
+      # toolchain. See docs/RUNBOOK.md.
+      - run: npm ci --prefix tools/lint
+      - run: npm run lint
+      - run: npm run content:check
+      - run: npm test
+      - run: npm run build
+      - name: Check bundle budget
+        run: |
+          set -euo pipefail
+          main=$(gzip -c dist/assets/index-*.js | wc -c)
+          echo "initial JS: ${main} bytes gzip"
+          test "$main" -lt 204800
+
+  e2e:
+    name: end to end
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
