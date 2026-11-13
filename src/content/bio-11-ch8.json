@@ -3,10 +3,59 @@
   "subject": "Biology",
   "class": 11,
   "title": "Cell: The Unit of Life",
+  "book": "NCERT Biology Class XI",
   "paragraphs": [
     {
+      "id": "what-is-a-cell",
+      "ncert_ref": "Ch 8, section 8.1 What is a Cell?",
+      "key_phrase": "basic structural and functional unit",
+      "meaning": "A cell is the smallest living unit that can carry out all the jobs of life on its own. A bacterium is one cell, while your body is a very large number of cells that have divided the work between them. Tissues, organs and organ systems are all built by grouping cells, so the cell sits at the base of that list.",
+      "words": [
+        {
+          "term": "cell",
+          "meaning": "The smallest unit that carries out the activities of life.",
+          "breakdown": "Latin cella = small room. Robert Hooke used the word in 1665 after seeing boxlike compartments in cork.",
+          "trap": "Hooke saw only the walls of dead cork cells, never the living contents."
+        },
+        {
+          "term": "unicellular",
+          "meaning": "Made of a single cell that does every job by itself.",
+          "breakdown": "uni = one, cellula = small cell",
+          "trap": "A unicellular organism is not a simple half-cell. It is a complete living system in one room."
+        },
+        {
+          "term": "tissue",
+          "meaning": "A group of similar cells doing one job together.",
+          "breakdown": "Latin texere = to weave",
+          "trap": "A tissue is above the cell, never the basic unit. Options often offer tissue because it sounds organised."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 160' fill='none' stroke='currentColor' stroke-width='2'><circle cx='52' cy='80' r='30'/><circle cx='52' cy='72' r='7'/><text x='20' y='138' font-size='11' fill='currentColor' stroke='none'>one cell, whole organism</text><path d='M96 80 H140 M132 74 L140 80 L132 86'/><g><rect x='160' y='40' width='28' height='24'/><rect x='194' y='40' width='28' height='24'/><rect x='228' y='40' width='28' height='24'/><rect x='160' y='70' width='28' height='24'/><rect x='194' y='70' width='28' height='24'/><rect x='228' y='70' width='28' height='24'/><rect x='160' y='100' width='28' height='24'/><rect x='194' y='100' width='28' height='24'/><rect x='228' y='100' width='28' height='24'/></g><text x='160' y='146' font-size='11' fill='currentColor' stroke='none'>many cells, one body</text></svg>",
+      "visual_alt": "One cell on the left labelled as a whole organism, an arrow, and a block of nine cells on the right labelled as the building blocks of a body.",
+      "hook": "A bacterium is a one-room house. Your liver is an apartment block built from the same kind of room.",
+      "exam_tags": ["NEET", "UPSC"],
+      "exam_note": "NEET tests the order of organisation and asks which level is the basic unit of life. UPSC general science uses the same idea when explaining how tissues and organs are built.",
+      "trap": "Tissue is one level above the cell. Options often offer tissue as the basic unit because a group sounds more organised than a single room.",
+      "recall": [
+        {
+          "q": "Which level of organisation is the basic structural and functional unit of life?",
+          "options": ["Cell", "Tissue", "Organ", "Organ system"],
+          "answer": 0,
+          "why": "The cell is the smallest unit that can carry out all life activities by itself. A tissue is a group of cells, so it already depends on the cell as its unit."
+        },
+        {
+          "q": "A unicellular organism such as a bacterium carries out all its life activities",
+          "options": ["Inside one cell", "By dividing work between tissues", "With the help of organs", "Only inside a host cell"],
+          "answer": 0,
+          "why": "One cell performs digestion, growth and reproduction in a unicellular organism. Tissues and organs appear only when many cells work together, as in multicellular organisms."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the Hooke year and that the organism examples match the chapter."
+    },
+    {
       "id": "cell-theory",
-      "ncert_ref": "Section 8.2, Cell Theory. Page and line: not verified.",
+      "ncert_ref": "Ch 8, section 8.2 Cell Theory",
       "key_phrase": "omnis cellula-e cellula",
       "meaning": "Every living thing is built from cells, and the cell is the basic unit of life. Schleiden and Schwann gave this idea. Virchow added the second half: new cells do not appear from nothing, they come from cells that already exist.",
       "words": [
@@ -17,18 +66,18 @@
           "trap": "Students credit this line to Schleiden and Schwann. It is Virchow's addition."
         },
         {
-          "term": "cell",
-          "meaning": "The smallest unit that carries out the activities of life.",
-          "breakdown": "Latin cella = small room. Robert Hooke used the word in 1665 after seeing boxlike compartments in cork.",
-          "trap": "Hooke saw only the walls of dead cork cells, never the living contents."
+          "term": "cell theory",
+          "meaning": "The set of three statements that cells make up bodies, are the basic unit, and come from earlier cells.",
+          "breakdown": "Schleiden studied plants, Schwann studied animals, Virchow explained where new cells come from",
+          "trap": "The theory has three parts, and the third part arrived twenty years after the first two."
         }
       ],
-      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><text x='10' y='18' font-size='12' fill='currentColor' stroke='none'>1. Schleiden + Schwann: bodies are made of cells</text><rect x='10' y='28' width='30' height='30'/><rect x='40' y='28' width='30' height='30'/><rect x='70' y='28' width='30' height='30'/><rect x='10' y='58' width='30' height='30'/><rect x='40' y='58' width='30' height='30'/><rect x='70' y='58' width='30' height='30'/><text x='10' y='112' font-size='12' fill='currentColor' stroke='none'>2. Virchow: a cell comes only from a cell</text><rect x='10' y='122' width='26' height='22'/><path d='M44 133 H84 M76 127 L84 133 L76 139'/><rect x='92' y='122' width='26' height='22'/><rect x='124' y='122' width='26' height='22'/></svg>",
-      "visual_alt": "Top: six squares forming a block, labelled as the Schleiden and Schwann idea that bodies are made of cells. Bottom: one square with an arrow to two squares, labelled as Virchow's idea that cells come from cells.",
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><text x='10' y='18' font-size='11' fill='currentColor' stroke='none'>1. Schleiden and Schwann: bodies are made of cells</text><rect x='10' y='28' width='30' height='30'/><rect x='40' y='28' width='30' height='30'/><rect x='70' y='28' width='30' height='30'/><rect x='10' y='58' width='30' height='30'/><rect x='40' y='58' width='30' height='30'/><rect x='70' y='58' width='30' height='30'/><text x='10' y='112' font-size='11' fill='currentColor' stroke='none'>2. Virchow: a cell comes only from a cell</text><rect x='10' y='122' width='26' height='22'/><path d='M44 133 H84 M76 127 L84 133 L76 139'/><rect x='92' y='122' width='26' height='22'/><rect x='124' y='122' width='26' height='22'/></svg>",
+      "visual_alt": "Top, six squares forming a block, labelled as the idea that bodies are made of cells. Bottom, one square with an arrow to two squares, labelled as Virchow's rule that cells come from cells.",
       "hook": "Schleiden and Schwann counted the bricks. Virchow noticed every new brick is baked from an old one.",
       "exam_tags": ["NEET"],
       "exam_note": "NEET asks who said what: who proposed the cell theory and who added the new-cells rule. It also appears as an exceptions question about viruses.",
-      "trap": "Schleiden and Schwann proposed the cell theory. Virchow modified it. Options often swap the names.",
+      "trap": "Schleiden and Schwann proposed the cell theory. Virchow modified it. Options often swap the three names.",
       "recall": [
         {
           "q": "Who explained that new cells form from pre-existing cells?",
@@ -44,18 +93,60 @@
         }
       ],
       "review_status": "draft",
-      "review_note": "Needs expert review: verify page and line numbers and attributions against the current NCERT edition."
+      "review_note": "Verify page and line against your edition. Check the attributions and the 1665 date."
+    },
+    {
+      "id": "cell-theory-exceptions",
+      "ncert_ref": "Ch 8, section 8.2 Cell Theory",
+      "key_phrase": "exceptions of the cell theory",
+      "meaning": "Cell theory says every living thing is made of cells, but viruses are the standard exception. A virus is genetic material wrapped in a protein coat, with no cytoplasm and no cell machinery of its own. It multiplies only after it enters a living cell and borrows that cell's equipment.",
+      "words": [
+        {
+          "term": "virus",
+          "meaning": "A nucleoprotein particle that cannot reproduce without a host cell.",
+          "breakdown": "Latin virus = poison. It is not a cell, so it sits outside cell theory.",
+          "trap": "A virus is not a very small bacterium. It has no cytoplasm, no ribosomes and no cell membrane of its own."
+        },
+        {
+          "term": "capsid",
+          "meaning": "The protein coat around the genetic material of a virus.",
+          "breakdown": "Latin capsa = box",
+          "trap": "The capsid is protein, not a cell wall, and it does not make the virus a cell."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 140' fill='none' stroke='currentColor' stroke-width='2'><path d='M40 40 L120 40 L120 100 L40 100 Z'/><path d='M52 52 C70 70 90 70 108 52'/><path d='M52 88 C70 70 90 70 108 88'/><text x='30' y='124' font-size='11' fill='currentColor' stroke='none'>virus: coat + genetic material</text><path d='M150 70 H182 M174 64 L182 70 L174 76'/><rect x='196' y='34' width='96' height='72' rx='18'/><circle cx='244' cy='70' r='11'/><text x='196' y='124' font-size='11' fill='currentColor' stroke='none'>host cell: full machinery</text></svg>",
+      "visual_alt": "A virus shown as a box holding a coiled thread, arrow, and a host cell with a nucleus, showing that the virus needs the cell's machinery.",
+      "hook": "A virus is a letter with no postal system. It travels only when a living cell picks it up and posts it.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks why viruses are an exception to cell theory and whether they are living. The answer turns on the absence of a cell and on reproduction only inside a host.",
+      "trap": "Viruses are not called non-living because they are small. They are outside cell theory because they are not made of cells.",
+      "recall": [
+        {
+          "q": "Why are viruses called an exception to cell theory?",
+          "options": ["They have no cells at all", "They are too small to be seen", "They have no genetic material", "They cannot cause disease"],
+          "answer": 0,
+          "why": "A virus has no cell, no cytoplasm and no organelles, so the statement that all living things are made of cells does not cover it. It does carry genetic material and can cause disease, so those options are wrong."
+        },
+        {
+          "q": "A virus can multiply",
+          "options": ["On its own in soil", "Only inside a living host cell", "Only inside another virus", "Only in distilled water"],
+          "answer": 1,
+          "why": "A virus has no ribosomes or energy machinery, so it uses the host cell to copy its genetic material and make proteins. Outside a host it is inert."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check that the virus description matches the wording used in this chapter."
     },
     {
       "id": "prokaryotic-cell",
-      "ncert_ref": "Section 8.4, Prokaryotic Cells. Page and line: not verified.",
+      "ncert_ref": "Ch 8, section 8.4 Prokaryotic Cells",
       "key_phrase": "prokaryotic cells",
       "meaning": "A prokaryotic cell has no nucleus wrapped in a membrane. Its DNA lies in an open region of the cytoplasm called the nucleoid, and it has no membrane-bound organelles. It still has ribosomes, and many bacteria also carry small extra rings of DNA called plasmids.",
       "words": [
         {
           "term": "prokaryotic",
           "meaning": "Describes a cell without a membrane-bound nucleus.",
-          "breakdown": "pro = before, karyon = kernel or nucleus (Greek)",
+          "breakdown": "pro = before, karyon = kernel or nucleus",
           "trap": "Students think prokaryotes have no DNA. They have DNA, just not inside a nuclear membrane."
         },
         {
@@ -67,32 +158,656 @@
         {
           "term": "plasmid",
           "meaning": "A small circular piece of DNA outside the main DNA.",
-          "breakdown": "from cytoplasm + id (small unit)",
-          "trap": "Plasmids are extra DNA. Cells can live without them, but they often carry traits like antibiotic resistance."
+          "breakdown": "from cytoplasm + id, a small unit",
+          "trap": "Plasmids are extra DNA. Cells can live without them, but they often carry traits such as antibiotic resistance."
         }
       ],
-      "visual_svg": "<svg viewBox='0 0 320 160' fill='none' stroke='currentColor' stroke-width='2'><rect x='10' y='25' width='190' height='110' rx='55'/><rect x='18' y='33' width='174' height='94' rx='47' stroke-dasharray='4 3'/><path d='M70 70 C90 50 110 90 130 70 S150 90 140 100 S100 110 85 98 S60 85 70 70'/><circle cx='165' cy='95' r='9'/><circle cx='60' cy='112' r='3' fill='currentColor'/><circle cx='105' cy='120' r='3' fill='currentColor'/><circle cx='165' cy='60' r='3' fill='currentColor'/><circle cx='48' cy='82' r='3' fill='currentColor'/><line x1='195' y1='50' x2='225' y2='40'/><text x='230' y='44' font-size='11' fill='currentColor' stroke='none'>cell wall</text><line x1='140' y1='72' x2='225' y2='72'/><text x='230' y='76' font-size='11' fill='currentColor' stroke='none'>nucleoid</text><line x1='174' y1='95' x2='225' y2='104'/><text x='230' y='108' font-size='11' fill='currentColor' stroke='none'>plasmid</text><line x1='108' y1='122' x2='225' y2='136'/><text x='230' y='140' font-size='11' fill='currentColor' stroke='none'>ribosomes</text></svg>",
+      "visual_svg": "<svg viewBox='0 0 320 160' fill='none' stroke='currentColor' stroke-width='2'><rect x='10' y='25' width='190' height='110' rx='55'/><rect x='18' y='33' width='174' height='94' rx='47' stroke-dasharray='4 3'/><path d='M70 70 C90 50 110 90 130 70 S150 90 140 100 S100 110 85 98 S60 85 70 70'/><circle cx='165' cy='95' r='9'/><circle cx='60' cy='112' r='3' fill='currentColor'/><circle cx='105' cy='120' r='3' fill='currentColor'/><circle cx='165' cy='60' r='3' fill='currentColor'/><line x1='195' y1='50' x2='225' y2='40'/><text x='230' y='44' font-size='10' fill='currentColor' stroke='none'>cell wall</text><line x1='140' y1='72' x2='225' y2='72'/><text x='230' y='76' font-size='10' fill='currentColor' stroke='none'>nucleoid</text><line x1='174' y1='95' x2='225' y2='104'/><text x='230' y='108' font-size='10' fill='currentColor' stroke='none'>plasmid</text><line x1='108' y1='122' x2='225' y2='136'/><text x='230' y='140' font-size='10' fill='currentColor' stroke='none'>ribosomes</text></svg>",
       "visual_alt": "A rounded bacterial cell with an outer wall and an inner dashed membrane. Inside are a tangled nucleoid, a small plasmid ring and scattered ribosome dots, each labelled.",
-      "hook": "A prokaryote is a studio flat: one open room, DNA lying on the floor. A eukaryote has a locked bedroom for the DNA, the nucleus.",
+      "hook": "A prokaryote is a studio flat: one open room with the DNA lying in it. A eukaryote has a locked bedroom for the DNA.",
       "exam_tags": ["NEET"],
-      "exam_note": "NEET likes prokaryote versus eukaryote comparisons: ribosome type, nuclear membrane, plasmids and organelles.",
-      "trap": "No membrane-bound organelles does not mean no ribosomes. Prokaryotes have 70S ribosomes, which have no membrane.",
+      "exam_note": "NEET likes prokaryote versus eukaryote comparisons: ribosome type, nuclear membrane, plasmids and organelles. It also asks where bacterial DNA is located.",
+      "trap": "No membrane-bound organelles does not mean no ribosomes. Prokaryotes have 70S ribosomes, which are not membrane-bound.",
       "recall": [
         {
           "q": "Which of these is present in a prokaryotic cell?",
           "options": ["Nucleolus", "70S ribosomes", "Mitochondria", "Golgi apparatus"],
           "answer": 1,
-          "why": "Prokaryotes have 70S ribosomes in the cytoplasm. Nucleolus, mitochondria and Golgi apparatus belong to eukaryotic cells."
+          "why": "Prokaryotes have 70S ribosomes in the cytoplasm. Nucleolus, mitochondria and Golgi apparatus are structures of eukaryotic cells."
         },
         {
           "q": "Where is the DNA of a bacterial cell found?",
           "options": ["Inside a nuclear envelope", "In the nucleoid, with no membrane around it", "Inside mitochondria", "Inside the cell wall"],
           "answer": 1,
-          "why": "Bacterial DNA lies in the nucleoid region of the cytoplasm. No membrane separates it from the rest of the cell."
+          "why": "Bacterial DNA lies in the nucleoid region of the cytoplasm, with no membrane separating it from the rest of the cell. Mitochondria are absent in prokaryotes."
         }
       ],
       "review_status": "draft",
-      "review_note": "Needs expert review: verify page and line numbers and the 70S ribosome statement against the current NCERT edition."
+      "review_note": "Verify page and line against your edition. Check the 70S ribosome statement and the nucleoid description."
+    },
+    {
+      "id": "bacterial-envelope",
+      "ncert_ref": "Ch 8, section 8.4.1 Cell Envelope and its Modifications",
+      "key_phrase": "cell envelope",
+      "meaning": "A bacterial cell is wrapped in three layers. The outermost is the glycocalyx, which may be a loose slime or a tough capsule, then the cell wall, then the plasma membrane. The wall gives shape and keeps the cell from bursting, while the capsule helps some bacteria escape the defences of the host.",
+      "words": [
+        {
+          "term": "glycocalyx",
+          "meaning": "The outermost sugar-rich layer of a bacterium, loose as slime or tight as a capsule.",
+          "breakdown": "glyco = sugar, calyx = cup",
+          "trap": "The glycocalyx is outside the cell wall, not inside the membrane."
+        },
+        {
+          "term": "capsule",
+          "meaning": "A thick, tight glycocalyx that protects the bacterium.",
+          "breakdown": "Latin capsula = small box",
+          "trap": "A capsule and a slime layer are both glycocalyx; the difference is how tightly they hold on."
+        },
+        {
+          "term": "Gram stain",
+          "meaning": "A staining method that splits bacteria into Gram positive and Gram negative.",
+          "breakdown": "Named after Hans Christian Gram, who developed it in the nineteenth century",
+          "trap": "The stain reflects the wall structure. Gram positive cells keep the crystal violet because their wall is thick."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><rect x='10' y='40' width='250' height='80' rx='38'/><rect x='20' y='50' width='230' height='60' rx='30'/><rect x='30' y='60' width='210' height='40' rx='20' stroke-dasharray='5 3'/><text x='10' y='26' font-size='10' fill='currentColor' stroke='none'>1 glycocalyx</text><text x='120' y='26' font-size='10' fill='currentColor' stroke='none'>2 cell wall</text><text x='226' y='26' font-size='10' fill='currentColor' stroke='none'>3 membrane</text><line x1='10' y1='32' x2='10' y2='40'/><line x1='120' y1='32' x2='120' y2='50'/><line x1='226' y1='32' x2='226' y2='60'/></svg>",
+      "visual_alt": "A bacterium drawn as three nested rounded layers, numbered from the outside in as glycocalyx, cell wall and plasma membrane.",
+      "hook": "Three coats in winter: a raincoat, a jacket, a shirt. Capsule, wall, membrane.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the order of the three envelope layers, and links the wall to Gram staining and to antibiotics such as penicillin that block wall building.",
+      "trap": "The capsule is not the cell wall. Both sit outside the membrane, but only the wall carries the shape and the Gram reaction.",
+      "recall": [
+        {
+          "q": "Starting from outside, what is the correct order of the bacterial cell envelope?",
+          "options": ["Cell wall, glycocalyx, plasma membrane", "Glycocalyx, cell wall, plasma membrane", "Plasma membrane, cell wall, glycocalyx", "Glycocalyx, plasma membrane, cell wall"],
+          "answer": 1,
+          "why": "The glycocalyx is outermost, the cell wall lies under it, and the plasma membrane is innermost against the cytoplasm. The other orders put the membrane outside the wall, which is not how a bacterium is built."
+        },
+        {
+          "q": "A bacterium that keeps the crystal violet stain in Gram staining is",
+          "options": ["Gram positive", "Gram negative", "Always a virus", "Always non-pathogenic"],
+          "answer": 0,
+          "why": "Gram positive bacteria retain the crystal violet because their wall is thick. Gram negative bacteria lose it and take the counterstain."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the Gram stain description and that penicillin's target is described as in this chapter."
+    },
+    {
+      "id": "bacterial-appendages",
+      "ncert_ref": "Ch 8, section 8.4.2 Ribosomes and Inclusion Bodies, and flagella",
+      "key_phrase": "basal body",
+      "meaning": "Bacteria can carry two kinds of surface appendage. Flagella are long whip-like threads built from a filament, a hook and a basal body, and they spin to push the cell through liquid. Pili and fimbriae are shorter and do not move the cell; they stick it to surfaces, and a special pilus passes DNA to another bacterium during conjugation.",
+      "words": [
+        {
+          "term": "flagellum",
+          "meaning": "A long appendage that spins to move a bacterium.",
+          "breakdown": "Latin flagellum = whip. Three parts: filament, hook, basal body.",
+          "trap": "The filament is the long part, but the motor is the basal body. Students name the filament as the whole organelle."
+        },
+        {
+          "term": "pilus",
+          "meaning": "A short appendage for attachment or for passing DNA.",
+          "breakdown": "Latin pilus = hair",
+          "trap": "Pili do not move the cell. Choosing pili for locomotion is the usual slip."
+        },
+        {
+          "term": "conjugation",
+          "meaning": "Transfer of DNA from one bacterium to another through a pilus.",
+          "breakdown": "Latin con + jugum = yoking together",
+          "trap": "Conjugation is not reproduction by division. It moves DNA between two cells."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><rect x='60' y='45' width='120' height='70' rx='35'/><path d='M180 70 C230 60 250 40 290 30'/><path d='M180 80 C230 80 250 80 292 80'/><path d='M180 92 C230 100 250 112 290 122'/><path d='M60 70 C20 60 14 50 8 40'/><text x='210' y='24' font-size='10' fill='currentColor' stroke='none'>flagellum</text><text x='236' y='98' font-size='10' fill='currentColor' stroke='none'>pili</text><text x='6' y='32' font-size='10' fill='currentColor' stroke='none'>pilus</text></svg>",
+      "visual_alt": "A bacterium with one long wavy flagellum on the right and three short straight pili, labelled so the long mover is separated from the short stickers.",
+      "hook": "A flagellum is a propeller with a shaft, a joint and a motor. A pilus is a hand that holds on or passes a note.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the number of parts of a bacterial flagellum, and the difference between pili and fimbriae. It also connects pili to conjugation.",
+      "trap": "Pili and fimbriae are not for movement. Movement is the flagellum's job, and the basal body is its motor.",
+      "recall": [
+        {
+          "q": "The three parts of a bacterial flagellum are",
+          "options": ["Filament, hook and basal body", "Head, neck and tail", "Axoneme, matrix and cristae", "Capsule, wall and membrane"],
+          "answer": 0,
+          "why": "A flagellum has a long filament, a curved hook and a basal body that anchors it and turns it. The other sets name parts of other structures."
+        },
+        {
+          "q": "Pili are mainly involved in",
+          "options": ["Locomotion", "Attachment and DNA transfer", "Photosynthesis", "Protein synthesis"],
+          "answer": 1,
+          "why": "Pili stick the bacterium to surfaces and one kind passes DNA during conjugation. They are not the moving organelles, which are the flagella."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the flagellum parts and the pili versus fimbriae wording."
+    },
+    {
+      "id": "plasma-membrane",
+      "ncert_ref": "Ch 8, section 8.5.1 Cell Membrane",
+      "key_phrase": "fluid mosaic model",
+      "meaning": "The membrane is a double layer of phospholipids with proteins sitting in it and on it. Singer and Nicolson described this arrangement as the fluid mosaic model. The phosphate head faces water, the lipid tails face each other, and the proteins decide which substances pass through.",
+      "words": [
+        {
+          "term": "phospholipid",
+          "meaning": "A fat molecule with a water-loving phosphate head and a water-fearing tail.",
+          "breakdown": "phosphate + lipid, from Greek lipos = fat",
+          "trap": "The head is hydrophilic and the tail is hydrophobic. Students reverse the two."
+        },
+        {
+          "term": "integral protein",
+          "meaning": "A protein embedded in the lipid bilayer.",
+          "breakdown": "integer = whole, so it is held within the membrane",
+          "trap": "Peripheral proteins sit on the surface; integral proteins go through or into the bilayer."
+        },
+        {
+          "term": "selective permeability",
+          "meaning": "The membrane lets some substances through and blocks others.",
+          "breakdown": "select = choose, permeare = to pass through",
+          "trap": "Selective does not mean nothing passes. Small uncharged molecules cross easily, while ions need help."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><line x1='10' y1='55' x2='310' y2='55'/><line x1='10' y1='75' x2='310' y2='75'/><g stroke-width='2'><path d='M40 55 V40 M40 55 V70'/><circle cx='40' cy='37' r='4'/><circle cx='40' cy='73' r='4'/><path d='M80 55 V40 M80 55 V70'/><circle cx='80' cy='37' r='4'/><circle cx='80' cy='73' r='4'/><path d='M240 55 V40 M240 55 V70'/><circle cx='240' cy='37' r='4'/><circle cx='240' cy='73' r='4'/><path d='M280 55 V40 M280 55 V70'/><circle cx='280' cy='37' r='4'/><circle cx='280' cy='73' r='4'/></g><path d='M150 30 V100' stroke-width='5'/><circle cx='150' cy='30' r='7'/><text x='120' y='124' font-size='10' fill='currentColor' stroke='none'>protein</text><text x='20' y='112' font-size='10' fill='currentColor' stroke='none'>lipid bilayer</text></svg>",
+      "visual_alt": "Two rows of lipid molecules with round heads facing outward and tails inward, one thick protein crossing the whole bilayer, labelled.",
+      "hook": "A phospholipid is a tadpole: round water-loving head, oily water-fearing tail. Two rows stand tail to tail.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks who proposed the fluid mosaic model, which part of the phospholipid is hydrophobic, and why the membrane is called selectively permeable.",
+      "trap": "The model is fluid mosaic, not the older sandwich model. Proteins are not in fixed layers, and the membrane is not rigid.",
+      "recall": [
+        {
+          "q": "The fluid mosaic model of the plasma membrane was proposed by",
+          "options": ["Robertson", "Singer and Nicolson", "Schleiden and Schwann", "Watson and Crick"],
+          "answer": 1,
+          "why": "Singer and Nicolson described the membrane as a fluid lipid bilayer with a mosaic of proteins. Robertson gave an earlier model, and the other pairs belong to cell theory and to DNA structure."
+        },
+        {
+          "q": "In a phospholipid, the part that avoids water is",
+          "options": ["The phosphate head", "The fatty acid tail", "The protein", "The cholesterol ring"],
+          "answer": 1,
+          "why": "The fatty acid tails are hydrophobic and turn inward, away from water. The phosphate heads are hydrophilic and face the watery sides."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the year of the fluid mosaic model and the head and tail wording."
+    },
+    {
+      "id": "cell-wall-plant",
+      "ncert_ref": "Ch 8, section 8.5.2 Cell Wall",
+      "key_phrase": "middle lamella",
+      "meaning": "A plant cell wall is mostly cellulose, with hemicellulose, pectin and glycoproteins packed around it. Neighbouring cells are glued by a middle lamella made of calcium pectate. Thin channels called plasmodesmata cross the wall so that cytoplasm and signals can pass between cells.",
+      "words": [
+        {
+          "term": "cellulose",
+          "meaning": "The main structural fibre of the plant cell wall.",
+          "breakdown": "from cellula, small cell; a polymer of glucose",
+          "trap": "Cellulose is not the only part of the wall. Hemicellulose, pectin and glycoproteins are there too."
+        },
+        {
+          "term": "middle lamella",
+          "meaning": "The cement layer between two neighbouring plant cells.",
+          "breakdown": "lamella is Latin for a thin plate",
+          "trap": "The middle lamella is calcium pectate, not cellulose, and it lies between cells rather than inside one."
+        },
+        {
+          "term": "plasmodesmata",
+          "meaning": "Fine channels through the wall that connect the cytoplasm of adjacent cells.",
+          "breakdown": "plasma = fluid, desmos = band or bond",
+          "trap": "Plasmodesmata are not gaps in the membrane. They are lined by membrane and let molecules pass in a controlled way."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 140' fill='none' stroke='currentColor' stroke-width='2'><rect x='20' y='30' width='120' height='80'/><rect x='180' y='30' width='120' height='80'/><path d='M140 40 H180 M140 60 H180 M140 80 H180 M140 100 H180' stroke-dasharray='4 3'/><text x='126' y='24' font-size='10' fill='currentColor' stroke='none'>middle lamella</text><text x='30' y='126' font-size='10' fill='currentColor' stroke='none'>cell 1</text><text x='190' y='126' font-size='10' fill='currentColor' stroke='none'>cell 2</text></svg>",
+      "visual_alt": "Two plant cells side by side with a dashed cement layer between them, and four channels crossing that layer to join the two interiors.",
+      "hook": "Cellulose is the brick, pectin is the mortar, and plasmodesmata are the doors left in the wall.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the chemical nature of the middle lamella and the difference between plant, fungal and bacterial walls. Plasmodesmata appear in transport questions.",
+      "trap": "Fungal walls are chitin, not cellulose. Bacterial walls are peptidoglycan. Only plants use cellulose as the main wall fibre.",
+      "recall": [
+        {
+          "q": "The middle lamella of a plant cell wall is mainly made of",
+          "options": ["Calcium pectate", "Chitin", "Peptidoglycan", "Lignin"],
+          "answer": 0,
+          "why": "Calcium pectate cements neighbouring plant cells. Chitin is the fungal wall material, peptidoglycan is bacterial, and lignin hardens older walls rather than forming the middle lamella."
+        },
+        {
+          "q": "Plasmodesmata allow",
+          "options": ["Water to enter the roots", "Cytoplasm and signals to pass between plant cells", "Proteins to be built", "DNA to be copied"],
+          "answer": 1,
+          "why": "Plasmodesmata are channels across the wall that connect the cytoplasm of adjacent cells, so molecules and signals can move between them. They are not sites of protein synthesis or DNA copying."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the middle lamella composition and the plasmodesmata description."
+    },
+    {
+      "id": "endoplasmic-reticulum",
+      "ncert_ref": "Ch 8, section 8.5.3 Endomembrane System",
+      "key_phrase": "endoplasmic reticulum",
+      "meaning": "The endoplasmic reticulum is a network of flattened sacs and tubes running through the cytoplasm. Rough ER carries ribosomes on its surface and makes proteins that are pushed into its lumen, while smooth ER has no ribosomes and makes lipids and steroids. Its membrane is continuous with the outer membrane of the nucleus.",
+      "words": [
+        {
+          "term": "lumen",
+          "meaning": "The space inside a sac or tube of the endoplasmic reticulum.",
+          "breakdown": "Latin lumen = light, later used for the inside space of a tube",
+          "trap": "The lumen is inside the ER membrane, separate from the cytoplasm."
+        },
+        {
+          "term": "rough ER",
+          "meaning": "Endoplasmic reticulum with ribosomes attached.",
+          "breakdown": "rough because the ribosomes make its surface look grainy under a microscope",
+          "trap": "The ribosomes sit on the cytosolic side of the membrane, not inside the lumen."
+        },
+        {
+          "term": "smooth ER",
+          "meaning": "Endoplasmic reticulum without ribosomes, active in lipid synthesis.",
+          "breakdown": "smooth because it looks like plain tubules under a microscope",
+          "trap": "Smooth ER does not make proteins. Students give both forms the same job."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><rect x='10' y='20' width='60' height='60'/><circle cx='40' cy='50' r='12'/><path d='M70 50 H100'/><path d='M110 30 C150 20 170 60 210 45 S270 30 300 45'/><path d='M110 62 C150 52 170 92 210 77 S270 62 300 77'/><g fill='currentColor' stroke='none'><circle cx='130' cy='38' r='3'/><circle cx='160' cy='36' r='3'/><circle cx='190' cy='42' r='3'/><circle cx='220' cy='44' r='3'/><circle cx='250' cy='36' r='3'/></g><text x='112' y='112' font-size='10' fill='currentColor' stroke='none'>rough ER with ribosomes</text><text x='112' y='132' font-size='10' fill='currentColor' stroke='none'>lumen is the space inside</text></svg>",
+      "visual_alt": "A nucleus on the left connected to a folded membrane network on the right. Dots on the upper folds mark ribosomes, and the space inside the folds is labelled lumen.",
+      "hook": "Rough ER is a conveyor belt with workers on it. Smooth ER is the same belt with the workers removed, now carrying oil instead of protein.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET matches organelles to functions and asks why cells that secrete proteins, such as antibody-producing cells, are rich in rough ER. Smooth ER appears in lipid and steroid questions.",
+      "trap": "Smooth ER does not make proteins. The ribosomes on rough ER do, and the ER only moves and folds the product.",
+      "recall": [
+        {
+          "q": "Which organelle is continuous with the outer membrane of the nucleus?",
+          "options": ["Golgi apparatus", "Endoplasmic reticulum", "Lysosome", "Mitochondrion"],
+          "answer": 1,
+          "why": "The endoplasmic reticulum membrane is continuous with the outer nuclear membrane, which is why the two are treated together as part of the endomembrane system. The Golgi, lysosomes and mitochondria are separate."
+        },
+        {
+          "q": "Smooth endoplasmic reticulum is mainly associated with",
+          "options": ["Protein synthesis", "Lipid and steroid synthesis", "DNA replication", "Photosynthesis"],
+          "answer": 1,
+          "why": "Smooth ER lacks ribosomes and makes lipids and steroids. Protein synthesis on the ER happens on the rough form, where ribosomes are attached."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the continuity with the nuclear envelope and the rough versus smooth functions."
+    },
+    {
+      "id": "golgi-apparatus",
+      "ncert_ref": "Ch 8, section 8.5.3 Endomembrane System, Golgi apparatus",
+      "key_phrase": "cis and trans faces",
+      "meaning": "The Golgi apparatus is a stack of flattened curved sacs with a cis face that receives material and a trans face that ships it out. As proteins pass through, sugars are added and the cargo is sorted into vesicles. It is also where lysosomes and many cell wall materials are packed.",
+      "words": [
+        {
+          "term": "cisternae",
+          "meaning": "The flattened sacs that make up the Golgi stack.",
+          "breakdown": "Latin cisterna = a reservoir",
+          "trap": "Cisternae are separate sacs, not one long tube."
+        },
+        {
+          "term": "cis face",
+          "meaning": "The receiving side of the Golgi, near the endoplasmic reticulum.",
+          "breakdown": "cis = on this side",
+          "trap": "Cis receives and trans ships. Students reverse the two when a diagram faces the other way."
+        },
+        {
+          "term": "glycosylation",
+          "meaning": "Adding sugar chains to proteins and lipids.",
+          "breakdown": "glyco = sugar, lysis = loosening or attaching here",
+          "trap": "Glycosylation is a Golgi job for many proteins, but it can begin in the ER. It does not happen in lysosomes."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><path d='M60 34 C120 24 190 44 260 34'/><path d='M60 62 C120 52 190 72 260 62'/><path d='M60 90 C120 80 190 100 260 90'/><path d='M60 118 C120 108 190 128 260 118'/><path d='M20 76 H56 M16 70 L24 76 L16 82'/><text x='10' y='58' font-size='10' fill='currentColor' stroke='none'>cis</text><path d='M264 76 H300 M292 70 L300 76 L292 82'/><text x='280' y='58' font-size='10' fill='currentColor' stroke='none'>trans</text></svg>",
+      "visual_alt": "Four curved stacked sacs with an arrow entering the cis face on the left and an arrow leaving the trans face on the right.",
+      "hook": "The Golgi is a post office: parcels arrive at the back door, get labelled, and leave from the front.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the polarity of the Golgi, which organelle forms lysosomes, and why the Golgi is called the shipping department of the cell.",
+      "trap": "The cis face is the receiving side, not the shipping side. The names describe position, not direction of travel.",
+      "recall": [
+        {
+          "q": "The face of the Golgi apparatus that receives material from the endoplasmic reticulum is the",
+          "options": ["Cis face", "Trans face", "Matrix face", "Stromal face"],
+          "answer": 0,
+          "why": "The cis face lies near the ER and receives vesicles. The trans face is the exit side, and matrix and stroma belong to mitochondria and plastids."
+        },
+        {
+          "q": "Lysosomes are formed by",
+          "options": ["The Golgi apparatus", "The nucleus", "Mitochondria", "Ribosomes"],
+          "answer": 0,
+          "why": "The Golgi packages hydrolytic enzymes into vesicles that become lysosomes. Ribosomes make proteins but do not form the vesicle, and mitochondria do not bud lysosomes."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the cis and trans description and the origin of lysosomes."
+    },
+    {
+      "id": "lysosomes",
+      "ncert_ref": "Ch 8, section 8.5.3 Endomembrane System, Lysosomes",
+      "key_phrase": "hydrolytic enzymes",
+      "meaning": "A lysosome is a small vesicle filled with hydrolytic enzymes that work best at acidic pH. It digests food particles, worn-out organelles and material taken in from outside, and it can release its enzymes to break down a dying cell. Because of that last job it is often called a suicidal bag.",
+      "words": [
+        {
+          "term": "hydrolase",
+          "meaning": "An enzyme that splits a molecule by adding water.",
+          "breakdown": "hydro = water, lysis = splitting",
+          "trap": "Hydrolases are not only in lysosomes, but lysosomes are the cell's concentrated bag of them."
+        },
+        {
+          "term": "autophagy",
+          "meaning": "Digestion of the cell's own worn-out parts.",
+          "breakdown": "auto = self, phagy = eating",
+          "trap": "Autophagy is not the cell eating another cell. That is phagocytosis."
+        },
+        {
+          "term": "suicidal bag",
+          "meaning": "A nickname for the lysosome because it can digest its own cell.",
+          "breakdown": "named for the release of its enzymes when the membrane breaks",
+          "trap": "The nickname does not mean the lysosome always kills the cell. It does so only when its membrane is damaged or the cell is dying."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 140' fill='none' stroke='currentColor' stroke-width='2'><circle cx='90' cy='70' r='46'/><circle cx='74' cy='58' r='6'/><circle cx='104' cy='66' r='4'/><circle cx='86' cy='88' r='5'/><text x='46' y='132' font-size='10' fill='currentColor' stroke='none'>lysosome, pH about 5</text><path d='M144 70 H176 M168 64 L176 70 L168 76'/><circle cx='224' cy='70' r='34' stroke-dasharray='5 3'/><path d='M210 70 C218 56 236 84 244 70'/><text x='188' y='132' font-size='10' fill='currentColor' stroke='none'>digests worn-out organelle</text></svg>",
+      "visual_alt": "A lysosome drawn as a circle filled with enzyme dots, an arrow, and a second circle enclosing a damaged organelle being broken down.",
+      "hook": "A lysosome is the cell's stomach and its recycling bin in one acid bag.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the optimum pH of lysosomal enzymes, the source of lysosomes and the meaning of autophagy. It also asks why lysosomes are called suicidal bags.",
+      "trap": "Lysosomal enzymes work in acid, not at neutral pH, and the organelle is formed by the Golgi rather than directly by the ER.",
+      "recall": [
+        {
+          "q": "The enzymes inside a lysosome work best at",
+          "options": ["Acidic pH", "Neutral pH", "Strongly alkaline pH", "Any pH equally"],
+          "answer": 0,
+          "why": "Lysosomal hydrolases are acid hydrolases with an acidic optimum. That is why the lysosome keeps its interior acidic and why leaking enzymes into the neutral cytoplasm is damaging."
+        },
+        {
+          "q": "Autophagy means",
+          "options": ["The cell digesting its own worn-out parts", "The cell taking in bacteria", "The cell dividing", "The cell making proteins"],
+          "answer": 0,
+          "why": "Autophagy is self-digestion of damaged organelles or cell material by lysosomes. Taking in outside particles is phagocytosis, and division and protein synthesis are unrelated."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the pH statement and the origin of lysosomes."
+    },
+    {
+      "id": "vacuole",
+      "ncert_ref": "Ch 8, section 8.5.3 Endomembrane System, Vacuoles",
+      "key_phrase": "tonoplast",
+      "meaning": "A plant vacuole is a large sac bounded by a membrane called the tonoplast. In a mature plant cell it can fill most of the cell volume with sap, and the water pushing outward keeps the cell firm. Amoeba has a contractile vacuole that pumps out excess water instead.",
+      "words": [
+        {
+          "term": "tonoplast",
+          "meaning": "The membrane that surrounds a plant vacuole.",
+          "breakdown": "tono = tension, plast = formed",
+          "trap": "The tonoplast is not the plasma membrane. It is the vacuole's own membrane, inside the cell."
+        },
+        {
+          "term": "turgor",
+          "meaning": "The firmness of a plant cell caused by water pushing on the wall.",
+          "breakdown": "Latin turgere = to swell",
+          "trap": "Turgor comes from water inside the vacuole pressing outward, not from the wall pulling inward."
+        },
+        {
+          "term": "contractile vacuole",
+          "meaning": "A vacuole that collects and expels excess water.",
+          "breakdown": "contractile = able to squeeze",
+          "trap": "Contractile vacuoles belong to freshwater protists such as Amoeba, not to plant cells."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 140' fill='none' stroke='currentColor' stroke-width='2'><rect x='20' y='20' width='130' height='100' rx='6'/><rect x='32' y='32' width='106' height='76' rx='34' stroke-dasharray='5 3'/><text x='20' y='136' font-size='10' fill='currentColor' stroke='none'>plant cell: one large vacuole</text><circle cx='240' cy='70' r='46'/><circle cx='240' cy='76' r='18'/><text x='200' y='136' font-size='10' fill='currentColor' stroke='none'>Amoeba: contractile vacuole</text></svg>",
+      "visual_alt": "A rectangular plant cell mostly filled by one dashed vacuole, and beside it an Amoeba with a small round vacuole.",
+      "hook": "A full vacuole is a packed water balloon that holds the tent up. Let the water out and the plant droops.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks what the tonoplast is and which organism uses a contractile vacuole. Vacuoles also appear in questions on turgidity and cell volume.",
+      "trap": "The vacuole membrane is the tonoplast, not the plasma membrane. Students swap the two names in diagrams.",
+      "recall": [
+        {
+          "q": "The membrane surrounding a plant vacuole is called the",
+          "options": ["Tonoplast", "Plasmalemma", "Cristae", "Thylakoid"],
+          "answer": 0,
+          "why": "Tonoplast is the vacuolar membrane. Plasmalemma is another name for the plasma membrane, cristae are folds of the inner mitochondrial membrane, and thylakoids are inside chloroplasts."
+        },
+        {
+          "q": "A contractile vacuole is used mainly to",
+          "options": ["Store starch", "Remove excess water", "Make proteins", "Carry out photosynthesis"],
+          "answer": 1,
+          "why": "It collects surplus water and squeezes it out, which matters for freshwater organisms that take in water constantly. Starch storage, protein synthesis and photosynthesis belong elsewhere."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the volume statement and the Amoeba example."
+    },
+    {
+      "id": "mitochondria",
+      "ncert_ref": "Ch 8, section 8.5.4 Mitochondria",
+      "key_phrase": "cristae",
+      "meaning": "A mitochondrion has two membranes, and the inner one folds inward as cristae around a space called the matrix. The folds carry the machinery of aerobic respiration, so this is the main site of ATP production. It also has its own circular DNA and 70S ribosomes, which is why it is called semi-autonomous.",
+      "words": [
+        {
+          "term": "cristae",
+          "meaning": "Folds of the inner mitochondrial membrane.",
+          "breakdown": "Latin crista = crest",
+          "trap": "Cristae are folds of the inner membrane, not separate sacs floating in the matrix."
+        },
+        {
+          "term": "matrix",
+          "meaning": "The fluid space inside the inner mitochondrial membrane.",
+          "breakdown": "Latin matrix = womb or mould",
+          "trap": "The matrix is not the space between the two membranes. That is the intermembrane space."
+        },
+        {
+          "term": "semi-autonomous",
+          "meaning": "Partly self-governing, because the organelle has its own DNA and ribosomes.",
+          "breakdown": "semi = half, autonomos = self-ruling",
+          "trap": "Semi-autonomous does not mean fully independent. Most mitochondrial proteins are still coded by nuclear DNA."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><ellipse cx='110' cy='75' rx='90' ry='50'/><ellipse cx='110' cy='75' rx='78' ry='38'/><path d='M52 55 C70 75 70 75 52 95'/><path d='M88 52 C106 75 106 75 88 98'/><path d='M124 52 C142 75 142 75 124 98'/><path d='M160 55 C178 75 178 75 160 95'/><text x='216' y='50' font-size='10' fill='currentColor' stroke='none'>double membrane</text><text x='216' y='76' font-size='10' fill='currentColor' stroke='none'>cristae are folds</text><text x='216' y='102' font-size='10' fill='currentColor' stroke='none'>matrix inside</text></svg>",
+      "visual_alt": "An oval mitochondrion with two outlines, inner folds crossing the interior, and labels for the double membrane, cristae and matrix.",
+      "hook": "A mitochondrion is a power plant with folded radiator fins. More folds mean more surface for the reactions that make ATP.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the function of cristae, why mitochondria are called semi-autonomous, and the ribosome type inside them. Maternal inheritance is a related question.",
+      "trap": "The matrix is inside the inner membrane. The space between the two membranes is separate and is not called the matrix.",
+      "recall": [
+        {
+          "q": "The folds of the inner mitochondrial membrane are called",
+          "options": ["Cristae", "Grana", "Cisternae", "Microvilli"],
+          "answer": 0,
+          "why": "Cristae increase the surface area for the reactions of aerobic respiration. Grana are stacks of thylakoids in chloroplasts, cisternae are Golgi sacs, and microvilli are folds of the plasma membrane."
+        },
+        {
+          "q": "Mitochondria are called semi-autonomous because they",
+          "options": ["Have their own DNA and 70S ribosomes", "Have no membrane", "Can live outside the cell", "Make their own cell wall"],
+          "answer": 0,
+          "why": "They carry circular DNA and 70S ribosomes and make some of their own proteins, which is why they are semi-autonomous. They still depend on nuclear genes for most proteins and cannot live outside the cell."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the 70S ribosome statement and the cristae description."
+    },
+    {
+      "id": "plastids",
+      "ncert_ref": "Ch 8, section 8.5.5 Plastids",
+      "key_phrase": "grana",
+      "meaning": "Chloroplasts are plastids that hold chlorophyll and carry out photosynthesis. Inside, flattened sacs called thylakoids are stacked into grana, and the fluid around them is the stroma. Leucoplasts store food without colour, and chromoplasts hold the pigments that colour flowers and fruit.",
+      "words": [
+        {
+          "term": "thylakoid",
+          "meaning": "A flattened sac inside a chloroplast that carries chlorophyll.",
+          "breakdown": "Greek thylakos = sac",
+          "trap": "Chlorophyll sits in the thylakoid membrane, not in the stroma."
+        },
+        {
+          "term": "granum",
+          "meaning": "A stack of thylakoids.",
+          "breakdown": "Latin granum = grain; plural grana",
+          "trap": "One granum is a stack, not a single sac. A single sac is a thylakoid."
+        },
+        {
+          "term": "stroma",
+          "meaning": "The fluid around the grana inside a chloroplast.",
+          "breakdown": "Greek stroma = bed or mattress",
+          "trap": "The stroma is not the space inside the thylakoid. It is the fluid around the stacks."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><ellipse cx='110' cy='75' rx='95' ry='52'/><g><rect x='58' y='48' width='34' height='7'/><rect x='54' y='60' width='42' height='7'/><rect x='58' y='72' width='34' height='7'/></g><g><rect x='122' y='64' width='34' height='7'/><rect x='118' y='76' width='42' height='7'/><rect x='122' y='88' width='34' height='7'/></g><text x='212' y='44' font-size='10' fill='currentColor' stroke='none'>thylakoid stack = granum</text><text x='212' y='74' font-size='10' fill='currentColor' stroke='none'>stroma = fluid around</text><text x='212' y='104' font-size='10' fill='currentColor' stroke='none'>double membrane</text></svg>",
+      "visual_alt": "A chloroplast with two outlines containing two stacks of flat sacs, labelled as grana, with the surrounding fluid labelled stroma.",
+      "hook": "A chloroplast is a solar panel factory: the stacked thylakoid sheets catch light, and the stroma does the assembly work.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the difference between grana and stroma, which plastid stores starch, and where chlorophyll is located.",
+      "trap": "Chlorophyll is in the thylakoid membrane, not dissolved in the stroma. Leucoplasts store food and have no pigment.",
+      "recall": [
+        {
+          "q": "A stack of thylakoids inside a chloroplast is called a",
+          "options": ["Granum", "Crista", "Cisterna", "Nucleoid"],
+          "answer": 0,
+          "why": "Thylakoids stack into grana. Cristae are mitochondrial folds, cisternae are Golgi sacs, and the nucleoid is the DNA region of a prokaryote."
+        },
+        {
+          "q": "Which plastid stores food material without carrying pigment?",
+          "options": ["Chloroplast", "Leucoplast", "Chromoplast", "Lysosome"],
+          "answer": 1,
+          "why": "Leucoplasts are colourless storage plastids, common in roots and tubers. Chloroplasts carry chlorophyll, chromoplasts carry other pigments, and a lysosome is not a plastid."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the plastid types and where chlorophyll is placed."
+    },
+    {
+      "id": "nucleus",
+      "ncert_ref": "Ch 8, section 8.5.10 Nucleus",
+      "key_phrase": "nuclear envelope",
+      "meaning": "The nucleus is wrapped by a double membrane, the nuclear envelope, which has pores that let RNA and proteins pass. Inside is the nucleolus, where ribosomal RNA is made, and chromatin, which is DNA wound around histone proteins. Each length of DNA with its bead of histones is a nucleosome.",
+      "words": [
+        {
+          "term": "nuclear envelope",
+          "meaning": "The double membrane around the nucleus, pierced by pores.",
+          "breakdown": "envelope from Old French envoloper = to wrap",
+          "trap": "The envelope has two membranes, not one, and the pores are channels through both."
+        },
+        {
+          "term": "nucleolus",
+          "meaning": "A dense region inside the nucleus where ribosomal RNA is made.",
+          "breakdown": "nucleus + olus, a small thing",
+          "trap": "The nucleolus has no membrane of its own. It is a region, not an organelle with a coat."
+        },
+        {
+          "term": "nucleosome",
+          "meaning": "DNA wrapped around a group of histone proteins.",
+          "breakdown": "nucleus + soma = body",
+          "trap": "A nucleosome is DNA plus histones, not DNA alone. The histone core is the bead and the DNA is the thread."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><circle cx='110' cy='75' r='60'/><circle cx='110' cy='75' r='52' stroke-dasharray='6 4'/><circle cx='110' cy='58' r='13'/><path d='M70 95 C90 80 130 110 150 90'/><path d='M70 112 C92 98 128 124 150 106'/><text x='186' y='48' font-size='10' fill='currentColor' stroke='none'>nuclear envelope</text><text x='186' y='74' font-size='10' fill='currentColor' stroke='none'>nucleolus</text><text x='186' y='100' font-size='10' fill='currentColor' stroke='none'>chromatin</text><text x='186' y='126' font-size='10' fill='currentColor' stroke='none'>pores in both membranes</text><line x1='170' y1='44' x2='152' y2='52'/><line x1='170' y1='70' x2='124' y2='58'/><line x1='170' y1='96' x2='146' y2='96'/></svg>",
+      "visual_alt": "A nucleus with two outlines and gaps for pores, a dense nucleolus, and coiled chromatin threads, with each part labelled.",
+      "hook": "The nucleus is a library with doorstaff: the pores check every parcel, and the nucleolus is the desk that builds the shelves.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the function of the nucleolus, the composition of a nucleosome, and what passes through nuclear pores.",
+      "trap": "The nucleolus is not a membrane-bound organelle inside the nucleus. It is a dense region where rRNA is made.",
+      "recall": [
+        {
+          "q": "A nucleosome is made of",
+          "options": ["DNA wound around histones", "RNA and ribosomes", "Two membranes and pores", "Protein and lipid"],
+          "answer": 0,
+          "why": "A nucleosome is a stretch of DNA coiled around a core of histone proteins, the basic unit of chromatin. RNA with ribosomes, the double membrane and protein with lipid describe other structures."
+        },
+        {
+          "q": "The nucleolus is the site of",
+          "options": ["Ribosomal RNA synthesis", "DNA replication", "ATP production", "Lipid synthesis"],
+          "answer": 0,
+          "why": "The nucleolus is where ribosomal RNA is transcribed and ribosome subunits are assembled. ATP production is mitochondrial and lipid synthesis is smooth ER work."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the nucleolus and nucleosome definitions."
+    },
+    {
+      "id": "chromosomes",
+      "ncert_ref": "Ch 8, section 8.5.11 Chromosomes",
+      "key_phrase": "centromere",
+      "meaning": "A chromosome is one DNA molecule with its proteins, and it becomes visible only when the cell is dividing. Its two copies are held together at the centromere, and the ends are capped by telomeres. The position of the centromere gives the four shapes: metacentric, submetacentric, acrocentric and telocentric.",
+      "words": [
+        {
+          "term": "centromere",
+          "meaning": "The point where two chromatids are held together.",
+          "breakdown": "centro = centre, mere = part",
+          "trap": "The centromere is not always in the centre. Its position defines the chromosome shape."
+        },
+        {
+          "term": "telomere",
+          "meaning": "The protected end of a chromosome.",
+          "breakdown": "telo = end, mere = part",
+          "trap": "Telomeres are the ends, not the joining point. They shorten with repeated cell divisions."
+        },
+        {
+          "term": "chromatid",
+          "meaning": "One of the two identical copies of a replicated chromosome.",
+          "breakdown": "chroma = colour, soma = body",
+          "trap": "Two chromatids joined at one centromere still count as one chromosome, not two."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 160' fill='none' stroke='currentColor' stroke-width='2'><path d='M40 30 V130'/><path d='M60 30 V130'/><path d='M40 78 H60'/><circle cx='50' cy='78' r='6'/><text x='24' y='152' font-size='10' fill='currentColor' stroke='none'>metacentric</text><path d='M110 30 V130'/><path d='M130 30 V130'/><path d='M110 58 H130'/><circle cx='120' cy='58' r='6'/><text x='94' y='152' font-size='10' fill='currentColor' stroke='none'>submetacentric</text><path d='M180 30 V130'/><path d='M200 30 V130'/><path d='M180 42 H200'/><circle cx='190' cy='42' r='6'/><text x='168' y='152' font-size='10' fill='currentColor' stroke='none'>acrocentric</text><path d='M250 30 V130'/><path d='M270 30 V130'/><path d='M250 32 H270'/><circle cx='260' cy='32' r='6'/><text x='236' y='152' font-size='10' fill='currentColor' stroke='none'>telocentric</text></svg>",
+      "visual_alt": "Four pairs of vertical chromatids joined at different points: centre, just off centre, near one end and at the very end, each labelled with its shape name.",
+      "hook": "A chromosome is a shoelace: telomeres are the plastic tips, the centromere is the knot that holds the two halves.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the shape of a chromosome from centromere position, and the number of chromosomes versus chromatids after replication.",
+      "trap": "After replication, a chromosome with two chromatids is still one chromosome. Students double the count.",
+      "recall": [
+        {
+          "q": "A chromosome with the centromere exactly in the middle is called",
+          "options": ["Metacentric", "Acrocentric", "Telocentric", "Submetacentric"],
+          "answer": 0,
+          "why": "Meta means middle, so a metacentric chromosome has its centromere at the centre and two equal arms. Submetacentric is slightly off centre, acrocentric is near the end, and telocentric is at the end."
+        },
+        {
+          "q": "A replicated chromosome with two chromatids joined at one centromere counts as",
+          "options": ["One chromosome", "Two chromosomes", "Four chromosomes", "Half a chromosome"],
+          "answer": 0,
+          "why": "Chromosome number counts centromeres, so the joined pair is one chromosome with two chromatids. Counting chromatids as chromosomes doubles the number and is a common error."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the four shape names and the chromatid counting statement."
+    },
+    {
+      "id": "cilia-and-flagella",
+      "ncert_ref": "Ch 8, section 8.5.8 Cilia and Flagella, and 8.5.9 Centrosome and Centrioles",
+      "key_phrase": "9 + 2",
+      "meaning": "Cilia and flagella are hair-like extensions covered by the plasma membrane, and they move the cell or sweep fluid past it. Their core is a ring of nine microtubule pairs around two central microtubules, called the 9 + 2 pattern. A centriole has nine triplets and no central pair, which is the usual confusion.",
+      "words": [
+        {
+          "term": "axoneme",
+          "meaning": "The microtubule core of a cilium or flagellum.",
+          "breakdown": "axon = axis, nema = thread",
+          "trap": "The axoneme is inside the membrane-covered extension, not the whole cilium."
+        },
+        {
+          "term": "microtubule",
+          "meaning": "A hollow tube of the protein tubulin that forms part of the cytoskeleton.",
+          "breakdown": "micro = small, tubulus = little tube",
+          "trap": "Microtubules are tubes, microfilaments are solid threads. Both are cytoskeleton, but they are not the same."
+        },
+        {
+          "term": "centriole",
+          "meaning": "A cylinder of nine microtubule triplets that helps organise spindle fibres.",
+          "breakdown": "centrum = centre",
+          "trap": "A centriole is 9 triplets, not 9 + 2. The 9 + 2 pattern belongs to cilia and flagella."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 160' fill='none' stroke='currentColor' stroke-width='2'><circle cx='80' cy='80' r='52'/><g fill='currentColor' stroke='none'><circle cx='80' cy='36' r='5'/><circle cx='102' cy='42' r='5'/><circle cx='118' cy='60' r='5'/><circle cx='124' cy='80' r='5'/><circle cx='118' cy='100' r='5'/><circle cx='102' cy='118' r='5'/><circle cx='80' cy='124' r='5'/><circle cx='58' cy='118' r='5'/><circle cx='42' cy='100' r='5'/><circle cx='36' cy='80' r='5'/><circle cx='42' cy='60' r='5'/><circle cx='58' cy='42' r='5'/><circle cx='80' cy='72' r='4'/><circle cx='80' cy='88' r='4'/></g><text x='20' y='152' font-size='10' fill='currentColor' stroke='none'>cilium: 9 pairs + 2</text><circle cx='240' cy='80' r='46'/><g fill='currentColor' stroke='none'><circle cx='240' cy='46' r='4'/><circle cx='257' cy='50' r='4'/><circle cx='268' cy='64' r='4'/><circle cx='272' cy='80' r='4'/><circle cx='268' cy='96' r='4'/><circle cx='257' cy='110' r='4'/><circle cx='240' cy='114' r='4'/><circle cx='223' cy='110' r='4'/><circle cx='212' cy='96' r='4'/><circle cx='208' cy='80' r='4'/><circle cx='212' cy='64' r='4'/><circle cx='223' cy='50' r='4'/></g><text x='186' y='152' font-size='10' fill='currentColor' stroke='none'>centriole: 9 triplets, hollow</text></svg>",
+      "visual_alt": "Left, a ring of nine dots around two central dots labelled as the cilium pattern. Right, a ring of nine dots with an empty centre labelled as the centriole pattern.",
+      "hook": "Nine ropes around two fighters in a boxing ring. A centriole is nine ropes around an empty ring.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the difference between the 9 + 2 and 9 triplet patterns, and which structures use each. Cilia also appear in questions on the respiratory tract and fallopian tube.",
+      "trap": "A centriole is nine triplets with no central pair. Using 9 + 2 for both is the classic error.",
+      "recall": [
+        {
+          "q": "The core of a cilium shows",
+          "options": ["Nine pairs of microtubules around two central ones", "Nine triplets with no central pair", "A solid core of actin", "A single central tubule"],
+          "answer": 0,
+          "why": "A cilium or flagellum has the 9 + 2 arrangement: nine peripheral pairs and two central microtubules. Nine triplets with no central pair describes a centriole."
+        },
+        {
+          "q": "A centriole is made of",
+          "options": ["Nine microtubule triplets", "Nine microtubule pairs plus two", "Cellulose fibres", "Intermediate filaments only"],
+          "answer": 0,
+          "why": "A centriole is a cylinder of nine microtubule triplets. The 9 + 2 pattern belongs to cilia and flagella, and cellulose belongs to plant cell walls."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the 9 + 2 and 9 triplet descriptions and the centriole function."
     }
   ]
 }
