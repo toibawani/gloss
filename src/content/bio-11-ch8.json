@@ -1,0 +1,98 @@
+{
+  "id": "bio-11-ch8",
+  "subject": "Biology",
+  "class": 11,
+  "title": "Cell: The Unit of Life",
+  "paragraphs": [
+    {
+      "id": "cell-theory",
+      "ncert_ref": "Section 8.2, Cell Theory. Page and line: not verified.",
+      "key_phrase": "omnis cellula-e cellula",
+      "meaning": "Every living thing is built from cells, and the cell is the basic unit of life. Schleiden and Schwann gave this idea. Virchow added the second half: new cells do not appear from nothing, they come from cells that already exist.",
+      "words": [
+        {
+          "term": "omnis cellula-e cellula",
+          "meaning": "Every cell comes from an existing cell.",
+          "breakdown": "omnis = every, cellula = small cell, e = from",
+          "trap": "Students credit this line to Schleiden and Schwann. It is Virchow's addition."
+        },
+        {
+          "term": "cell",
+          "meaning": "The smallest unit that carries out the activities of life.",
+          "breakdown": "Latin cella = small room. Robert Hooke used the word in 1665 after seeing boxlike compartments in cork.",
+          "trap": "Hooke saw only the walls of dead cork cells, never the living contents."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><text x='10' y='18' font-size='12' fill='currentColor' stroke='none'>1. Schleiden + Schwann: bodies are made of cells</text><rect x='10' y='28' width='30' height='30'/><rect x='40' y='28' width='30' height='30'/><rect x='70' y='28' width='30' height='30'/><rect x='10' y='58' width='30' height='30'/><rect x='40' y='58' width='30' height='30'/><rect x='70' y='58' width='30' height='30'/><text x='10' y='112' font-size='12' fill='currentColor' stroke='none'>2. Virchow: a cell comes only from a cell</text><rect x='10' y='122' width='26' height='22'/><path d='M44 133 H84 M76 127 L84 133 L76 139'/><rect x='92' y='122' width='26' height='22'/><rect x='124' y='122' width='26' height='22'/></svg>",
+      "visual_alt": "Top: six squares forming a block, labelled as the Schleiden and Schwann idea that bodies are made of cells. Bottom: one square with an arrow to two squares, labelled as Virchow's idea that cells come from cells.",
+      "hook": "Schleiden and Schwann counted the bricks. Virchow noticed every new brick is baked from an old one.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks who said what: who proposed the cell theory and who added the new-cells rule. It also appears as an exceptions question about viruses.",
+      "trap": "Schleiden and Schwann proposed the cell theory. Virchow modified it. Options often swap the names.",
+      "recall": [
+        {
+          "q": "Who explained that new cells form from pre-existing cells?",
+          "options": ["Matthias Schleiden", "Theodor Schwann", "Rudolf Virchow", "Robert Hooke"],
+          "answer": 2,
+          "why": "Virchow added that cells divide and new cells come from existing ones, which gave the cell theory its final shape. Schleiden and Schwann gave the first part, that bodies are made of cells."
+        },
+        {
+          "q": "What did Robert Hooke see in a thin slice of cork in 1665?",
+          "options": ["Living cells with nuclei", "Boxlike compartments", "Bacteria moving", "Chromosomes"],
+          "answer": 1,
+          "why": "He saw many small boxlike compartments, the walls of dead cork cells, and called them cells. He did not see living contents or nuclei."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Needs expert review: verify page and line numbers and attributions against the current NCERT edition."
+    },
+    {
+      "id": "prokaryotic-cell",
+      "ncert_ref": "Section 8.4, Prokaryotic Cells. Page and line: not verified.",
+      "key_phrase": "prokaryotic cells",
+      "meaning": "A prokaryotic cell has no nucleus wrapped in a membrane. Its DNA lies in an open region of the cytoplasm called the nucleoid, and it has no membrane-bound organelles. It still has ribosomes, and many bacteria also carry small extra rings of DNA called plasmids.",
+      "words": [
+        {
+          "term": "prokaryotic",
+          "meaning": "Describes a cell without a membrane-bound nucleus.",
+          "breakdown": "pro = before, karyon = kernel or nucleus (Greek)",
+          "trap": "Students think prokaryotes have no DNA. They have DNA, just not inside a nuclear membrane."
+        },
+        {
+          "term": "nucleoid",
+          "meaning": "The region where the DNA of a prokaryote sits.",
+          "breakdown": "nucleus + oid = nucleus-like",
+          "trap": "Nucleoid looks like a nucleus but has no membrane around it."
+        },
+        {
+          "term": "plasmid",
+          "meaning": "A small circular piece of DNA outside the main DNA.",
+          "breakdown": "from cytoplasm + id (small unit)",
+          "trap": "Plasmids are extra DNA. Cells can live without them, but they often carry traits like antibiotic resistance."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 160' fill='none' stroke='currentColor' stroke-width='2'><rect x='10' y='25' width='190' height='110' rx='55'/><rect x='18' y='33' width='174' height='94' rx='47' stroke-dasharray='4 3'/><path d='M70 70 C90 50 110 90 130 70 S150 90 140 100 S100 110 85 98 S60 85 70 70'/><circle cx='165' cy='95' r='9'/><circle cx='60' cy='112' r='3' fill='currentColor'/><circle cx='105' cy='120' r='3' fill='currentColor'/><circle cx='165' cy='60' r='3' fill='currentColor'/><circle cx='48' cy='82' r='3' fill='currentColor'/><line x1='195' y1='50' x2='225' y2='40'/><text x='230' y='44' font-size='11' fill='currentColor' stroke='none'>cell wall</text><line x1='140' y1='72' x2='225' y2='72'/><text x='230' y='76' font-size='11' fill='currentColor' stroke='none'>nucleoid</text><line x1='174' y1='95' x2='225' y2='104'/><text x='230' y='108' font-size='11' fill='currentColor' stroke='none'>plasmid</text><line x1='108' y1='122' x2='225' y2='136'/><text x='230' y='140' font-size='11' fill='currentColor' stroke='none'>ribosomes</text></svg>",
+      "visual_alt": "A rounded bacterial cell with an outer wall and an inner dashed membrane. Inside are a tangled nucleoid, a small plasmid ring and scattered ribosome dots, each labelled.",
+      "hook": "A prokaryote is a studio flat: one open room, DNA lying on the floor. A eukaryote has a locked bedroom for the DNA, the nucleus.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET likes prokaryote versus eukaryote comparisons: ribosome type, nuclear membrane, plasmids and organelles.",
+      "trap": "No membrane-bound organelles does not mean no ribosomes. Prokaryotes have 70S ribosomes, which have no membrane.",
+      "recall": [
+        {
+          "q": "Which of these is present in a prokaryotic cell?",
+          "options": ["Nucleolus", "70S ribosomes", "Mitochondria", "Golgi apparatus"],
+          "answer": 1,
+          "why": "Prokaryotes have 70S ribosomes in the cytoplasm. Nucleolus, mitochondria and Golgi apparatus belong to eukaryotic cells."
+        },
+        {
+          "q": "Where is the DNA of a bacterial cell found?",
+          "options": ["Inside a nuclear envelope", "In the nucleoid, with no membrane around it", "Inside mitochondria", "Inside the cell wall"],
+          "answer": 1,
+          "why": "Bacterial DNA lies in the nucleoid region of the cytoplasm. No membrane separates it from the rest of the cell."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Needs expert review: verify page and line numbers and the 70S ribosome statement against the current NCERT edition."
+    }
+  ]
+}

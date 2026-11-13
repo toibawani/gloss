@@ -1,0 +1,14 @@
+{
+  "name": "Gloss",
+  "short_name": "Gloss",
+  "description": "Margin notes for every NCERT paragraph.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#F1EBDD",
+  "theme_color": "#8A3B1E",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
