@@ -104,7 +104,7 @@ export function Reader({ id, para }: { id: string; para?: string }) {
       </header>
 
       <div className="pager">
-        <button className="btn btn-icon" onClick={() => go(-1)} disabled={i === 0} aria-label="Previous paragraph">
+        <button className="btn btn-icon btn-quiet" onClick={() => go(-1)} disabled={i === 0} aria-label="Previous paragraph">
           <Icon name="left" />
         </button>
         <div className="pager-mid">
@@ -113,7 +113,7 @@ export function Reader({ id, para }: { id: string; para?: string }) {
           </p>
           <progress className="progress" max={n} value={i + 1} aria-label="Paragraph progress" />
         </div>
-        <button className="btn btn-icon" onClick={() => go(1)} disabled={i === n - 1} aria-label="Next paragraph">
+        <button className="btn btn-icon btn-quiet" onClick={() => go(1)} disabled={i === n - 1} aria-label="Next paragraph">
           <Icon name="right" />
         </button>
       </div>
@@ -123,10 +123,10 @@ export function Reader({ id, para }: { id: string; para?: string }) {
       </div>
 
       <nav className="pager pager-bottom" aria-label="Paragraph">
-        <button className="btn" onClick={() => go(-1)} disabled={i === 0}>
+        <button className="btn btn-quiet" onClick={() => go(-1)} disabled={i === 0}>
           Previous
         </button>
-        <button className="btn" onClick={() => go(1)} disabled={i === n - 1}>
+        <button className="btn btn-quiet" onClick={() => go(1)} disabled={i === n - 1}>
           Next paragraph
         </button>
       </nav>

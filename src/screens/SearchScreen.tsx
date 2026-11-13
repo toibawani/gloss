@@ -33,10 +33,6 @@ export function SearchScreen() {
   return (
     <>
       <header className="page-head">
-        <p className="eyebrow">
-          <span className="eyebrow-rule" aria-hidden="true" />
-          Search
-        </p>
         <h1>Find a line</h1>
         <p className="lede">Key phrases, tricky words and the first line of every meaning. All of it runs on this device.</p>
       </header>
@@ -66,7 +62,7 @@ export function SearchScreen() {
       {busy && <Skeleton lines={5} />}
 
       {hits && hits.length === 0 && !busy && (
-        <Empty title="No match" text="Try a single word from the paragraph, or a term from its margin." />
+        <Empty art="search" title="No match" text="Try a single word from the paragraph, or a term from its margin." />
       )}
 
       {hits && hits.length > 0 && (

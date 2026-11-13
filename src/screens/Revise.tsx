@@ -37,10 +37,6 @@ export function Revise() {
     return (
       <>
         <header className="page-head">
-          <p className="eyebrow">
-            <span className="eyebrow-rule" aria-hidden="true" />
-            Revision
-          </p>
           <h1>Nothing due</h1>
           <p className="lede">
             Recall questions come back after 1, 3, 7 and 21 days. Answer a question in any chapter and it appears here
@@ -48,9 +44,10 @@ export function Revise() {
           </p>
         </header>
         <Empty
+          art="review"
           title="Your day is clear"
           text="Read a paragraph and answer its two questions. The first review lands tomorrow."
-          action={{ label: 'Open a chapter', href: '#/' }}
+          action={{ label: 'Read a paragraph', href: '#/c/bio-11-ch8' }}
         />
       </>
     )
@@ -59,10 +56,6 @@ export function Revise() {
   return (
     <>
       <header className="page-head">
-        <p className="eyebrow">
-          <span className="eyebrow-rule" aria-hidden="true" />
-          Revision
-        </p>
         <h1>
           {due.length} {due.length === 1 ? 'question' : 'questions'} today
         </h1>
