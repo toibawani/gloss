@@ -3,7 +3,7 @@
   "private": true,
   "description": "ESLint toolchain pinned to TypeScript 6.0. typescript-eslint does not yet support the TypeScript 7 compiler used by the app, so lint runs against its own copy. See docs/RUNBOOK.md.",
   "devDependencies": {
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "typescript-eslint": "8.72.2"
   }
 }
