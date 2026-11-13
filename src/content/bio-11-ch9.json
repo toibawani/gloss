@@ -1,0 +1,819 @@
+{
+  "id": "bio-11-ch9",
+  "subject": "Biology",
+  "class": 11,
+  "title": "Biomolecules",
+  "book": "NCERT Biology Class XI",
+  "paragraphs": [
+    {
+      "id": "chemical-composition",
+      "ncert_ref": "Ch 9, section 9.1 How to Analyse Chemical Composition?",
+      "key_phrase": "trichloroacetic acid",
+      "meaning": "To find what a tissue is made of, the tissue is ground and treated with trichloroacetic acid. Whatever dissolves in the acid is the acid-soluble fraction, and it holds amino acids, sugars and nucleotides. The acid-insoluble fraction holds proteins, nucleic acids, polysaccharides and lipids, which are large or do not dissolve in acid.",
+      "words": [
+        {
+          "term": "acid-soluble fraction",
+          "meaning": "The small molecules that dissolve in trichloroacetic acid.",
+          "breakdown": "soluble = able to dissolve",
+          "trap": "The acid-soluble fraction is not the unimportant fraction. Amino acids and nucleotides are the building blocks of the large molecules."
+        },
+        {
+          "term": "acid-insoluble fraction",
+          "meaning": "The material left behind after acid treatment, mostly large molecules and lipids.",
+          "breakdown": "insoluble = does not dissolve",
+          "trap": "Lipids are small but still appear here because they do not dissolve in acid. Size is not the only reason a molecule is in this fraction."
+        },
+        {
+          "term": "trichloroacetic acid",
+          "meaning": "The acid used to separate small soluble molecules from large ones.",
+          "breakdown": "tri + chloro + acetic acid, a strong organic acid",
+          "trap": "It is a reagent for analysis, not a component of the cell."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><path d='M40 24 H140 L124 62 V126 H56 V62 Z'/><path d='M62 74 H118 V116 H62 Z'/><text x='44' y='146' font-size='10' fill='currentColor' stroke='none'>ground tissue + acid</text><path d='M158 76 H190 M182 70 L190 76 L182 82'/><text x='204' y='44' font-size='10' fill='currentColor' stroke='none'>soluble: amino acids,</text><text x='204' y='58' font-size='10' fill='currentColor' stroke='none'>sugars, nucleotides</text><text x='204' y='92' font-size='10' fill='currentColor' stroke='none'>insoluble: proteins,</text><text x='204' y='106' font-size='10' fill='currentColor' stroke='none'>nucleic acids, lipids</text></svg>",
+      "visual_alt": "A tube of ground tissue treated with acid, with an arrow to two labelled groups: small soluble molecules and large or oily insoluble ones.",
+      "hook": "The acid is a sieve: small molecules fall through, large and oily ones stay behind.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks which fraction a named compound belongs to. Lipids sitting in the acid-insoluble fraction despite being small is a favourite twist.",
+      "trap": "Lipids are not macromolecules, yet they are in the acid-insoluble fraction because they do not dissolve in acid. Size alone does not decide the fraction.",
+      "recall": [
+        {
+          "q": "Which of these is found in the acid-soluble fraction of a tissue extract?",
+          "options": ["Amino acids", "Proteins", "Polysaccharides", "Nucleic acids"],
+          "answer": 0,
+          "why": "Amino acids are small and dissolve in trichloroacetic acid. Proteins, polysaccharides and nucleic acids are large polymers and stay in the acid-insoluble fraction."
+        },
+        {
+          "q": "Lipids appear in the acid-insoluble fraction mainly because they",
+          "options": ["Do not dissolve in acid", "Have a very high molecular weight", "Contain nitrogen", "Are made of amino acids"],
+          "answer": 0,
+          "why": "Lipids are small molecules but they do not dissolve in trichloroacetic acid, so they are left with the insoluble material. They are not polymers, so high molecular weight is not the reason."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check that the fraction contents and the lipid exception match this chapter."
+    },
+    {
+      "id": "primary-secondary-metabolites",
+      "ncert_ref": "Ch 9, section 9.2 Primary and Secondary Metabolites",
+      "key_phrase": "secondary metabolites",
+      "meaning": "Primary metabolites are the molecules every cell needs to grow and live, such as amino acids, nucleotides and sugars. Secondary metabolites are made by only some plants and are not required for basic survival, though they help with defence and attraction. Alkaloids, flavonoids, rubber, essential oils and antibiotics are examples.",
+      "words": [
+        {
+          "term": "primary metabolite",
+          "meaning": "A molecule needed for ordinary growth and life.",
+          "breakdown": "primary = first in importance",
+          "trap": "Primary does not mean made first in time. It means required for survival."
+        },
+        {
+          "term": "secondary metabolite",
+          "meaning": "A plant-made molecule that is not needed for basic survival but helps in other ways.",
+          "breakdown": "secondary = of lesser necessity",
+          "trap": "Secondary metabolites are not waste products. Many defend the plant or attract pollinators."
+        },
+        {
+          "term": "alkaloid",
+          "meaning": "A nitrogen-containing plant compound with strong effects on animals.",
+          "breakdown": "alkali + oid, alkali-like",
+          "trap": "Alkaloids are secondary metabolites, not the amino acids used to build proteins."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><rect x='14' y='30' width='130' height='96'/><text x='26' y='48' font-size='10' fill='currentColor' stroke='none'>primary</text><path d='M28 66 H130 M28 82 H112 M28 98 H122'/><rect x='176' y='30' width='130' height='96'/><text x='188' y='48' font-size='10' fill='currentColor' stroke='none'>secondary</text><path d='M190 66 H292 M190 82 H266 M190 98 H280'/></svg>",
+      "visual_alt": "Two boxes labelled primary and secondary metabolites, with three example lines in each, showing that every cell makes the first kind and only some plants make the second.",
+      "hook": "Primary metabolites are the rice and dal of the cell. Secondary metabolites are the spices: not needed to survive, but they change everything.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks to sort named compounds into primary and secondary metabolites, and to say why secondary metabolites are still useful to the plant.",
+      "trap": "Secondary metabolites are not useless leftovers. They often protect the plant or attract pollinators, which is why they persist.",
+      "recall": [
+        {
+          "q": "Which of these is a secondary metabolite?",
+          "options": ["Alkaloid", "Amino acid", "Nucleotide", "Glucose"],
+          "answer": 0,
+          "why": "Alkaloids are secondary metabolites, made by some plants for defence and other roles. Amino acids, nucleotides and glucose are primary metabolites needed by every cell."
+        },
+        {
+          "q": "Secondary metabolites are best described as molecules that",
+          "options": ["Are not required for basic survival but help the plant", "Every cell must make to live", "Replace proteins in the cell", "Are only made by animals"],
+          "answer": 0,
+          "why": "They are not needed for the basic business of living, but they help with defence, attraction and similar jobs. Primary metabolites are the ones required by every cell."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the list of secondary metabolites used in this chapter."
+    },
+    {
+      "id": "biomacromolecules",
+      "ncert_ref": "Ch 9, section 9.3 Biomacromolecules",
+      "key_phrase": "macromolecules",
+      "meaning": "A biomacromolecule is a very large molecule built by joining many small units, with a molecular weight above about ten thousand daltons. Proteins, nucleic acids and polysaccharides are the main examples. Lipids are left out because a single lipid molecule is small, even though lipids are important cell components.",
+      "words": [
+        {
+          "term": "macromolecule",
+          "meaning": "A large molecule made of many repeating units.",
+          "breakdown": "macro = large, molecule = small mass",
+          "trap": "A macromolecule must be a polymer. Being bulky or important is not enough."
+        },
+        {
+          "term": "dalton",
+          "meaning": "The unit used for molecular weight, roughly the mass of one hydrogen atom.",
+          "breakdown": "named after John Dalton",
+          "trap": "The ten thousand dalton line is a convention, not a sharp physical boundary."
+        },
+        {
+          "term": "polymer",
+          "meaning": "A long molecule made by joining many small units.",
+          "breakdown": "poly = many, mer = part",
+          "trap": "Lipids are not polymers of a repeating unit, which is why they are excluded from macromolecules."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><g><circle cx='26' cy='48' r='9'/><circle cx='48' cy='48' r='9'/><circle cx='70' cy='48' r='9'/><circle cx='92' cy='48' r='9'/><circle cx='114' cy='48' r='9'/></g><text x='24' y='76' font-size='10' fill='currentColor' stroke='none'>polymer: many units</text><g><path d='M186 40 C206 62 226 30 246 52'/><circle cx='186' cy='40' r='5'/><circle cx='246' cy='52' r='5'/></g><text x='180' y='76' font-size='10' fill='currentColor' stroke='none'>lipid: few small units</text><path d='M14 96 H306'/><text x='14' y='118' font-size='10' fill='currentColor' stroke='none'>above about 10,000 daltons: protein, nucleic acid, polysaccharide</text><text x='14' y='136' font-size='10' fill='currentColor' stroke='none'>below: lipids, sugars, amino acids</text></svg>",
+      "visual_alt": "A chain of joined circles labelled polymer above a line, and a short two-part lipid below it, with the size cut-off written along the line.",
+      "hook": "A polymer is a train and its monomers are the coaches. A lipid is a few loose cars parked together, not a train.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks which class is not a macromolecule and why. Lipids are the standard answer, and the reason is the absence of a polymer structure.",
+      "trap": "Lipids are not macromolecules even though a fat droplet is large. The size test applies to one molecule, not to a clump.",
+      "recall": [
+        {
+          "q": "Which of these is not a biomacromolecule?",
+          "options": ["Lipid", "Protein", "Nucleic acid", "Polysaccharide"],
+          "answer": 0,
+          "why": "A single lipid molecule is small and is not a polymer, so it falls below the macromolecule range. Proteins, nucleic acids and polysaccharides are large polymers."
+        },
+        {
+          "q": "A molecule is called a biomacromolecule mainly because it",
+          "options": ["Is a large polymer", "Contains carbon", "Dissolves in water", "Is found in cells"],
+          "answer": 0,
+          "why": "The defining feature is a high molecular weight from many joined units. Carbon, solubility and location in a cell are true of many small molecules too."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the molecular weight cut-off and the lipid exception."
+    },
+    {
+      "id": "amino-acids",
+      "ncert_ref": "Ch 9, section 9.4 Proteins, amino acids",
+      "key_phrase": "amino acids",
+      "meaning": "An amino acid has a central carbon carrying an amino group, a carboxyl group, a hydrogen and a side chain called the R group. The R group is what makes one amino acid different from another. Twenty standard amino acids build proteins, and the ones the body cannot make are called essential.",
+      "words": [
+        {
+          "term": "amino acid",
+          "meaning": "The small unit that joins with others to build a protein.",
+          "breakdown": "amino group + acid group on the same carbon",
+          "trap": "An amino acid is not a protein. It is one unit of a protein."
+        },
+        {
+          "term": "R group",
+          "meaning": "The side chain that differs between amino acids.",
+          "breakdown": "R stands for the remaining group in the formula",
+          "trap": "The R group is the variable part. The amino and carboxyl groups are common to all standard amino acids."
+        },
+        {
+          "term": "essential amino acid",
+          "meaning": "An amino acid the body cannot make and must get from food.",
+          "breakdown": "essential because the diet must supply it",
+          "trap": "Essential does not mean more important. It means the body cannot synthesise it."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><g><circle cx='120' cy='80' r='16'/><text x='114' y='84' font-size='10' fill='currentColor' stroke='none'>C</text><path d='M120 64 V36'/><text x='112' y='30' font-size='10' fill='currentColor' stroke='none'>H</text><path d='M104 80 H68'/><text x='38' y='84' font-size='10' fill='currentColor' stroke='none'>H2N</text><path d='M136 80 H172'/><text x='176' y='84' font-size='10' fill='currentColor' stroke='none'>COOH</text><path d='M120 96 V124'/><text x='116' y='140' font-size='10' fill='currentColor' stroke='none'>R</text></g><text x='196' y='52' font-size='10' fill='currentColor' stroke='none'>same in every</text><text x='196' y='66' font-size='10' fill='currentColor' stroke='none'>amino acid</text><text x='196' y='108' font-size='10' fill='currentColor' stroke='none'>R differs, so this</text><text x='196' y='122' font-size='10' fill='currentColor' stroke='none'>is the varying part</text></svg>",
+      "visual_alt": "A central carbon with hydrogen above, amino group left, carboxyl group right and R group below, the shared groups marked as common and the R group marked as the part that varies.",
+      "hook": "Every amino acid wears the same uniform and carries a different backpack. The backpack is the R group.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks which part of an amino acid varies and how many standard amino acids build proteins. It also asks which ones the diet must supply.",
+      "trap": "The R group varies, not the amino or carboxyl group. All standard amino acids share those two groups.",
+      "recall": [
+        {
+          "q": "Two amino acids differ from each other mainly in their",
+          "options": ["R group", "Amino group", "Carboxyl group", "Central carbon"],
+          "answer": 0,
+          "why": "The side chain, called the R group, is the part that changes. The amino group, carboxyl group and central carbon are shared by standard amino acids."
+        },
+        {
+          "q": "An essential amino acid is one that",
+          "options": ["The body cannot make and must get from food", "The body makes in large amounts", "Is found only in plants", "Contains no nitrogen"],
+          "answer": 0,
+          "why": "Essential refers to the diet supplying it because the body cannot synthesise it. It does not mean the amino acid is more important chemically."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the number of standard amino acids and the definition of essential."
+    },
+    {
+      "id": "peptide-bond",
+      "ncert_ref": "Ch 9, section 9.4 Proteins, peptide bond",
+      "key_phrase": "peptide bond",
+      "meaning": "A peptide bond forms when the carboxyl group of one amino acid joins the amino group of the next, and a water molecule is lost. Many amino acids linked this way make a polypeptide. The bond is written as a single line between the carbon of one unit and the nitrogen of the next.",
+      "words": [
+        {
+          "term": "peptide bond",
+          "meaning": "The bond between the carboxyl carbon of one amino acid and the nitrogen of the next.",
+          "breakdown": "peptide from Greek peptos = digested",
+          "trap": "The bond is between carbon and nitrogen, not between two carboxyl groups."
+        },
+        {
+          "term": "condensation",
+          "meaning": "A joining reaction that releases a small molecule such as water.",
+          "breakdown": "con = together, densare = to thicken",
+          "trap": "Condensation releases water. Hydrolysis uses water to split a bond."
+        },
+        {
+          "term": "polypeptide",
+          "meaning": "A chain of many amino acids joined by peptide bonds.",
+          "breakdown": "poly = many, peptide = amino acid chain",
+          "trap": "A polypeptide is not yet a working protein. Folding into a shape is a separate step."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 140' fill='none' stroke='currentColor' stroke-width='2'><text x='16' y='40' font-size='11' fill='currentColor' stroke='none'>amino acid 1</text><text x='150' y='40' font-size='11' fill='currentColor' stroke='none'>amino acid 2</text><path d='M52 62 H104 M52 78 H104'/><path d='M120 62 H172 M120 78 H172'/><path d='M104 70 H120'/><circle cx='112' cy='70' r='4'/><text x='196' y='66' font-size='10' fill='currentColor' stroke='none'>water lost</text><text x='196' y='80' font-size='10' fill='currentColor' stroke='none'>H2O</text><path d='M112 44 V56'/></svg>",
+      "visual_alt": "Two amino acid blocks joined by a single bond with a water molecule leaving the join, labelled as a peptide bond.",
+      "hook": "Two hands clasp and a water drop falls out. The clasp is the peptide bond.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks what is lost when a peptide bond forms, and identifies the bond in a chain diagram. The number of peptide bonds in a chain of a given length is a common numerical question.",
+      "trap": "Water is removed, not added. Calling peptide bond formation hydrolysis reverses the reaction.",
+      "recall": [
+        {
+          "q": "Formation of a peptide bond releases",
+          "options": ["Water", "Carbon dioxide", "Ammonia", "Oxygen"],
+          "answer": 0,
+          "why": "The carboxyl group and amino group join with the loss of one water molecule. That is why the reaction is a condensation."
+        },
+        {
+          "q": "A chain of 10 amino acids joined by peptide bonds has how many peptide bonds?",
+          "options": ["9", "10", "11", "20"],
+          "answer": 0,
+          "why": "Each bond joins one amino acid to the next, so a chain of ten units needs nine bonds. Ten would require an eleventh amino acid."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the condensation wording and the numerical example."
+    },
+    {
+      "id": "protein-structure",
+      "ncert_ref": "Ch 9, section 9.7 Structure of Proteins",
+      "key_phrase": "quaternary structure",
+      "meaning": "Protein structure is described at four levels. Primary is the order of amino acids, secondary is local coiling into a helix or sheet, and tertiary is the full three-dimensional fold. Quaternary structure appears when several folded chains assemble into one working protein.",
+      "words": [
+        {
+          "term": "primary structure",
+          "meaning": "The sequence of amino acids in a chain.",
+          "breakdown": "primary = first level",
+          "trap": "Primary is sequence, not shape. Two proteins with the same length can differ completely in sequence."
+        },
+        {
+          "term": "secondary structure",
+          "meaning": "Local coiling or folding, such as a helix or a sheet.",
+          "breakdown": "secondary = second level",
+          "trap": "A helix is a local pattern, not the whole three-dimensional shape."
+        },
+        {
+          "term": "quaternary structure",
+          "meaning": "The arrangement of several folded chains into one protein.",
+          "breakdown": "quaternary = fourth level",
+          "trap": "Only proteins with more than one chain have quaternary structure. A single chain stops at tertiary."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><text x='10' y='20' font-size='10' fill='currentColor' stroke='none'>1 sequence</text><g fill='currentColor' stroke='none'><circle cx='16' cy='36' r='4'/><circle cx='32' cy='36' r='4'/><circle cx='48' cy='36' r='4'/><circle cx='64' cy='36' r='4'/></g><text x='88' y='20' font-size='10' fill='currentColor' stroke='none'>2 helix</text><path d='M92 44 C108 20 120 60 136 36 S152 60 160 44'/><text x='178' y='20' font-size='10' fill='currentColor' stroke='none'>3 fold</text><path d='M190 50 C176 34 214 28 216 46 S186 64 200 74 S230 60 232 44'/><text x='252' y='20' font-size='10' fill='currentColor' stroke='none'>4 assembly</text><circle cx='270' cy='50' r='13'/><circle cx='296' cy='50' r='13'/><circle cx='283' cy='72' r='13'/></svg>",
+      "visual_alt": "Four small panels numbered one to four: a row of dots for sequence, a wavy line for helix, a tangled loop for the fold, and three joined circles for assembled chains.",
+      "hook": "A protein is a sentence, a coil, a sculpture and a team: sequence, helix, fold, subunits.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET matches each level to its description and asks which level survives when a protein is denatured. It also asks which proteins have quaternary structure.",
+      "trap": "Primary structure is the sequence, not the shape. Shape belongs to the higher levels, and it is what denaturation destroys.",
+      "recall": [
+        {
+          "q": "The sequence of amino acids in a protein is its",
+          "options": ["Primary structure", "Secondary structure", "Tertiary structure", "Quaternary structure"],
+          "answer": 0,
+          "why": "Primary structure is the order of amino acids. Secondary is local coiling, tertiary is the overall fold, and quaternary is the assembly of several chains."
+        },
+        {
+          "q": "Quaternary structure is present in a protein that",
+          "options": ["Has more than one folded chain", "Has only one chain", "Has no amino acids", "Has lost its peptide bonds"],
+          "answer": 0,
+          "why": "Quaternary structure describes how several folded chains come together. A single chain has no quaternary level, and losing peptide bonds would destroy the primary structure."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the four level definitions and the helix and sheet examples."
+    },
+    {
+      "id": "denaturation",
+      "ncert_ref": "Ch 9, section 9.7 Structure of Proteins, denaturation",
+      "key_phrase": "denaturation",
+      "meaning": "Heating or changing the pH can make a protein lose its folded shape without breaking its peptide bonds. This is denaturation, and the protein usually stops working. Egg white turning solid in a pan is the everyday example.",
+      "words": [
+        {
+          "term": "denaturation",
+          "meaning": "Loss of a protein's folded shape without breaking its peptide bonds.",
+          "breakdown": "de = remove, natura = natural state",
+          "trap": "Denaturation is not digestion. Digestion breaks peptide bonds; denaturation only unfolds the protein."
+        },
+        {
+          "term": "coagulation",
+          "meaning": "The clumping of unfolded proteins, as in cooked egg white.",
+          "breakdown": "coagulare = to curdle",
+          "trap": "Coagulation is what you see after denaturation, not the cause of it."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 140' fill='none' stroke='currentColor' stroke-width='2'><path d='M46 60 C30 34 82 26 82 52 S40 78 62 92 S96 70 94 50'/><text x='20' y='124' font-size='10' fill='currentColor' stroke='none'>folded, working</text><path d='M136 70 H176 M168 64 L176 70 L168 76'/><text x='140' y='56' font-size='10' fill='currentColor' stroke='none'>heat</text><path d='M212 50 C232 38 244 62 226 70 S200 84 220 92 S256 84 250 66'/><path d='M212 112 C232 100 244 124 226 128'/><text x='204' y='138' font-size='10' fill='currentColor' stroke='none'>unfolded, clumped</text></svg>",
+      "visual_alt": "A neatly folded chain labelled working, an arrow labelled heat, and the same chain unfolded and clumped, with the peptide bonds still drawn intact.",
+      "hook": "Denaturation is a crumpled paper boat: same paper, same creases, no longer a boat.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks whether denaturation destroys the primary structure. The answer is no, which is why the sequence can sometimes refold.",
+      "trap": "Peptide bonds survive denaturation. Only the weaker folding interactions are disrupted.",
+      "recall": [
+        {
+          "q": "Denaturation of a protein destroys its",
+          "options": ["Three-dimensional shape", "Primary sequence", "Peptide bonds", "Amino acid composition"],
+          "answer": 0,
+          "why": "Denaturation unfolds the protein and destroys its higher-order shape. The peptide bonds and the amino acid sequence remain intact."
+        },
+        {
+          "q": "Cooking an egg white turns it solid because heat",
+          "options": ["Denatures and coagulates the protein", "Breaks every peptide bond", "Adds water to the protein", "Turns protein into carbohydrate"],
+          "answer": 0,
+          "why": "Heat unfolds the albumin, and the unfolded chains clump together, which is why the white sets. The peptide bonds are not all broken, and the protein does not become carbohydrate."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the egg white example and the statement about peptide bonds."
+    },
+    {
+      "id": "polysaccharides",
+      "ncert_ref": "Ch 9, section 9.5 Polysaccharides",
+      "key_phrase": "glycosidic bond",
+      "meaning": "Polysaccharides are long chains of sugars joined by glycosidic bonds. Starch stores energy in plants as amylose and amylopectin, glycogen does the same job in animals, and cellulose builds plant walls. Cellulose is also made of glucose, but its linkage cannot be digested by humans, while chitin forms fungal walls and insect shells.",
+      "words": [
+        {
+          "term": "glycosidic bond",
+          "meaning": "The bond that joins two sugar units.",
+          "breakdown": "glyco = sugar, osidic from the sugar ending -ose",
+          "trap": "The bond joins sugar to sugar, not sugar to amino acid. That would be a peptide bond."
+        },
+        {
+          "term": "amylose",
+          "meaning": "The unbranched starch chain.",
+          "breakdown": "amylum = starch",
+          "trap": "Amylose is one part of starch, not a separate storage polysaccharide."
+        },
+        {
+          "term": "cellulose",
+          "meaning": "A glucose polymer that forms the plant cell wall.",
+          "breakdown": "from cellula, small cell",
+          "trap": "Humans cannot digest cellulose because they lack the enzyme for its linkage, not because it contains a different sugar."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><g><circle cx='20' cy='44' r='9'/><circle cx='42' cy='44' r='9'/><circle cx='64' cy='44' r='9'/><circle cx='86' cy='44' r='9'/></g><text x='16' y='70' font-size='10' fill='currentColor' stroke='none'>starch: coiled energy store</text><g><circle cx='180' cy='44' r='9'/><circle cx='202' cy='44' r='9'/><circle cx='224' cy='44' r='9'/><circle cx='246' cy='44' r='9'/><circle cx='268' cy='44' r='9'/></g><text x='176' y='70' font-size='10' fill='currentColor' stroke='none'>cellulose: straight wall fibre</text><path d='M14 88 H306'/><text x='14' y='110' font-size='10' fill='currentColor' stroke='none'>both are glucose polymers</text><text x='14' y='128' font-size='10' fill='currentColor' stroke='none'>the linkage decides whether we can digest them</text></svg>",
+      "visual_alt": "A short curved chain labelled starch and a straight chain labelled cellulose, both drawn from identical glucose circles, with a note that the linkage decides digestibility.",
+      "hook": "Starch and cellulose are the same bricks laid in different patterns. One feeds you, the other builds the wall.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks why cellulose cannot be digested by humans even though it is a glucose polymer, and which polysaccharide stores energy in animals.",
+      "trap": "Cellulose is not branched starch. It differs in the kind of linkage, which is why human enzymes cannot break it.",
+      "recall": [
+        {
+          "q": "Humans cannot digest cellulose because they lack the enzyme to break its",
+          "options": ["Beta linkages between glucose units", "Peptide bonds", "Phosphodiester bonds", "Hydrogen bonds"],
+          "answer": 0,
+          "why": "Cellulose is glucose joined by beta linkages, and human digestive enzymes cannot split them. Peptide bonds belong to proteins and phosphodiester bonds to nucleic acids."
+        },
+        {
+          "q": "The storage polysaccharide of animals is",
+          "options": ["Glycogen", "Starch", "Cellulose", "Chitin"],
+          "answer": 0,
+          "why": "Glycogen is the animal storage polysaccharide. Starch is the plant store, cellulose is structural in plants, and chitin is structural in fungi and insects."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the amylose and amylopectin description and the cellulose linkage wording."
+    },
+    {
+      "id": "nucleic-acids",
+      "ncert_ref": "Ch 9, section 9.6 Nucleic Acids",
+      "key_phrase": "phosphodiester bond",
+      "meaning": "A nucleotide has a nitrogen base, a five-carbon sugar and a phosphate group. Nucleotides join into a chain when the phosphate of one links to the sugar of the next, forming a phosphodiester bond. DNA uses deoxyribose and thymine, while RNA uses ribose and uracil.",
+      "words": [
+        {
+          "term": "nucleotide",
+          "meaning": "A base, a sugar and a phosphate joined together.",
+          "breakdown": "nucleus + tide, a unit of the nucleus",
+          "trap": "A nucleotide has three parts. Leaving out the phosphate gives a nucleoside."
+        },
+        {
+          "term": "nucleoside",
+          "meaning": "A base joined to a sugar, without phosphate.",
+          "breakdown": "nucleoside = base + sugar",
+          "trap": "Nucleoside lacks phosphate, so it cannot form the backbone of a nucleic acid."
+        },
+        {
+          "term": "phosphodiester bond",
+          "meaning": "The bond that links the phosphate of one nucleotide to the sugar of the next.",
+          "breakdown": "phosphate + di + ester, two ester links through one phosphate",
+          "trap": "The backbone bond is between phosphate and sugar, not between two bases."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><rect x='30' y='30' width='220' height='70' rx='4'/><g><rect x='44' y='44' width='42' height='42'/><text x='52' y='70' font-size='10' fill='currentColor' stroke='none'>base</text><circle cx='120' cy='65' r='20'/><text x='112' y='69' font-size='10' fill='currentColor' stroke='none'>sugar</text><circle cx='182' cy='65' r='15'/><text x='176' y='69' font-size='10' fill='currentColor' stroke='none'>P</text></g><path d='M248 65 H286 M278 59 L286 65 L278 71'/><text x='250' y='124' font-size='10' fill='currentColor' stroke='none'>next nucleotide</text><text x='30' y='124' font-size='10' fill='currentColor' stroke='none'>base + sugar + phosphate</text></svg>",
+      "visual_alt": "One nucleotide drawn as a base box, a sugar circle and a phosphate circle, with an arrow from the phosphate to the next nucleotide and the three parts labelled.",
+      "hook": "Sugar, base, phosphate: a seat, a passenger and a coupling. The couplings join the coaches.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the difference between a nucleoside and a nucleotide, the sugar in DNA versus RNA, and which bond forms the backbone.",
+      "trap": "A nucleoside has no phosphate. Adding the phosphate turns it into a nucleotide.",
+      "recall": [
+        {
+          "q": "A nucleotide consists of",
+          "options": ["A base, a sugar and a phosphate", "A base and a sugar only", "Two sugars and a phosphate", "An amino acid and a phosphate"],
+          "answer": 0,
+          "why": "The nucleotide is the base plus sugar plus phosphate unit. Base plus sugar alone is a nucleoside, and amino acids belong to proteins."
+        },
+        {
+          "q": "The sugar found in RNA but not in DNA is",
+          "options": ["Ribose", "Deoxyribose", "Glucose", "Fructose"],
+          "answer": 0,
+          "why": "RNA uses ribose, which has an OH at the two-prime position. DNA uses deoxyribose, which lacks that oxygen."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the nucleotide and nucleoside definitions."
+    },
+    {
+      "id": "dna-structure",
+      "ncert_ref": "Ch 9, section 9.6 Nucleic Acids, structure of DNA",
+      "key_phrase": "double helix",
+      "meaning": "DNA is two chains wound around each other in a double helix, running in opposite directions. Adenine pairs with thymine by two hydrogen bonds, and guanine pairs with cytosine by three. One full turn holds about ten base pairs and measures 3.4 nanometres along the axis.",
+      "words": [
+        {
+          "term": "double helix",
+          "meaning": "Two strands wound around each other like a twisted ladder.",
+          "breakdown": "double = two, helix = spiral",
+          "trap": "The two strands are not identical. They are complementary, so each can act as a template."
+        },
+        {
+          "term": "antiparallel",
+          "meaning": "Running in opposite directions, as the two DNA strands do.",
+          "breakdown": "anti = opposite, parallel = side by side",
+          "trap": "Antiparallel does not mean unconnected. The strands are held together by base pairing."
+        },
+        {
+          "term": "hydrogen bond",
+          "meaning": "A weak bond between bases that holds the two strands together.",
+          "breakdown": "named for the hydrogen atom shared in the interaction",
+          "trap": "Hydrogen bonds hold the two strands together, but the backbone is held by stronger phosphodiester bonds."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><path d='M60 20 C110 50 10 70 60 100 S110 130 60 140'/><path d='M140 20 C90 50 190 70 140 100 S90 130 140 140'/><path d='M76 46 H124 M94 62 H106 M76 78 H124 M88 94 H112 M76 110 H124'/><text x='164' y='50' font-size='10' fill='currentColor' stroke='none'>two strands,</text><text x='164' y='64' font-size='10' fill='currentColor' stroke='none'>opposite directions</text><text x='164' y='94' font-size='10' fill='currentColor' stroke='none'>A pairs with T, 2 bonds</text><text x='164' y='108' font-size='10' fill='currentColor' stroke='none'>G pairs with C, 3 bonds</text><text x='164' y='132' font-size='10' fill='currentColor' stroke='none'>one turn: 10 pairs, 3.4 nm</text></svg>",
+      "visual_alt": "Two wavy strands crossing as a ladder with rungs, labelled as opposite directions, with the two base pairs and the 10-pair turn written beside it.",
+      "hook": "A is a flat plug and T is its socket, two clicks. G and C need three clicks, which is why GC-rich DNA is harder to pull apart.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the number of hydrogen bonds in each base pair and the pitch of the helix. It also asks what antiparallel means for the two strands.",
+      "trap": "A pairs with T, not with U, in DNA. Uracil appears in RNA, and the pairing rules do not change because of it.",
+      "recall": [
+        {
+          "q": "How many hydrogen bonds hold guanine to cytosine in DNA?",
+          "options": ["Three", "Two", "One", "Four"],
+          "answer": 0,
+          "why": "G and C form three hydrogen bonds, while A and T form two. That is why DNA with more G and C needs more heat to separate."
+        },
+        {
+          "q": "The two strands of DNA are called antiparallel because they",
+          "options": ["Run in opposite directions", "Have identical sequences", "Are joined by peptide bonds", "Contain no hydrogen bonds"],
+          "answer": 0,
+          "why": "The strands run in opposite directions, which is why replication has a leading and a lagging side. They are complementary rather than identical, and their bonds are hydrogen and phosphodiester, not peptide."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the helix measurements and hydrogen bond counts."
+    },
+    {
+      "id": "rna-types",
+      "ncert_ref": "Ch 9, section 9.6 Nucleic Acids, types of RNA",
+      "key_phrase": "messenger RNA",
+      "meaning": "RNA works in several forms inside a cell. Messenger RNA carries the instructions from DNA to the ribosome, transfer RNA brings the matching amino acid, and ribosomal RNA is part of the ribosome itself. RNA is usually a single chain, and it uses ribose in place of deoxyribose.",
+      "words": [
+        {
+          "term": "messenger RNA",
+          "meaning": "The RNA copy of a gene that carries the message to the ribosome.",
+          "breakdown": "messenger because it carries a message from DNA",
+          "trap": "mRNA is a copy of one gene, not of the whole genome."
+        },
+        {
+          "term": "transfer RNA",
+          "meaning": "The RNA that carries an amino acid to the ribosome.",
+          "breakdown": "transfer because it ferries a single amino acid",
+          "trap": "tRNA carries amino acids but is not part of the ribosome."
+        },
+        {
+          "term": "ribosomal RNA",
+          "meaning": "The RNA that forms part of the ribosome.",
+          "breakdown": "ribosomal because it sits in the ribosome",
+          "trap": "rRNA is structural and catalytic in the ribosome, not a messenger."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'><rect x='10' y='30' width='54' height='34'/><text x='20' y='51' font-size='10' fill='currentColor' stroke='none'>DNA</text><path d='M68 47 H104 M96 41 L104 47 L96 53'/><path d='M108 30 C126 46 108 62 126 78'/><text x='104' y='100' font-size='10' fill='currentColor' stroke='none'>mRNA</text><path d='M132 47 H166 M158 41 L166 47 L158 53'/><path d='M172 28 H228 L210 62 V96 H190 V62 Z'/><text x='176' y='120' font-size='10' fill='currentColor' stroke='none'>ribosome with rRNA</text><path d='M250 22 C270 22 270 40 250 40'/><circle cx='240' cy='46' r='6'/><text x='238' y='74' font-size='10' fill='currentColor' stroke='none'>tRNA brings</text><text x='238' y='88' font-size='10' fill='currentColor' stroke='none'>an amino acid</text></svg>",
+      "visual_alt": "DNA giving a messenger RNA strand that reaches a ribosome, while a transfer RNA carrying a small amino acid arrives at the same ribosome.",
+      "hook": "mRNA is the written order, tRNA is the delivery rider, rRNA is the kitchen bench.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the job of each RNA type and which sugar RNA uses. It also asks whether RNA can be a single chain.",
+      "trap": "tRNA carries amino acids but is not part of the ribosome. rRNA is the RNA built into the ribosome.",
+      "recall": [
+        {
+          "q": "Which RNA carries amino acids to the ribosome?",
+          "options": ["tRNA", "mRNA", "rRNA", "DNA"],
+          "answer": 0,
+          "why": "Transfer RNA matches its anticodon to the messenger and delivers the amino acid. Messenger RNA carries the message, and ribosomal RNA is part of the ribosome."
+        },
+        {
+          "q": "RNA differs from DNA in having",
+          "options": ["Ribose and uracil", "Deoxyribose and thymine", "Two strands", "No phosphate"],
+          "answer": 0,
+          "why": "RNA uses ribose and uracil, while DNA uses deoxyribose and thymine. RNA is usually single-stranded, and both nucleic acids have a phosphate backbone."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the roles named for each RNA type."
+    },
+    {
+      "id": "metabolism",
+      "ncert_ref": "Ch 9, section 9.9 Dynamic State of Body Constituents, and 9.10 Metabolic Basis for Living",
+      "key_phrase": "anabolism",
+      "meaning": "Metabolism is the sum of all chemical reactions in a living body. Anabolism builds larger molecules and uses energy, while catabolism breaks molecules down and releases energy. The two run at the same time, and the rate at which material moves through a pathway is its metabolic flux.",
+      "words": [
+        {
+          "term": "anabolism",
+          "meaning": "The building reactions that use energy.",
+          "breakdown": "ana = up, ballein = to throw",
+          "trap": "Anabolism consumes energy. Catabolism releases it."
+        },
+        {
+          "term": "catabolism",
+          "meaning": "The breaking reactions that release energy.",
+          "breakdown": "kata = down, ballein = to throw",
+          "trap": "Catabolism is not the same as digestion. Digestion is one route into catabolism."
+        },
+        {
+          "term": "metabolic flux",
+          "meaning": "The rate at which material moves through a metabolic pathway.",
+          "breakdown": "flux = flow",
+          "trap": "Flux is a rate, not an amount. A small pool can have a high flux."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 140' fill='none' stroke='currentColor' stroke-width='2'><text x='20' y='26' font-size='10' fill='currentColor' stroke='none'>small units</text><path d='M20 40 H120 M112 34 L120 40 L112 46'/><text x='140' y='26' font-size='10' fill='currentColor' stroke='none'>large molecule</text><rect x='140' y='32' width='60' height='18'/><text x='216' y='26' font-size='10' fill='currentColor' stroke='none'>anabolism uses energy</text><path d='M20 96 H120 M112 90 L120 96 L112 102'/><text x='140' y='82' font-size='10' fill='currentColor' stroke='none'>large molecule</text><rect x='140' y='88' width='60' height='18'/><text x='216' y='82' font-size='10' fill='currentColor' stroke='none'>catabolism releases energy</text><text x='20' y='130' font-size='10' fill='currentColor' stroke='none'>both directions run at once in the same cell</text></svg>",
+      "visual_alt": "Two opposing arrows: small units building into a large molecule labelled anabolism, and a large molecule breaking into small units labelled catabolism.",
+      "hook": "Building a wall and breaking an old one happen on the same site all day. That is metabolism.",
+      "exam_tags": ["NEET", "UPSC"],
+      "exam_note": "NEET asks to classify a reaction as anabolic or catabolic. UPSC uses the same distinction in answers on nutrition and energy.",
+      "trap": "Catabolism releases energy and anabolism spends it. Students reverse the labels because building sounds like work, and work sounds like energy released.",
+      "recall": [
+        {
+          "q": "Which process releases energy?",
+          "options": ["Catabolism", "Anabolism", "Photosynthesis", "Protein synthesis"],
+          "answer": 0,
+          "why": "Catabolism breaks larger molecules into smaller ones and releases energy. Anabolism, photosynthesis and protein synthesis all consume energy."
+        },
+        {
+          "q": "Anabolic reactions are best described as",
+          "options": ["Building reactions that consume energy", "Breaking reactions that release energy", "Reactions that need no enzymes", "Reactions that only occur outside cells"],
+          "answer": 0,
+          "why": "Anabolism builds larger molecules and needs energy input. Breaking reactions that release energy are catabolic, and almost all of these reactions are enzyme-driven inside cells."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the anabolism and catabolism definitions and the flux sentence."
+    },
+    {
+      "id": "living-state",
+      "ncert_ref": "Ch 9, section 9.11 The Living State",
+      "key_phrase": "non-equilibrium steady state",
+      "meaning": "A living cell is not at equilibrium with its surroundings. It keeps a steady internal composition by constantly spending energy, so the state is called a non-equilibrium steady state. When the energy supply stops, the cell drifts toward equilibrium and dies.",
+      "words": [
+        {
+          "term": "equilibrium",
+          "meaning": "The state where forward and reverse changes cancel out.",
+          "breakdown": "aequus = equal, libra = balance",
+          "trap": "Equilibrium is not the same as health. A dead system can sit at equilibrium."
+        },
+        {
+          "term": "steady state",
+          "meaning": "A stable pattern maintained by a continuous flow of material and energy.",
+          "breakdown": "steady = not changing overall, state = condition",
+          "trap": "Steady does not mean static. Molecules keep entering and leaving."
+        },
+        {
+          "term": "entropy",
+          "meaning": "A measure of disorder, which tends to increase on its own.",
+          "breakdown": "en = in, trope = a turning",
+          "trap": "A living cell holds entropy low locally by spending energy, not by breaking the second law."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'/><path d='M20 100 H300'/><text x='20' y='118' font-size='10' fill='currentColor' stroke='none'>time</text><path d='M20 96 C60 60 100 128 150 84 S230 100 300 92'/><text x='176' y='42' font-size='10' fill='currentColor' stroke='none'>living: held away from</text><text x='176' y='56' font-size='10' fill='currentColor' stroke='none'>equilibrium by energy</text><text x='176' y='76' font-size='10' fill='currentColor' stroke='none'>dead: falls to equilibrium</text><path d='M20 96 H300' stroke-dasharray='5 4'/></svg>",
+      "visual_alt": "A wavy line above a flat dashed line: the wavy line is the living state held away from equilibrium, and the flat line is the dead state at equilibrium.",
+      "hook": "A spinning top looks still but is never at rest. Stop pushing energy in and it falls.",
+      "exam_tags": ["NEET", "UPSC"],
+      "exam_note": "NEET asks why living organisms are called non-equilibrium steady states. UPSC uses the same idea when explaining homeostasis and the cost of staying alive.",
+      "trap": "Steady does not mean unchanging. The composition holds while molecules are constantly replaced.",
+      "recall": [
+        {
+          "q": "A living organism is called a non-equilibrium steady state because it",
+          "options": ["Keeps a stable composition by spending energy", "Never changes at all", "Has stopped all reactions", "Is always at equilibrium with its surroundings"],
+          "answer": 0,
+          "why": "The cell maintains a steady internal pattern by continuous work, which keeps it away from equilibrium. That is different from being static and from being at equilibrium."
+        },
+        {
+          "q": "If a cell stops spending energy, it will",
+          "options": ["Drift toward equilibrium and die", "Stay unchanged forever", "Reach a higher steady state", "Become a virus"],
+          "answer": 0,
+          "why": "Without energy input the gradients and organisation collapse and the system moves toward equilibrium, which is incompatible with life. It cannot stay unchanged without work."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the non-equilibrium steady state wording and the entropy sentence."
+    },
+    {
+      "id": "enzymes",
+      "ncert_ref": "Ch 9, section 9.12 Enzymes",
+      "key_phrase": "activation energy",
+      "meaning": "An enzyme is a protein that speeds up a reaction by lowering its activation energy. The substrate fits into a small region called the active site, and the enzyme is released unchanged after the reaction. One enzyme molecule can repeat the cycle many times, which is its turnover.",
+      "words": [
+        {
+          "term": "enzyme",
+          "meaning": "A protein catalyst that speeds up a cell reaction.",
+          "breakdown": "en = in, zyme = yeast, from early work on fermentation",
+          "trap": "An enzyme is not used up. It comes out of the reaction ready to work again."
+        },
+        {
+          "term": "active site",
+          "meaning": "The small region of an enzyme where the substrate binds.",
+          "breakdown": "active because the chemistry happens there",
+          "trap": "The active site is a pocket with a shape, not the whole enzyme surface."
+        },
+        {
+          "term": "turnover number",
+          "meaning": "The number of substrate molecules one enzyme converts per unit time.",
+          "breakdown": "turnover = how many times the cycle repeats",
+          "trap": "A high turnover number does not mean the enzyme is present in large amounts."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'/><path d='M20 120 H130'/><path d='M20 120 C30 70 60 40 100 30' stroke-dasharray='5 4'/><text x='24' y='24' font-size='10' fill='currentColor' stroke='none'>without enzyme</text><path d='M170 120 H300'/><path d='M170 120 C200 92 240 86 300 84'/><text x='180' y='66' font-size='10' fill='currentColor' stroke='none'>with enzyme</text><text x='20' y='142' font-size='10' fill='currentColor' stroke='none'>lower barrier, same start and end</text></svg>",
+      "visual_alt": "Two energy hills, a tall one labelled without enzyme and a short one labelled with enzyme, both starting and ending at the same level.",
+      "hook": "An enzyme is a stile over a wall. It does not push you, it gives you an easier way across.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks how enzymes raise reaction rate and what happens to the enzyme afterwards. It also asks why enzymes do not change the final energy levels of the reaction.",
+      "trap": "Enzymes do not add energy to the reaction. They lower the activation barrier, so the reaction can happen at body temperature.",
+      "recall": [
+        {
+          "q": "Enzymes increase the rate of a reaction by",
+          "options": ["Lowering activation energy", "Supplying energy to the substrate", "Increasing the temperature", "Changing the products"],
+          "answer": 0,
+          "why": "An enzyme provides an easier path with a lower activation barrier. It does not supply energy, and it does not change the products or the overall energy difference."
+        },
+        {
+          "q": "After catalysing a reaction, an enzyme is",
+          "options": ["Unchanged and able to work again", "Used up completely", "Converted into the product", "Permanently denatured"],
+          "answer": 0,
+          "why": "The enzyme is released unchanged and can repeat the cycle, which is why a small amount can convert a large amount of substrate. It is not consumed like a reactant."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the activation energy and turnover statements."
+    },
+    {
+      "id": "enzyme-factors",
+      "ncert_ref": "Ch 9, section 9.12.1 Factors Affecting Enzyme Activity",
+      "key_phrase": "optimum temperature",
+      "meaning": "Each enzyme works best at a particular temperature and pH, called its optimum. Above the optimum the protein loses its shape and activity falls sharply, while below it the collisions slow down. Increasing substrate concentration raises the rate only until every active site is busy.",
+      "words": [
+        {
+          "term": "optimum",
+          "meaning": "The condition at which an enzyme works fastest.",
+          "breakdown": "optimus = best",
+          "trap": "The optimum is a range, not a single perfect number, and it differs between enzymes."
+        },
+        {
+          "term": "saturation",
+          "meaning": "The point where every active site is occupied.",
+          "breakdown": "satur = full",
+          "trap": "Adding more substrate past saturation does not raise the rate, because the enzyme is already fully busy."
+        },
+        {
+          "term": "denaturation",
+          "meaning": "Loss of enzyme shape at high temperature or extreme pH.",
+          "breakdown": "de = remove, natura = natural state",
+          "trap": "The fall in activity above the optimum is denaturation, not a slower collision rate."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'/><path d='M30 120 H300'/><path d='M30 120 V20'/><path d='M30 120 C70 60 110 40 160 40 S240 70 292 118'/><text x='140' y='30' font-size='10' fill='currentColor' stroke='none'>optimum</text><text x='252' y='98' font-size='10' fill='currentColor' stroke='none'>heat denatures</text><text x='46' y='132' font-size='10' fill='currentColor' stroke='none'>too slow</text><text x='250' y='132' font-size='10' fill='currentColor' stroke='none'>temperature</text></svg>",
+      "visual_alt": "A rate curve that rises to a peak labelled optimum and then falls steeply, with the two ends labelled too slow and heat denatures.",
+      "hook": "An enzyme is a picky worker: too cold and it is slow, too hot and it quits.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks you to read a rate against temperature or pH graph, name the optimum, and explain the fall on either side.",
+      "trap": "The fall after the optimum is denaturation, not fewer collisions. Cold slows an enzyme but does not destroy it.",
+      "recall": [
+        {
+          "q": "Enzyme activity falls sharply above the optimum temperature because the enzyme",
+          "options": ["Denatures", "Becomes a substrate", "Gains a cofactor", "Changes its amino acid sequence"],
+          "answer": 0,
+          "why": "Heat breaks the weak interactions holding the folded shape, so the active site loses its fit. The amino acid sequence itself is not changed."
+        },
+        {
+          "q": "Adding more substrate once all active sites are occupied will",
+          "options": ["Not increase the rate further", "Double the rate", "Denature the enzyme", "Change the optimum pH"],
+          "answer": 0,
+          "why": "At saturation every enzyme molecule is already working at full capacity, so extra substrate has nothing to bind to. The rate levels off."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the temperature and pH optima description."
+    },
+    {
+      "id": "enzyme-inhibition",
+      "ncert_ref": "Ch 9, section 9.12.2 Enzyme Inhibition",
+      "key_phrase": "competitive inhibition",
+      "meaning": "A competitive inhibitor resembles the substrate and blocks the active site, so more substrate can outcompete it. A non-competitive inhibitor binds elsewhere on the enzyme and changes its shape, so extra substrate does not help much. Malonate blocking succinate dehydrogenase is the standard example of the competitive kind.",
+      "words": [
+        {
+          "term": "competitive inhibitor",
+          "meaning": "A molecule that looks like the substrate and occupies the active site.",
+          "breakdown": "compete = to strive together for the same place",
+          "trap": "A competitive inhibitor does not destroy the enzyme. Raising substrate concentration can overcome it."
+        },
+        {
+          "term": "non-competitive inhibitor",
+          "meaning": "A molecule that binds away from the active site and changes the enzyme's shape.",
+          "breakdown": "non-competitive because it does not fight for the active site",
+          "trap": "Extra substrate does not reverse a non-competitive inhibitor, because the active site itself has been distorted."
+        },
+        {
+          "term": "allosteric site",
+          "meaning": "A binding site on an enzyme away from the active site.",
+          "breakdown": "allo = other, stereos = solid or space",
+          "trap": "An allosteric site is not the active site. Binding there changes the shape of the enzyme."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150' fill='none' stroke='currentColor' stroke-width='2'/><path d='M30 40 H110 V120 H30 Z'/><path d='M64 40 V64 H88 V40'/><circle cx='76' cy='86' r='10'/><text x='24' y='140' font-size='10' fill='currentColor' stroke='none'>competitive: same slot</text><path d='M180 40 H260 V120 H180 Z'/><circle cx='220' cy='56' r='9'/><path d='M212 98 H228 V112 H212 Z'/><text x='174' y='140' font-size='10' fill='currentColor' stroke='none'>non-competitive: elsewhere</text></svg>",
+      "visual_alt": "Two enzyme shapes: in the first a molecule sits in the active site notch, in the second it binds at a separate site and the notch is distorted.",
+      "hook": "A competitive inhibitor is someone sitting in your seat. A non-competitive one bends the chair so you cannot sit.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks you to identify the type of inhibition from a description or a rate graph, and to name the malonate and succinate dehydrogenase example.",
+      "trap": "A non-competitive inhibitor does not compete for the active site, so raising substrate concentration does not restore the rate.",
+      "recall": [
+        {
+          "q": "A competitive inhibitor can be overcome by",
+          "options": ["Increasing substrate concentration", "Increasing enzyme concentration only", "Adding a coenzyme", "Heating the mixture"],
+          "answer": 0,
+          "why": "A competitive inhibitor and the substrate compete for the same site, so more substrate wins more often. A non-competitive inhibitor is not reversed this way."
+        },
+        {
+          "q": "Malonate inhibits succinate dehydrogenase by",
+          "options": ["Competing with succinate at the active site", "Binding to DNA", "Denaturing the enzyme with heat", "Removing the coenzyme permanently"],
+          "answer": 0,
+          "why": "Malonate resembles succinate and occupies the same active site, which is the classic example of competitive inhibition. It does not act on DNA or by heat."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the malonate example and the inhibitor definitions."
+    },
+    {
+      "id": "cofactors",
+      "ncert_ref": "Ch 9, section 9.12.3 Cofactors",
+      "key_phrase": "holoenzyme",
+      "meaning": "Many enzymes need a non-protein helper to work. A tightly bound organic helper is a prosthetic group, a loosely bound organic helper is a coenzyme, and a metal ion can act as an activator. The protein part alone is the apoenzyme, and the complete assembly is the holoenzyme.",
+      "words": [
+        {
+          "term": "cofactor",
+          "meaning": "A non-protein helper required by an enzyme.",
+          "breakdown": "co = together with, factor = something that contributes",
+          "trap": "A cofactor is not part of the protein chain. It attaches to the protein."
+        },
+        {
+          "term": "coenzyme",
+          "meaning": "A loosely bound organic cofactor.",
+          "breakdown": "co = with, enzyme = the protein catalyst",
+          "trap": "A coenzyme is not the enzyme itself, and many are derived from vitamins."
+        },
+        {
+          "term": "apoenzyme",
+          "meaning": "The protein part of an enzyme without its cofactor.",
+          "breakdown": "apo = away from",
+          "trap": "The apoenzyme is inactive on its own. Adding the cofactor gives the holoenzyme."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 140' fill='none' stroke='currentColor' stroke-width='2'/><path d='M30 40 H110 V96 H30 Z'/><text x='44' y='74' font-size='10' fill='currentColor' stroke='none'>protein</text><circle cx='140' cy='68' r='14'/><text x='134' y='72' font-size='10' fill='currentColor' stroke='none'>co</text><path d='M158 68 H186 M178 62 L186 68 L178 74'/><path d='M190 40 H282 V96 H190 Z'/><text x='200' y='74' font-size='10' fill='currentColor' stroke='none'>holoenzyme</text><text x='30' y='124' font-size='10' fill='currentColor' stroke='none'>apoenzyme alone is inactive</text></svg>",
+      "visual_alt": "A protein block labelled apoenzyme, a separate helper circle, and an arrow to the combined block labelled holoenzyme.",
+      "hook": "Apoenzyme is the blade, cofactor is the handle. Together they are the knife.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks the difference between a prosthetic group and a coenzyme, and asks for named examples such as haem, NAD and metal ions.",
+      "trap": "A cofactor is not part of the protein chain. It is a separate helper attached to it, which is why the apoenzyme alone is inactive.",
+      "recall": [
+        {
+          "q": "The protein part of an enzyme without its cofactor is called the",
+          "options": ["Apoenzyme", "Holoenzyme", "Coenzyme", "Substrate"],
+          "answer": 0,
+          "why": "Apoenzyme is the protein alone and it is inactive. With its cofactor it becomes the holoenzyme, and the coenzyme is the helper rather than the protein."
+        },
+        {
+          "q": "A tightly bound organic helper of an enzyme is called a",
+          "options": ["Prosthetic group", "Coenzyme", "Metal ion", "Substrate"],
+          "answer": 0,
+          "why": "A prosthetic group is tightly attached to the enzyme. A coenzyme is loosely bound, and a metal ion is inorganic."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the cofactor categories and named examples."
+    }
+  ]
+}
