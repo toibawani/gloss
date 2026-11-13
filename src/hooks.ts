@@ -1,11 +1,22 @@
 import { useEffect, useRef, useState } from 'react'
+import { flushSync } from 'react-dom'
 import { chapterIndex, loadChapter, loadChapters } from './content'
 import type { ChapterT } from './schema'
 
 export function useHash() {
   const [h, setH] = useState(location.hash.slice(1) || '/')
   useEffect(() => {
-    const f = () => setH(location.hash.slice(1) || '/')
+    const read = () => location.hash.slice(1) || '/'
+    const f = () => {
+      // A short cross-fade between routes, only where the browser supports view transitions.
+      // Reduced-motion users skip it because the transition paints nothing beyond the final frame.
+      const vt = (document as Document & { startViewTransition?: (cb: () => void) => void }).startViewTransition
+      if (vt && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        vt.call(document, () => flushSync(() => setH(read())))
+      } else {
+        setH(read())
+      }
+    }
     addEventListener('hashchange', f)
     return () => removeEventListener('hashchange', f)
   }, [])

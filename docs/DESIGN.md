@@ -13,8 +13,9 @@ furniture that should get out of its way. The rules below are decisions, not opt
 3. **Hierarchy by scale, not by decoration.** One thing is big on every screen. Labels are small,
    rare and lowercase, not a uniform uppercase ribbon above every page.
 4. **Color carries meaning.** Each subject owns one solid ink color, used for its covers, numerals,
-   progress and diagram accents. Rust is reserved for actions and the brand mark. No color does
-   two jobs.
+   progress and diagram accents. Deep blue is reserved for actions and the brand mark. No color
+   does two jobs. The page itself is a cool paper, not cream: cream reads as age, and this is a
+   working notebook, not an antique.
 5. **Density changes on purpose.** Reading is airy, lists are compact, settings are tight.
 6. **Motion explains a change.** A paragraph slides in the direction you moved. A sheet rises. An
    answer reveals. Nothing fades in because it scrolled into view.
@@ -35,22 +36,44 @@ Self-hosted. No Inter, Geist or Space Grotesk.
 
 Modular scale: 11, 13, 15, 19, 24, 32, 44, 60. No size outside the scale.
 
+## Motion
+
+Motion answers a question the reader already has: where did the page go, and did my action
+register. Durations are tokens, `--fast` 140ms for state and `--med` 280ms for a screen change,
+with one easing curve, `cubic-bezier(0.22, 0.61, 0.36, 1)`. Everything below is cancelled under
+`prefers-reduced-motion: reduce`.
+
+| Movement | Job |
+| --- | --- |
+| Route change | hash navigation runs inside `document.startViewTransition`; the new screen cross-fades over 180ms and starts 4px lower, so the eye lands on the new title |
+| Progress meter | the filled bar animates width on mount, so a saved count reads as an amount, not a number |
+| Tab bar | a 2px accent bar slides under the active label, which is the only thing that moves in the shell |
+| Chapter row hover | the cover plate lifts 2px and the numeral takes the subject ink; a ruled row, not a card |
+| Answer reveal | the explanation opens with a 120ms height and opacity change, matching the click |
+| Sheet | the native dialog rises 8px and fades, once |
+
+Nothing animates on scroll. No parallax, no counters that tick for decoration, no looping motion
+outside the 1.4s skeleton pulse.
+
 ## Color
 
 One tonal system per subject, one paper.
 
 | Token | Light | Dark | Use |
 | --- | --- | --- | --- |
-| `--paper` | `#f4eee0` | `#15120d` | page background |
-| `--panel` | `#fbf7ec` | `#1d1912` | tonal band, sheet background |
-| `--ink` | `#1f1a14` | `#f2e9d6` | text |
-| `--muted` | `#5c5142` | `#c3b49a` | secondary text, 5.1:1 minimum |
-| `--rule` | `#d6c9ae` | `#3f372a` | hairlines |
-| `--accent` | `#8a3b1e` | `#f0b58d` | actions, brand mark, focus |
-| `--bio` | `#2e4a34` | `#8fbb96` | biology |
-| `--phy` | `#26405f` | `#94b6dd` | physics |
-| `--chem` | `#8a3b24` | `#e7a184` | chemistry |
-| `--hist` | `#7a5a1e` | `#d8b979` | history, geography |
+| `--paper` | `#f4f5f2` | `#0f1216` | page background |
+| `--panel` | `#fbfcfa` | `#161a1f` | tonal band, sheet background |
+| `--band` | `#e8ebe5` | `#1d232a` | quiet fill, cover plate |
+| `--ink` | `#12161a` | `#e9edf1` | text |
+| `--muted` | `#525c66` | `#a6b1bc` | secondary text, 5:1 minimum |
+| `--rule` | `#d5dad3` | `#2c343d` | hairlines |
+| `--accent` | `#0f4c81` | `#82b4e4` | actions, brand mark, focus |
+| `--bio` | `#1f6a4d` | `#79c6a6` | biology |
+| `--phy` | `#3a3f7a` | `#a3abee` | physics |
+| `--chem` | `#9a3038` | `#e6a0a6` | chemistry |
+| `--hist` | `#7a5a1e` | `#d9b978` | history, geography |
+
+`scripts/check-contrast.mjs` checks every pairing in both themes and fails below AA. It runs in CI.
 
 Subject color is always set on a container as `--subject`, and children use `var(--subject)`. It is
 never used for body text on paper below 4.5:1.
