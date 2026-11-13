@@ -14,8 +14,10 @@ export const SVG_TAGS = new Set([
 export const SVG_ATTRS = new Set([
   'viewBox', 'd', 'cx', 'cy', 'r', 'rx', 'ry', 'x', 'y', 'x1', 'y1', 'x2', 'y2', 'width', 'height', 'points',
   'transform', 'fill', 'stroke', 'stroke-width', 'stroke-dasharray', 'stroke-linecap', 'stroke-linejoin',
-  'text-anchor', 'font-size', 'opacity',
+  'text-anchor', 'font-size', 'opacity', 'class',
 ])
+/** Semantic diagram classes, mapped in src/styles.css. Keep in sync with src/Visual.tsx. */
+export const SVG_CLASSES = new Set(['d-line', 'd-fill', 'd-accent', 'd-label', 'd-muted', 'd-guide'])
 
 const BUZZWORDS = [
   'revolutionize', 'revolutionise', 'supercharge', 'seamless', 'seamlessly', 'game-changer',
@@ -97,7 +99,13 @@ export function lintSvg(svg: string): Issue[] {
   for (const t of tags) if (!SVG_TAGS.has(t)) add('svg-tag', `tag <${t}> is outside the allow-list`)
   for (const a of attrs) if (!SVG_ATTRS.has(a)) add('svg-attr', `attribute ${a} is outside the allow-list`)
   if (!/viewBox\s*=\s*['"]0 0 \d+ \d+['"]/.test(svg)) add('svg-viewbox', 'viewBox must start at 0 0')
-  if (!/currentColor/.test(svg)) add('svg-colour', 'diagram never uses currentColor')
+  for (const m of svg.matchAll(/class\s*=\s*['"]([^'"]*)['"]/g)) {
+    for (const token of m[1].split(/\s+/).filter(Boolean)) {
+      if (!SVG_CLASSES.has(token)) add('svg-class', `class ${token} is outside the diagram set`)
+    }
+  }
+  const usesClass = /class\s*=\s*['"]d-/.test(svg)
+  if (!/currentColor/.test(svg) && !usesClass) add('svg-colour', 'diagram never uses currentColor')
   if (HEX_COLOUR.test(svg)) add('svg-hex', 'hard-coded hex colour found')
   for (const m of svg.matchAll(NAMED_COLOUR)) {
     add('svg-named-colour', `fixed colour ${m[1]}="${m[2]}" found; use currentColor or none`)

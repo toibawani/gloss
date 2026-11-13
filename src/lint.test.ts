@@ -82,6 +82,8 @@ describe('svg allow-list', () => {
     ["<svg viewBox='0 0 10 10'><rect fill='url(#x)'/></svg>", 'svg-url'],
     ["<svg viewBox='0 0 10 10'><rect fill='#ff0000'/></svg>", 'svg-hex'],
     ["<svg viewBox='0 0 10 10'><rect fill='currentColor'/></svg>", 'svg-nothing-bad'],
+    ["<svg viewBox='0 0 10 10'><rect class='d-line'/></svg>", 'svg-nothing-bad'],
+    ["<svg viewBox='0 0 10 10'><rect class='d-line evil'/></svg>", 'svg-class'],
   ])('flags %s', (svg, code) => {
     const codes = lintSvg(svg).map((i) => i.code)
     if (code === 'svg-nothing-bad') expect(codes).not.toContain('svg-hex')

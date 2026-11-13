@@ -1,0 +1,302 @@
+{
+  "id": "phy-11-ch1",
+  "subject": "Physics",
+  "class": 11,
+  "title": "Units and Measurements",
+  "book": "NCERT Physics Class XI",
+  "paragraphs": [
+    {
+      "id": "si-base-units",
+      "ncert_ref": "Ch 1, Units and Measurements: the International System of Units",
+      "key_phrase": "seven base units",
+      "meaning": "A measurement is a number with a unit, and SI fixes seven base units that every other unit is built from: metre for length, kilogram for mass, second for time, ampere for current, kelvin for temperature, mole for amount of substance and candela for luminous intensity. A unit such as the newton is derived, because it is written from base units. The point of one agreed system is that a result measured in Delhi means the same thing in a laboratory anywhere else.",
+      "words": [
+        {
+          "term": "base unit",
+          "meaning": "One of the seven independent units from which all others are formed.",
+          "breakdown": "base = the starting point. Metre, kilogram, second, ampere, kelvin, mole and candela.",
+          "trap": "The kilogram is the only base unit whose name already carries a prefix. That does not make the gram the base unit."
+        },
+        {
+          "term": "derived unit",
+          "meaning": "A unit produced by multiplying or dividing base units, such as the newton or the joule.",
+          "breakdown": "newton = kilogram metre per second squared, joule = newton metre",
+          "trap": "A derived unit still has dimensions. Being derived does not mean it is less exact."
+        },
+        {
+          "term": "candela",
+          "meaning": "The SI base unit of luminous intensity, the brightness of a source in a given direction.",
+          "breakdown": "Latin candela = candle. It is about light as the eye sees it, not raw power.",
+          "trap": "Candela is the base unit most often left out when students count the seven."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><g class='d-line'><rect x='12' y='26' width='34' height='34'/><rect x='54' y='26' width='34' height='34'/><rect x='96' y='26' width='34' height='34'/><rect x='138' y='26' width='34' height='34'/><rect x='180' y='26' width='34' height='34'/><rect x='222' y='26' width='34' height='34'/><rect x='264' y='26' width='34' height='34'/></g><text class='d-label' x='16' y='20'>length</text><text class='d-label' x='58' y='20'>mass</text><text class='d-label' x='100' y='20'>time</text><text class='d-label' x='142' y='20'>current</text><text class='d-label' x='184' y='20'>temp</text><text class='d-label' x='226' y='20'>amount</text><text class='d-label' x='268' y='20'>light</text><text class='d-label' x='22' y='49'>m</text><text class='d-label' x='64' y='49'>kg</text><text class='d-label' x='106' y='49'>s</text><text class='d-label' x='148' y='49'>A</text><text class='d-label' x='190' y='49'>K</text><text class='d-label' x='232' y='49'>mol</text><text class='d-label' x='274' y='49'>cd</text><path class='d-guide' d='M160 66v34'/><text class='d-label' x='96' y='116'>everything else is built from these</text><path class='d-accent' d='M96 122h128'/></svg>",
+      "visual_alt": "Seven boxes in a row for metre, kilogram, second, ampere, kelvin, mole and candela, with a line beneath saying every other unit is built from them.",
+      "hook": "Seven bricks. The newton, the joule and the volt are just walls built from them.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Both exams ask you to spot a base unit among derived ones, and to count the base units. The trap is counting the kilogram as two units because of its prefix.",
+      "trap": "The kilogram is already the base unit. Its name contains a prefix because the gram was defined first, not because the gram is the base.",
+      "recall": [
+        {
+          "q": "Which of these is an SI base unit?",
+          "options": ["Newton", "Joule", "Kelvin", "Watt"],
+          "answer": 2,
+          "why": "The kelvin is one of the seven base units. The newton, joule and watt are derived from base units such as the kilogram, metre and second."
+        },
+        {
+          "q": "How many base units does the SI system define?",
+          "options": ["Five", "Six", "Seven", "Nine"],
+          "answer": 2,
+          "why": "There are seven: metre, kilogram, second, ampere, kelvin, mole and candela. Every other SI unit is a combination of these."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Chapter numbering differs between the older and rationalised editions, so check that this is chapter 1 in your copy."
+    },
+    {
+      "id": "significant-figures",
+      "ncert_ref": "Ch 1, Units and Measurements: significant figures",
+      "key_phrase": "digits that carry meaning",
+      "meaning": "Significant figures are the digits that tell you how precise a measurement is. Every non-zero digit counts, zeros between two significant digits count, leading zeros never count, and in a decimal a trailing zero does count, so 0.00450 has three. When you multiply or divide, the answer keeps the smallest number of significant figures in the inputs.",
+      "words": [
+        {
+          "term": "significant figure",
+          "meaning": "A digit that is known reliably plus the first uncertain digit.",
+          "breakdown": "signify = to mean. A figure that carries information about the size or the precision.",
+          "trap": "Leading zeros are placeholders, not measurements. 0.0025 has two significant figures, not five."
+        },
+        {
+          "term": "least count",
+          "meaning": "The smallest change an instrument can show.",
+          "breakdown": "The last digit you can read sets how many figures the measurement deserves.",
+          "trap": "Writing more digits than the instrument can resolve does not make the measurement better."
+        },
+        {
+          "term": "scientific notation",
+          "meaning": "Writing a number as a decimal between 1 and 10 multiplied by a power of ten.",
+          "breakdown": "It makes the significant figures obvious: 4.50 × 10^-3 has three.",
+          "trap": "The power of ten never adds significant figures. Only the decimal part does."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 130'><text class='d-label' x='12' y='30'>measurement</text><text class='d-label' x='12' y='60'>0.00450 m</text><path class='d-muted' d='M12 68h20M56 68h8M92 68h8'/><text class='d-label' x='12' y='96'>placeholders</text><path class='d-guide' d='M40 74v14M40 88h-24'/><text class='d-label' x='150' y='60'>three significant figures</text><text class='d-label' x='150' y='82'>4, 5 and the last 0</text><path class='d-accent' d='M150 92h96'/></svg>",
+      "visual_alt": "The number 0.00450 with its leading zeros marked as placeholders and the digits 4, 5 and the final zero marked as the three significant figures.",
+      "hook": "Zeros before the first real digit are signposts. Zeros after a real digit are part of the reading.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions give a calculation and four answers that differ only in rounding. The marking scheme follows the least precise input, not the most digits you can write.",
+      "trap": "In addition and subtraction the rule is decimal places, not significant figures. Mixing the two rules is the usual error.",
+      "recall": [
+        {
+          "q": "How many significant figures does 0.00450 have?",
+          "options": ["Two", "Three", "Four", "Five"],
+          "answer": 1,
+          "why": "The leading zeros are placeholders. The digits 4, 5 and the trailing zero after the decimal are significant, so there are three."
+        },
+        {
+          "q": "A rectangle measures 4.2 cm by 2.15 cm. To how many significant figures should the area be reported?",
+          "options": ["Two", "Three", "Four", "Five"],
+          "answer": 0,
+          "why": "In a product the answer carries the smallest number of significant figures among the inputs. 4.2 has two, so the area is reported to two figures."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the significant-figure examples match the rules printed in your copy."
+    },
+    {
+      "id": "dimensional-analysis",
+      "ncert_ref": "Ch 1, Units and Measurements: dimensional formulae and dimensional equations",
+      "key_phrase": "dimensions of a quantity",
+      "meaning": "Dimensions describe what kind of quantity something is, using powers of mass, length, time and the other base quantities, so velocity is length divided by time. Dimensional analysis checks an equation by requiring every term to have the same dimensions, and it can convert units or reject a wrong formula. It cannot supply a dimensionless constant such as the one half in kinetic energy.",
+      "words": [
+        {
+          "term": "dimensional formula",
+          "meaning": "The expression of a quantity in terms of M, L, T and the other base dimensions.",
+          "breakdown": "force = mass × acceleration = M L T^-2",
+          "trap": "Dimensions are not units. Force has the same dimensions whether you measure it in newtons or dynes."
+        },
+        {
+          "term": "principle of homogeneity",
+          "meaning": "Every term added or equated in a valid equation must have the same dimensions.",
+          "breakdown": "homo = same, genos = kind",
+          "trap": "Homogeneity is necessary, not sufficient. An equation can balance dimensionally and still be wrong by a numerical factor."
+        },
+        {
+          "term": "dimensionless quantity",
+          "meaning": "A quantity with no dimensions, such as an angle, strain or refractive index.",
+          "breakdown": "A ratio of two quantities with the same dimensions cancels to nothing.",
+          "trap": "Dimensionless does not mean unitless in every convention. Angles are dimensionless but still carry the radian."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 140'><text class='d-label' x='12' y='24'>check every term</text><rect class='d-line' x='12' y='38' width='84' height='30'/><text class='d-label' x='20' y='58'>M L T^-2</text><text class='d-label' x='106' y='58'>=</text><rect class='d-line' x='122' y='38' width='84' height='30'/><text class='d-label' x='130' y='58'>M L T^-2</text><text class='d-label' x='216' y='58'>+</text><rect class='d-accent' x='232' y='38' width='76' height='30'/><text class='d-label' x='240' y='58'>same again</text><path class='d-guide' d='M12 96h296'/><text class='d-label' x='12' y='118'>a mismatch here means the equation is wrong</text></svg>",
+      "visual_alt": "Three terms in an equation, two in boxes and one outlined in the accent color, all labelled with the same dimensions, with a note that a mismatch means the equation is wrong.",
+      "hook": "Dimensions are a spellcheck for equations. They catch the wrong word, not the wrong meaning.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "JEE uses dimensions to test which combination of constants gives a quantity, and to reject options quickly. NEET asks for the dimensional formula of a standard quantity.",
+      "trap": "Dimensional analysis cannot supply a numerical constant. It can tell you that energy goes as mass times velocity squared, not that the factor is one half.",
+      "recall": [
+        {
+          "q": "Which quantity is dimensionless?",
+          "options": ["Strain", "Pressure", "Impulse", "Torque"],
+          "answer": 0,
+          "why": "Strain is a change in length divided by a length, so the dimensions cancel. Pressure, impulse and torque all keep dimensions of mass, length and time."
+        },
+        {
+          "q": "Dimensional analysis can be used to",
+          "options": [
+            "Find the exact numerical constant in a formula",
+            "Check whether an equation is dimensionally consistent",
+            "Prove that a formula is physically correct",
+            "Replace a controlled experiment"
+          ],
+          "answer": 1,
+          "why": "It checks that the dimensions on both sides agree. That is necessary but not sufficient, and it never supplies a dimensionless constant."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Confirm the dimensional formulae listed match the table in your copy."
+    },
+    {
+      "id": "errors-in-measurement",
+      "ncert_ref": "Ch 1, Units and Measurements: accuracy, precision and errors",
+      "key_phrase": "every measurement carries an error",
+      "meaning": "No instrument gives the true value exactly, and the difference between a reading and the accepted value is the error. Systematic errors lean the same way every time, such as a balance that reads high with nothing on it, while random errors scatter both ways and shrink when you repeat and average. The mean absolute, relative and percentage errors turn that scatter into a number you can report.",
+      "words": [
+        {
+          "term": "systematic error",
+          "meaning": "An error that pushes readings in the same direction each time.",
+          "breakdown": "A zero error, a worn scale or a wrongly calibrated instrument.",
+          "trap": "Repeating the measurement does not remove a systematic error. It repeats the same mistake."
+        },
+        {
+          "term": "random error",
+          "meaning": "An unpredictable scatter around the true value.",
+          "breakdown": "Changing conditions, imperfect parallax, fluctuating readings.",
+          "trap": "Averaging many readings reduces random error but never removes it completely."
+        },
+        {
+          "term": "relative error",
+          "meaning": "The absolute error divided by the measured value, often written as a percentage.",
+          "breakdown": "relative error = Δa / a, percentage error = (Δa / a) × 100",
+          "trap": "A small absolute error on a small reading can still be a large relative error."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M20 40h280'/><path class='d-accent' d='M160 30v20'/><text class='d-label' x='146' y='24'>true value</text><circle class='d-fill' cx='60' cy='90' r='6'/><circle class='d-fill' cx='74' cy='90' r='6'/><circle class='d-fill' cx='88' cy='90' r='6'/><text class='d-label' x='30' y='118'>systematic: all on one side</text><circle class='d-fill' cx='200' cy='90' r='6'/><circle class='d-fill' cx='240' cy='90' r='6'/><circle class='d-fill' cx='160' cy='90' r='6'/><text class='d-label' x='170' y='118'>random: both sides</text></svg>",
+      "visual_alt": "A true-value line with three readings clustered to one side, labelled systematic, and three readings scattered around the line, labelled random.",
+      "hook": "A systematic error is a crooked ruler. A random error is a shaky hand.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions give several readings, ask for the mean absolute error or the percentage error, and offer a distractor that averages a systematic error away.",
+      "trap": "Taking more readings fixes random error, not systematic error. The zero error stays until you correct the instrument.",
+      "recall": [
+        {
+          "q": "A balance reads 0.2 g with nothing on the pan. This is",
+          "options": ["A random error", "A systematic error", "A rounding error", "Not an error"],
+          "answer": 1,
+          "why": "Every reading will be 0.2 g too high, in the same direction. That is a systematic zero error, and repeating the weighing will not remove it."
+        },
+        {
+          "q": "Repeating a measurement many times and averaging mainly reduces",
+          "options": ["Systematic error", "Random error", "The least count", "The unit"],
+          "answer": 1,
+          "why": "Random errors scatter in both directions, so their average moves toward zero. A systematic error leans the same way every time and survives averaging."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the error formulae and the sign conventions used in your copy."
+    },
+    {
+      "id": "accuracy-and-precision",
+      "ncert_ref": "Ch 1, Units and Measurements: accuracy and precision",
+      "key_phrase": "accuracy is closeness, precision is repeatability",
+      "meaning": "Accuracy says how close a reading is to the true value, and precision says how close repeated readings are to each other. A clock that is five minutes slow is precise, because it gives the same answer every time, and inaccurate, because that answer is wrong. Good measurement needs both, and a systematic error is exactly where precision can be high while accuracy is poor.",
+      "words": [
+        {
+          "term": "accuracy",
+          "meaning": "How close a measured value is to the accepted or true value.",
+          "breakdown": "From Latin ad curare, to take care of. It is about correctness.",
+          "trap": "A precise instrument can still be inaccurate if it is badly calibrated."
+        },
+        {
+          "term": "precision",
+          "meaning": "How close repeated measurements are to one another, or how fine the resolution is.",
+          "breakdown": "It is about consistency and resolution, not truth.",
+          "trap": "Precision is not another word for accuracy. This is the most common mix-up in the chapter."
+        },
+        {
+          "term": "resolution",
+          "meaning": "The smallest difference an instrument can display.",
+          "breakdown": "A ruler marked in millimetres resolves 1 mm.",
+          "trap": "More digits on a display do not create resolution the sensor does not have."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='24' y='30' width='110' height='90'/><circle class='d-fill' cx='79' cy='75' r='5'/><circle class='d-fill' cx='88' cy='75' r='5'/><circle class='d-fill' cx='70' cy='75' r='5'/><text class='d-label' x='30' y='140'>precise, inaccurate</text><rect class='d-line' x='186' y='30' width='110' height='90'/><circle class='d-fill' cx='241' cy='75' r='5'/><circle class='d-fill' cx='241' cy='75' r='5'/><circle class='d-fill' cx='241' cy='75' r='5'/><text class='d-label' x='192' y='140'>precise and accurate</text><path class='d-accent' d='M241 62v-8'/></svg>",
+      "visual_alt": "Two targets: the first has all hits clustered off centre, labelled precise but not accurate; the second has all hits at the centre, labelled both.",
+      "hook": "A stopped clock is extremely precise and completely useless. That is precision without accuracy.",
+      "exam_tags": ["NEET"],
+      "exam_note": "NEET asks you to classify instrument readings as accurate, precise, both or neither, and to explain how a systematic error keeps precision high.",
+      "trap": "High precision does not imply high accuracy. A miscalibrated instrument repeats the same wrong value perfectly.",
+      "recall": [
+        {
+          "q": "A watch loses exactly two minutes every day. Its readings are",
+          "options": ["Accurate but not precise", "Precise but not accurate", "Both accurate and precise", "Neither accurate nor precise"],
+          "answer": 1,
+          "why": "It gives a consistent, repeatable reading, so it is precise. Every reading is wrong by the same amount, so it is not accurate."
+        },
+        {
+          "q": "Accuracy of a measurement refers to",
+          "options": ["How close it is to the true value", "How many digits it has", "How repeatable it is", "How small the instrument is"],
+          "answer": 0,
+          "why": "Accuracy is closeness to the accepted value. Repeatability and digit count belong to precision and resolution."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Confirm the target-diagram wording matches the definitions in your copy."
+    },
+    {
+      "id": "unit-conversion",
+      "ncert_ref": "Ch 1, Units and Measurements: conversion of units",
+      "key_phrase": "multiply by one",
+      "meaning": "A unit conversion is a chain of fractions that each equal one, written so the unwanted unit cancels. To turn 90 km/h into metres per second, multiply by 1000 m over 1 km and by 1 h over 3600 s: the kilometres and hours cancel and 25 m/s remains. Each fraction states the same quantity in two units, so the value never changes, only its label.",
+      "words": [
+        {
+          "term": "conversion factor",
+          "meaning": "A ratio of two equal quantities in different units, used to change the unit.",
+          "breakdown": "1 km = 1000 m gives the fractions 1000 m / 1 km and 1 km / 1000 m.",
+          "trap": "Choose the fraction that cancels the unit you have. Inverting it multiplies the error instead of removing it."
+        },
+        {
+          "term": "dimensionally consistent",
+          "meaning": "Both sides of an equation reduce to the same base dimensions.",
+          "breakdown": "A conversion that leaves the dimensions unchanged cannot change the physical quantity.",
+          "trap": "A correct number with the wrong unit is a wrong answer. Marks are lost on the unit."
+        },
+        {
+          "term": "order of magnitude",
+          "meaning": "The nearest power of ten, used for quick comparison.",
+          "breakdown": "25 m/s is of the order of 10 m/s, not 100 m/s.",
+          "trap": "An order of magnitude is not a rounded value. It is a statement about scale."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='30'>90 km/h</text><text class='d-label' x='96' y='30'>×</text><rect class='d-line' x='112' y='14' width='70' height='24'/><text class='d-label' x='118' y='30'>1000 m</text><path class='d-line' d='M112 40h70'/><text class='d-label' x='118' y='56'>1 km</text><text class='d-label' x='196' y='30'>×</text><rect class='d-line' x='212' y='14' width='70' height='24'/><text class='d-label' x='218' y='30'>1 h</text><path class='d-line' d='M212 40h70'/><text class='d-label' x='218' y='56'>3600 s</text><path class='d-accent' d='M12 84h20M124 84h20M228 84h16'/><text class='d-label' x='12' y='110'>km and h cancel</text><text class='d-label' x='12' y='132'>= 25 m/s</text></svg>",
+      "visual_alt": "Ninety kilometres per hour multiplied by a fraction of metres over kilometres and a fraction of hours over seconds, with the cancelled units marked, giving 25 metres per second.",
+      "hook": "You are not changing the speed. You are changing the label on the same speed.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Numericals often hide a unit change, such as grams to kilograms or minutes to seconds. Most lost marks here are unit slips, not physics.",
+      "trap": "Multiplying by 1000/3600 converts km/h to m/s. Multiplying by 3600/1000 converts the other way. Check the cancellation before calculating.",
+      "recall": [
+        {
+          "q": "A car travels at 72 km/h. What is its speed in metres per second?",
+          "options": ["10 m/s", "20 m/s", "26 m/s", "36 m/s"],
+          "answer": 1,
+          "why": "72 km/h × 1000 m / 1 km × 1 h / 3600 s = 72 × 1000 / 3600 = 20 m/s."
+        },
+        {
+          "q": "In a conversion fraction, the unit you want to remove should appear",
+          "options": ["In the numerator", "In the denominator", "In both places", "Only as a power"],
+          "answer": 1,
+          "why": "Putting the unwanted unit in the denominator lets it cancel against the unit in the numerator of the quantity you are converting."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition. Check the conversion examples against the worked examples in your copy."
+    }
+  ]
+}
