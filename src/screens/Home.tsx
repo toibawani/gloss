@@ -4,6 +4,8 @@ import { useChapter } from '../hooks'
 import { saveChaptersOffline, formatBytes } from '../offline'
 import * as store from '../store'
 import { Card } from '../components/Card'
+import { ChapterList } from '../components/ChapterList'
+import { Cover } from '../components/Cover'
 import { Empty, Skeleton } from '../components/States'
 import { Icon } from '../icons'
 import { isDue, usableCard } from '../srs'
@@ -47,17 +49,34 @@ export function Home() {
   }
 
   const read = Object.values(prog).reduce((n, ids) => n + ids.length, 0)
+  const subjects = groups.length
 
   return (
     <>
       <header className="page-head hero">
-        <p className="hero-subject">Class 11 · Biology</p>
+        <p className="hero-subject">Class 11 · Physics, Chemistry and Biology</p>
         <h1>Every paragraph, with a margin note.</h1>
         <p className="lede">
-          NCERT lines explained where students get stuck. {totalParagraphs} paragraphs are written across {chapterIndex.length}{' '}
-          chapters. Every one is a draft until a subject expert checks it.
+          NCERT lines explained where students get stuck. {subjects} subjects, {chapterIndex.length} chapters and{' '}
+          {totalParagraphs} paragraphs are written so far. Every one is a draft until a subject expert checks it.
         </p>
       </header>
+
+      <section className="covers" aria-label="Subjects">
+        {groups.map(([subject, list]) => {
+          const total = list.reduce((n, c) => n + c.paragraphs, 0)
+          const seen = list.reduce((n, c) => n + (prog[c.id] ?? []).length, 0)
+          return (
+            <a className="cover-card" key={subject} href={`#/s/${encodeURIComponent(subject)}`} data-subject={subject}>
+              <Cover subject={subject} size={96} />
+              <span className="cover-name">{subject}</span>
+              <span className="cover-meta">
+                {list.length} {list.length === 1 ? 'chapter' : 'chapters'} · {seen} of {total} read
+              </span>
+            </a>
+          )
+        })}
+      </section>
 
       {due > 0 && (
         <a className="due" href="#/revise">
@@ -80,44 +99,15 @@ export function Home() {
               </span>
             </div>
 
-            <ul className="chapter-list">
-              {list.map((c, n) => {
-                const read = (prog[c.id] ?? []).length
-                return (
-                  <li key={c.id}>
-                    <a className="chapter-row" href={`#/c/${c.id}`}>
-                      <span className="chapter-no" aria-hidden="true">
-                        {String(n + 1).padStart(2, '0')}
-                      </span>
-                      <span className="chapter-body">
-                        <span className="chapter-name">{c.title}</span>
-                        <span className="chapter-meta">
-                          <span>{c.paragraphs} paragraphs</span>
-                          <span className="dot" aria-hidden="true">
-                            ·
-                          </span>
-                          <span>{read} read</span>
-                        </span>
-                        <progress
-                          className="progress"
-                          max={c.paragraphs}
-                          value={read}
-                          aria-label={`${c.title}: ${read} of ${c.paragraphs} paragraphs read`}
-                        />
-                      </span>
-                      <span className="chapter-go" aria-hidden="true">
-                        <Icon name="right" size={18} />
-                      </span>
-                    </a>
-                  </li>
-                )
-              })}
-            </ul>
+            <ChapterList chapters={list} progress={prog} />
 
             <div className="row">
               <button className="link-btn" onClick={() => save(subject, list.map((c) => c.id))}>
                 <Icon name="download" size={16} /> Save {subject.toLowerCase()} for offline
               </button>
+              <a className="link-btn" href={`#/s/${encodeURIComponent(subject)}`}>
+                All {subject.toLowerCase()} chapters <Icon name="right" size={14} />
+              </a>
             </div>
 
             {saved[subject] && (

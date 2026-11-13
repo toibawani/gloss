@@ -11,6 +11,7 @@ import { SearchScreen } from './screens/SearchScreen'
 import { Settings } from './screens/Settings'
 import { NotFound } from './screens/NotFound'
 import { Privacy, Terms } from './Legal'
+import { Library } from './screens/Library'
 import { StyleGuide } from './screens/StyleGuide'
 import { Wordmark } from './components/Brand'
 import { Icon, type IconName } from './icons'
@@ -19,9 +20,12 @@ initSettings()
 
 const NAV: { route: string; href: string; label: string; icon: IconName }[] = [
   { route: '', href: '#/', label: 'Home', icon: 'home' },
-  { route: 'words', href: '#/words', label: 'Words', icon: 'words' },
+  { route: 'library', href: '#/library', label: 'Library', icon: 'library' },
   { route: 'revise', href: '#/revise', label: 'Revise', icon: 'revise' },
+  { route: 'words', href: '#/words', label: 'Words', icon: 'words' },
 ]
+
+const TABS = [...NAV, { route: 'settings', href: '#/settings', label: 'Settings', icon: 'settings' as IconName }]
 
 export default function App() {
   const h = useHash()
@@ -87,6 +91,10 @@ export default function App() {
             <Home />
           ) : route === 'c' ? (
             <Reader id={id} para={para} />
+          ) : route === 'library' ? (
+            <Library />
+          ) : route === 's' ? (
+            <Library only={id} />
           ) : route === 'words' ? (
             <Words />
           ) : route === 'revise' ? (
@@ -117,6 +125,15 @@ export default function App() {
           </p>
         </div>
       </footer>
+
+      <nav className="tabbar" aria-label="Sections">
+        {TABS.map((t) => (
+          <a key={t.href} href={t.href} aria-current={current === t.route ? 'page' : undefined}>
+            <Icon name={t.icon} size={22} />
+            <span>{t.label}</span>
+          </a>
+        ))}
+      </nav>
 
       {updateReady && <UpdateBar onReload={applyUpdate} onLater={dismissUpdate} />}
     </>
