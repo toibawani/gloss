@@ -1,0 +1,81 @@
+#!/usr/bin/env node
+// Captures docs/screens/*.png at 360, 390, 768 and 1280 in light and dark, plus the two
+// manifest screenshots. Starts its own preview server against dist/.
+import { spawn } from 'node:child_process'
+import { existsSync, mkdirSync } from 'node:fs'
+import { chromium } from '@playwright/test'
+
+const ROOT = new URL('..', import.meta.url).pathname
+const PORT = 4173
+const BASE = `http://127.0.0.1:${PORT}`
+
+if (!existsSync(`${ROOT}dist/index.html`)) {
+  console.error('dist/ is missing. Run npm run build first.')
+  process.exit(1)
+}
+mkdirSync(`${ROOT}docs/screens`, { recursive: true })
+
+const server = spawn('npx', ['vite', 'preview', '--host', '127.0.0.1', '--port', String(PORT), '--strictPort'], {
+  cwd: ROOT,
+  stdio: 'ignore',
+})
+
+const ready = async () => {
+  for (let i = 0; i < 40; i++) {
+    try {
+      const res = await fetch(`${BASE}/`)
+      if (res.ok) return true
+    } catch {
+      // keep waiting
+    }
+    await new Promise((r) => setTimeout(r, 250))
+  }
+  return false
+}
+
+const pages = [
+  ['home', '/'],
+  ['reader', '/#/c/bio-11-ch8/cell-theory'],
+  ['settings', '/#/settings'],
+]
+
+try {
+  if (!(await ready())) throw new Error('preview server did not start')
+  const browser = await chromium.launch()
+  for (const width of [360, 390, 768, 1280]) {
+    for (const theme of ['light', 'dark']) {
+      const context = await browser.newContext({
+        viewport: { width, height: width < 500 ? 780 : 900 },
+        colorScheme: theme,
+        reducedMotion: 'reduce',
+      })
+      const page = await context.newPage()
+      for (const [name, path] of pages) {
+        await page.goto(BASE + path)
+        await page.waitForLoadState('networkidle')
+        await page.waitForTimeout(250)
+        await page.screenshot({ path: `${ROOT}docs/screens/${name}-${width}-${theme}.png`, fullPage: false })
+      }
+      await context.close()
+    }
+  }
+
+  const mobile = await browser.newContext({ viewport: { width: 360, height: 640 }, deviceScaleFactor: 1.5 })
+  const mp = await mobile.newPage()
+  await mp.goto(`${BASE}/#/c/bio-11-ch8/cell-theory`)
+  await mp.waitForLoadState('networkidle')
+  await mp.screenshot({ path: `${ROOT}public/screenshot-mobile.png` })
+  await mobile.close()
+
+  const wide = await browser.newContext({ viewport: { width: 1280, height: 720 } })
+  const wp = await wide.newPage()
+  await wp.goto(`${BASE}/#/c/bio-11-ch9/protein-structure`)
+  await wp.waitForLoadState('networkidle')
+  await wp.screenshot({ path: `${ROOT}public/screenshot-wide.png` })
+  await wide.close()
+
+  await browser.close()
+  console.log('screenshots written to docs/screens and public/screenshot-*.png')
+} finally {
+  server.kill('SIGTERM')
+}
