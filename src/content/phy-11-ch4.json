@@ -1,0 +1,201 @@
+{
+  "id": "phy-11-ch4",
+  "subject": "Physics",
+  "class": 11,
+  "title": "Laws of Motion",
+  "book": "NCERT Physics Class XI",
+  "paragraphs": [
+    {
+      "id": "inertia",
+      "ncert_ref": "Ch 4, Laws of Motion: Newton's first law and inertia",
+      "key_phrase": "mass is the measure of inertia",
+      "meaning": "A body keeps doing what it was doing unless a net external force acts on it, which is why a bus that brakes throws you forward. Inertia is that reluctance to change, and mass is how much of it a body has. The first law is also the definition of an inertial frame: a frame in which a body with no net force really does move in a straight line at constant speed.",
+      "words": [
+        {
+          "term": "inertia",
+          "meaning": "The tendency of a body to resist a change in its state of motion.",
+          "breakdown": "Latin iners = idle or unskilled. It is a property of mass, not a force.",
+          "trap": "Inertia is not a force pushing you back. In a braking bus, your body continues forward while the bus slows."
+        },
+        {
+          "term": "inertial frame",
+          "meaning": "A frame in which Newton's first law holds without adding fictitious forces.",
+          "breakdown": "A train moving at constant velocity is close to inertial. A braking train is not.",
+          "trap": "The Earth is only approximately inertial, because it rotates. For most problems the approximation is fine, and the chapter says so."
+        },
+        {
+          "term": "net external force",
+          "meaning": "The vector sum of all forces from outside the body.",
+          "breakdown": "Internal forces between parts of a body cancel in pairs and cannot change its overall motion.",
+          "trap": "A body moving at constant velocity has zero net force, not zero forces. The forces balance."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M20 110h280'/><rect class='d-line' x='70' y='62' width='70' height='40' rx='2'/><circle class='d-line' cx='88' cy='102' r='9'/><circle class='d-line' cx='124' cy='102' r='9'/><path class='d-accent' d='M160 82h44M192 74l12 8-12 8'/><text class='d-label' x='150' y='58'>net force</text><text class='d-label' x='70' y='134'>no force, no change in motion</text></svg>",
+      "visual_alt": "A cart on a line with a net force arrow, labelled as the only thing that changes its motion.",
+      "hook": "The bus does not throw you forward. It stops, and you keep going.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions test which of several statements about inertia and frames is true, and the classic wrong option says a body at constant velocity has no forces on it.",
+      "trap": "Zero net force is not zero force. A book resting on a table has weight and normal force in balance.",
+      "recall": [
+        {
+          "q": "A body moves with constant velocity. The net force on it is",
+          "options": ["Zero", "Equal to its weight", "Constant but non-zero", "Increasing"],
+          "answer": 0,
+          "why": "Constant velocity means no change in motion, so the vector sum of forces is zero. Individual forces may still act and cancel."
+        },
+        {
+          "q": "Mass is a measure of",
+          "options": ["Weight", "Inertia", "Volume", "Density"],
+          "answer": 1,
+          "why": "The greater the mass, the harder it is to change the body's state of motion, which is exactly inertia."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and confirm the chapter number in your printing."
+    },
+    {
+      "id": "second-law-and-impulse",
+      "ncert_ref": "Ch 4, Laws of Motion: Newton's second law and impulse",
+      "key_phrase": "force is the rate of change of momentum",
+      "meaning": "Force is not mass times acceleration by definition; it is the rate of change of momentum, and F = ma is the special case where mass is constant. Impulse is force multiplied by the time it acts, and it equals the change in momentum. That is why a fielder pulls his hands back while catching: the same change in momentum over a longer time needs a smaller force.",
+      "words": [
+        {
+          "term": "momentum",
+          "meaning": "The product of mass and velocity, a vector.",
+          "breakdown": "p = mv. Units are kilogram metre per second, or newton second.",
+          "trap": "Momentum has direction. A ball that bounces back has a larger change in momentum than one that stops."
+        },
+        {
+          "term": "impulse",
+          "meaning": "The product of force and the time it acts, equal to the change in momentum.",
+          "breakdown": "J = F Δt = Δp. Graphically it is the area under the force-time graph.",
+          "trap": "Impulse is not a force. It has the same units as momentum, which is the clue."
+        },
+        {
+          "term": "equilibrium",
+          "meaning": "The state where all forces on a body add to zero, so its acceleration is zero.",
+          "breakdown": "The body may be at rest or moving at constant velocity.",
+          "trap": "Equilibrium does not mean at rest. A car at steady speed on a straight road is in equilibrium."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 110h260M30 110V26'/><path class='d-fill' d='M60 110V60h40v50Z'/><path class='d-accent' d='M140 110V40h40v70Z'/><text class='d-label' x='56' y='50'>long time</text><text class='d-label' x='136' y='32'>short time</text><path class='d-guide' d='M100 96h40'/><text class='d-label' x='150' y='134'>same impulse, different force</text></svg>",
+      "visual_alt": "Two force-time rectangles with equal area, one tall and narrow and one short and wide, showing the same impulse with different forces.",
+      "hook": "The catcher who gives with the ball is buying time, and time is what turns a sting into a catch.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Impulse questions give a force-time graph or a collision and ask for the change in momentum. Reading the area, not the peak force, is the mark.",
+      "trap": "A ball hitting a wall and returning has Δp of about 2mv, not mv. The direction reversal doubles the change.",
+      "recall": [
+        {
+          "q": "A 0.2 kg ball hits a wall at 10 m/s and rebounds at 10 m/s. The impulse on the ball has magnitude",
+          "options": ["0 N s", "2 N s", "4 N s", "0.2 N s"],
+          "answer": 2,
+          "why": "Taking the incoming direction as positive, Δp = m(-10) - m(10) = -4 kg m/s. The magnitude is 4 N s."
+        },
+        {
+          "q": "Pulling the hands back while catching a ball reduces",
+          "options": ["The change in momentum", "The force on the hands", "The mass of the ball", "The impulse"],
+          "answer": 1,
+          "why": "The same change in momentum happens over a longer time, so the force is smaller. The impulse itself is unchanged."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the impulse definition and units against your copy."
+    },
+    {
+      "id": "third-law-pairs",
+      "ncert_ref": "Ch 4, Laws of Motion: Newton's third law",
+      "key_phrase": "action and reaction act on different bodies",
+      "meaning": "Every force comes with an equal and opposite partner, but the two act on different bodies, which is why they never cancel. When you push a wall, the wall pushes you back; only the force on you decides your motion. A rocket moves because it throws gas backward and the gas pushes the rocket forward, not because the exhaust pushes against the air.",
+      "words": [
+        {
+          "term": "action-reaction pair",
+          "meaning": "Two forces of equal size, opposite direction, acting on two different bodies.",
+          "breakdown": "They exist together. You cannot have one without the other.",
+          "trap": "A pair on the same body would cancel. Action and reaction act on different bodies and never cancel each other."
+        },
+        {
+          "term": "normal force",
+          "meaning": "The contact force a surface exerts perpendicular to itself.",
+          "breakdown": "It is a reaction to the body pressing on the surface, and it is not always equal to weight.",
+          "trap": "Normal force is not always mg. In a lift accelerating upward, the normal force on you is larger than your weight."
+        },
+        {
+          "term": "conservation of momentum",
+          "meaning": "The total momentum of an isolated system stays constant.",
+          "breakdown": "It follows from the third law: internal forces cancel in pairs.",
+          "trap": "Momentum is conserved only when no net external force acts. A ball hitting the ground is not an isolated system."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='40' y='50' width='60' height='60'/><path class='d-accent' d='M106 80h40M138 72l10 8-10 8'/><path class='d-muted' d='M34 80H6M14 72L4 80l10 8'/><text class='d-label' x='56' y='130'>wall pushes you left</text><text class='d-label' x='146' y='60'>you push wall right</text><text class='d-label' x='150' y='104'>different bodies, equal size</text></svg>",
+      "visual_alt": "A hand pushing a wall to the right with the wall pushing the hand to the left, labelled as forces on different bodies.",
+      "hook": "You cannot lift yourself by pulling your own hair. The pair of forces is on the same body and cancels.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "A common question asks why action and reaction do not cancel, or how a rocket moves in vacuum. The mark is the words different bodies.",
+      "trap": "Action and reaction are not a cause and an effect in time. They occur together, and naming one as the cause is the usual mistake.",
+      "recall": [
+        {
+          "q": "Action and reaction forces never cancel because they",
+          "options": ["Are unequal", "Act on different bodies", "Act at different times", "Have different units"],
+          "answer": 1,
+          "why": "Cancellation requires two forces on the same body. The third-law pair acts on two different bodies, so each body feels only one of them."
+        },
+        {
+          "q": "A rocket in space accelerates because",
+          "options": ["The exhaust pushes against air", "The rocket pushes gas backward and gas pushes it forward", "Gravity pulls it", "Its mass decreases only"],
+          "answer": 1,
+          "why": "The rocket and its exhaust form a third-law pair, so the rocket is pushed forward by the gas it throws backward. No air is needed."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the rocket example against your copy."
+    },
+    {
+      "id": "friction",
+      "ncert_ref": "Ch 4, Laws of Motion: friction",
+      "key_phrase": "static friction adjusts, kinetic friction is fixed",
+      "meaning": "Static friction is not a fixed value: it grows to match the applied force up to a maximum of μsN, and only then does the object move. Once sliding starts, kinetic friction takes over at μkN and is usually smaller, which is why a heavy box is hardest to start and easier to keep moving. In the standard model friction does not depend on the area of contact, only on the normal force and the surfaces.",
+      "words": [
+        {
+          "term": "static friction",
+          "meaning": "The friction that holds a body at rest, matching the applied force up to a limit.",
+          "breakdown": "f ≤ μsN. It is self-adjusting, not constant.",
+          "trap": "Writing static friction as μsN for every case is wrong. It equals the applied force until the limit is reached."
+        },
+        {
+          "term": "kinetic friction",
+          "meaning": "The friction on a sliding body, roughly constant at μkN.",
+          "breakdown": "μk is usually less than μs, which is why starting is harder than sliding.",
+          "trap": "Kinetic friction does not depend on speed in the standard treatment, so doubling the speed does not double it."
+        },
+        {
+          "term": "angle of repose",
+          "meaning": "The steepest angle at which a body stays at rest on an incline.",
+          "breakdown": "At that angle, tan θ = μs.",
+          "trap": "The angle of repose uses the static coefficient, not the kinetic one."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M20 112h280'/><rect class='d-line' x='90' y='70' width='70' height='42' rx='2'/><path class='d-accent' d='M166 91h44M200 83l10 8-10 8'/><path class='d-muted' d='M88 112h4M100 106h4M112 100h4'/><text class='d-label' x='156' y='62'>applied force</text><text class='d-label' x='90' y='134'>friction pushes back</text><path class='d-guide' d='M86 92H58'/><text class='d-label' x='18' y='88'>f</text></svg>",
+      "visual_alt": "A block on a surface with an applied force arrow to the right and a friction arrow to the left, with the surface marked.",
+      "hook": "Starting a heavy almirah is a tug of war you win by one extra newton, and then it slides easily.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Block-on-incline questions ask whether the block moves at a given angle, and the answer depends on comparing tan θ with μs.",
+      "trap": "Friction is not always μN. On a stationary block it equals the applied force, which may be smaller than the maximum.",
+      "recall": [
+        {
+          "q": "A block on a horizontal floor is pushed with 5 N and does not move. If μsN is 12 N, the friction force is",
+          "options": ["12 N", "5 N", "7 N", "Zero"],
+          "answer": 1,
+          "why": "Static friction adjusts to the applied force, so it is 5 N here. It only reaches 12 N when the push reaches 12 N."
+        },
+        {
+          "q": "The angle of repose of a surface is the angle at which",
+          "options": ["The block just begins to slide", "Kinetic friction is maximum", "The normal force is zero", "Friction equals weight"],
+          "answer": 0,
+          "why": "At the angle of repose the component of weight along the incline equals the maximum static friction, so the block is on the point of sliding."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the friction laws and coefficients against your copy."
+    }
+  ]
+}

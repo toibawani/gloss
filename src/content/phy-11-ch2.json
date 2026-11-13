@@ -1,0 +1,201 @@
+{
+  "id": "phy-11-ch2",
+  "subject": "Physics",
+  "class": 11,
+  "title": "Motion in a Straight Line",
+  "book": "NCERT Physics Class XI",
+  "paragraphs": [
+    {
+      "id": "distance-and-displacement",
+      "ncert_ref": "Ch 2, Motion in a Straight Line: position, path length and displacement",
+      "key_phrase": "displacement is the shortest straight line",
+      "meaning": "Distance is the length of the path you actually walked, so it only grows. Displacement is the change in position from start to finish, with direction, so it can be zero even after a long journey. Walk 3 m east and 3 m back and you have covered 6 m of distance but your displacement is zero.",
+      "words": [
+        {
+          "term": "displacement",
+          "meaning": "The change in position, from the starting point to the finishing point, with direction.",
+          "breakdown": "dis = away, place = position. It is a vector, so sign matters.",
+          "trap": "Displacement is not the total path. A full circle returns you to zero displacement with a large distance covered."
+        },
+        {
+          "term": "path length",
+          "meaning": "The actual distance travelled along the route, a scalar.",
+          "breakdown": "Also called distance. It can never be negative and never decreases.",
+          "trap": "A path length of 6 m with zero displacement is not a contradiction. They answer different questions."
+        },
+        {
+          "term": "position vector",
+          "meaning": "A vector from the origin to the point where the object is.",
+          "breakdown": "In one dimension it is just a signed number, x, measured from a chosen origin.",
+          "trap": "The origin is your choice. Displacement does not depend on where you put it; position does."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 120h260'/><path class='d-muted' d='M30 120h60'/><text class='d-label' x='30' y='140'>start</text><path class='d-accent' d='M30 120c0-40 60-40 60 0'/><text class='d-label' x='34' y='64'>6 m walked</text><path class='d-guide' d='M92 120h30'/><text class='d-label' x='100' y='108'>3 m east</text><text class='d-label' x='150' y='72'>displacement = 0</text><text class='d-label' x='150' y='92'>distance = 6 m</text></svg>",
+      "visual_alt": "A path out and back over six metres with the start and finish at the same point, showing zero displacement against six metres of distance.",
+      "hook": "Walking to the kitchen and back gives your phone a step count and a displacement of zero.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "One-mark questions ask for displacement after a described route, and the trap is a round trip that ends where it started.",
+      "trap": "Displacement can be smaller than distance, never larger. If your answer has displacement bigger, the calculation is wrong.",
+      "recall": [
+        {
+          "q": "A student walks 4 m north, then 4 m south. What are the distance and displacement?",
+          "options": ["8 m and 8 m", "8 m and 0", "0 and 8 m", "0 and 0"],
+          "answer": 1,
+          "why": "The path is 4 + 4 = 8 m of distance. The finishing point is the starting point, so displacement is zero."
+        },
+        {
+          "q": "Which quantity can never be negative?",
+          "options": ["Displacement", "Velocity", "Distance", "Acceleration"],
+          "answer": 2,
+          "why": "Distance is the length of a path, so it has no direction and cannot be negative. The other three are vectors and take signs."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and confirm this is chapter 2 in your printed numbering."
+    },
+    {
+      "id": "average-velocity",
+      "ncert_ref": "Ch 2, Motion in a Straight Line: average velocity and average speed",
+      "key_phrase": "displacement over time",
+      "meaning": "Average velocity is displacement divided by the time taken, while average speed is distance divided by time. The two differ whenever the path doubles back, because displacement can shrink and distance cannot. Instantaneous velocity is what the average becomes as the time interval shrinks to nothing, which is the slope of the position-time graph at that instant.",
+      "words": [
+        {
+          "term": "average velocity",
+          "meaning": "Displacement divided by the time interval.",
+          "breakdown": "v = Δx / Δt, with the sign of Δx carried through.",
+          "trap": "Averages of velocity are not arithmetic unless the time intervals are equal. Average the displacement, not the speeds."
+        },
+        {
+          "term": "instantaneous velocity",
+          "meaning": "The velocity at one instant, the limit of average velocity as the interval approaches zero.",
+          "breakdown": "It is the slope of the tangent to the x-t graph.",
+          "trap": "Speedometer reading is instantaneous speed, not velocity. It has no direction."
+        },
+        {
+          "term": "uniform motion",
+          "meaning": "Motion at constant velocity, so equal displacements in equal times.",
+          "breakdown": "The x-t graph is a straight line and its slope is the velocity.",
+          "trap": "Constant speed around a curve is not uniform motion in the vector sense, because direction changes."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 122h260M30 122V20'/><path class='d-accent' d='M30 112L120 60L210 84L290 34'/><text class='d-label' x='8' y='24'>x</text><text class='d-label' x='286' y='140'>t</text><text class='d-label' x='124' y='48'>slope = velocity</text><path class='d-guide' d='M210 84h56v-50'/></svg>",
+      "visual_alt": "A position-time graph with a rising and falling line, with the slope marked as the velocity at each stretch.",
+      "hook": "A taxi meter measures distance. Your average velocity is the straight line from where you started to where you stopped.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Numericals give a journey in stages and ask for average velocity. The error is averaging the two speeds instead of dividing total displacement by total time.",
+      "trap": "For equal distances at two speeds, average speed is the harmonic mean, not the arithmetic mean. Fifty at 30 and 50 at 60 is not 45.",
+      "recall": [
+        {
+          "q": "A car goes 60 km east in 1 h, then 40 km west in 1 h. Its average velocity is",
+          "options": ["50 km/h east", "10 km/h east", "20 km/h east", "100 km/h east"],
+          "answer": 1,
+          "why": "Displacement is 60 minus 40, which is 20 km east, over 2 h, giving 10 km/h east. The distance travelled is 100 km, which is the average speed."
+        },
+        {
+          "q": "The slope of a position-time graph at one instant gives",
+          "options": ["Average speed", "Instantaneous velocity", "Acceleration", "Distance travelled"],
+          "answer": 1,
+          "why": "The tangent at a point measures the rate of change of position at that instant, which is instantaneous velocity."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the worked example numbers against your copy."
+    },
+    {
+      "id": "acceleration-signs",
+      "ncert_ref": "Ch 2, Motion in a Straight Line: acceleration",
+      "key_phrase": "acceleration is the change in velocity",
+      "meaning": "Acceleration is the rate at which velocity changes, so it is negative whenever velocity becomes more negative, not only when an object slows down. A ball thrown upward has downward acceleration the whole time it rises, because gravity never switches off at the top. The kinematic equations v = u + at, s = ut + ½at² and v² = u² + 2as hold only when acceleration is constant.",
+      "words": [
+        {
+          "term": "acceleration",
+          "meaning": "The rate of change of velocity with time, a vector.",
+          "breakdown": "a = Δv / Δt. Positive and negative signs refer to the chosen axis, not to speeding up or slowing down.",
+          "trap": "Negative acceleration does not always mean slowing. A car moving west and speeding up has negative velocity and negative acceleration."
+        },
+        {
+          "term": "retardation",
+          "meaning": "Acceleration in the direction opposite to velocity, which reduces speed.",
+          "breakdown": "It is still acceleration. Braking gives a about -6 m/s² in a car.",
+          "trap": "Retardation is not a separate quantity with its own formula. Use the same equations with a negative sign."
+        },
+        {
+          "term": "free fall",
+          "meaning": "Motion under gravity alone, with acceleration g of about 9.8 m/s² downward near the Earth.",
+          "breakdown": "Air resistance is ignored in the standard treatment.",
+          "trap": "At the highest point of a throw the velocity is zero but the acceleration is still g. Zero velocity is not zero acceleration."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 122h260M30 122V22'/><path class='d-accent' d='M30 112C90 20 150 20 210 112'/><text class='d-label' x='26' y='40'>v = 0 at the top</text><text class='d-label' x='150' y='44'>g pulls down all the way</text><path class='d-guide' d='M160 52v46'/><text class='d-label' x='180' y='80'>a = -g</text></svg>",
+      "visual_alt": "A velocity-time curve for a ball thrown upward, showing velocity falling to zero at the top while acceleration stays downward throughout.",
+      "hook": "At the top of a throw the ball is momentarily still, and gravity has not paused for even that instant.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Free-fall questions often ask for the acceleration at the highest point, and the distractor is zero because the velocity is zero.",
+      "trap": "Velocity and acceleration are independent at an instant. Zero velocity with non-zero acceleration is exactly what happens at the top of a throw.",
+      "recall": [
+        {
+          "q": "A ball is thrown vertically upward. At its highest point,",
+          "options": ["velocity is zero and acceleration is zero", "velocity is zero and acceleration is g downward", "velocity is maximum and acceleration is zero", "velocity is g and acceleration is zero"],
+          "answer": 1,
+          "why": "The ball stops for an instant, so velocity is zero. Gravity still acts, so acceleration remains about 9.8 m/s² downward."
+        },
+        {
+          "q": "A car moving west at 10 m/s speeds up to 16 m/s west. Its acceleration is",
+          "options": ["Positive and speeding up", "Negative and slowing down", "Zero", "Negative and speeding up"],
+          "answer": 3,
+          "why": "Taking east as positive, the velocity is negative and becomes more negative, so acceleration is negative. The speed is increasing, which shows a negative sign alone does not mean slowing."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the sign convention used in your copy."
+    },
+    {
+      "id": "velocity-time-graphs",
+      "ncert_ref": "Ch 2, Motion in a Straight Line: kinematic equations and graphs",
+      "key_phrase": "slope is acceleration, area is displacement",
+      "meaning": "On a velocity-time graph, the slope at any point is the acceleration and the area under the line is the displacement. A horizontal line means constant velocity, a rising line means constant acceleration, and a line crossing the time axis means the object reversed direction. This is why a v-t graph can describe a whole journey in one picture, and why the area below the axis counts as negative displacement.",
+      "words": [
+        {
+          "term": "v-t graph",
+          "meaning": "A plot of velocity against time for one object along one axis.",
+          "breakdown": "Slope gives acceleration, area gives displacement.",
+          "trap": "Area above the axis is positive displacement and below is negative. Adding them without signs doubles the answer."
+        },
+        {
+          "term": "uniform acceleration",
+          "meaning": "Acceleration that stays constant in size and direction.",
+          "breakdown": "The v-t graph is a straight line, and the three kinematic equations apply.",
+          "trap": "The equations v² = u² + 2as fail for changing acceleration, which is the case for most real braking."
+        },
+        {
+          "term": "relative velocity",
+          "meaning": "The velocity of one object measured from another moving object.",
+          "breakdown": "In one dimension, v(A relative to B) = v(A) - v(B).",
+          "trap": "Relative velocity can exceed the speed of either object when they move in opposite directions."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 110h260M30 110V22'/><path class='d-fill' d='M30 90L130 40V110H30Z'/><path class='d-accent' d='M130 110L230 60'/><text class='d-label' x='44' y='84'>area = displacement</text><text class='d-label' x='150' y='48'>slope = a</text><text class='d-label' x='280' y='126'>t</text><text class='d-label' x='4' y='26'>v</text></svg>",
+      "visual_alt": "A velocity-time graph with a shaded triangular area labelled displacement and a sloping line labelled acceleration.",
+      "hook": "One graph holds the whole trip: how fast, how hard you pressed, and how far you went.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Graph questions ask for the distance in a stated interval, or the acceleration in one segment. Reading the area as a rectangle plus a triangle is the fast route.",
+      "trap": "A v-t graph that crosses the axis does not mean the object stopped. It means the direction reversed, and the areas on either side have opposite signs.",
+      "recall": [
+        {
+          "q": "On a velocity-time graph, the area under the line represents",
+          "options": ["Acceleration", "Displacement", "Average speed", "Force"],
+          "answer": 1,
+          "why": "Velocity multiplied by time gives displacement, so the area under a v-t graph is the displacement, with sign."
+        },
+        {
+          "q": "A horizontal line on a velocity-time graph means",
+          "options": ["Zero velocity", "Constant acceleration", "Constant velocity", "Zero displacement"],
+          "answer": 2,
+          "why": "The velocity value does not change with time, so the object moves at constant velocity and its acceleration is zero."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the graph conventions used in your copy."
+    }
+  ]
+}
