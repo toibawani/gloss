@@ -1,14 +1,20 @@
 {
-  "name": "Gloss",
+  "id": "./",
+  "name": "Gloss · NCERT margin notes",
   "short_name": "Gloss",
-  "description": "Margin notes for every NCERT paragraph.",
-  "start_url": ".",
-  "scope": ".",
+  "description": "Every NCERT paragraph explained in the margin, tied to the exact line.",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#F1EBDD",
-  "theme_color": "#8A3B1E",
+  "orientation": "portrait-primary",
+  "background_color": "#F2ECDD",
+  "theme_color": "#F2ECDD",
+  "categories": ["education", "books"],
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
