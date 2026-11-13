@@ -33,10 +33,19 @@ const ready = async () => {
   return false
 }
 
+// Every screen, including the ones a reviewer would otherwise never open.
 const pages = [
   ['home', '/'],
   ['reader', '/#/c/bio-11-ch8/cell-theory'],
+  ['reader-visual', '/#/c/bio-11-ch8/what-is-a-cell'],
+  ['words', '/#/words'],
+  ['revise', '/#/revise'],
+  ['search', '/#/search'],
   ['settings', '/#/settings'],
+  ['terms', '/#/terms'],
+  ['privacy', '/#/privacy'],
+  ['notfound', '/#/nope'],
+  ['styleguide', '/#/styleguide'],
 ]
 
 try {
@@ -53,7 +62,7 @@ try {
       for (const [name, path] of pages) {
         await page.goto(BASE + path)
         await page.waitForLoadState('networkidle')
-        await page.waitForTimeout(250)
+        await page.waitForTimeout(200)
         await page.screenshot({ path: `${ROOT}docs/screens/${name}-${width}-${theme}.png`, fullPage: false })
       }
       await context.close()
@@ -75,7 +84,7 @@ try {
   await wide.close()
 
   await browser.close()
-  console.log('screenshots written to docs/screens and public/screenshot-*.png')
+  console.log(`screenshots written: ${pages.length * 8} screen captures plus 2 manifest images`)
 } finally {
   server.kill('SIGTERM')
 }
