@@ -1,0 +1,201 @@
+{
+  "id": "bio-11-cell-cycle",
+  "subject": "Biology",
+  "class": 11,
+  "title": "Cell Cycle and Cell Division",
+  "book": "NCERT Biology Class XI",
+  "paragraphs": [
+    {
+      "id": "cell-cycle-phases",
+      "ncert_ref": "Cell Cycle and Cell Division: phases of the cell cycle",
+      "key_phrase": "DNA doubles in S, not in mitosis",
+      "meaning": "A cell spends most of its life in interphase, which has three parts. G1 is growth, S is the phase where DNA replicates, and G2 is the final preparation with checking and more growth. Only then does the M phase divide the cell, and a cell that stops dividing altogether leaves the cycle and sits in G0.",
+      "words": [
+        {
+          "term": "interphase",
+          "meaning": "The growth and replication period between two divisions.",
+          "breakdown": "It has G1, S and G2, and it takes far longer than mitosis itself.",
+          "trap": "Interphase is not a resting phase. The cell is metabolically busy and replicates its DNA in S."
+        },
+        {
+          "term": "S phase",
+          "meaning": "The synthesis phase, when each chromosome is copied into two sister chromatids.",
+          "breakdown": "DNA content doubles, but the chromosome number stays the same.",
+          "trap": "After S the cell has twice the DNA but not twice the chromosomes. The count doubles only at anaphase."
+        },
+        {
+          "term": "G0",
+          "meaning": "A quiescent state outside the cycle where a cell stops dividing.",
+          "breakdown": "Many nerve and muscle cells sit here permanently.",
+          "trap": "G0 is not death. The cell is alive and working, it has simply left the division cycle."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 78h260'/><circle class='d-line' cx='62' cy='78' r='20'/><circle class='d-line' cx='130' cy='78' r='20'/><circle class='d-line' cx='198' cy='78' r='20'/><circle class='d-accent' cx='266' cy='78' r='20'/><text class='d-label' x='50' y='44'>G1</text><text class='d-label' x='118' y='44'>S</text><text class='d-label' x='186' y='44'>G2</text><text class='d-label' x='256' y='44'>M</text><text class='d-label' x='112' y='126'>DNA doubles here</text><path class='d-guide' d='M130 98v22'/><text class='d-label' x='30' y='140'>a cell can also leave and sit in G0</text></svg>",
+      "visual_alt": "Four circles in a line for G1, S, G2 and M, with S marked as the phase where DNA doubles.",
+      "hook": "The division you can see under a microscope is the shortest part. The work was done quietly in S.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Questions ask which phase has double the DNA, or when the chromosome number doubles. The first is S, the second is anaphase.",
+      "trap": "DNA content and chromosome number do not rise together. DNA doubles in S, chromosomes separate in anaphase.",
+      "recall": [
+        {
+          "q": "DNA replication takes place in",
+          "options": ["G1 phase", "S phase", "G2 phase", "M phase"],
+          "answer": 1,
+          "why": "The S phase is the synthesis phase, where each chromosome is copied to form two sister chromatids."
+        },
+        {
+          "q": "A cell in G0 is",
+          "options": ["Dead", "Actively dividing", "Alive but not dividing", "Replicating DNA"],
+          "answer": 2,
+          "why": "G0 is a quiescent state. The cell carries out its normal functions but has exited the division cycle."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and confirm the chapter number in your printing."
+    },
+    {
+      "id": "mitosis-stages",
+      "ncert_ref": "Cell Cycle and Cell Division: mitosis",
+      "key_phrase": "one cell becomes two identical cells",
+      "meaning": "Mitosis divides the nucleus so that each daughter gets the same chromosomes as the parent. Chromatin condenses and the spindle forms in prophase, chromosomes line up at the equator in metaphase, centromeres split and chromatids move apart in anaphase, and two nuclei re-form in telophase. Cytokinesis then divides the cytoplasm, giving two diploid cells with identical genetic content.",
+      "words": [
+        {
+          "term": "metaphase plate",
+          "meaning": "The plane at the cell equator where chromosomes align during metaphase.",
+          "breakdown": "Alignment is the checkpoint: a chromosome not attached to both poles delays the division.",
+          "trap": "The chromosomes line up as single structures, not as pairs. Pairing at the equator belongs to meiosis I."
+        },
+        {
+          "term": "centromere",
+          "meaning": "The region that holds two sister chromatids together and attaches to spindle fibres.",
+          "breakdown": "It splits in anaphase, which is the moment the chromosome number doubles in each cell.",
+          "trap": "The centromere does not move to the pole first. The chromatids are pulled, and the centromere leads."
+        },
+        {
+          "term": "cytokinesis",
+          "meaning": "The division of the cytoplasm after the nucleus has divided.",
+          "breakdown": "In plant cells a cell plate forms; in animal cells the membrane pinches inward.",
+          "trap": "Mitosis is nuclear division only. Without cytokinesis you get one cell with two nuclei."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='22'>prophase</text><circle class='d-line' cx='60' cy='72' r='30'/><path class='d-accent' d='M50 62c10-8 20 8 22 4M52 82c12 6 18-8 24-4'/><text class='d-label' x='120' y='22'>metaphase</text><circle class='d-line' cx='168' cy='72' r='30'/><path class='d-accent' d='M168 44v56M162 52h12M162 92h12'/><text class='d-label' x='228' y='22'>anaphase</text><circle class='d-line' cx='276' cy='72' r='30'/><circle class='d-accent' cx='264' cy='72' r='5'/><circle class='d-accent' cx='288' cy='72' r='5'/><text class='d-label' x='12' y='132'>condense, align, separate, rebuild</text></svg>",
+      "visual_alt": "Three cells showing chromosomes condensing, lining up at the equator, and pulling apart to opposite poles.",
+      "hook": "Mitosis is a photocopy, not a remix. The two daughters get the same pages.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Identify the stage from a diagram: alignment means metaphase, separating chromatids mean anaphase. The chromosome count per cell is a favourite follow-up.",
+      "trap": "In anaphase the chromosome number in the cell doubles, not halves. Each chromatid becomes a chromosome once the centromere splits.",
+      "recall": [
+        {
+          "q": "Chromosomes align at the cell equator during",
+          "options": ["Prophase", "Metaphase", "Anaphase", "Telophase"],
+          "answer": 1,
+          "why": "Metaphase is defined by alignment at the metaphase plate, which is also when the spindle checkpoint is checked."
+        },
+        {
+          "q": "The number of chromosomes in a human somatic cell after mitosis is",
+          "options": ["23", "46", "92", "12"],
+          "answer": 1,
+          "why": "Mitosis keeps the chromosome number the same. A human body cell has 46 chromosomes before and after."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the stage descriptions against your copy."
+    },
+    {
+      "id": "meiosis-crossing-over",
+      "ncert_ref": "Cell Cycle and Cell Division: meiosis",
+      "key_phrase": "homologues pair and exchange pieces",
+      "meaning": "Meiosis has two divisions after a single round of replication. In prophase I the homologous chromosomes pair up, and non-sister chromatids exchange segments at points called chiasmata. That crossing over is why the four daughter cells are genetically different from each other, even before the independent assortment of chromosomes at metaphase I.",
+      "words": [
+        {
+          "term": "synapsis",
+          "meaning": "The pairing of homologous chromosomes during prophase I.",
+          "breakdown": "The paired structure is a bivalent or tetrad, with four chromatids in one group.",
+          "trap": "Synapsis pairs homologues, not sister chromatids. Sister chromatids stay together at their centromere."
+        },
+        {
+          "term": "crossing over",
+          "meaning": "Exchange of segments between non-sister chromatids of a homologous pair.",
+          "breakdown": "It happens at chiasmata and produces recombinant chromosomes.",
+          "trap": "Crossing over does not change the total amount of DNA. It swaps equal pieces between two chromosomes."
+        },
+        {
+          "term": "independent assortment",
+          "meaning": "The random orientation of homologous pairs at metaphase I.",
+          "breakdown": "With 23 pairs in humans, the number of combinations is 2^23 before crossing over.",
+          "trap": "Assortment happens in meiosis I, not II. Meiosis II separates sister chromatids, which are already identical."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 40c40 0 40 60 0 60'/><path class='d-muted' d='M56 40c40 0 40 60 0 60'/><path class='d-line' d='M180 40c40 0 40 60 0 60'/><path class='d-muted' d='M196 40c40 0 40 60 0 60'/><path class='d-accent' d='M78 52c14 6 18 18 4 26'/><text class='d-label' x='96' y='46'>crossing over</text><text class='d-label' x='28' y='128'>pair, exchange, then separate</text><text class='d-label' x='176' y='128'>four different daughter cells</text></svg>",
+      "visual_alt": "Two paired chromosomes touching at a point where segments are exchanged, with a note that four different daughter cells result.",
+      "hook": "Meiosis shuffles the deck twice: once by swapping cards, once by dealing them in random order.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Questions ask in which sub-stage crossing over occurs, or why siblings differ. The answers are pachytene of prophase I, and recombination plus independent assortment.",
+      "trap": "Crossing over is not a mutation. It recombines existing alleles, and it happens in every meiosis, not as an error.",
+      "recall": [
+        {
+          "q": "Crossing over occurs between",
+          "options": ["Sister chromatids", "Non-sister chromatids of homologous chromosomes", "Any two chromosomes", "Chromatids of different cells"],
+          "answer": 1,
+          "why": "Homologues pair in prophase I, and non-sister chromatids exchange segments. Sister chromatids exchange nothing because they are identical."
+        },
+        {
+          "q": "Independent assortment of chromosomes happens in",
+          "options": ["Metaphase of mitosis", "Metaphase I of meiosis", "Metaphase II of meiosis", "Anaphase II"],
+          "answer": 1,
+          "why": "Homologous pairs orient randomly at the metaphase I plate, which is what produces the 2^23 combinations in humans."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and confirm the sub-stage names used in your copy."
+    },
+    {
+      "id": "meiosis-significance",
+      "ncert_ref": "Cell Cycle and Cell Division: significance of meiosis",
+      "key_phrase": "halves the number, keeps the variation",
+      "meaning": "Meiosis halves the chromosome number so that fertilisation can restore it, and it creates variation by recombination and independent assortment. Without it, each generation would double its chromosome number. Because the four daughter cells differ, a population has more combinations to survive a change in conditions.",
+      "words": [
+        {
+          "term": "haploid",
+          "meaning": "Having one set of chromosomes, written n.",
+          "breakdown": "Human gametes are haploid with 23 chromosomes; body cells are diploid with 46.",
+          "trap": "Haploid does not mean half a cell. The cell is complete, with one set instead of two."
+        },
+        {
+          "term": "reduction division",
+          "meaning": "A division that halves the chromosome number, which is meiosis I.",
+          "breakdown": "Meiosis II is equational, like mitosis, and separates sister chromatids.",
+          "trap": "Both meiotic divisions are called meiosis, but only the first is the reduction division."
+        },
+        {
+          "term": "fertilisation",
+          "meaning": "The fusion of two haploid gametes to form a diploid zygote.",
+          "breakdown": "23 plus 23 gives 46, restoring the body cell number.",
+          "trap": "Fertilisation does not create variation by itself. Most of the variation is already in the gametes."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='46' cy='62' r='22'/><text class='d-label' x='38' y='66'>2n</text><path class='d-accent' d='M76 62h22M90 56l8 6-8 6'/><circle class='d-line' cx='124' cy='62' r='15'/><text class='d-label' x='118' y='66'>n</text><circle class='d-line' cx='176' cy='62' r='15'/><text class='d-label' x='170' y='66'>n</text><path class='d-guide' d='M140 84l16 20M164 84l-16 20'/><circle class='d-fill' cx='152' cy='118' r='14'/><text class='d-label' x='146' y='122'>2n</text><text class='d-label' x='196' y='94'>two gametes fuse</text><text class='d-label' x='196' y='116'>the number is restored</text></svg>",
+      "visual_alt": "A diploid cell dividing into two haploid gametes that fuse into a diploid zygote, showing the number halved and restored.",
+      "hook": "Meiosis is the only reason each generation does not carry twice the chromosomes of the last.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Questions ask for the ploidy at each stage, or why meiosis is necessary for sexual reproduction. The chain 2n to n to 2n is the answer.",
+      "trap": "Meiosis in a haploid organism still produces haploid cells, but it is not a reduction division there. The ploidy labels come from the starting cell.",
+      "recall": [
+        {
+          "q": "Meiosis is important for sexual reproduction because it",
+          "options": ["Doubles the chromosome number", "Halves the chromosome number and creates variation", "Produces identical cells", "Prevents crossing over"],
+          "answer": 1,
+          "why": "It halves the number so fertilisation restores it, and recombination plus assortment make each gamete different."
+        },
+        {
+          "q": "The reduction division in meiosis is",
+          "options": ["Meiosis I", "Meiosis II", "Both divisions equally", "Neither; mitosis is the reduction"],
+          "answer": 0,
+          "why": "Homologues separate in meiosis I, taking the cell from diploid to haploid. Meiosis II only separates sister chromatids."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the ploidy statements against your copy."
+    }
+  ]
+}

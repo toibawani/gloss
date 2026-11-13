@@ -1,0 +1,201 @@
+{
+  "id": "chem-11-bonding",
+  "subject": "Chemistry",
+  "class": 11,
+  "title": "Chemical Bonding and Molecular Structure",
+  "book": "NCERT Chemistry Class XI",
+  "paragraphs": [
+    {
+      "id": "ionic-and-covalent",
+      "ncert_ref": "Chemical Bonding and Molecular Structure: ionic and covalent bonds",
+      "key_phrase": "transfer gives ions, sharing gives molecules",
+      "meaning": "A bond forms because atoms reach a lower energy state, not because they want eight electrons as a goal in itself. When the electronegativity difference is large, one atom takes the electron and the pair sits as ions held by electrostatic attraction. When the difference is small, the electrons are shared, and the shared pair belongs to both nuclei at once.",
+      "words": [
+        {
+          "term": "electronegativity",
+          "meaning": "The tendency of an atom in a bond to attract the shared electron pair.",
+          "breakdown": "It rises across a period and falls down a group. Fluorine is the highest.",
+          "trap": "Electronegativity is a property in a bond, not of a free atom. A bare atom does not have one."
+        },
+        {
+          "term": "lattice energy",
+          "meaning": "The energy released when one mole of an ionic solid forms from its gaseous ions.",
+          "breakdown": "It grows with charge and shrinks with ion size, which is why MgO melts far above NaCl.",
+          "trap": "Lattice energy is not the same as the bond energy of one ion pair. It is a bulk quantity per mole."
+        },
+        {
+          "term": "bond length",
+          "meaning": "The distance between the nuclei of two bonded atoms.",
+          "breakdown": "More shared pairs pull the nuclei closer, so a triple bond is shorter than a double bond.",
+          "trap": "Bond length and bond strength move in opposite directions. The shorter bond is the stronger one."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='50' cy='60' r='18'/><circle class='d-line' cx='96' cy='60' r='12'/><path class='d-accent' d='M70 60h14'/><text class='d-label' x='30' y='104'>transfer: ions</text><circle class='d-line' cx='190' cy='60' r='16'/><circle class='d-line' cx='232' cy='60' r='16'/><path class='d-accent' d='M204 60h14M204 66h14'/><text class='d-label' x='176' y='104'>sharing: molecule</text><text class='d-label' x='30' y='132'>held by attraction</text><text class='d-label' x='176' y='132'>held by a shared pair</text></svg>",
+      "visual_alt": "On the left an electron moves from one atom to another forming ions; on the right two atoms share a pair of electrons.",
+      "hook": "Sodium does not give away an electron out of generosity. The pair of ions that results is simply lower in energy.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions compare melting points and conductivity from bond type. Ionic solids conduct only when molten or dissolved because the ions must be free to move.",
+      "trap": "Covalent compounds can conduct in solution if they ionise, such as HCl. The rule is about free ions, not about the bond label.",
+      "recall": [
+        {
+          "q": "An ionic solid does not conduct electricity because",
+          "options": ["It has no charged particles", "Its ions are fixed in the lattice", "Its electrons are shared", "It has a low melting point"],
+          "answer": 1,
+          "why": "The ions are charged but locked in place. Melting or dissolving frees them, and then the solid or solution conducts."
+        },
+        {
+          "q": "Which bond is most likely when the electronegativity difference is very large?",
+          "options": ["Covalent", "Ionic", "Metallic", "Coordinate only"],
+          "answer": 1,
+          "why": "A large difference lets one atom take the electron pair almost completely, producing ions held by electrostatic attraction."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and confirm the chapter number in your printing before publishing."
+    },
+    {
+      "id": "octet-exceptions",
+      "ncert_ref": "Chemical Bonding and Molecular Structure: the octet rule and its exceptions",
+      "key_phrase": "eight is a tendency, not a law",
+      "meaning": "The octet rule says atoms tend to surround themselves with eight electrons, and it predicts a great many formulae. It is not a law: beryllium chloride has only four electrons around beryllium, boron trifluoride has six around boron, and phosphorus pentachloride has ten. Nitrogen monoxide has an odd number of electrons, so no arrangement can pair them all.",
+      "words": [
+        {
+          "term": "octet rule",
+          "meaning": "The tendency of atoms to gain, lose or share electrons to reach eight in the valence shell.",
+          "breakdown": "It works because eight corresponds to a filled s and p subshell for the second period.",
+          "trap": "Hydrogen and helium follow a duet, not an octet. They are complete with two electrons."
+        },
+        {
+          "term": "expanded octet",
+          "meaning": "More than eight electrons around the central atom, possible from the third period onward.",
+          "breakdown": "PCl5 has ten and SF6 has twelve around the central atom.",
+          "trap": "Second-period atoms such as carbon and nitrogen cannot expand their octet. There are no 2d orbitals to use."
+        },
+        {
+          "term": "odd-electron molecule",
+          "meaning": "A molecule with an odd total number of valence electrons, such as NO.",
+          "breakdown": "One electron is left unpaired, so the molecule is also a radical.",
+          "trap": "An odd electron count does not mean the molecule is unstable. NO is a stable gas, it simply cannot satisfy an octet everywhere."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='24'>BF3: six around boron</text><circle class='d-line' cx='60' cy='60' r='10'/><circle class='d-line' cx='30' cy='78' r='7'/><circle class='d-line' cx='60' cy='92' r='7'/><circle class='d-line' cx='90' cy='78' r='7'/><path class='d-accent' d='M46 68l-8 6M74 68l8 6M60 72v12'/><text class='d-label' x='140' y='24'>PCl5: ten</text><circle class='d-line' cx='190' cy='62' r='10'/><circle class='d-line' cx='160' cy='40' r='6'/><circle class='d-line' cx='220' cy='40' r='6'/><circle class='d-line' cx='160' cy='86' r='6'/><circle class='d-line' cx='220' cy='86' r='6'/><circle class='d-line' cx='190' cy='26' r='6'/><text class='d-label' x='140' y='128'>exceptions are not errors</text></svg>",
+      "visual_alt": "Boron trifluoride with six electrons around boron next to phosphorus pentachloride with ten around phosphorus.",
+      "hook": "The octet rule is a strong habit, and chemistry keeps a list of the atoms that skip it.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Identify the exception questions: BeCl2, BF3 and NO are the standard wrong-octet answers, and PCl5 and SF6 the expanded ones.",
+      "trap": "An expanded octet needs a third-period or heavier central atom. Drawing five bonds to nitrogen is always wrong.",
+      "recall": [
+        {
+          "q": "Which molecule does not obey the octet rule?",
+          "options": ["CH4", "H2O", "BF3", "NH3"],
+          "answer": 2,
+          "why": "Boron in BF3 has only six electrons around it. The other three have complete octets around the central atom."
+        },
+        {
+          "q": "Expanded octets are possible for",
+          "options": ["Carbon", "Nitrogen", "Oxygen", "Sulfur"],
+          "answer": 3,
+          "why": "Sulfur is in the third period and can use d orbitals to hold more than eight electrons, as in SF6. Second-period atoms cannot."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the exception examples against your copy."
+    },
+    {
+      "id": "vsepr-shapes",
+      "ncert_ref": "Chemical Bonding and Molecular Structure: VSEPR theory",
+      "key_phrase": "lone pairs push harder than bonds",
+      "meaning": "VSEPR starts from one idea: electron pairs around a central atom repel and spread as far apart as they can. Lone pairs repel more strongly than bond pairs, so they squeeze the bond angle. Methane is 109.5 degrees, ammonia drops to about 107, and water drops further to about 104.5, even though all three have four pairs around the centre.",
+      "words": [
+        {
+          "term": "VSEPR",
+          "meaning": "Valence shell electron pair repulsion, a model that predicts shape from electron pair repulsion.",
+          "breakdown": "Count all pairs around the central atom, then arrange them to minimise repulsion.",
+          "trap": "VSEPR predicts electron geometry first. The molecular shape ignores lone pairs when naming the shape."
+        },
+        {
+          "term": "bond angle",
+          "meaning": "The angle between two bonds at the central atom.",
+          "breakdown": "It shrinks as lone pairs replace bond pairs: 109.5, then 107, then 104.5.",
+          "trap": "A smaller angle does not mean a weaker molecule. The lone pairs are pushing, not pulling."
+        },
+        {
+          "term": "lone pair",
+          "meaning": "A pair of valence electrons not shared in a bond.",
+          "breakdown": "It occupies space around the central atom and changes the shape.",
+          "trap": "Lone pairs are invisible in the formula but decide the geometry. Counting only bonds gives the wrong shape."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 152'><text class='d-label' x='12' y='22'>CH4 109.5</text><circle class='d-line' cx='60' cy='66' r='9'/><path class='d-accent' d='M60 76v22M60 56V34M50 72l-16 10M70 72l16 10'/><text class='d-label' x='130' y='22'>NH3 107</text><circle class='d-line' cx='190' cy='66' r='9'/><path class='d-accent' d='M190 76v22M180 72l-16 10M200 72l16 10'/><path class='d-muted' d='M190 56v-14'/><text class='d-label' x='254' y='22'>H2O 104.5</text><circle class='d-line' cx='280' cy='66' r='9'/><path class='d-accent' d='M270 72l-14 10M290 72l14 10'/><path class='d-muted' d='M280 56v-12M280 76v-2'/><text class='d-label' x='12' y='140'>one lone pair: 107, two lone pairs: 104.5</text></svg>",
+      "visual_alt": "Methane, ammonia and water side by side with bond angles of 109.5, 107 and 104.5 degrees as lone pairs increase.",
+      "hook": "Two electrons with no bond to hold them take up more room, and every bond around them pays.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Predict the shape and bond angle of a given molecule. The lone pair count on the central atom decides both, and the order of repulsion is lone-lone, then lone-bond, then bond-bond.",
+      "trap": "Water is bent, not linear, and ammonia is pyramidal, not trigonal planar. The lone pairs change the shape name as well as the angle.",
+      "recall": [
+        {
+          "q": "The bond angle in water is smaller than in ammonia because",
+          "options": ["Oxygen is larger than nitrogen", "Water has two lone pairs on oxygen", "Ammonia has no lone pair", "Water has more bonds"],
+          "answer": 1,
+          "why": "Two lone pairs repel more strongly than one, squeezing the two O-H bonds closer than the N-H bonds in ammonia."
+        },
+        {
+          "q": "The shape of the ammonia molecule is",
+          "options": ["Trigonal planar", "Tetrahedral", "Trigonal pyramidal", "Linear"],
+          "answer": 2,
+          "why": "Three bonds and one lone pair give a trigonal pyramidal shape. The electron geometry is tetrahedral, but the shape is named from the atoms."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the bond angle values against your copy."
+    },
+    {
+      "id": "hybridisation",
+      "ncert_ref": "Chemical Bonding and Molecular Structure: hybridisation",
+      "key_phrase": "mixed orbitals explain the shapes",
+      "meaning": "Hybridisation mixes atomic orbitals of similar energy into new orbitals with the geometry the molecule actually shows. One s and three p orbitals give four sp3 hybrids pointing at 109.5 degrees, as in methane. One s and two p orbitals give three sp2 hybrids at 120 degrees, and the leftover p orbital forms the pi bond in ethene.",
+      "words": [
+        {
+          "term": "hybrid orbital",
+          "meaning": "An orbital formed by mixing atomic orbitals of comparable energy.",
+          "breakdown": "sp3 gives four orbitals, sp2 three, sp one. Each points in a fixed direction.",
+          "trap": "Hybridisation is a model, not a physical event you could photograph. It is a useful bookkeeping device."
+        },
+        {
+          "term": "sigma bond",
+          "meaning": "A bond formed by head-on overlap along the line joining the nuclei.",
+          "breakdown": "Single bonds are sigma. It allows rotation, which is why ethane can turn.",
+          "trap": "A double bond is one sigma plus one pi, not two sigmas. Counting two sigmas makes the shape wrong."
+        },
+        {
+          "term": "pi bond",
+          "meaning": "A bond formed by sideways overlap of p orbitals, above and below the bond axis.",
+          "breakdown": "It is weaker than sigma and locks rotation, which is why ethene is planar.",
+          "trap": "Pi bonds do not exist on their own between two atoms. There is always a sigma bond underneath."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='22'>sp3: 109.5</text><path class='d-accent' d='M56 70l-20 24M56 70l20 24M56 70v-28M56 70h0'/><circle class='d-line' cx='56' cy='70' r='6'/><text class='d-label' x='130' y='22'>sp2: 120</text><path class='d-accent' d='M186 78l-24 18M186 78l24 18M186 78v-26'/><circle class='d-line' cx='186' cy='78' r='6'/><text class='d-label' x='256' y='22'>sp: 180</text><path class='d-accent' d='M280 74h0M256 74h16M304 74h-16'/><circle class='d-line' cx='280' cy='74' r='6'/><text class='d-label' x='12' y='132'>the leftover p orbital makes the pi bond</text></svg>",
+      "visual_alt": "Three central atoms with sp3, sp2 and sp hybrid orbitals arranged at 109.5, 120 and 180 degrees.",
+      "hook": "Carbon does not bend its bonds. It re-mixes its orbitals until the angles come out right.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions give a molecule and ask for the hybridisation of one atom, or the number of sigma and pi bonds. Count the electron domains, including lone pairs.",
+      "trap": "A lone pair occupies a hybrid orbital, so it counts when you decide sp3 or sp2. Counting only bonded atoms gives the wrong hybridisation.",
+      "recall": [
+        {
+          "q": "The carbon atoms in ethene are",
+          "options": ["sp3 hybridised", "sp2 hybridised", "sp hybridised", "Unhybridised"],
+          "answer": 1,
+          "why": "Each carbon has three sigma bonds and one pi bond, so three electron domains, which gives sp2 and a planar molecule at 120 degrees."
+        },
+        {
+          "q": "A triple bond contains",
+          "options": ["Three sigma bonds", "One sigma and two pi bonds", "Two sigma and one pi bond", "Three pi bonds"],
+          "answer": 1,
+          "why": "One head-on sigma bond plus two sideways pi bonds. There can only be one sigma between two atoms."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the hybridisation examples against your copy."
+    }
+  ]
+}
