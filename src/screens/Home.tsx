@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { chapterIndex } from '../content'
+import { chapterIndex, totalParagraphs } from '../content'
 import { useChapter } from '../hooks'
 import { saveChaptersOffline, formatBytes } from '../offline'
 import * as store from '../store'
@@ -32,7 +32,7 @@ export function Home() {
   }, [])
 
   if (chapterIndex.length === 0) {
-    return <Empty title="No chapters in this build" text="The content index is empty. Rebuild the site and reload." />
+    return <Empty art="lost" title="No chapters in this build" text="The content index is empty. Rebuild the site and reload." />
   }
 
   const save = async (subject: string, ids: string[]) => {
@@ -46,17 +46,16 @@ export function Home() {
     }))
   }
 
+  const read = Object.values(prog).reduce((n, ids) => n + ids.length, 0)
+
   return (
     <>
-      <header className="page-head">
-        <p className="eyebrow">
-          <span className="eyebrow-rule" aria-hidden="true" />
-          Class 11 Biology
-        </p>
+      <header className="page-head hero">
+        <p className="hero-subject">Class 11 · Biology</p>
         <h1>Every paragraph, with a margin note.</h1>
         <p className="lede">
-          NCERT lines explained where students get stuck. Chapters 8 and 9 are open. Each paragraph is a draft until a
-          subject expert checks it.
+          NCERT lines explained where students get stuck. {totalParagraphs} paragraphs are written across {chapterIndex.length}{' '}
+          chapters. Every one is a draft until a subject expert checks it.
         </p>
       </header>
 
@@ -69,66 +68,84 @@ export function Home() {
         </a>
       )}
 
-      {groups.map(([subject, list]) => (
-        <section className="group" key={subject} aria-labelledby={`subject-${subject}`}>
-          <div className="group-head">
-            <h2 id={`subject-${subject}`}>{subject}</h2>
-            <button className="link-btn" onClick={() => save(subject, list.map((c) => c.id))}>
-              <Icon name="download" size={16} /> Save for offline
-            </button>
-          </div>
+      {groups.map(([subject, list]) => {
+        const seen = list.reduce((n, c) => n + (prog[c.id] ?? []).length, 0)
+        const total = list.reduce((n, c) => n + c.paragraphs, 0)
+        return (
+          <section className="group" key={subject} data-subject={subject} aria-labelledby={`subject-${subject}`}>
+            <div className="group-head">
+              <h2 id={`subject-${subject}`}>{subject}</h2>
+              <span className="group-count">
+                {list.length} {list.length === 1 ? 'chapter' : 'chapters'} · {seen} of {total} paragraphs read
+              </span>
+            </div>
 
-          <ul className="chapter-list">
-            {list.map((c, n) => {
-              const seen = (prog[c.id] ?? []).length
-              return (
-                <li key={c.id}>
-                  <a className="chapter-row" href={`#/c/${c.id}`}>
-                    <span className="chapter-no" aria-hidden="true">
-                      {String(n + 1).padStart(2, '0')}
-                    </span>
-                    <span className="chapter-body">
-                      <span className="chapter-name">{c.title}</span>
-                      <span className="chapter-meta">
-                        {c.paragraphs} paragraphs · {seen} read
+            <ul className="chapter-list">
+              {list.map((c, n) => {
+                const read = (prog[c.id] ?? []).length
+                return (
+                  <li key={c.id}>
+                    <a className="chapter-row" href={`#/c/${c.id}`}>
+                      <span className="chapter-no" aria-hidden="true">
+                        {String(n + 1).padStart(2, '0')}
                       </span>
-                      <progress className="progress" max={c.paragraphs} value={seen} aria-label={`${c.title} progress`} />
-                    </span>
-                    <span className="chapter-go" aria-hidden="true">
-                      <Icon name="right" size={18} />
-                    </span>
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
+                      <span className="chapter-body">
+                        <span className="chapter-name">{c.title}</span>
+                        <span className="chapter-meta">
+                          <span>{c.paragraphs} paragraphs</span>
+                          <span className="dot" aria-hidden="true">
+                            ·
+                          </span>
+                          <span>{read} read</span>
+                        </span>
+                        <progress
+                          className="progress"
+                          max={c.paragraphs}
+                          value={read}
+                          aria-label={`${c.title}: ${read} of ${c.paragraphs} paragraphs read`}
+                        />
+                      </span>
+                      <span className="chapter-go" aria-hidden="true">
+                        <Icon name="right" size={18} />
+                      </span>
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
 
-          {saved[subject] && (
-            <p className="inline-note" role="status">
-              {saved[subject]}
-            </p>
-          )}
-        </section>
-      ))}
+            <div className="row">
+              <button className="link-btn" onClick={() => save(subject, list.map((c) => c.id))}>
+                <Icon name="download" size={16} /> Save {subject.toLowerCase()} for offline
+              </button>
+            </div>
+
+            {saved[subject] && (
+              <p className="inline-note" role="status">
+                {saved[subject]}
+              </p>
+            )}
+          </section>
+        )
+      })}
 
       {firstRun && (
         <section className="sample" aria-labelledby="sample-title">
           <div className="group-head">
             <h2 id="sample-title">Try one paragraph</h2>
-            <span className="muted small">Tap a dotted word. Answer both questions.</span>
+            <span className="group-count">Tap a dotted word. Answer both questions.</span>
           </div>
           {sample.loading && <Skeleton lines={6} rail />}
-          {sample.ch && sample.ch.paragraphs[0] && (
-            <Card ch={sample.ch} p={sample.ch.paragraphs[0]} index={0} sample />
-          )}
+          {sample.ch && sample.ch.paragraphs[0] && <Card ch={sample.ch} p={sample.ch.paragraphs[0]} index={0} sample />}
           {sample.error && (
-            <p className="inline-note">The sample could not be loaded. Open chapter 8 from the list above.</p>
+            <p className="inline-note">The sample did not load. Open chapter 8 from the list above.</p>
           )}
         </section>
       )}
 
       <p className="page-note">
-        Gloss is not affiliated with NCERT. References point at the book. The explanations are original.
+        {read} of {totalParagraphs} paragraphs read on this device. Gloss is not affiliated with NCERT; references point
+        at the book and the explanations are original.
       </p>
     </>
   )

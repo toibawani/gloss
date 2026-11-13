@@ -16,10 +16,6 @@ export function Words() {
   return (
     <>
       <header className="page-head">
-        <p className="eyebrow">
-          <span className="eyebrow-rule" aria-hidden="true" />
-          Word bank
-        </p>
         <h1>Words you opened</h1>
         <p className="lede">Every tap is saved on this device, with the breakdown you read in the margin.</p>
       </header>
@@ -38,12 +34,13 @@ export function Words() {
 
       {opened.length === 0 ? (
         <Empty
+          art="words"
           title="No words yet"
           text="Open a chapter and tap an underlined word. It lands here with its meaning and the place students slip."
-          action={{ label: 'Open a chapter', href: '#/' }}
+          action={{ label: 'Open chapter 8', href: '#/c/bio-11-ch8' }}
         />
       ) : list.length === 0 ? (
-        <Empty title="No word matches" text="Try a shorter search, or clear the box." />
+        <Empty art="search" title="No word matches" text="Try a shorter search, or clear the box." />
       ) : (
         <ul className="word-grid">
           {list.map((w) => (

@@ -82,11 +82,7 @@ export function Settings() {
   return (
     <>
       <header className="page-head">
-        <p className="eyebrow">
-          <span className="eyebrow-rule" aria-hidden="true" />
-          Settings
-        </p>
-        <h1>Make the page yours</h1>
+        <h1>Settings</h1>
         <p className="lede">Everything here is stored on this device. Nothing is sent anywhere.</p>
       </header>
 

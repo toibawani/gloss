@@ -11,6 +11,8 @@ import { SearchScreen } from './screens/SearchScreen'
 import { Settings } from './screens/Settings'
 import { NotFound } from './screens/NotFound'
 import { Privacy, Terms } from './Legal'
+import { StyleGuide } from './screens/StyleGuide'
+import { Wordmark } from './components/Brand'
 import { Icon, type IconName } from './icons'
 
 initSettings()
@@ -46,9 +48,8 @@ export default function App() {
       </a>
       <header className="top">
         <div className="top-inner">
-          <a className="brand" href="#/">
-            Gloss
-            <span className="brand-mark" aria-hidden="true" />
+          <a className="brand" href="#/" aria-label="Gloss">
+            <Wordmark />
           </a>
           <nav className="main-nav" aria-label="Main">
             {NAV.map((n) => (
@@ -98,6 +99,8 @@ export default function App() {
             <Terms />
           ) : route === 'privacy' ? (
             <Privacy />
+          ) : route === 'styleguide' ? (
+            <StyleGuide />
           ) : (
             <NotFound />
           )}

@@ -8,5 +8,6 @@ export default defineConfig({
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
   },
-  test: { environment: 'node' },
+  // Playwright owns e2e/; Vitest only collects unit tests next to the source.
+  test: { environment: 'node', include: ['src/**/*.test.ts'] },
 })
