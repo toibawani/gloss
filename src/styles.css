@@ -3,18 +3,28 @@
 /* ------------------------------------------------------------------ tokens */
 
 :root {
-  --paper: #f2ecdd;
-  --panel: #faf6ec;
-  --ink: #211c15;
-  --muted: #574d3e;
-  --rule: #cfc1a6;
+  --paper: #f4eee0;
+  --panel: #fbf7ec;
+  --band: #ede5d2;
+  --ink: #1f1a14;
+  --muted: #5c5142;
+  --rule: #d6c9ae;
+  --rule-strong: #b4a281;
   --accent: #8a3b1e;
   --pencil: #3f5b73;
   --ok: #2f5d3a;
   --bad: #8c2a2a;
 
+  --bio: #2e4a34;
+  --phy: #26405f;
+  --chem: #8a3b24;
+  --hist: #7a5a1e;
+  --subject: var(--ink);
+  --subject-wash: #e6dfcb;
+
   --r: 3px;
 
+  /* 4, 8, 12, 16, 24, 32, 48, 72 */
   --s-1: 0.25rem;
   --s-2: 0.5rem;
   --s-3: 0.75rem;
@@ -24,17 +34,19 @@
   --s-7: 3rem;
   --s-8: 4.5rem;
 
-  --fs-xs: 0.75rem;
+  /* 11, 13, 15, 19, 24, 32, 44, 60 */
+  --fs-xs: 0.6875rem;
   --fs-sm: 0.8125rem;
   --fs-base: 0.9375rem;
   --fs-md: 1rem;
-  --fs-lg: 1.25rem;
-  --fs-xl: 1.6rem;
-  --fs-2xl: 2.1rem;
-  --fs-3xl: 2.7rem;
+  --fs-lg: 1.1875rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.75rem;
+  --fs-display: clamp(2rem, 7vw, 3.75rem);
 
   --read: 1.1875rem;
-  --lead: 1.66;
+  --lead: 1.62;
 
   --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
   --sans: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -42,34 +54,52 @@
   --hand: 'Caveat', 'Segoe Script', cursive;
 
   --measure: 34rem;
+  --margin: 16rem;
+  --shell: 72rem;
   --gutter: 1.25rem;
   color-scheme: light;
 }
 
 :root[data-theme='dark'] {
-  --paper: #16130e;
-  --panel: #1e1a13;
-  --ink: #f3ead7;
-  --muted: #c6b79e;
-  --rule: #453c2e;
-  --accent: #f2b78e;
+  --paper: #15120d;
+  --panel: #1d1912;
+  --band: #221d15;
+  --ink: #f2e9d6;
+  --muted: #c3b49a;
+  --rule: #3f372a;
+  --rule-strong: #5d5340;
+  --accent: #f0b58d;
   --pencil: #a9c9e2;
   --ok: #9ed6ab;
   --bad: #f4a9a9;
+
+  --bio: #8fbb96;
+  --phy: #94b6dd;
+  --chem: #e7a184;
+  --hist: #d8b979;
+  --subject-wash: #2a2419;
   color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root[data-theme='system'] {
-    --paper: #16130e;
-    --panel: #1e1a13;
-    --ink: #f3ead7;
-    --muted: #c6b79e;
-    --rule: #453c2e;
-    --accent: #f2b78e;
+    --paper: #15120d;
+    --panel: #1d1912;
+    --band: #221d15;
+    --ink: #f2e9d6;
+    --muted: #c3b49a;
+    --rule: #3f372a;
+    --rule-strong: #5d5340;
+    --accent: #f0b58d;
     --pencil: #a9c9e2;
     --ok: #9ed6ab;
     --bad: #f4a9a9;
+
+    --bio: #8fbb96;
+    --phy: #94b6dd;
+    --chem: #e7a184;
+    --hist: #d8b979;
+    --subject-wash: #2a2419;
     color-scheme: dark;
   }
 }
@@ -87,6 +117,20 @@
 }
 :root[data-leading='loose'] {
   --lead: 1.86;
+}
+
+[data-subject='Biology'] {
+  --subject: var(--bio);
+}
+[data-subject='Physics'] {
+  --subject: var(--phy);
+}
+[data-subject='Chemistry'] {
+  --subject: var(--chem);
+}
+[data-subject='History'],
+[data-subject='Geography'] {
+  --subject: var(--hist);
 }
 
 /* ------------------------------------------------------------------ base */
@@ -116,7 +160,7 @@ h2,
 h3 {
   margin: 0;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 p {
@@ -189,7 +233,7 @@ svg {
 }
 
 .wrap {
-  width: min(100% - 2 * var(--gutter), 64rem);
+  width: min(100% - 2 * var(--gutter), var(--shell));
   margin-inline: auto;
 }
 
@@ -200,15 +244,15 @@ svg {
   font-size: var(--fs-sm);
 }
 
-.rail-label {
-  display: flex;
-  align-items: center;
-  gap: var(--s-1);
+/* A label names a group. It is lowercase, small and rare, never a ribbon on every page. */
+.rail-label,
+.eyebrow {
+  display: block;
   margin: 0 0 var(--s-2);
   font-size: var(--fs-xs);
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  text-transform: lowercase;
   color: var(--muted);
 }
 
@@ -216,19 +260,15 @@ svg {
   display: flex;
   align-items: center;
   gap: var(--s-2);
-  margin: 0 0 var(--s-3);
-  font-size: var(--fs-xs);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
+  margin-bottom: var(--s-3);
 }
 
+/* The one place a small rule earns its keep: it marks a subject, and carries its color. */
 .eyebrow-rule {
   display: inline-block;
-  width: 1.5rem;
-  height: 1.5px;
-  background: var(--accent);
+  width: 1.25rem;
+  height: 2px;
+  background: var(--subject);
 }
 
 /* ------------------------------------------------------------------ header */
@@ -238,36 +278,29 @@ svg {
   top: 0;
   z-index: 20;
   background: var(--paper);
-  border-bottom: 1.5px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 .top-inner {
   display: flex;
   align-items: center;
   gap: var(--s-3);
-  width: min(100% - 2 * var(--gutter), 64rem);
+  width: min(100% - 2 * var(--gutter), var(--shell));
   margin-inline: auto;
-  min-height: 3.25rem;
+  min-height: 3.5rem;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: var(--s-2);
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  font-weight: 600;
   color: var(--ink);
   text-decoration: none;
-  letter-spacing: -0.02em;
 }
 
-.brand-mark {
-  width: 0.4rem;
-  height: 0.4rem;
-  background: var(--accent);
-  border-radius: 50%;
-  transform: translateY(0.15rem);
+.brand svg {
+  display: block;
+  height: 30px;
+  width: auto;
 }
 
 .main-nav {
@@ -282,20 +315,18 @@ svg {
   gap: var(--s-2);
   min-height: 44px;
   padding: 0 var(--s-3);
-  border: 1.5px solid transparent;
-  border-radius: var(--r);
   color: var(--muted);
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
 .main-nav a:hover {
   color: var(--ink);
-  border-color: var(--rule);
 }
 
 .main-nav a[aria-current='page'] {
   color: var(--ink);
-  border-color: var(--ink);
+  border-bottom-color: var(--ink);
 }
 
 .top-tools {
@@ -309,15 +340,17 @@ svg {
   justify-content: center;
   width: 44px;
   height: 44px;
-  border: 1.5px solid transparent;
-  border-radius: var(--r);
   color: var(--ink);
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
-.icon-btn:hover,
+.icon-btn:hover {
+  color: var(--accent);
+}
+
 .icon-btn[aria-current='page'] {
-  border-color: var(--rule);
+  border-bottom-color: var(--ink);
 }
 
 .offline {
@@ -325,8 +358,8 @@ svg {
   align-items: center;
   gap: var(--s-2);
   padding: var(--s-2) var(--gutter);
-  background: var(--panel);
-  border-bottom: 1.5px solid var(--rule);
+  background: var(--band);
+  border-bottom: 1px solid var(--rule);
   color: var(--muted);
   font-size: var(--fs-sm);
 }
@@ -344,20 +377,21 @@ main.wrap {
 /* ------------------------------------------------------------------ shared */
 
 .page-head {
-  max-width: 36rem;
+  max-width: 42rem;
   margin-bottom: var(--s-6);
 }
 
 .page-head h1 {
   font-family: var(--serif);
-  font-size: clamp(1.85rem, 7vw, var(--fs-3xl));
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  font-size: var(--fs-display);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
 }
 
 .lede {
   margin-top: var(--s-3);
-  max-width: 34rem;
+  max-width: 36rem;
   color: var(--muted);
   font-size: var(--fs-md);
   line-height: 1.6;
@@ -366,7 +400,7 @@ main.wrap {
 .page-note {
   margin-top: var(--s-7);
   padding-top: var(--s-4);
-  border-top: 1.5px solid var(--rule);
+  border-top: 1px solid var(--rule);
   color: var(--muted);
   font-size: var(--fs-sm);
 }
@@ -378,35 +412,40 @@ main.wrap {
   gap: var(--s-2);
   min-height: 44px;
   padding: 0 var(--s-4);
-  font-size: var(--fs-md);
+  font-size: var(--fs-base);
   font-weight: 500;
-  color: var(--ink);
-  background: var(--paper);
-  border: 1.5px solid var(--rule);
+  color: var(--paper);
+  background: var(--ink);
+  border: 1px solid var(--ink);
   border-radius: var(--r);
   cursor: pointer;
   text-decoration: none;
-  transition: border-color 120ms ease, transform 100ms ease;
 }
 
 .btn:hover:not(:disabled) {
-  border-color: var(--ink);
+  background: #000;
 }
 
-.btn:active:not(:disabled) {
-  transform: scale(0.98);
+:root[data-theme='dark'] .btn:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--paper);
+  opacity: 0.92;
 }
 
 .btn:disabled {
-  color: var(--muted);
-  border-color: var(--rule);
   cursor: default;
-  opacity: 0.6;
+  opacity: 0.45;
 }
 
 .btn-quiet {
+  color: var(--ink);
   background: transparent;
-  border-color: var(--rule);
+  border-color: var(--rule-strong);
+}
+
+.btn-quiet:hover:not(:disabled) {
+  background: var(--band);
+  color: var(--ink);
 }
 
 .btn-small {
@@ -416,8 +455,14 @@ main.wrap {
 }
 
 .btn-danger {
-  border-color: var(--bad);
   color: var(--bad);
+  background: transparent;
+  border-color: var(--bad);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--bad);
+  color: var(--paper);
 }
 
 .btn-icon {
@@ -436,7 +481,7 @@ main.wrap {
   color: var(--accent);
   font-size: var(--fs-sm);
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
   cursor: pointer;
 }
 
@@ -450,23 +495,29 @@ main.wrap {
 .field > legend {
   display: block;
   margin-bottom: var(--s-2);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
   font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: var(--muted);
 }
 
 fieldset.field > legend {
   padding: 0;
 }
 
+/* Inputs are underlines on the page, not boxes floating on it. */
 .input {
   width: 100%;
   min-height: 44px;
-  padding: 0 var(--s-3);
+  padding: var(--s-2) 0;
   font: inherit;
+  font-size: var(--fs-md);
   color: var(--ink);
-  background: var(--panel);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule-strong);
+  border-radius: 0;
 }
 
 .input::placeholder {
@@ -474,14 +525,13 @@ fieldset.field > legend {
 }
 
 .input:focus-visible {
-  border-color: var(--ink);
+  outline: none;
+  border-bottom: 2px solid var(--ink);
 }
 
 .note {
-  background: var(--panel);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
-  padding: var(--s-3);
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--rule);
   font-size: var(--fs-sm);
   color: var(--muted);
 }
@@ -491,9 +541,8 @@ fieldset.field > legend {
   align-items: flex-start;
   gap: var(--s-2);
   margin-top: var(--s-3);
-  padding: var(--s-3);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--rule);
   color: var(--muted);
   font-size: var(--fs-sm);
 }
@@ -501,8 +550,8 @@ fieldset.field > legend {
 .alert {
   margin-bottom: var(--s-5);
   padding: var(--s-4);
-  border: 1.5px solid var(--bad);
-  border-radius: var(--r);
+  background: var(--band);
+  border-left: 2px solid var(--bad);
 }
 
 .alert p + p {
@@ -516,28 +565,44 @@ fieldset.field > legend {
   margin: var(--s-3) 0;
 }
 
+/* ------------------------------------------------------------------ empty states */
+
 .empty {
-  margin-top: var(--s-4);
-  padding: var(--s-5) var(--s-4);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
-  background: var(--panel);
-  max-width: 36rem;
+  display: grid;
+  justify-items: start;
+  gap: var(--s-3);
+  max-width: 34rem;
+  padding: var(--s-6) 0;
+}
+
+.empty-art {
+  color: var(--rule-strong);
+  margin-bottom: var(--s-1);
 }
 
 .empty h2 {
   font-family: var(--serif);
-  font-size: var(--fs-xl);
-  margin-bottom: var(--s-2);
+  font-size: var(--fs-2xl);
+  line-height: 1.15;
 }
 
 .empty p {
   color: var(--muted);
-  margin-bottom: var(--s-3);
   max-width: 32rem;
 }
 
-/* ------------------------------------------------------------------ home */
+/* ------------------------------------------------------------------ today */
+
+.hero {
+  padding-bottom: var(--s-6);
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero-subject {
+  font-size: var(--fs-sm);
+  color: var(--subject);
+  font-weight: 600;
+}
 
 .due {
   display: flex;
@@ -545,16 +610,21 @@ fieldset.field > legend {
   justify-content: space-between;
   gap: var(--s-3);
   margin-bottom: var(--s-6);
-  padding: var(--s-3) var(--s-4);
-  border: 1.5px solid var(--ink);
-  border-radius: var(--r);
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
   color: var(--ink);
   text-decoration: none;
-  font-size: var(--fs-md);
+}
+
+.due strong {
+  font-family: var(--serif);
+  font-size: var(--fs-xl);
+  font-variant-numeric: tabular-nums;
 }
 
 .group {
-  margin-bottom: var(--s-6);
+  margin-bottom: var(--s-7);
 }
 
 .group-head {
@@ -562,49 +632,52 @@ fieldset.field > legend {
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: var(--s-3);
-  margin-bottom: var(--s-3);
+  gap: var(--s-2) var(--s-3);
+  margin-bottom: var(--s-1);
   padding-bottom: var(--s-2);
-  border-bottom: 1.5px solid var(--rule);
+  border-bottom: 1px solid var(--ink);
 }
 
 .group-head h2 {
   font-family: var(--serif);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
+  letter-spacing: -0.01em;
 }
 
+.group-count {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Rows on a ruled page: no boxes, no repeated card anatomy. */
 .chapter-list {
   display: grid;
-  gap: var(--s-2);
 }
 
 .chapter-row {
   display: grid;
-  grid-template-columns: 2.25rem minmax(0, 1fr) 1.5rem;
+  grid-template-columns: 3.25rem minmax(0, 1fr) 1.25rem;
   align-items: center;
   gap: var(--s-3);
-  padding: var(--s-3) var(--s-3) var(--s-3) var(--s-2);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
+  padding: var(--s-4) var(--s-2) var(--s-4) 0;
+  border-bottom: 1px solid var(--rule);
   color: var(--ink);
   text-decoration: none;
-  background: var(--panel);
-  transition: border-color 120ms ease, transform 100ms ease;
 }
 
 .chapter-row:hover {
-  border-color: var(--ink);
-}
-
-.chapter-row:active {
-  transform: scale(0.99);
+  background: var(--panel);
 }
 
 .chapter-no {
   font-family: var(--serif);
-  font-size: var(--fs-md);
-  color: var(--muted);
-  text-align: center;
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--subject);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
 }
 
 .chapter-body {
@@ -615,30 +688,44 @@ fieldset.field > legend {
 
 .chapter-name {
   font-family: var(--serif);
-  font-size: var(--fs-md);
+  font-size: var(--fs-lg);
   font-weight: 600;
 }
 
 .chapter-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s-2);
   color: var(--muted);
   font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.chapter-meta .dot {
+  color: var(--rule-strong);
 }
 
 .chapter-go {
   color: var(--muted);
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+}
+
+.chapter-row:hover .chapter-go {
+  color: var(--accent);
 }
 
 .progress {
   appearance: none;
   -webkit-appearance: none;
   width: 100%;
-  height: 4px;
+  height: 2px;
   border: 0;
   background: var(--rule);
-  border-radius: var(--r);
+  border-radius: 0;
   overflow: hidden;
+  margin-top: var(--s-2);
 }
 
 .progress::-webkit-progress-bar {
@@ -646,17 +733,21 @@ fieldset.field > legend {
 }
 
 .progress::-webkit-progress-value {
-  background: var(--ink);
+  background: var(--subject);
 }
 
 .progress::-moz-progress-bar {
-  background: var(--ink);
+  background: var(--subject);
+}
+
+.progress[value='0'] {
+  background: var(--rule);
 }
 
 .sample {
   margin-top: var(--s-7);
   padding-top: var(--s-5);
-  border-top: 1.5px solid var(--rule);
+  border-top: 1px solid var(--ink);
 }
 
 /* ------------------------------------------------------------------ reader */
@@ -682,14 +773,19 @@ fieldset.field > legend {
 
 .chapter-title {
   font-family: var(--serif);
-  font-size: clamp(1.7rem, 6.5vw, var(--fs-2xl));
-  line-height: 1.14;
-  letter-spacing: -0.02em;
+  font-size: var(--fs-display);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   max-width: 24ch;
+  text-wrap: balance;
 }
 
 .chapter-sub {
-  margin-top: var(--s-2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+  margin-top: var(--s-3);
   color: var(--muted);
   font-size: var(--fs-sm);
 }
@@ -700,6 +796,9 @@ fieldset.field > legend {
   align-items: center;
   gap: var(--s-3);
   margin: var(--s-4) 0 var(--s-3);
+  padding: var(--s-2) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 .pager-mid {
@@ -716,6 +815,7 @@ fieldset.field > legend {
 .pager-bottom {
   margin-top: var(--s-4);
   grid-template-columns: 1fr 1fr;
+  border-bottom: 0;
 }
 
 .pager-bottom .btn:last-child {
@@ -730,26 +830,23 @@ fieldset.field > legend {
 
 .card {
   display: block;
-  background: var(--panel);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
-  overflow: hidden;
+  background: var(--paper);
+  padding-top: var(--s-4);
 }
 
 .card-main {
-  padding: var(--s-5) var(--s-4);
+  padding: 0;
 }
 
 .card[data-dir='1'] {
-  animation: from-right 150ms ease-out;
+  animation: from-right 160ms ease-out;
 }
 
 .card[data-dir='-1'] {
-  animation: from-left 150ms ease-out;
+  animation: from-left 160ms ease-out;
 }
 
-/* Slide only. Fading text would drop contrast while the card moves, and the words
-   should be readable the whole time. */
+/* Slide only. Fading text would drop contrast while the card moves. */
 @keyframes from-right {
   from {
     transform: translateX(14px);
@@ -764,11 +861,12 @@ fieldset.field > legend {
 
 .phrase {
   font-family: var(--serif);
-  font-size: var(--fs-xl);
-  line-height: 1.3;
+  font-size: var(--fs-2xl);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   color: var(--ink);
   margin-bottom: var(--s-4);
-  max-width: 28ch;
+  max-width: 24ch;
 }
 
 .phrase q {
@@ -785,18 +883,12 @@ fieldset.field > legend {
 
 .visual-wrap {
   margin: var(--s-5) 0;
-  padding: var(--s-3);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
-  background: var(--paper);
-  color: var(--ink);
-  /* Diagrams are drawn on a 320-unit grid. Capping the width keeps their labels the
-     same size as the body text instead of blowing them up on a wide screen. */
   max-width: 24rem;
 }
 
 .visual {
   margin: 0;
+  color: var(--ink);
 }
 
 .visual svg {
@@ -805,25 +897,66 @@ fieldset.field > legend {
   height: auto;
 }
 
+/* Diagram language. Content may name only these classes. */
+.visual .d-line {
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.visual .d-muted {
+  stroke: var(--muted);
+  fill: none;
+  stroke-width: 1;
+  opacity: 0.7;
+}
+
+.visual .d-accent {
+  stroke: var(--subject);
+  fill: none;
+  stroke-width: 2;
+}
+
+.visual .d-fill {
+  fill: var(--subject-wash);
+  stroke: var(--subject);
+  stroke-width: 1.5;
+}
+
+.visual .d-label {
+  fill: var(--ink);
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.01em;
+  stroke: none;
+}
+
+.visual .d-guide {
+  stroke: var(--muted);
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 3 2;
+}
+
 .hook-block {
   margin: var(--s-5) 0;
-  padding: var(--s-3) 0 var(--s-3) var(--s-4);
-  border-left: 1.5px solid var(--accent);
+  padding: var(--s-3) 0 0;
+  border-top: 1px solid var(--rule);
   max-width: var(--measure);
 }
 
 .hook {
   font-family: var(--hand);
-  font-size: 1.55rem;
-  line-height: 1.3;
+  font-size: 1.5rem;
+  line-height: 1.32;
   color: var(--ink);
 }
 
 .trap-block {
   margin: var(--s-5) 0;
-  padding: var(--s-3) var(--s-4);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
+  padding: var(--s-4) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
   max-width: var(--measure);
 }
 
@@ -836,7 +969,7 @@ fieldset.field > legend {
 .recall {
   margin-top: var(--s-6);
   padding-top: var(--s-4);
-  border-top: 1.5px solid var(--rule);
+  border-top: 1px solid var(--ink);
   max-width: var(--measure);
 }
 
@@ -844,9 +977,9 @@ fieldset.field > legend {
   display: grid;
   align-content: start;
   gap: var(--s-5);
-  padding: var(--s-4);
-  border-top: 1.5px solid var(--rule);
-  background: var(--paper);
+  padding: var(--s-4) 0 var(--s-4) var(--s-5);
+  border-top: 1px solid var(--rule);
+  margin-top: var(--s-5);
 }
 
 .ref-line {
@@ -857,16 +990,17 @@ fieldset.field > legend {
 .status {
   display: inline-block;
   margin-top: var(--s-2);
-  padding: 2px var(--s-2);
-  border: 1.5px solid var(--muted);
-  border-radius: var(--r);
+  padding: 2px 0;
   color: var(--muted);
   font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  border-bottom: 1px solid var(--rule-strong);
 }
 
 .status.ok {
-  border-color: var(--ok);
   color: var(--ok);
+  border-color: var(--ok);
 }
 
 .review-note {
@@ -895,20 +1029,17 @@ fieldset.field > legend {
   text-decoration-color: var(--pencil);
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
-  border-radius: var(--r);
 }
 
 .word[aria-expanded='true'] {
-  background: var(--rule);
+  color: var(--accent);
   text-decoration-thickness: 3px;
 }
 
 .word-card {
   margin-top: var(--s-3);
-  padding: var(--s-3);
-  border: 1.5px solid var(--pencil);
-  border-radius: var(--r);
-  background: var(--panel);
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--pencil);
   font-size: var(--fs-sm);
   line-height: 1.55;
 }
@@ -956,19 +1087,24 @@ fieldset.field > legend {
 }
 
 .tag {
-  padding: 2px var(--s-2);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
+  padding: 0;
   color: var(--muted);
   font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+
+.tag + .tag::before {
+  content: '·';
+  padding-right: var(--s-2);
+  color: var(--rule-strong);
 }
 
 .tag-on {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: var(--paper);
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .exam-block > p:not(.rail-label):not(.tags) {
@@ -988,7 +1124,6 @@ fieldset.field > legend {
 }
 
 .q-text {
-  font-family: var(--sans);
   font-size: var(--fs-md);
   font-weight: 600;
   line-height: 1.45;
@@ -997,7 +1132,7 @@ fieldset.field > legend {
 
 .opts {
   display: grid;
-  gap: var(--s-2);
+  border-top: 1px solid var(--rule);
 }
 
 .opt {
@@ -1006,40 +1141,38 @@ fieldset.field > legend {
   justify-content: space-between;
   gap: var(--s-3);
   width: 100%;
-  min-height: 44px;
-  padding: var(--s-2) var(--s-3);
+  min-height: 48px;
+  padding: var(--s-2) 0;
   text-align: left;
   font-size: var(--fs-md);
-  background: var(--paper);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
   cursor: pointer;
-  transition: border-color 120ms ease, transform 100ms ease;
 }
 
 .opt:hover {
-  border-color: var(--ink);
-}
-
-.opt:active {
-  transform: scale(0.99);
+  color: var(--accent);
 }
 
 .opt.right {
-  border-color: var(--ok);
-  border-width: 2px;
+  color: var(--ok);
 }
 
 .opt.wrong {
-  border-color: var(--bad);
-  border-width: 2px;
+  color: var(--bad);
+}
+
+.opt.right .opt-tag,
+.opt.wrong .opt-tag {
+  color: inherit;
 }
 
 .opt-tag {
   flex: none;
   font-size: var(--fs-xs);
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: 0.06em;
   color: var(--muted);
 }
@@ -1050,26 +1183,24 @@ fieldset.field > legend {
 
 .why {
   margin-top: var(--s-3);
-  padding: var(--s-3);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
+  padding: var(--s-3) 0;
+  border-bottom: 1px solid var(--rule);
   font-size: var(--fs-sm);
   line-height: 1.6;
+  color: var(--muted);
 }
 
 /* ------------------------------------------------------------------ review */
 
 .review-list {
   display: grid;
-  gap: var(--s-4);
+  gap: var(--s-6);
   max-width: 40rem;
 }
 
 .review-item {
-  padding: var(--s-4);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
-  background: var(--panel);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--rule);
 }
 
 .review-item .q {
@@ -1080,15 +1211,14 @@ fieldset.field > legend {
 
 .word-grid {
   display: grid;
-  gap: var(--s-3);
+  gap: 0;
   margin-top: var(--s-5);
+  border-top: 1px solid var(--ink);
 }
 
 .word-entry {
-  padding: var(--s-4);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
-  background: var(--panel);
+  padding: var(--s-4) 0;
+  border-bottom: 1px solid var(--rule);
 }
 
 .word-entry-head {
@@ -1100,7 +1230,7 @@ fieldset.field > legend {
 
 .word-entry h2 {
   font-family: var(--serif);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
 }
 
 .word-entry p {
@@ -1118,7 +1248,7 @@ fieldset.field > legend {
   align-items: center;
   gap: var(--s-2);
   min-height: 44px;
-  margin-top: var(--s-2);
+  margin-top: var(--s-1);
   font-size: var(--fs-sm);
   color: var(--accent);
 }
@@ -1134,38 +1264,37 @@ fieldset.field > legend {
 
 .result-list {
   display: grid;
-  gap: var(--s-2);
+  border-top: 1px solid var(--ink);
 }
 
 .result {
   display: grid;
   gap: var(--s-1);
-  padding: var(--s-3) var(--s-4);
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
-  background: var(--panel);
+  padding: var(--s-4) 0;
+  border-bottom: 1px solid var(--rule);
   color: var(--ink);
   text-decoration: none;
 }
 
 .result:hover {
-  border-color: var(--ink);
+  background: var(--panel);
 }
 
 .result-title {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: var(--s-2);
-  font-family: var(--serif);
-  font-size: var(--fs-md);
-  font-weight: 600;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: var(--muted);
 }
 
 .result-phrase {
   font-family: var(--serif);
-  font-size: var(--fs-md);
-  color: var(--accent);
+  font-size: var(--fs-lg);
+  font-weight: 600;
 }
 
 .result-snippet {
@@ -1188,23 +1317,22 @@ fieldset.field > legend {
 
 .settings-block h2 {
   font-family: var(--serif);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   padding-bottom: var(--s-2);
   margin-bottom: var(--s-4);
-  border-bottom: 1.5px solid var(--rule);
+  border-bottom: 1px solid var(--ink);
 }
 
+/* Segmented control: a rule with a filled bar under the chosen word. */
 .seg {
   display: flex;
   flex-wrap: wrap;
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
-  overflow: hidden;
+  gap: var(--s-4);
+  border-bottom: 1px solid var(--rule);
 }
 
 .seg-item {
   position: relative;
-  flex: 1 1 auto;
 }
 
 .seg-item input {
@@ -1217,28 +1345,28 @@ fieldset.field > legend {
 .seg-item span {
   display: flex;
   align-items: center;
-  justify-content: center;
   min-height: 44px;
-  padding: 0 var(--s-3);
-  font-size: var(--fs-sm);
-  color: var(--ink);
+  padding: 0 0 2px;
+  font-size: var(--fs-base);
+  color: var(--muted);
   cursor: pointer;
-  border-right: 1.5px solid var(--rule);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
 }
 
-.seg-item:last-child span {
-  border-right: 0;
+.seg-item span:hover {
+  color: var(--ink);
 }
 
 .seg-item input:checked + span {
-  background: var(--ink);
-  color: var(--paper);
+  color: var(--ink);
   font-weight: 600;
+  border-bottom-color: var(--ink);
 }
 
 .seg-item input:focus-visible + span {
   outline: 3px solid var(--accent);
-  outline-offset: -3px;
+  outline-offset: 2px;
 }
 
 /* ------------------------------------------------------------------ states */
@@ -1250,11 +1378,7 @@ fieldset.field > legend {
 }
 
 .skeleton-card {
-  border: 1.5px solid var(--rule);
-  border-radius: var(--r);
-  background: var(--panel);
-  padding: var(--s-5) var(--s-4);
-  /* Hold roughly the height of a real card so the footer does not jump when it lands. */
+  padding: var(--s-5) 0;
   min-height: 34rem;
 }
 
@@ -1262,8 +1386,8 @@ fieldset.field > legend {
   display: block;
   height: 0.75rem;
   margin-bottom: var(--s-3);
-  background: var(--rule);
-  border-radius: var(--r);
+  background: var(--band);
+  border-radius: 0;
   animation: pulse 1.4s ease-in-out infinite;
 }
 
@@ -1289,19 +1413,19 @@ fieldset.field > legend {
 /* ------------------------------------------------------------------ footer */
 
 .foot {
-  border-top: 1.5px solid var(--rule);
-  margin-top: var(--s-7);
+  border-top: 1px solid var(--rule);
   color: var(--muted);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
 }
 
 .foot-inner {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  gap: var(--s-2);
-  padding-top: var(--s-4);
-  padding-bottom: var(--s-5);
+  gap: var(--s-2) var(--s-4);
+  padding-top: var(--s-3);
+  padding-bottom: var(--s-3);
 }
 
 .foot-links {
@@ -1329,8 +1453,8 @@ fieldset.field > legend {
   justify-content: space-between;
   gap: var(--s-3);
   padding: var(--s-3) var(--gutter);
-  background: var(--panel);
-  border-top: 1.5px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   font-size: var(--fs-sm);
 }
 
@@ -1340,10 +1464,52 @@ fieldset.field > legend {
   gap: var(--s-2);
 }
 
+.update-bar .btn {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+
+.update-bar .link-btn {
+  color: var(--paper);
+}
+
 .update-actions {
   display: flex;
   align-items: center;
   gap: var(--s-3);
+}
+
+/* ------------------------------------------------------------------ sheet */
+
+.sheet {
+  width: min(100% - 1.5rem, 34rem);
+  max-height: 88vh;
+  margin: auto auto 0;
+  padding: var(--s-4) var(--s-5) var(--s-6);
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: var(--r) var(--r) 0 0;
+}
+
+.sheet::backdrop {
+  background: rgba(28, 22, 14, 0.45);
+}
+
+.sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--s-4);
+}
+
+.sheet-head h2 {
+  font-family: var(--serif);
+  font-size: var(--fs-xl);
 }
 
 /* ------------------------------------------------------------------ prose */
@@ -1372,52 +1538,99 @@ fieldset.field > legend {
   margin-bottom: var(--s-4);
 }
 
+/* ------------------------------------------------------------------ styleguide */
+
+.sg-section {
+  padding: var(--s-5) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.sg-section h2 {
+  font-family: var(--serif);
+  font-size: var(--fs-xl);
+  margin-bottom: var(--s-3);
+}
+
+.sg-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3);
+  margin-bottom: var(--s-3);
+}
+
+.sg-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: var(--s-3);
+}
+
+.sg-swatch {
+  border-top: 2.5rem solid var(--swatch);
+  padding-top: var(--s-2);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+
 /* ------------------------------------------------------------------ wide */
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   :root {
     --gutter: 2rem;
   }
 
   .card-main {
-    padding: var(--s-6) var(--s-5);
+    padding: 0;
   }
 
   .word-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--s-6);
+  }
+
+  .chapter-row {
+    grid-template-columns: 4.5rem minmax(0, 1fr) 1.5rem;
+    padding-block: var(--s-5);
+  }
+
+  .chapter-no {
+    font-size: var(--fs-3xl);
+  }
+
+  .chapter-name {
+    font-size: var(--fs-xl);
   }
 }
 
 @media (min-width: 900px) {
   .card {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 17.5rem;
+    grid-template-columns: minmax(0, var(--measure)) var(--margin);
+    column-gap: 3rem;
     align-items: start;
+    border-top: 1px solid var(--rule);
   }
 
   .card-margin {
     border-top: 0;
-    border-left: 1.5px solid var(--rule);
-    padding: var(--s-5);
+    margin-top: 0;
+    padding: 0 0 0 var(--s-5);
+    border-left: 1px solid var(--rule);
     min-height: 100%;
     position: sticky;
-    top: 4.25rem;
+    top: 4.5rem;
   }
 
   .skeleton-card {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 17.5rem;
-    gap: var(--s-5);
+    grid-template-columns: minmax(0, var(--measure)) var(--margin);
+    gap: 3rem;
   }
 
   .skeleton-rail {
     display: block;
-    border-left: 1.5px solid var(--rule);
+    border-left: 1px solid var(--rule);
     padding-left: var(--s-4);
-  }
-
-  .chapter-list {
-    gap: var(--s-2);
   }
 
   .review-list {
@@ -1429,9 +1642,13 @@ fieldset.field > legend {
   .sample .group-head > .muted {
     flex-basis: 100%;
   }
+
+  .foot-inner > p:first-child {
+    max-width: 22rem;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .main-nav span {
     position: absolute;
     width: 1px;
@@ -1443,10 +1660,6 @@ fieldset.field > legend {
 
   .main-nav a {
     padding: 0 var(--s-2);
-  }
-
-  .brand {
-    font-size: 1.25rem;
   }
 }
 
