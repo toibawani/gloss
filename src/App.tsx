@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { chapters, failed } from './content'
-import type { ParagraphT, RecallT } from './schema'
+import { chapterIndex, loadChapter, loadChapters, type ChapterMeta } from './content'
+import type { ChapterT, ParagraphT, RecallT } from './schema'
 import * as store from './store'
 import { isDue, nextCard } from './srs'
 import { Visual } from './Visual'
@@ -31,11 +31,50 @@ function useOnline() {
   return on
 }
 
+type Loaded = { ch: ChapterT | null; error: string | null; loading: boolean }
+
+function useChapter(id: string): Loaded {
+  const [state, setState] = useState<Loaded>({ ch: null, error: null, loading: true })
+  useEffect(() => {
+    let live = true
+    setState({ ch: null, error: null, loading: true })
+    loadChapter(id)
+      .then((ch) => live && setState({ ch, error: null, loading: false }))
+      .catch((e: Error) => live && setState({ ch: null, error: e.message, loading: false }))
+    return () => {
+      live = false
+    }
+  }, [id])
+  return state
+}
+
+function useAllChapters() {
+  const [all, setAll] = useState<ChapterT[] | null>(null)
+  useEffect(() => {
+    let live = true
+    loadChapters(chapterIndex.map((c) => c.id)).then((m) => live && setAll([...m.values()]))
+    return () => {
+      live = false
+    }
+  }, [])
+  return all
+}
+
 function Empty({ title, text }: { title: string; text: string }) {
   return (
     <div className="empty">
       <h2>{title}</h2>
       <p>{text}</p>
+    </div>
+  )
+}
+
+function Skeleton({ lines = 4 }: { lines?: number }) {
+  return (
+    <div className="skeleton" aria-hidden="true">
+      {Array.from({ length: lines }, (_, i) => (
+        <span key={i} className="skel-line" />
+      ))}
     </div>
   )
 }
@@ -126,6 +165,12 @@ function Card({ chapterId, p }: { chapterId: string; p: ParagraphT }) {
               <dd>{w.breakdown}</dd>
               <dt>Where students trip</dt>
               <dd>{w.trap}</dd>
+              {w.hi && (
+                <>
+                  <dt>Hindi</dt>
+                  <dd lang="hi">{w.hi}</dd>
+                </>
+              )}
             </dl>
           )}
         </>
@@ -158,12 +203,17 @@ function Card({ chapterId, p }: { chapterId: string; p: ParagraphT }) {
   )
 }
 
-function Reader({ id }: { id: string }) {
-  const ch = chapters.find((c) => c.id === id)
+function Reader({ id, initial }: { id: string; initial?: string }) {
+  const { ch, error, loading } = useChapter(id)
   const [i, setI] = useState(0)
   const x0 = useRef(0)
   const n = ch?.paragraphs.length ?? 0
   const go = (d: number) => setI((v) => Math.min(n - 1, Math.max(0, v + d)))
+  useEffect(() => {
+    if (!ch || !initial) return
+    const at = ch.paragraphs.findIndex((p) => p.id === initial)
+    if (at >= 0) setI(at)
+  }, [ch, initial])
   useEffect(() => {
     const f = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement) return
@@ -173,7 +223,28 @@ function Reader({ id }: { id: string }) {
     addEventListener('keydown', f)
     return () => removeEventListener('keydown', f)
   })
-  if (!ch) return <Empty title="Chapter not found" text="Go back to Home and pick a chapter from the list." />
+  if (loading) {
+    return (
+      <section>
+        <Skeleton lines={2} />
+        <div className="card">
+          <Skeleton lines={8} />
+        </div>
+      </section>
+    )
+  }
+  if (error || !ch) {
+    return (
+      <Empty
+        title={navigator.onLine ? 'This chapter did not load' : 'This chapter is not saved offline'}
+        text={
+          navigator.onLine
+            ? 'Reload the page. If it still fails, go back to Home and open the chapter again.'
+            : 'Go back to Home and open a chapter you have already read, or reconnect once.'
+        }
+      />
+    )
+  }
   return (
     <section
       onTouchStart={(e) => (x0.current = e.touches[0].clientX)}
@@ -184,15 +255,21 @@ function Reader({ id }: { id: string }) {
     >
       <h2 className="chapter-title">
         {ch.title}
-        <span className="sub">Class {ch.class} {ch.subject}</span>
+        <span className="sub">
+          Class {ch.class} {ch.subject}
+        </span>
       </h2>
       <div className="pager">
-        <button className="btn" disabled={i === 0} onClick={() => go(-1)}>Previous</button>
+        <button className="btn" disabled={i === 0} onClick={() => go(-1)}>
+          Previous
+        </button>
         <label className="progress-label">
           Paragraph {i + 1} of {n}
           <progress max={n} value={i + 1} />
         </label>
-        <button className="btn" disabled={i === n - 1} onClick={() => go(1)}>Next</button>
+        <button className="btn" disabled={i === n - 1} onClick={() => go(1)}>
+          Next
+        </button>
       </div>
       <Card key={ch.paragraphs[i].id} chapterId={ch.id} p={ch.paragraphs[i]} />
     </section>
@@ -201,28 +278,33 @@ function Reader({ id }: { id: string }) {
 
 function Home() {
   const prog = store.getProgress()
-  if (chapters.length === 0) return <Empty title="Content did not load" text="Reload the page. If it keeps happening, check your connection once and try again." />
-  const subjects = [...new Set(chapters.map((c) => c.subject))]
+  if (chapterIndex.length === 0) {
+    return <Empty title="Content did not load" text="Reload the page. If it keeps happening, check your connection once and try again." />
+  }
+  const subjects = [...new Set(chapterIndex.map((c) => c.subject))]
   return (
     <section>
-      {failed > 0 && <p className="note">Some chapters could not be loaded and are hidden.</p>}
       {subjects.map((s) => (
         <div key={s}>
           <h2>{s}</h2>
           <ul className="chapters">
-            {chapters.filter((c) => c.subject === s).map((c) => {
-              const seen = (prog[c.id] ?? []).length
-              return (
-                <li key={c.id}>
-                  <a className="chapter" href={`#/c/${c.id}`}>
-                    <span className="chapter-name">{c.title}</span>
-                    <span className="sub">Class {c.class}</span>
-                    <progress max={c.paragraphs.length} value={seen} aria-label="Paragraphs read" />
-                    <span className="sub">{seen} of {c.paragraphs.length} paragraphs read</span>
-                  </a>
-                </li>
-              )
-            })}
+            {chapterIndex
+              .filter((c) => c.subject === s)
+              .map((c: ChapterMeta) => {
+                const seen = (prog[c.id] ?? []).length
+                return (
+                  <li key={c.id}>
+                    <a className="chapter" href={`#/c/${c.id}`}>
+                      <span className="chapter-name">{c.title}</span>
+                      <span className="sub">Class {c.class}</span>
+                      <progress max={c.paragraphs} value={seen} aria-label="Paragraphs read" />
+                      <span className="sub">
+                        {seen} of {c.paragraphs} paragraphs read
+                      </span>
+                    </a>
+                  </li>
+                )
+              })}
           </ul>
         </div>
       ))}
@@ -232,26 +314,36 @@ function Home() {
 
 function Words() {
   const [q, setQ] = useState('')
+  const all = useAllChapters()
   const opened = store.getWords()
-  const all = useMemo(
-    () => chapters.flatMap((c) => c.paragraphs.flatMap((p) => p.words.map((w) => ({ w, pid: p.id, ref: p.ncert_ref })))),
-    [],
+  const list = useMemo(
+    () =>
+      (all ?? []).flatMap((c) =>
+        c.paragraphs.flatMap((p) =>
+          p.words
+            .filter((w) => opened.some((o) => o.p === p.id && o.t === w.term))
+            .map((w) => ({ w, pid: p.id, ref: p.ncert_ref })),
+        ),
+      ),
+    [all, opened],
   )
-  const list = all
-    .filter((x) => opened.some((o) => o.p === x.pid && o.t === x.w.term))
-    .filter((x) => `${x.w.term} ${x.w.meaning}`.toLowerCase().includes(q.trim().toLowerCase()))
+  const filtered = list.filter((x) => `${x.w.term} ${x.w.meaning}`.toLowerCase().includes(q.trim().toLowerCase()))
   return (
     <section>
       <h2>Word bank</h2>
-      <label htmlFor="search" className="field-label">Search your words</label>
+      <label htmlFor="search" className="field-label">
+        Search your words
+      </label>
       <input id="search" className="input" value={q} onChange={(e) => setQ(e.target.value)} />
-      {opened.length === 0 ? (
+      {!all ? (
+        <Skeleton lines={4} />
+      ) : opened.length === 0 ? (
         <Empty title="No words yet" text="Tap an underlined word in a chapter and it will be saved here." />
-      ) : list.length === 0 ? (
+      ) : filtered.length === 0 ? (
         <Empty title="No match" text="Try a shorter search." />
       ) : (
         <ul className="wordlist">
-          {list.map((x) => (
+          {filtered.map((x) => (
             <li key={x.pid + x.w.term} className="wordcard">
               <h3>{x.w.term}</h3>
               <p>{x.w.meaning}</p>
@@ -266,17 +358,21 @@ function Words() {
 }
 
 function Revise() {
+  const all = useAllChapters()
   const due = useMemo(() => {
+    if (!all) return []
     const idx = new Map<string, RecallT>()
-    chapters.forEach((c) => c.paragraphs.forEach((p) => p.recall.forEach((r, k) => idx.set(`${p.id}#${k}`, r))))
+    all.forEach((c) => c.paragraphs.forEach((p) => p.recall.forEach((r, k) => idx.set(`${p.id}#${k}`, r))))
     return Object.entries(store.getSrs())
       .filter(([k, c]) => idx.has(k) && isDue(c, Date.now()))
       .map(([k]) => ({ id: k, r: idx.get(k)! }))
-  }, [])
+  }, [all])
   return (
     <section>
       <h2>Revision</h2>
-      {due.length === 0 ? (
+      {!all ? (
+        <Skeleton lines={4} />
+      ) : due.length === 0 ? (
         <Empty title="Nothing due today" text="Answer recall questions in a chapter. They come back here after 1, 3, 7 and 21 days." />
       ) : (
         <>
@@ -296,28 +392,50 @@ export default function App() {
   const h = useHash()
   const online = useOnline()
   const main = useRef<HTMLElement>(null)
-  const [, route, arg] = h.split('/')
+  const [, route, arg, para] = h.split('/')
   useEffect(() => {
     scrollTo(0, 0)
     main.current?.focus()
   }, [h])
   const link = (to: string, label: string, on: boolean) => (
-    <a href={`#/${to}`} aria-current={on ? 'page' : undefined}>{label}</a>
+    <a href={`#/${to}`} aria-current={on ? 'page' : undefined}>
+      {label}
+    </a>
   )
   return (
     <>
-      <button className="skip" onClick={() => main.current?.focus()}>Skip to content</button>
+      <button className="skip" onClick={() => main.current?.focus()}>
+        Skip to content
+      </button>
       <header className="top">
-        <a className="brand" href="#/">Gloss</a>
+        <a className="brand" href="#/">
+          Gloss
+        </a>
         <nav aria-label="Main">
           {link('', 'Home', !route || route === 'c')}
           {link('words', 'Words', route === 'words')}
           {link('revise', 'Revise', route === 'revise')}
         </nav>
       </header>
-      {!online && <p className="offline" role="status">You are offline. Everything here still works.</p>}
+      {!online && (
+        <p className="offline" role="status">
+          You are offline. Everything here still works.
+        </p>
+      )}
       <main ref={main} tabIndex={-1} id="main">
-        {route === 'c' ? <Reader id={arg} /> : route === 'words' ? <Words /> : route === 'revise' ? <Revise /> : route === 'terms' ? <Terms /> : route === 'privacy' ? <Privacy /> : <Home />}
+        {route === 'c' ? (
+          <Reader id={arg} initial={para} />
+        ) : route === 'words' ? (
+          <Words />
+        ) : route === 'revise' ? (
+          <Revise />
+        ) : route === 'terms' ? (
+          <Terms />
+        ) : route === 'privacy' ? (
+          <Privacy />
+        ) : (
+          <Home />
+        )}
       </main>
       <footer>
         <p>Gloss explains NCERT in original words. Not affiliated with NCERT.</p>
