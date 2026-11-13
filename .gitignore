@@ -8,3 +8,13 @@ coverage/
 .env.*
 !.env.example
 .DS_Store
+
+# Local reference PDFs supplied by the maintainer. Never committed.
+reference/
+*.pdf
+
+# Tool output
+test-results/
+playwright-report/
+.lighthouseci/
+blob-report/
