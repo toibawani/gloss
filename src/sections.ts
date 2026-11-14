@@ -91,3 +91,8 @@ export function sectionsOf(subject: string): Section[] {
 export function sectionOf(subject: string, slug: string): Section | undefined {
   return sectionsOf(subject).find((s) => s.slug === slug)
 }
+
+/** The shelf a chapter sits on, for breadcrumbs and the reader header. */
+export function sectionForChapter(id: string): Section | undefined {
+  return SECTIONS.find((s) => s.ids.includes(id))
+}
