@@ -9,193 +9,193 @@
       "id": "projectile",
       "ncert_ref": "Ch 3, Motion in a Plane: projectile motion",
       "key_phrase": "two motions, one clock",
-      "meaning": "A projectile moves because two independent motions happen at once: constant velocity horizontally and constant acceleration downward. They share the same time, which is why the vertical motion alone decides how long the flight lasts. Time of flight is 2u sin θ / g and range is u² sin 2θ / g, both measured from the same launch height.",
+      "meaning": "A projectile has constant horizontal velocity and constant downward acceleration at the same time, and the two share one clock. Kick a ball at 20 m/s and 30 degrees and it stays up for about 2.0 s, rises 5.1 m and lands 35.3 m away. Because the vertical motion alone sets the timing, a bullet fired horizontally and a bullet dropped from the same height reach the ground together.",
       "words": [
         {
           "term": "time of flight",
           "meaning": "The total time a projectile stays in the air.",
-          "breakdown": "T = 2u sin θ / g on level ground. It depends only on the vertical component of the launch velocity.",
-          "trap": "Horizontal speed does not change the time of flight. A bullet fired horizontally and one dropped from the same height land together."
+          "breakdown": "T = 2u sin θ / g on level ground, so 20 m/s at 30 degrees gives 20/9.8, about 2.04 s.",
+          "trap": "Horizontal speed does not change the time of flight. Only the vertical component of the launch velocity does."
         },
         {
           "term": "range",
-          "meaning": "The horizontal distance covered before the projectile returns to launch height.",
-          "breakdown": "R = u² sin 2θ / g, largest at 45 degrees.",
-          "trap": "Maximum range is at 45 degrees only on level ground with no air resistance. A launch from a height peaks at a lower angle."
+          "meaning": "The horizontal distance covered before the projectile returns to its launch height.",
+          "breakdown": "R = u² sin 2θ / g, largest at 45 degrees. For 20 m/s at 30 degrees, R is about 35.3 m.",
+          "trap": "Maximum range is at 45 degrees only on level ground. Launch from a cliff and the best angle is below 45."
         },
         {
           "term": "trajectory",
-          "meaning": "The path followed by the projectile, a parabola when only gravity acts.",
-          "breakdown": "y = x tan θ - gx² / (2u² cos²θ).",
-          "trap": "The parabola is a shape, not a force. Nothing pushes the projectile along the curve."
+          "meaning": "The path of the projectile, a parabola when gravity is the only force.",
+          "breakdown": "y = x tan θ - gx² / (2u² cos² θ).",
+          "trap": "The curve is a shape, not a force. Nothing pushes the projectile along the parabola; only gravity acts."
         }
       ],
-      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M24 116h276'/><path class='d-accent' d='M44 116c30-70 70-96 110-78 44 20 60 78 92 78'/><path class='d-guide' d='M154 116V56'/><text class='d-label' x='120' y='132'>apex: vertical speed zero</text><text class='d-label' x='40' y='38'>same clock for both motions</text></svg>",
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M24 116h276'/><path class='d-accent' d='M44 116c30-70 70-96 110-78 44 20 60 78 92 78'/><path class='d-guide' d='M154 116V56'/><text class='d-label' x='120' y='132'>apex: vertical speed zero</text><text class='d-label' x='40' y='38'>horizontal speed never changes</text></svg>",
       "visual_alt": "A parabolic path with a vertical guide at the highest point where the vertical velocity is zero.",
-      "hook": "Fire a bullet horizontally and drop one at the same moment: they hit the ground together.",
+      "hook": "Fire a bullet horizontally and drop one at the same instant: they land together.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "Two angles giving the same range add to 90 degrees. Questions use this instead of solving the quadratic.",
-      "trap": "At the highest point the velocity is not zero, only its vertical component. The horizontal component keeps going.",
+      "exam_note": "Two launch angles that add to 90 degrees give the same range. Questions use that instead of solving the quadratic.",
+      "trap": "At the apex the velocity is not zero, only its vertical part. The horizontal component keeps the projectile moving.",
       "recall": [
         {
-          "q": "A projectile is launched at 30 degrees and another at 60 degrees with the same speed. Their ranges are",
-          "options": ["Equal", "30 degrees larger", "60 degrees larger", "Cannot be compared"],
+          "q": "A projectile is launched at 30 and at 60 degrees with the same speed. Their ranges are",
+          "options": ["Equal", "Larger at 30", "Larger at 60", "Cannot be compared"],
           "answer": 0,
-          "why": "Range depends on sin 2θ, and sin 60 equals sin 120, so complementary angles give the same range."
+          "why": "Range depends on sin 2θ, and sin 60 equals sin 120, so complementary angles give equal ranges."
         },
         {
-          "q": "At the highest point of its path, a projectile has",
-          "options": ["Zero velocity", "Zero acceleration", "Horizontal velocity only", "Vertical velocity only"],
-          "answer": 2,
-          "why": "The vertical component is zero at the apex, but the horizontal component is unchanged, so velocity is horizontal, not zero."
+          "q": "A ball is thrown at 20 m/s at 30 degrees. Its time of flight is about",
+          "options": ["1.0 s", "2.0 s", "3.5 s", "4.1 s"],
+          "answer": 1,
+          "why": "T is 2u sin θ / g, which is 2 times 20 times 0.5 divided by 9.8, about 2.04 s."
         }
       ],
       "review_status": "draft",
-      "review_note": "Verify page and line against your edition, and check the formulae as printed in your copy."
+      "review_note": "Verify page and line against your edition, and check the worked values against your copy."
     },
     {
       "id": "relative-velocity",
       "ncert_ref": "Ch 3, Motion in a Plane: relative velocity",
       "key_phrase": "velocities subtract as vectors",
-      "meaning": "The velocity of A as seen from B is the velocity of A minus the velocity of B, subtracted as vectors, not as magnitudes. That is why rain falling straight down appears slanted when you run, and why two cars at 60 km/h in opposite directions close at 120 km/h. Drawing the subtraction triangle answers most questions faster than the algebra.",
+      "meaning": "The velocity of A seen from B is v(A) minus v(B), subtracted as vectors rather than as sizes. Rain falling at 4 m/s while you walk at 3 m/s appears to come at 5 m/s, tilted about 37 degrees from the vertical, which is why an umbrella leans forward. Two trains at 60 km/h passing in opposite directions close on each other at 120 km/h, not 60.",
       "words": [
         {
           "term": "relative velocity",
           "meaning": "The velocity of one body measured in the frame of another.",
-          "breakdown": "v(A relative to B) = v(A) - v(B), vector subtraction.",
-          "trap": "Never subtract speeds unless the motions are along the same line. At an angle, the magnitudes do not simply subtract."
+          "breakdown": "v(A relative to B) = v(A) - v(B), a vector subtraction.",
+          "trap": "Speeds cannot simply be subtracted unless the motions are along one line. Rain and a walker meet at an angle, so 4 and 3 give 5."
         },
         {
           "term": "frame of reference",
-          "meaning": "The body and coordinate system against which motion is measured.",
-          "breakdown": "Changing the frame adds a constant velocity to everything and leaves relative motion unchanged.",
-          "trap": "A frame moving at constant velocity is inertial, so the laws of motion still hold in it. Only accelerating frames need pseudo forces."
+          "meaning": "The body and axes against which motion is measured.",
+          "breakdown": "Changing to a frame moving at constant velocity adds the same velocity to everything and leaves relative motion unchanged.",
+          "trap": "Only frames moving at constant velocity leave the laws of motion intact. An accelerating frame needs pseudo forces."
         },
         {
           "term": "resultant",
           "meaning": "The single vector that replaces two or more vectors.",
-          "breakdown": "For perpendicular vectors, magnitude is the square root of the sum of squares.",
-          "trap": "The resultant of two equal vectors is not their sum unless they point the same way."
+          "breakdown": "For perpendicular vectors, the magnitude is the square root of the sum of the squares.",
+          "trap": "Two equal vectors do not add to double their size unless they point the same way."
         }
       ],
       "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 40v70'/><path class='d-accent' d='M40 40l90 40'/><path class='d-guide' d='M130 80l0-40'/><text class='d-label' x='48' y='34'>rain, straight down</text><text class='d-label' x='48' y='100'>what you see while running</text><circle class='d-fill' cx='196' cy='74' r='4'/><path class='d-muted' d='M196 74l20-10M190 60l-14 22'/><text class='d-label' x='232' y='66'>add the runner's</text><text class='d-label' x='232' y='84'>velocity, get a slant</text></svg>",
-      "visual_alt": "A vertical rain vector combined with a horizontal running vector to give a slanted apparent direction.",
+      "visual_alt": "A vertical rain vector combined with a horizontal running vector, giving a slanted apparent direction.",
       "hook": "The rain is not leaning. You are the one moving sideways.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "Typical question: rain falls at 4 m/s and you walk at 3 m/s, find the angle the umbrella should make. The answer is arctan(3/4) from the vertical.",
-      "trap": "The apparent speed is the magnitude of the difference vector, not the difference of magnitudes. 4 and 3 give 5, not 1.",
+      "exam_note": "Rain-and-umbrella questions ask for the angle from the vertical, which is arctan(walking speed / rain speed).",
+      "trap": "The apparent speed is the size of the difference vector, not the difference of the sizes. Four and three give five, not one.",
       "recall": [
         {
-          "q": "Rain falls vertically at 4 m/s. A person walks at 3 m/s. The rain appears to fall at",
-          "options": ["1 m/s", "5 m/s at an angle", "7 m/s", "4 m/s vertically"],
+          "q": "Rain falls at 4 m/s and you walk at 3 m/s. The rain appears to fall at",
+          "options": ["1 m/s", "5 m/s, tilted", "7 m/s", "4 m/s, vertical"],
           "answer": 1,
-          "why": "The relative velocity is the vector difference, so its magnitude is the square root of 4 squared plus 3 squared, which is 5 m/s, tilted."
+          "why": "The relative velocity is the vector difference, so its magnitude is the square root of 4 squared plus 3 squared, which is 5."
         },
         {
-          "q": "Two trains of length 100 m each pass in opposite directions at 10 m/s each. The time to cross is",
+          "q": "Two 100 m trains pass in opposite directions at 10 m/s each. They clear each other in",
           "options": ["5 s", "10 s", "20 s", "2 s"],
           "answer": 1,
-          "why": "Relative speed is 20 m/s and the total length to clear is 200 m, so the time is 10 s."
-        }
-      ],
-      "review_status": "draft",
-      "review_note": "Verify page and line against your edition, and check the rain example numbers against your copy."
-    },
-    {
-      "id": "river-crossing",
-      "ncert_ref": "Ch 3, Motion in a Plane: crossing a river",
-      "key_phrase": "shortest time or shortest path, not both",
-      "meaning": "To cross a river in the shortest time, aim the boat straight across, and the current carries you downstream while you cross. To land directly opposite, you must aim upstream so that the current is cancelled, which takes longer. The two goals conflict because the crossing depends only on the component of your velocity across the river.",
-      "words": [
-        {
-          "term": "drift",
-          "meaning": "How far downstream the current carries you during the crossing.",
-          "breakdown": "Drift equals the current speed multiplied by the crossing time.",
-          "trap": "Aiming straight across gives shortest time but maximum drift. You cannot avoid drift and save time at once."
-        },
-        {
-          "term": "component",
-          "meaning": "The part of a vector along a chosen direction.",
-          "breakdown": "Only the component perpendicular to the bank shortens the crossing time.",
-          "trap": "The boat's speed in still water is not its speed across the ground. The current adds to it as a vector."
-        },
-        {
-          "term": "resultant velocity",
-          "meaning": "The boat's actual velocity relative to the bank.",
-          "breakdown": "It is the vector sum of the boat's velocity in still water and the river's velocity.",
-          "trap": "If the current is faster than the boat, landing directly opposite is impossible, no matter which way you aim."
-        }
-      ],
-      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M20 30h280M20 120h280'/><path class='d-accent' d='M60 120V56'/><path class='d-muted' d='M60 120l70 0'/><text class='d-label' x='66' y='48'>shortest time</text><text class='d-label' x='134' y='136'>drift</text><path class='d-accent' d='M226 118l-24-58'/><text class='d-label' x='186' y='48'>aim upstream</text><text class='d-label' x='196' y='136'>lands opposite</text></svg>",
-      "visual_alt": "Two crossings side by side: one straight across that drifts downstream, one aimed upstream that lands opposite.",
-      "hook": "Aiming straight across is the fastest way over and the worst way to arrive where you meant to.",
-      "exam_tags": ["NEET", "JEE"],
-      "exam_note": "Shortest time is width divided by boat speed. Shortest path is width divided by the square root of boat speed squared minus current speed squared.",
-      "trap": "Do not use the boat speed in still water as the crossing speed when the boat is aimed upstream. Only its component across counts.",
-      "recall": [
-        {
-          "q": "To cross a river in the shortest time, the boat should be aimed",
-          "options": ["Upstream", "Downstream", "Straight across", "At 45 degrees"],
-          "answer": 2,
-          "why": "The whole boat speed then points across the river, so the crossing time is the width divided by that speed, which is the smallest possible."
-        },
-        {
-          "q": "If the river current is faster than the boat's speed in still water, landing directly opposite is",
-          "options": ["Possible if aimed upstream", "Possible at 45 degrees", "Impossible", "Faster than crossing straight"],
-          "answer": 2,
-          "why": "Cancelling the current needs an upstream component bigger than the current, which the boat cannot supply when it is slower."
+          "why": "The closing speed is 20 m/s and the length to clear is 200 m, so the time is 10 s."
         }
       ],
       "review_status": "draft",
       "review_note": "Verify page and line against your edition, and check the worked example against your copy."
     },
     {
+      "id": "river-crossing",
+      "ncert_ref": "Ch 3, Motion in a Plane: crossing a river",
+      "key_phrase": "shortest time or shortest path, not both",
+      "meaning": "Crossing time depends only on the component of your velocity across the river, so aiming straight across is fastest and the current carries you downstream. A 400 m river with a 5 m/s boat and a 3 m/s current takes 80 s to cross straight, with 240 m of drift, while landing directly opposite needs an upstream angle of about 37 degrees and takes 100 s.",
+      "words": [
+        {
+          "term": "drift",
+          "meaning": "How far downstream the current carries you during the crossing.",
+          "breakdown": "Drift is current speed multiplied by crossing time, so 3 m/s for 80 s gives 240 m.",
+          "trap": "Aiming straight across gives the shortest time and the largest drift. You cannot have both."
+        },
+        {
+          "term": "component",
+          "meaning": "The part of a vector along a chosen direction.",
+          "breakdown": "Only the component perpendicular to the bank shortens the crossing.",
+          "trap": "The boat's still-water speed is not its speed over the ground. The current adds to it as a vector."
+        },
+        {
+          "term": "resultant velocity",
+          "meaning": "The boat's velocity relative to the bank.",
+          "breakdown": "It is the vector sum of the boat's velocity in still water and the river's velocity.",
+          "trap": "If the current is faster than the boat, landing directly opposite is impossible whatever the heading."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M20 30h280M20 120h280'/><path class='d-accent' d='M60 120V56'/><path class='d-muted' d='M60 120l70 0'/><text class='d-label' x='66' y='48'>shortest time</text><text class='d-label' x='134' y='136'>drift</text><path class='d-accent' d='M226 118l-24-58'/><text class='d-label' x='186' y='48'>aim upstream</text><text class='d-label' x='196' y='136'>lands opposite</text></svg>",
+      "visual_alt": "Two crossings: one straight across that drifts downstream and one aimed upstream that lands opposite.",
+      "hook": "Aiming straight across is the fastest way over and the worst way to arrive where you meant.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Shortest time is width divided by boat speed. Shortest path is width divided by the square root of boat speed squared minus current speed squared.",
+      "trap": "For the shortest path, the crossing speed is not the boat's still-water speed. Only its component across the river counts.",
+      "recall": [
+        {
+          "q": "To cross a river in the shortest time, the boat is aimed",
+          "options": ["Upstream", "Downstream", "Straight across", "At 45 degrees"],
+          "answer": 2,
+          "why": "The whole boat speed then points across the river, giving the smallest possible crossing time."
+        },
+        {
+          "q": "A 400 m river, boat 5 m/s, current 3 m/s. Crossing straight across takes",
+          "options": ["50 s", "80 s", "100 s", "133 s"],
+          "answer": 1,
+          "why": "Aiming straight across makes the full 5 m/s cross the river, so the time is 400 divided by 5, which is 80 s."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the worked values against your copy."
+    },
+    {
       "id": "circular-motion",
       "ncert_ref": "Ch 3, Motion in a Plane: uniform circular motion",
       "key_phrase": "speed constant, velocity is not",
-      "meaning": "In uniform circular motion the speed stays the same while the direction changes every instant, so the velocity changes and there is an acceleration pointing at the centre. Its size is v²/r, or ω²r. Remove the inward force and the body does not fly outward; it leaves along the tangent, which is what a stone does when the string snaps.",
+      "meaning": "In uniform circular motion the speed stays fixed while the direction turns, so the velocity changes and there is an acceleration of v²/r pointing at the centre. A 0.5 kg stone on a 1 m string at 4 m/s needs a tension of 8 N, and it completes a circle in about 1.57 s. Cut the string and the stone leaves along the tangent, not outward from the centre.",
       "words": [
         {
           "term": "centripetal acceleration",
           "meaning": "The acceleration directed towards the centre of a circular path.",
-          "breakdown": "a = v²/r = ω²r. It changes direction, not speed.",
-          "trap": "Centripetal force is not an extra force. It is the name for whatever force happens to point inward, such as tension or gravity."
+          "breakdown": "a = v²/r. For 4 m/s on a 1 m radius, a is 16 m/s², about 1.6g.",
+          "trap": "Centripetal force is not an extra force. It is the name for whichever real force points inward, such as tension or friction."
         },
         {
           "term": "angular velocity",
           "meaning": "The rate of change of angle, ω = θ/t, in radians per second.",
-          "breakdown": "v = ωr relates the linear and angular speeds.",
-          "trap": "Angular velocity is the same for all points on a rigid rotating body, but linear speed grows with r."
+          "breakdown": "v = ωr. The period is 2π/ω, so 4 m/s on 1 m gives 1.57 s.",
+          "trap": "Every point on a rigid rotating body shares ω, but linear speed grows with distance from the axis."
         },
         {
           "term": "centrifugal",
           "meaning": "A pseudo force that appears only in a rotating frame, pointing away from the centre.",
-          "breakdown": "It has no counterpart in the ground frame, where the real force points inward.",
-          "trap": "There is no outward force on a car turning a corner. The friction points inward; your body's inertia makes you feel pushed outward."
+          "breakdown": "The ground frame has no outward force, only the inward one.",
+          "trap": "A car turning a corner has friction pointing inward. Your body's inertia makes you feel pushed outward."
         }
       ],
-      "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='130' cy='76' r='44'/><circle class='d-fill' cx='174' cy='76' r='5'/><path class='d-accent' d='M174 76l-26 0M152 70l-6 6 6 6'/><path class='d-muted' d='M174 76v-30M174 46l-5 8M174 46l5 8'/><text class='d-label' x='182' y='44'>motion</text><text class='d-label' x='100' y='50'>force to centre</text><text class='d-label' x='182' y='96'>cut the string:</text><text class='d-label' x='182' y='112'>the stone leaves along the tangent</text></svg>",
+      "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='130' cy='76' r='44'/><circle class='d-fill' cx='174' cy='76' r='5'/><path class='d-accent' d='M174 76l-26 0M152 70l-6 6 6 6'/><path class='d-muted' d='M174 76v-30M174 46l-5 8M174 46l5 8'/><text class='d-label' x='182' y='44'>velocity</text><text class='d-label' x='100' y='50'>force to centre</text><text class='d-label' x='182' y='96'>cut the string:</text><text class='d-label' x='182' y='112'>the stone leaves along the tangent</text></svg>",
       "visual_alt": "A body on a circular path with the inward acceleration arrow and a tangent showing where it goes if released.",
       "hook": "The string does not hold the stone out. It keeps pulling it away from the straight line it wants.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "Questions use a = v²/r with tension, friction or gravity as the inward force. Setting the inward force equal to mv²/r is the whole method.",
-      "trap": "Writing centripetal force as a separate arrow added to the diagram leads to double counting. It is the net inward force.",
+      "exam_note": "Set whichever inward force is present equal to mv²/r. For a car on a flat road that force is friction, and on a banked road it is a component of the normal force.",
+      "trap": "Drawing centripetal force as a separate arrow alongside tension double counts it. It is the net inward force.",
       "recall": [
         {
-          "q": "A body moves on a circle at constant speed. Its acceleration",
-          "options": ["Is zero", "Points along the velocity", "Points towards the centre", "Points away from the centre"],
-          "answer": 2,
-          "why": "The speed is constant but the direction changes, and the change in velocity always points towards the centre."
+          "q": "A 0.5 kg stone moves at 4 m/s on a 1 m string. The tension is",
+          "options": ["2 N", "8 N", "16 N", "32 N"],
+          "answer": 1,
+          "why": "Tension supplies mv²/r, which is 0.5 times 16 divided by 1, giving 8 N."
         },
         {
           "q": "Two points on a rotating disc, one at twice the radius, have linear speeds in the ratio",
           "options": ["1:1", "1:2", "2:1", "1:4"],
           "answer": 1,
-          "why": "v = ωr with the same ω, so the point at twice the radius moves twice as fast."
+          "why": "Both share the same angular velocity and v = ωr, so the outer point moves twice as fast."
         }
       ],
       "review_status": "draft",
-      "review_note": "Verify page and line against your edition, and check the acceleration expression against your copy."
+      "review_note": "Verify page and line against your edition, and check the worked values against your copy."
     }
   ]
 }

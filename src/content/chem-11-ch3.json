@@ -9,45 +9,45 @@
       "id": "periodic-law",
       "ncert_ref": "Classification of Elements and Periodicity: the modern periodic law",
       "key_phrase": "properties repeat with atomic number",
-      "meaning": "Mendeleev arranged elements by atomic mass and found that properties repeated periodically, but a few elements sat in the wrong place until the order was changed to atomic number. The modern periodic law states that properties are a periodic function of atomic number. The long form of the table then follows the filling order of orbitals, which is why the blocks are named after the subshell being filled.",
+      "meaning": "Mendeleev ordered elements by atomic mass and had to swap pairs such as tellurium and iodine, whose chemistry contradicted their masses. Ordering by atomic number fixed those inversions, and the modern periodic law states that properties are a periodic function of atomic number. The long form then follows the subshell being filled, giving blocks of 2, 6, 10 and 14 columns, and periods of 2, 8, 8, 18, 18 and 32 elements.",
       "words": [
         {
           "term": "periodic law",
-          "meaning": "The properties of elements are a periodic function of their atomic numbers.",
-          "breakdown": "Repeating valence shell configurations produce repeating chemical behaviour.",
-          "trap": "The law is about atomic number, not atomic mass. Mendeleev used mass and got argon and potassium out of order."
+          "meaning": "Properties are a periodic function of atomic number, not atomic mass.",
+          "breakdown": "Repeating valence configurations produce repeating chemical behaviour.",
+          "trap": "Mendeleev's mass ordering put argon before potassium by mass but not by chemistry. Atomic number, not mass, is the ordering principle."
         },
         {
           "term": "period",
-          "meaning": "A horizontal row of the periodic table, with the same outermost shell number.",
-          "breakdown": "The first three periods have 2, 8 and 8 elements; later periods have 18 and 32.",
-          "trap": "Period number equals the highest principal quantum number, not the number of electrons."
+          "meaning": "A horizontal row whose atoms share the outermost shell number.",
+          "breakdown": "Period 3 has eight elements, from sodium to argon, filling 3s and 3p.",
+          "trap": "The period number is the highest principal quantum number in use, not a count of electrons."
         },
         {
           "term": "group",
-          "meaning": "A vertical column, whose members share valence shell configuration.",
+          "meaning": "A vertical column whose members share valence configuration.",
           "breakdown": "Group 1 is the alkali metals, group 17 the halogens, group 18 the noble gases.",
-          "trap": "Elements in the same group do not have identical properties. They share the number of valence electrons, and properties change gradually down the group."
+          "trap": "Same group does not mean identical. Valence electron count repeats; size and reactivity change steadily down the column."
         }
       ],
       "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='24' y='30' width='80' height='30'/><rect class='d-line' x='104' y='30' width='80' height='30'/><rect class='d-line' x='184' y='30' width='80' height='30'/><rect class='d-muted' x='24' y='60' width='240' height='24'/><rect class='d-line' x='24' y='84' width='240' height='24'/><text class='d-label' x='30' y='50'>s block</text><text class='d-label' x='110' y='50'>p block</text><text class='d-label' x='190' y='50'>d block</text><text class='d-label' x='30' y='100'>f block</text><text class='d-label' x='30' y='132'>blocks follow the subshell being filled</text></svg>",
       "visual_alt": "A schematic table divided into s, p, d and f blocks, labelled by the subshell being filled.",
-      "hook": "The periodic table is not a list of elements. It is a picture of electron configurations.",
+      "hook": "The periodic table is a picture of electron configurations, not a list of names.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "Questions ask the block, group or period of an element from its configuration. The highest n gives the period, and the valence subshell gives the block.",
-      "trap": "Helium is in group 18 with the noble gases, but its configuration is 1s², so it belongs to the s block, not the p block.",
+      "exam_note": "Questions ask for the block, group or period from a configuration. Highest n gives the period; the subshell of the last electron gives the block.",
+      "trap": "Helium sits in group 18 but its configuration is 1s², so it belongs to the s block, not the p block.",
       "recall": [
         {
           "q": "The modern periodic law arranges elements by",
           "options": ["Atomic mass", "Atomic number", "Density", "Valency"],
           "answer": 1,
-          "why": "Ordering by atomic number fixed the inversions that Mendeleev's mass ordering could not explain."
+          "why": "Atomic number ordering removed the mass-based inversions, such as tellurium and iodine."
         },
         {
-          "q": "An element with configuration 3s²3p⁵ belongs to",
+          "q": "An element with configuration 3s² 3p⁵ belongs to",
           "options": ["Group 2, s block", "Group 17, p block", "Group 15, p block", "Group 18, p block"],
           "answer": 1,
-          "why": "Seven valence electrons place it in group 17, and the last electron enters a p orbital, so it is in the p block."
+          "why": "Seven valence electrons put it in group 17, and the last electron enters a p orbital."
         }
       ],
       "review_status": "draft",
@@ -57,141 +57,141 @@
       "id": "atomic-radius",
       "ncert_ref": "Classification of Elements and Periodicity: atomic and ionic radii",
       "key_phrase": "shrinks across, grows down",
-      "meaning": "Atomic radius falls across a period because the nuclear charge grows while electrons enter the same shell, pulling them closer. It rises down a group because each new shell starts further out. Ions follow the same logic: a cation is smaller than its atom and an anion is larger, since losing electrons raises the effective pull on those that remain.",
+      "meaning": "Across period 3 the radius falls from 186 pm at sodium to 99 pm at chlorine, because ten more protons pull the same shell inward, with the added electrons shielding poorly. Down a group the radius rises as each new shell starts further out. Ions behave the same way, so Na+ is 102 pm against 186 pm for the atom, and the isoelectronic series runs Mg2+ at 72 pm, Na+ at 102 pm, F- at 133 pm and O2- at 140 pm.",
       "words": [
         {
           "term": "atomic radius",
-          "meaning": "A measure of the size of an atom, defined by the distance between nuclei in a bonded or touching pair.",
-          "breakdown": "Covalent, metallic and van der Waals radii are defined differently and give different numbers.",
-          "trap": "There is no single atomic radius. Comparing values from different definitions gives false trends."
+          "meaning": "A size measure taken from the distance between nuclei in a bonded or touching pair.",
+          "breakdown": "Covalent, metallic and van der Waals radii use different contacts and give different numbers.",
+          "trap": "There is no single atomic radius. Mixing definitions from different columns creates false trends."
         },
         {
           "term": "effective nuclear charge",
-          "meaning": "The net positive charge felt by an outer electron after inner electrons shield part of the nucleus.",
-          "breakdown": "It rises across a period, which is why radius falls.",
-          "trap": "Effective nuclear charge is not the same as the actual nuclear charge. The inner electrons screen part of it."
+          "meaning": "The net positive charge an outer electron feels after inner electrons screen the nucleus.",
+          "breakdown": "It rises across a period, which is why the radius shrinks from sodium to chlorine.",
+          "trap": "Effective nuclear charge is not the total nuclear charge. The inner electrons cancel part of it."
         },
         {
           "term": "isoelectronic",
-          "meaning": "Ions or atoms with the same number of electrons.",
-          "breakdown": "Among isoelectronic species, the one with the larger nuclear charge is smaller.",
-          "trap": "Isoelectronic species do not have the same radius. Na+ is smaller than F- because sodium has the higher nuclear charge."
+          "meaning": "Species with the same number of electrons.",
+          "breakdown": "Among isoelectronic ions, the largest nuclear charge gives the smallest radius.",
+          "trap": "Isoelectronic species do not share a radius. Mg2+ and O2- both have ten electrons and differ by more than 60 pm."
         }
       ],
-      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 118h260M30 118V30'/><path class='d-accent' d='M36 44c60 0 90 26 120 40 40 18 90 24 128 26'/><circle class='d-fill' cx='64' cy='52' r='4'/><circle class='d-fill' cx='238' cy='88' r='4'/><text class='d-label' x='40' y='40'>Li, large</text><text class='d-label' x='176' y='116'>F, small</text><text class='d-label' x='30' y='140'>radius across period 2</text></svg>",
-      "visual_alt": "A curve falling across a period, showing atomic radius decreasing from lithium to fluorine.",
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 118h260M30 118V30'/><path class='d-accent' d='M36 44c60 0 90 26 120 40 40 18 90 24 128 26'/><circle class='d-fill' cx='64' cy='52' r='4'/><circle class='d-fill' cx='238' cy='88' r='4'/><text class='d-label' x='40' y='40'>Na, 186 pm</text><text class='d-label' x='176' y='116'>Cl, 99 pm</text><text class='d-label' x='30' y='140'>radius across period 3</text></svg>",
+      "visual_alt": "A falling curve from sodium at 186 picometres to chlorine at 99 picometres across period 3.",
       "hook": "Adding electrons usually makes an atom bigger. Losing them always makes it smaller.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "Ranking questions are common: order a set of atoms or ions by size. Cations first, then isoelectronic comparisons by nuclear charge.",
-      "trap": "A noble gas radius from van der Waals data looks larger than the halogen before it. That does not break the trend, because the measurement is a different kind.",
+      "exam_note": "Ranking questions are common. Compare cations and anions by nuclear charge once you know they are isoelectronic.",
+      "trap": "A noble gas radius from van der Waals data looks larger than the halogen before it. That is a different measurement, not a broken trend.",
       "recall": [
         {
           "q": "Which is larger, Na or Na+?",
-          "options": ["Na", "Na+", "They are equal", "Cannot be compared"],
+          "options": ["Na", "Na+", "Equal", "Cannot be compared"],
           "answer": 0,
-          "why": "Removing an electron leaves the same nuclear charge pulling fewer electrons, and often removes a whole shell, so the ion is smaller."
+          "why": "Removing an electron leaves the same nuclear charge holding fewer electrons, and removes a whole shell, so the ion is smaller."
         },
         {
-          "q": "Among Na+, Mg2+, F- and O2-, the smallest is",
-          "options": ["Na+", "Mg2+", "F-", "O2-"],
-          "answer": 1,
-          "why": "All four are isoelectronic with ten electrons, and magnesium has the largest nuclear charge, so it pulls them in tightest."
+          "q": "Among Mg2+, Na+, F- and O2-, the smallest is",
+          "options": ["Mg2+", "Na+", "F-", "O2-"],
+          "answer": 0,
+          "why": "All four have ten electrons, and magnesium has the largest nuclear charge, so it pulls them in tightest."
         }
       ],
       "review_status": "draft",
-      "review_note": "Verify page and line against your edition, and check the radius data against your copy."
+      "review_note": "Verify page and line against your edition, and check the radius values against your copy."
     },
     {
       "id": "ionisation-enthalpy",
       "ncert_ref": "Classification of Elements and Periodicity: ionisation enthalpy",
       "key_phrase": "energy to remove an electron",
-      "meaning": "Ionisation enthalpy is the energy needed to remove the most loosely held electron from a gaseous atom. It rises across a period as the outer electron is held more tightly, and falls down a group as the electron sits further from the nucleus. The trend is not smooth: beryllium holds its electron more tightly than boron, and nitrogen more tightly than oxygen, because of filled and half-filled subshells.",
+      "meaning": "First ionisation enthalpy climbs across period 2 from 520 kJ/mol at lithium to 1681 kJ/mol at fluorine, with two dips that matter more than the trend. Beryllium at 899 exceeds boron at 801 because its 2s subshell is full, and nitrogen at 1402 exceeds oxygen at 1314 because its 2p subshell is half full. Down a group the value falls as the outer electron sits further from the nucleus.",
       "words": [
         {
           "term": "ionisation enthalpy",
-          "meaning": "The energy required to remove an electron from a gaseous atom or ion.",
-          "breakdown": "The first value removes the outermost electron; the second removes the next, and is always larger.",
-          "trap": "The sample must be gaseous. Values measured in a liquid or solid include other energy changes and are not ionisation enthalpies."
+          "meaning": "The energy needed to remove an electron from a gaseous atom or ion.",
+          "breakdown": "The first value removes the outermost electron; the second is always larger.",
+          "trap": "The sample must be gaseous. Values from liquids or solids include other energy changes and are not ionisation enthalpies."
         },
         {
           "term": "half-filled stability",
-          "meaning": "The extra stability of a subshell that is exactly half full.",
-          "breakdown": "Nitrogen has three unpaired 2p electrons, so its first ionisation enthalpy exceeds that of oxygen.",
-          "trap": "Half-filled stability is a small effect, not a rule that overrides every trend. It explains exceptions, not the general direction."
+          "meaning": "The extra stability of an exactly half-filled subshell.",
+          "breakdown": "Nitrogen has three unpaired 2p electrons, so its first ionisation enthalpy exceeds oxygen's.",
+          "trap": "This stability explains exceptions; it does not reverse the general trend across a period."
         },
         {
           "term": "electron gain enthalpy",
-          "meaning": "The enthalpy change when an electron is added to a gaseous atom.",
-          "breakdown": "It is usually negative, since energy is released, and chlorine releases more than fluorine.",
-          "trap": "A more negative electron gain enthalpy does not always follow the group trend. Fluorine is smaller than chlorine, and adding an electron to it costs more repulsion."
+          "meaning": "The enthalpy change when a gaseous atom gains an electron.",
+          "breakdown": "Usually negative: chlorine releases about 349 kJ/mol, fluorine about 328.",
+          "trap": "Fluorine is more electronegative yet releases less energy than chlorine, because a small atom suffers more repulsion when an extra electron arrives."
         }
       ],
-      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 118h260M30 118V30'/><path class='d-accent' d='M36 108c40-8 60-24 80-28 30-6 40 10 70-6 30-16 50-30 90-44'/><circle class='d-fill' cx='116' cy='80' r='4'/><text class='d-label' x='112' y='66'>dip at boron</text><text class='d-label' x='166' y='92'>dip at oxygen</text><text class='d-label' x='30' y='140'>first ionisation enthalpy across period 2</text></svg>",
-      "visual_alt": "An ionisation enthalpy curve rising across period 2 with two small dips at boron and oxygen.",
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 118h260M30 118V30'/><path class='d-accent' d='M36 108c40-8 60-24 80-28 30-6 40 10 70-6 30-16 50-30 90-44'/><circle class='d-fill' cx='116' cy='80' r='4'/><text class='d-label' x='108' y='66'>dip at B</text><text class='d-label' x='166' y='92'>dip at O</text><text class='d-label' x='30' y='140'>first ionisation enthalpy across period 2</text></svg>",
+      "visual_alt": "An ionisation enthalpy curve rising across period 2 with small dips at boron and oxygen.",
       "hook": "The trend is a staircase with two steps backwards, and those steps are the exam question.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "The classic exceptions are Be greater than B, and N greater than O. The reasons are a filled 2s subshell and a half-filled 2p subshell.",
-      "trap": "Second ionisation enthalpy is always larger than the first for the same element, because the remaining electrons are held more tightly.",
+      "exam_note": "The standard exceptions are Be above B, and N above O. The reasons are a filled 2s subshell and a half-filled 2p subshell.",
+      "trap": "Second ionisation enthalpy always exceeds the first for the same element, because the remaining electrons are held more tightly.",
       "recall": [
         {
-          "q": "The first ionisation enthalpy of nitrogen is greater than that of oxygen because",
-          "options": ["Nitrogen is larger", "Nitrogen has a half-filled 2p subshell", "Oxygen has fewer protons", "Nitrogen is a gas"],
+          "q": "Nitrogen's first ionisation enthalpy exceeds oxygen's because nitrogen has",
+          "options": ["A larger radius", "A half-filled 2p subshell", "Fewer protons", "A full 2p subshell"],
           "answer": 1,
-          "why": "The half-filled 2p arrangement is relatively stable, so removing an electron from nitrogen costs more than removing one from oxygen."
+          "why": "The half-filled arrangement is relatively stable, so removing one electron costs more than it does in oxygen."
         },
         {
-          "q": "Ionisation enthalpy generally decreases down a group because",
-          "options": ["Nuclear charge decreases", "The outer electron is further from the nucleus", "Atomic mass increases", "The number of shells decreases"],
+          "q": "Ionisation enthalpy falls down a group because",
+          "options": ["Nuclear charge falls", "The outer electron is further out and better shielded", "Mass rises", "Shells decrease"],
           "answer": 1,
-          "why": "Each period adds a shell, so the outer electron is more shielded and further away, and is easier to remove."
+          "why": "Each period adds a shell, so the outer electron is easier to remove."
         }
       ],
       "review_status": "draft",
-      "review_note": "Verify page and line against your edition, and check the exception data against your copy."
+      "review_note": "Verify page and line against your edition, and check the enthalpy values against your copy."
     },
     {
       "id": "electronegativity",
       "ncert_ref": "Classification of Elements and Periodicity: electronegativity and anomalies",
       "key_phrase": "pull on the shared pair",
-      "meaning": "Electronegativity is an atom's tendency in a bond to attract the shared electrons, and it rises across a period and falls down a group. Fluorine is the most electronegative element. Some apparent breaks in periodic trends are not breaks at all but consequences of a different measurement, such as the large van der Waals radius reported for noble gases.",
+      "meaning": "Electronegativity measures how strongly an atom in a bond attracts the shared pair. On the Pauling scale fluorine is 4.0, oxygen 3.44 and chlorine 3.16, and the value falls down a group as size grows. Some apparent breaks come from the measurement rather than the chemistry: noble gases are reported by van der Waals contact, which is larger than a covalent radius, so argon looks bigger than chlorine without contradicting the trend.",
       "words": [
         {
           "term": "electronegativity",
-          "meaning": "The tendency of an atom in a molecule to attract a shared pair of electrons.",
-          "breakdown": "On the Pauling scale fluorine is 4.0, the highest value.",
-          "trap": "Electronegativity has no unit and is not measured for a free atom. It only has meaning inside a bond."
+          "meaning": "The tendency of an atom in a molecule to attract a shared electron pair.",
+          "breakdown": "Pauling values: F 4.0, O 3.44, N 3.04, Cl 3.16.",
+          "trap": "It has no units and no meaning for a free atom. It exists only inside a bond."
         },
         {
           "term": "lanthanoid contraction",
-          "meaning": "The gradual decrease in size across the lanthanoids, caused by poor shielding of f electrons.",
-          "breakdown": "It makes the elements after the lanthanoids slightly smaller than expected.",
-          "trap": "The contraction is small but cumulative, which is why zirconium and hafnium have almost identical radii."
+          "meaning": "The steady size decrease across the lanthanoids, caused by poor shielding by f electrons.",
+          "breakdown": "It leaves zirconium and hafnium almost the same size.",
+          "trap": "The contraction is small per element but accumulates, which is why it separates elements that should be much larger."
         },
         {
           "term": "anomalous radius",
-          "meaning": "A radius that appears out of trend because a different definition was used.",
-          "breakdown": "Noble gas radii are van der Waals radii, which are larger than covalent radii.",
-          "trap": "The noble gas values are not evidence against the periodic trend. Comparing them with covalent radii is comparing two different quantities."
+          "meaning": "A radius that looks out of trend because a different definition was used.",
+          "breakdown": "Noble gas radii come from van der Waals contacts, not covalent bonds.",
+          "trap": "These values do not disprove the periodic trend. Comparing a van der Waals radius with a covalent one is comparing different quantities."
         }
       ],
       "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M24 116h272M24 116V30'/><path class='d-accent' d='M40 110c30-4 50-20 70-40 20-22 36-40 60-52'/><text class='d-label' x='36' y='140'>across a period: increases</text><text class='d-label' x='212' y='44'>F is the highest</text><path class='d-guide' d='M170 40v70'/><text class='d-label' x='176' y='92'>down a group: decreases</text></svg>",
-      "visual_alt": "A curve rising across a period to fluorine as the most electronegative element, with a note that it falls down a group.",
+      "visual_alt": "A curve rising across a period to fluorine as the most electronegative element.",
       "hook": "The noble gases look huge on a radius chart only because their radius is measured differently.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "Questions pair electronegativity with bond polarity and oxidation state. A larger difference means a more polar bond, not necessarily a stronger one.",
-      "trap": "Electronegativity and electron gain enthalpy both measure attraction for electrons, but one is in a bond and the other is for an isolated gaseous atom.",
+      "exam_note": "Electronegativity is paired with bond polarity and oxidation state. A larger difference means a more polar bond, not necessarily a stronger one.",
+      "trap": "Electronegativity and electron gain enthalpy both describe attraction for electrons, but one is inside a bond and the other is for an isolated gaseous atom.",
       "recall": [
         {
           "q": "The most electronegative element is",
           "options": ["Oxygen", "Chlorine", "Fluorine", "Nitrogen"],
           "answer": 2,
-          "why": "Fluorine has the highest value on the Pauling scale, at 4.0, because of its small size and high nuclear charge."
+          "why": "Fluorine is 4.0 on the Pauling scale, the highest value, because of its small size and high nuclear charge."
         },
         {
-          "q": "The very large radius reported for neon is best explained by",
-          "options": ["A real break in the trend", "The use of van der Waals radii", "A high nuclear charge", "Its low mass"],
+          "q": "Chlorine releases more energy than fluorine on gaining an electron because",
+          "options": ["Chlorine is more electronegative", "Fluorine is very small, so the added electron feels strong repulsion", "Chlorine has fewer protons", "Fluorine has a larger radius"],
           "answer": 1,
-          "why": "Noble gases do not form covalent bonds, so their size is measured from van der Waals contact, a different and larger quantity."
+          "why": "Fluorine's small 2p shell packs the incoming electron tightly, and the repulsion reduces the energy released."
         }
       ],
       "review_status": "draft",
