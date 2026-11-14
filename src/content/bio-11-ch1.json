@@ -1,0 +1,201 @@
+{
+  "id": "bio-11-ch1",
+  "subject": "Biology",
+  "class": 11,
+  "title": "The Living World",
+  "book": "NCERT Biology Class XI",
+  "paragraphs": [
+    {
+      "id": "what-is-living",
+      "ncert_ref": "The Living World: defining features of living organisms",
+      "key_phrase": "growth alone does not prove life",
+      "meaning": "Growth, reproduction and metabolism are all properties of living things, but none of them works as a definition on its own. A crystal grows, a mule cannot reproduce, and a dormant seed barely metabolises. The feature that separates living from non-living most reliably is self-replication with metabolism, which is why the chapter calls consciousness the defining property of living organisms.",
+      "words": [
+        {
+          "term": "metabolism",
+          "meaning": "The sum of all chemical reactions in a living body.",
+          "breakdown": "It includes building up molecules and breaking them down, and it continues in every living cell.",
+          "trap": "Metabolism is not only digestion. A single isolated reaction in a test tube is not metabolism either, because metabolism is the whole set of reactions in a body."
+        },
+        {
+          "term": "growth",
+          "meaning": "An increase in mass or number of cells.",
+          "breakdown": "In living things it comes from cell division, and in non-living things it comes from accumulation on the surface.",
+          "trap": "Non-living objects can grow, so growth is not proof of life. Dead organisms do not grow either."
+        },
+        {
+          "term": "reproduction",
+          "meaning": "The production of new individuals similar to the parent.",
+          "breakdown": "It can be asexual, without gametes, or sexual, with gametes.",
+          "trap": "Sterile organisms such as worker bees and mules are still alive. Reproduction cannot be a definition of life."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='24' y='44' width='70' height='60' rx='2'/><rect class='d-line' x='124' y='44' width='70' height='60' rx='2'/><rect class='d-line' x='224' y='44' width='70' height='60' rx='2'/><text class='d-label' x='34' y='78'>grows</text><text class='d-label' x='134' y='70'>reproduces</text><text class='d-label' x='240' y='70'>metabolises</text><text class='d-label' x='24' y='126'>each is true of some non-living things</text></svg>",
+      "visual_alt": "Three criteria shown as separate boxes, with a caption that each one alone also holds for some non-living things.",
+      "hook": "A crystal grows, a flame consumes fuel, and neither is alive.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Questions ask which property is defining. The answer is consciousness, not growth, because growth is shared with non-living things.",
+      "trap": "All living things grow, but not all growth is a sign of life. That asymmetry is the point the chapter makes.",
+      "recall": [
+        {
+          "q": "Which property is considered defining of living organisms?",
+          "options": ["Growth", "Reproduction", "Consciousness", "Metabolism"],
+          "answer": 2,
+          "why": "Growth and reproduction both fail as definitions, so the chapter treats the ability to sense and respond, consciousness, as the defining property."
+        },
+        {
+          "q": "A mule cannot reproduce but is alive. This shows that",
+          "options": ["Reproduction defines life", "Reproduction is not essential for being alive", "Mules are not organisms", "Growth is essential"],
+          "answer": 1,
+          "why": "Sterile organisms are alive, so reproduction cannot be required for life, even though it is essential for a species continuing."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and confirm the chapter number in your printing."
+    },
+    {
+      "id": "hierarchy",
+      "ncert_ref": "The Living World: taxonomic categories and hierarchy",
+      "key_phrase": "from species up to kingdom",
+      "meaning": "Taxonomy arranges organisms in ranks: species, genus, family, order, class, phylum or division, and kingdom. As you move up, the group gets larger and its members share fewer features. Species is the smallest rank and the only one that exists as a natural breeding unit, which is why a species name has two parts and every other rank has one.",
+      "words": [
+        {
+          "term": "taxonomic hierarchy",
+          "meaning": "The arrangement of ranks from species to kingdom.",
+          "breakdown": "Species, genus, family, order, class, phylum, kingdom. Each level contains the one below it.",
+          "trap": "Higher ranks are not more important. They simply group more organisms with fewer shared features."
+        },
+        {
+          "term": "genus",
+          "meaning": "A group of closely related species that share a recent common ancestor.",
+          "breakdown": "Panthera includes the lion, tiger and leopard.",
+          "trap": "Two species in the same genus are not the same species. Genus is one rank above species, not a synonym for it."
+        },
+        {
+          "term": "family",
+          "meaning": "A group of related genera.",
+          "breakdown": "The cat family includes Panthera and Felis.",
+          "trap": "Family is above genus, not below it. Students reverse these two ranks very often."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M60 132h200M76 110h168M92 88h136M108 66h104M124 44h72M140 22h40'/><text class='d-label' x='250' y='30'>kingdom</text><text class='d-label' x='250' y='52'>phylum</text><text class='d-label' x='250' y='74'>class</text><text class='d-label' x='250' y='96'>order</text><text class='d-label' x='250' y='118'>family</text><text class='d-label' x='250' y='140'>genus</text><text class='d-label' x='20' y='78'>fewer features</text><text class='d-label' x='20' y='96'>shared as you</text><text class='d-label' x='20' y='114'>move up</text></svg>",
+      "visual_alt": "A stack of bars narrowing upward from species to kingdom, labelled with the ranks.",
+      "hook": "Every rank is a box that fits inside the one above it.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Order the ranks correctly under time pressure. Species, genus, family, order, class, phylum, kingdom is the sequence they test.",
+      "trap": "Division is used instead of phylum for plants. Both occupy the same rank, so neither is above the other.",
+      "recall": [
+        {
+          "q": "Which rank comes immediately above family?",
+          "options": ["Genus", "Order", "Class", "Species"],
+          "answer": 1,
+          "why": "The sequence is species, genus, family, order, class, phylum, kingdom, so order sits directly above family."
+        },
+        {
+          "q": "As you move from species to kingdom, the number of shared features",
+          "options": ["Increases", "Decreases", "Stays the same", "Becomes zero"],
+          "answer": 1,
+          "why": "Higher ranks contain more organisms, and a larger group can only share a smaller set of common features."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the rank order against your copy."
+    },
+    {
+      "id": "nomenclature",
+      "ncert_ref": "The Living World: binomial nomenclature",
+      "key_phrase": "two words, genus then species",
+      "meaning": "Every species has a two-word scientific name, with the genus first and the species second. The name is written in italics when printed and underlined when handwritten, and only the genus begins with a capital. The rules exist so that one species has one name everywhere, which is what makes a paper from another country usable here.",
+      "words": [
+        {
+          "term": "binomial nomenclature",
+          "meaning": "The system of naming species with two Latin words.",
+          "breakdown": "Introduced by Linnaeus. The first word is the genus, the second the specific epithet.",
+          "trap": "The second word is not a species on its own. It is an epithet that only has meaning with its genus."
+        },
+        {
+          "term": "specific epithet",
+          "meaning": "The second part of a binomial, always written in lower case.",
+          "breakdown": "In Homo sapiens, sapiens is the epithet.",
+          "trap": "Capitalising the epithet is an error, even when it comes from a person's name."
+        },
+        {
+          "term": "taxonomy",
+          "meaning": "The science of identifying, naming and classifying organisms.",
+          "breakdown": "It has three parts: characterisation, identification and nomenclature.",
+          "trap": "Taxonomy is not the same as systematics. Systematics includes evolutionary relationships as well."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M24 96h272'/><text class='d-label' x='24' y='52'>Mangifera indica</text><path class='d-accent' d='M24 64h96'/><path class='d-guide' d='M24 96v-20M120 96v-20'/><text class='d-label' x='26' y='118'>genus, capital</text><text class='d-label' x='150' y='118'>epithet, lower case</text><text class='d-label' x='24' y='140'>italic in print, underlined by hand</text></svg>",
+      "visual_alt": "A binomial name with the genus capitalised and the epithet in lower case, marked as italic or underlined.",
+      "hook": "One name for one species, in every language, is the whole point.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Questions test the formatting: italics in print, underline when handwritten, genus capitalised, epithet not. They also ask who introduced the system.",
+      "trap": "Writing Homo Sapiens with a capital S is wrong. The epithet is always lower case.",
+      "recall": [
+        {
+          "q": "In Mangifera indica, indica is the",
+          "options": ["Genus", "Specific epithet", "Family", "Author"],
+          "answer": 1,
+          "why": "The first word is the genus and the second, written in lower case, is the specific epithet."
+        },
+        {
+          "q": "Binomial nomenclature was introduced by",
+          "options": ["Aristotle", "Linnaeus", "Darwin", "Haeckel"],
+          "answer": 1,
+          "why": "Carolus Linnaeus formalised the two-word naming system that is still used."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the naming rules against your copy."
+    },
+    {
+      "id": "taxonomic-aids",
+      "ncert_ref": "The Living World: taxonomic aids",
+      "key_phrase": "herbarium, keys, museum, garden",
+      "meaning": "Taxonomists keep records: herbaria store pressed dried plants on labelled sheets, museums keep preserved specimens, botanical gardens grow living collections, and keys identify an unknown specimen by a series of paired choices. Each aid answers a different question, which is why a herbarium cannot substitute for a key and a key cannot substitute for a type specimen.",
+      "words": [
+        {
+          "term": "herbarium",
+          "meaning": "A collection of pressed, dried and labelled plant specimens.",
+          "breakdown": "Each sheet carries the date, place, collector and scientific name.",
+          "trap": "A herbarium stores dried specimens, not living plants. Living collections belong to a botanical garden."
+        },
+        {
+          "term": "taxonomic key",
+          "meaning": "A series of paired statements used to identify an organism.",
+          "breakdown": "Each pair is a couplet, and each choice leads to the next couplet.",
+          "trap": "A key identifies one specimen at a time. It is not a list of all species, and it needs accurate observations to work."
+        },
+        {
+          "term": "type specimen",
+          "meaning": "The reference specimen to which a species name is permanently attached.",
+          "breakdown": "It is kept in a museum or herbarium and is the final authority on what the name means.",
+          "trap": "A type specimen is not a typical example chosen for looking normal. It is the fixed reference for the name."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='26' y='36' width='70' height='72' rx='2'/><path class='d-accent' d='M42 96c10-30 26-42 38-46'/><text class='d-label' x='30' y='126'>herbarium sheet</text><path class='d-line' d='M136 60h52M136 76h52M136 92h52'/><text class='d-label' x='136' y='46'>couplets</text><path class='d-muted' d='M214 108l16-16M214 92l16 16'/><text class='d-label' x='196' y='132'>key: one of two</text></svg>",
+      "visual_alt": "A herbarium sheet beside a two-choice key, the two main aids for storing and identifying plants.",
+      "hook": "A herbarium remembers what a plant looked like. A key tells you what the plant in your hand is.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Match each aid to its definition: herbarium is dried plants, museum is preserved specimens, key is identification, garden is living plants.",
+      "trap": "A zoological park is not a museum. Museums preserve specimens, parks keep living animals.",
+      "recall": [
+        {
+          "q": "A herbarium contains",
+          "options": ["Living plants", "Pressed dried plant specimens", "Preserved animals", "Seeds only"],
+          "answer": 1,
+          "why": "Herbarium sheets hold dried, pressed and labelled plants, which is what makes them a permanent record."
+        },
+        {
+          "q": "A taxonomic key works by",
+          "options": ["Comparing photographs", "A series of paired choices", "Measuring every specimen", "Listing all species"],
+          "answer": 1,
+          "why": "Each couplet offers two statements, and the choice made leads on until the specimen is identified."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the aid definitions against your copy."
+    }
+  ]
+}

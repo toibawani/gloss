@@ -1,0 +1,201 @@
+{
+  "id": "bio-11-ch2",
+  "subject": "Biology",
+  "class": 11,
+  "title": "Biological Classification",
+  "book": "NCERT Biology Class XI",
+  "paragraphs": [
+    {
+      "id": "five-kingdoms",
+      "ncert_ref": "Biological Classification: the five kingdom system",
+      "key_phrase": "cell type, wall and body plan",
+      "meaning": "The five kingdom system sorts organisms by cell type, cell wall, body organisation, nutrition and reproduction. Monera are prokaryotes, Protista are single-celled eukaryotes, Fungi absorb food and have chitin walls, Plantae make their own food, and Animalia ingest it. The system is a working classification, not a claim that each kingdom is one evolutionary branch.",
+      "words": [
+        {
+          "term": "prokaryote",
+          "meaning": "A cell without a membrane-bound nucleus or organelles.",
+          "breakdown": "Bacteria and archaea. DNA lies free in the cytoplasm.",
+          "trap": "Prokaryotes are not small eukaryotes. They lack membrane-bound organelles entirely, not just a nucleus."
+        },
+        {
+          "term": "saprophyte",
+          "meaning": "An organism that feeds on dead and decaying matter by absorbing it.",
+          "breakdown": "Most fungi are saprophytes, which is why they grow on bread and fallen leaves.",
+          "trap": "Saprophytes do not photosynthesise. Some fungi are parasitic instead, absorbing from living hosts."
+        },
+        {
+          "term": "heterotroph",
+          "meaning": "An organism that cannot make its own food and depends on other organisms.",
+          "breakdown": "Animals, fungi and most bacteria are heterotrophs.",
+          "trap": "Not every heterotroph ingests food. Fungi absorb it, which is why they are not animals."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='20' y='34' width='52' height='54' rx='2'/><rect class='d-line' x='82' y='34' width='52' height='54' rx='2'/><rect class='d-line' x='144' y='34' width='52' height='54' rx='2'/><rect class='d-line' x='206' y='34' width='52' height='54' rx='2'/><rect class='d-line' x='268' y='34' width='40' height='54' rx='2'/><text class='d-label' x='24' y='108'>monera</text><text class='d-label' x='86' y='108'>protista</text><text class='d-label' x='148' y='108'>fungi</text><text class='d-label' x='210' y='108'>plantae</text><text class='d-label' x='262' y='108'>animalia</text><text class='d-label' x='20' y='136'>no nucleus, then nucleus, then body plan</text></svg>",
+      "visual_alt": "Five boxes in a row for the five kingdoms, ordered from prokaryotes to animals.",
+      "hook": "Two kingdoms could not hold everything once microscopes found single-celled eukaryotes.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Questions ask which criterion separates two kingdoms. Cell wall composition and mode of nutrition are the usual discriminators.",
+      "trap": "Fungi were once grouped with plants because both have walls, but the wall is chitin and the nutrition is absorptive.",
+      "recall": [
+        {
+          "q": "Fungi differ from plants mainly in",
+          "options": ["Cell wall composition and nutrition", "Having a nucleus", "Being multicellular", "Reproducing sexually"],
+          "answer": 0,
+          "why": "Fungal walls are chitin, not cellulose, and fungi absorb food rather than photosynthesising."
+        },
+        {
+          "q": "Monera includes all organisms that are",
+          "options": ["Unicellular", "Prokaryotic", "Photosynthetic", "Pathogenic"],
+          "answer": 1,
+          "why": "The defining feature of the kingdom is the prokaryotic cell, without a membrane-bound nucleus."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and confirm the kingdom criteria stated in your copy."
+    },
+    {
+      "id": "archaea",
+      "ncert_ref": "Biological Classification: Monera and archaebacteria",
+      "key_phrase": "ancient bacteria, extreme homes",
+      "meaning": "Archaebacteria have a different cell wall and membrane from other bacteria, and they live in places that would kill most cells: salt lakes, hot springs and marshes where methane is produced. Their chemistry is closer to eukaryotes than to true bacteria, which is why they are separated. Cyanobacteria, by contrast, are true bacteria that photosynthesise and once made the oxygen in the atmosphere.",
+      "words": [
+        {
+          "term": "archaebacteria",
+          "meaning": "Prokaryotes with distinct membrane lipids and cell walls, often living in extreme conditions.",
+          "breakdown": "Includes halophiles in salt, thermophiles in heat and methanogens in marshes.",
+          "trap": "Archaebacteria are not eukaryotes despite their different chemistry, and they are not a subgroup of true bacteria."
+        },
+        {
+          "term": "cyanobacteria",
+          "meaning": "Photosynthetic bacteria, often called blue-green algae.",
+          "breakdown": "They have chlorophyll and release oxygen, and some fix nitrogen in special cells.",
+          "trap": "Cyanobacteria are not algae, even though the old name says so. They are prokaryotes."
+        },
+        {
+          "term": "plasmid",
+          "meaning": "A small circular DNA molecule separate from the main bacterial chromosome.",
+          "breakdown": "Plasmids often carry genes for antibiotic resistance and are used in genetic engineering.",
+          "trap": "A plasmid is not the main genome. It is extra DNA that can be gained or lost."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M24 116h272'/><rect class='d-line' x='40' y='46' width='64' height='44' rx='20'/><path class='d-accent' d='M56 68c10-10 26 10 34 0'/><rect class='d-line' x='134' y='46' width='64' height='44' rx='20'/><path class='d-accent' d='M150 60v20M164 60v20M178 60v20'/><text class='d-label' x='40' y='132'>salt lake</text><text class='d-label' x='130' y='132'>hot spring</text><text class='d-label' x='230' y='70'>different walls,</text><text class='d-label' x='230' y='88'>different lipids</text></svg>",
+      "visual_alt": "Two archaebacterial cells labelled with the extreme habitats they occupy.",
+      "hook": "Some bacteria live at temperatures that would cook a human cell, and their membranes are built differently for it.",
+      "exam_tags": ["NEET"],
+      "exam_note": "The classic match is methanogens to marshes and biogas, halophiles to salt, thermophiles to hot springs.",
+      "trap": "Methanogens are archaebacteria, not fungi, even though both can live in wet decaying places.",
+      "recall": [
+        {
+          "q": "Methanogens are found in",
+          "options": ["Salt lakes", "Hot springs", "Marshy areas and biogas plants", "Dry deserts"],
+          "answer": 2,
+          "why": "Methanogens live where oxygen is absent and produce methane, which is why they are used in biogas plants."
+        },
+        {
+          "q": "Cyanobacteria are",
+          "options": ["Eukaryotic algae", "Photosynthetic prokaryotes", "Fungi", "Viruses"],
+          "answer": 1,
+          "why": "They photosynthesise but lack a nucleus, so they are bacteria, despite the old name blue-green algae."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the habitat examples against your copy."
+    },
+    {
+      "id": "protista",
+      "ncert_ref": "Biological Classification: Protista",
+      "key_phrase": "single cells with a nucleus",
+      "meaning": "Protista gathers all single-celled eukaryotes, which makes it a convenient group rather than a natural one. It includes photosynthetic forms such as diatoms and dinoflagellates, animal-like protozoans, and slime moulds that behave like fungi for part of their life. Because the kingdom is defined by what it is not, its members do not share one ancestor exclusively.",
+      "words": [
+        {
+          "term": "diatom",
+          "meaning": "A photosynthetic protist with a silica shell in two halves.",
+          "breakdown": "Their shells make diatomaceous earth, used for filtration.",
+          "trap": "Diatom shells are silica, not calcium carbonate. Coral and shells of molluscs are the calcium ones."
+        },
+        {
+          "term": "protozoan",
+          "meaning": "A single-celled, animal-like protist that usually ingests food.",
+          "breakdown": "Amoeba moves with pseudopodia, Paramecium with cilia, Plasmodium is a parasite.",
+          "trap": "Protozoa are not animals. They are single-celled eukaryotes that resemble animals in nutrition."
+        },
+        {
+          "term": "slime mould",
+          "meaning": "A protist that lives as an amoeboid mass and forms spores.",
+          "breakdown": "It moves and feeds like a protozoan, then reproduces with spore-bearing structures like a fungus.",
+          "trap": "Slime moulds are not fungi, though their fruiting bodies look like them."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='60' cy='70' r='26'/><path class='d-accent' d='M46 58c14 6 14 18 0 24M60 48v44M74 58c-14 6-14 18 0 24'/><path class='d-line' d='M130 50h40v40h-40z'/><path class='d-muted' d='M130 70h40M150 50v40'/><circle class='d-line' cx='234' cy='70' r='22'/><path class='d-accent' d='M234 54v32'/><text class='d-label' x='30' y='126'>diatom</text><text class='d-label' x='122' y='126'>dinoflagellate</text><text class='d-label' x='212' y='126'>protozoan</text></svg>",
+      "visual_alt": "Three single-celled protists shown side by side, each with a different body form.",
+      "hook": "One kingdom, three lifestyles: make food, hunt it, or absorb it.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Match the organism to its group: diatoms and dinoflagellates are photosynthetic, Paramecium is ciliated, Plasmodium is a sporozoan parasite.",
+      "trap": "Red tides are caused by dinoflagellates, not by diatoms. Both are protists, which is where the confusion comes from.",
+      "recall": [
+        {
+          "q": "Diatoms are characterised by",
+          "options": ["Silica shells", "Calcium carbonate shells", "Chitin walls", "No cell wall"],
+          "answer": 0,
+          "why": "Their two-part shells are made of silica, which is why they leave diatomaceous earth behind."
+        },
+        {
+          "q": "Malaria is caused by a protist that is",
+          "options": ["Photosynthetic", "A parasite", "A slime mould", "A diatom"],
+          "answer": 1,
+          "why": "Plasmodium is a protozoan parasite that lives in a mosquito and then in human blood."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the examples against your copy."
+    },
+    {
+      "id": "fungi",
+      "ncert_ref": "Biological Classification: Fungi",
+      "key_phrase": "threads, spores, chitin",
+      "meaning": "A fungus body is made of thread-like hyphae, and a mass of hyphae is a mycelium. Fungi digest food outside their bodies and absorb the products, and they reproduce by spores. The main classes differ in how their spores are made: sac fungi form spores in asci, club fungi on basidia, and zygomycetes form resistant zygospores after two hyphae fuse.",
+      "words": [
+        {
+          "term": "mycelium",
+          "meaning": "The network of hyphae that makes up a fungal body.",
+          "breakdown": "Hyphae may be septate, with cross walls, or coenocytic, without them.",
+          "trap": "A mushroom is not the whole fungus. It is the fruiting body of a much larger mycelium underground."
+        },
+        {
+          "term": "basidium",
+          "meaning": "The club-shaped cell of club fungi on which four spores form.",
+          "breakdown": "Mushrooms and bracket fungi are basidiomycetes.",
+          "trap": "Basidia are not asci. Asci hold spores in a sac, basidia hold them on the outside of a club."
+        },
+        {
+          "term": "lichen",
+          "meaning": "A partnership between a fungus and an alga or cyanobacterium.",
+          "breakdown": "The fungus provides shelter and minerals, the partner photosynthesises.",
+          "trap": "A lichen is not a single organism. It is a stable association of two, and it is used as a pollution indicator."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 120h240'/><path class='d-accent' d='M70 120c0-40 40-40 40 0'/><path class='d-line' d='M110 80h60'/><circle class='d-fill' cx='140' cy='68' r='4'/><circle class='d-fill' cx='156' cy='74' r='4'/><text class='d-label' x='44' y='140'>hyphae</text><text class='d-label' x='180' y='70'>spores released</text><text class='d-label' x='180' y='92'>from the fruiting body</text></svg>",
+      "visual_alt": "A fungal fruiting body on hyphae releasing spores.",
+      "hook": "The mushroom you see is the least of the fungus. Most of it is a web under the soil.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Classify by spore structure: ascomycetes in asci, basidiomycetes on basidia, zygomycetes in zygospores. Lichens and mycorrhiza come up as association questions.",
+      "trap": "Fungi are not plants without chlorophyll. Their walls are chitin and their storage carbohydrate is glycogen, like animals.",
+      "recall": [
+        {
+          "q": "Club fungi produce spores on",
+          "options": ["Asci", "Basidia", "Zygospores", "Conidia"],
+          "answer": 1,
+          "why": "Basidiomycetes, the club fungi, form four spores on each club-shaped basidium."
+        },
+        {
+          "q": "A lichen is an association between",
+          "options": ["Two fungi", "A fungus and an alga or cyanobacterium", "A fungus and a moss", "Two algae"],
+          "answer": 1,
+          "why": "The fungal partner provides structure and the photosynthetic partner supplies food, which is why lichens colonise bare rock."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the class examples against your copy."
+    }
+  ]
+}

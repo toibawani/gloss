@@ -1,0 +1,201 @@
+{
+  "id": "phy-11-ch6",
+  "subject": "Physics",
+  "class": 11,
+  "title": "System of Particles and Rotational Motion",
+  "book": "NCERT Physics Class XI",
+  "paragraphs": [
+    {
+      "id": "centre-of-mass",
+      "ncert_ref": "Ch 6, System of Particles and Rotational Motion: centre of mass",
+      "key_phrase": "the point that follows the simple law",
+      "meaning": "The centre of mass is the mass-weighted average position of a system, and it moves as if all the mass and all the external forces acted there. That is why a spanner thrown across a room spins about a point that travels in a clean parabola. Internal forces, however violent, cannot shift the centre of mass of an isolated system.",
+      "words": [
+        {
+          "term": "centre of mass",
+          "meaning": "The point where the total mass of a system may be taken to act for external forces.",
+          "breakdown": "It can lie outside the body, as in a ring or a boomerang.",
+          "trap": "The centre of mass is not always inside the object and does not have to contain any mass."
+        },
+        {
+          "term": "internal force",
+          "meaning": "A force between parts of the same system.",
+          "breakdown": "Internal forces cancel in pairs by Newton's third law, so they cannot accelerate the centre of mass.",
+          "trap": "Internal forces can deform or spin a body, but they cannot change the motion of its centre of mass."
+        },
+        {
+          "term": "moment of inertia",
+          "meaning": "A body's resistance to angular acceleration, depending on mass and how it is distributed.",
+          "breakdown": "I equals the sum of mr², and it depends on the chosen axis.",
+          "trap": "Moment of inertia is not fixed for a body. Moving the axis changes it, which is why the axis must be stated."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M24 120h272'/><path class='d-accent' d='M40 96c40-56 90-56 130 0'/><circle class='d-fill' cx='105' cy='68' r='4'/><path class='d-guide' d='M105 68v52'/><text class='d-label' x='112' y='62'>the centre travels</text><text class='d-label' x='112' y='80'>a clean parabola</text><text class='d-label' x='196' y='112'>the body tumbles around it</text></svg>",
+      "visual_alt": "A tumbling object whose centre follows a smooth parabolic path while the body rotates around that point.",
+      "hook": "Throw a spanner and it spins, but its centre still traces the same arc as a thrown stone.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Centre of mass questions use the weighted average formula, or symmetry for uniform bodies. A removed portion is treated as negative mass.",
+      "trap": "For a cut-out shape, subtract the removed piece rather than adding it. Treating the hole as material gives a point too far out.",
+      "recall": [
+        {
+          "q": "Two masses of 1 kg and 3 kg are 2 m apart. The centre of mass lies",
+          "options": ["At the midpoint", "0.5 m from the 1 kg mass", "1.5 m from the 1 kg mass", "0.25 m from the 1 kg mass"],
+          "answer": 1,
+          "why": "The weighted average puts the point at 1.5 m from the 1 kg mass, which is 0.5 m from it towards the 3 kg mass."
+        },
+        {
+          "q": "Internal forces cannot change",
+          "options": ["The shape of a body", "The motion of the centre of mass", "The spin of a body", "The temperature"],
+          "answer": 1,
+          "why": "They cancel in pairs, so the net internal force is zero and the centre of mass moves only under external forces."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the moment of inertia definition against your copy."
+    },
+    {
+      "id": "torque-and-angular-momentum",
+      "ncert_ref": "Ch 6, System of Particles and Rotational Motion: torque and angular momentum",
+      "key_phrase": "force at a distance turns things",
+      "meaning": "Torque is the turning effect of a force, equal to the force times the perpendicular distance from the axis. It is the rotational counterpart of force, and angular momentum is the counterpart of momentum. With no external torque, angular momentum stays constant, which is why a skater pulling her arms in spins faster rather than slowing down.",
+      "words": [
+        {
+          "term": "torque",
+          "meaning": "The product of force and the perpendicular distance from the axis, τ = rF sin θ.",
+          "breakdown": "It is a vector along the axis, with a direction given by the right hand rule.",
+          "trap": "A force through the axis produces no torque, however large it is. The perpendicular distance is what matters."
+        },
+        {
+          "term": "angular momentum",
+          "meaning": "The rotational analogue of momentum, L = Iω for a rigid body.",
+          "breakdown": "It is conserved when no external torque acts.",
+          "trap": "Angular momentum is not the same as linear momentum. A body can have one without the other."
+        },
+        {
+          "term": "couple",
+          "meaning": "Two equal and opposite forces acting along different lines, producing rotation without translation.",
+          "breakdown": "The torque of a couple is force times the separation between the lines of action.",
+          "trap": "Two equal and opposite forces on the same line cancel completely and produce no turning effect."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 116h240'/><circle class='d-fill' cx='120' cy='116' r='5'/><path class='d-accent' d='M120 116L220 62'/><path class='d-accent' d='M206 52l18 12-18 12'/><path class='d-guide' d='M120 76v40'/><text class='d-label' x='128' y='70'>force at an angle</text><text class='d-label' x='70' y='96'>r is perpendicular</text><text class='d-label' x='200' y='136'>it turns, it does not slide</text></svg>",
+      "visual_alt": "A force applied at an angle to a lever arm, with the perpendicular distance and turning effect marked.",
+      "hook": "A door handle is far from the hinge for a reason. Distance buys turning power.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Equilibrium of a rigid body needs both net force and net torque to be zero. Solving only the forces gives a wrong reaction.",
+      "trap": "Angular momentum conservation needs zero external torque, not zero external force. The skater still feels gravity and the floor.",
+      "recall": [
+        {
+          "q": "A force applied along the line through the axis of rotation produces",
+          "options": ["Maximum torque", "Zero torque", "Half torque", "Infinite torque"],
+          "answer": 1,
+          "why": "The perpendicular distance from the axis is zero, so the torque rF sin θ is zero."
+        },
+        {
+          "q": "A skater pulling her arms in spins faster because",
+          "options": ["Angular momentum increases", "Moment of inertia decreases at constant angular momentum", "Torque increases", "Mass decreases"],
+          "answer": 1,
+          "why": "With no external torque, L stays constant, so a smaller moment of inertia means a larger angular velocity."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the torque definition against your copy."
+    },
+    {
+      "id": "moment-of-inertia",
+      "ncert_ref": "Ch 6, System of Particles and Rotational Motion: moment of inertia and the parallel axis theorem",
+      "key_phrase": "mass far from the axis counts more",
+      "meaning": "Moment of inertia is the sum of each mass times the square of its distance from the axis, so mass far out contributes far more than mass near the centre. That is why a hollow cylinder is harder to spin than a solid one of the same mass. The parallel axis theorem lets you shift from a known axis through the centre of mass to any parallel axis.",
+      "words": [
+        {
+          "term": "radius of gyration",
+          "meaning": "The distance at which the whole mass could be placed to give the same moment of inertia.",
+          "breakdown": "I = Mk², so k is the square root of I divided by M.",
+          "trap": "Radius of gyration is not a physical radius. It is a computed distance and can be larger than the object."
+        },
+        {
+          "term": "parallel axis theorem",
+          "meaning": "I equals the moment about the centre of mass plus Md², for a parallel axis at distance d.",
+          "breakdown": "It works only between parallel axes, and only when one passes through the centre of mass.",
+          "trap": "The theorem adds Md², never subtracts. For an axis not through the centre of mass, a different relation is needed."
+        },
+        {
+          "term": "rolling without slipping",
+          "meaning": "Motion where the point of contact is instantaneously at rest, so v = ωR.",
+          "breakdown": "The total kinetic energy is the sum of translational and rotational parts.",
+          "trap": "Rolling without slipping does not mean no friction. Static friction acts at the contact point, and it does no work."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='90' cy='74' r='34'/><circle class='d-fill' cx='90' cy='74' r='4'/><circle class='d-fill' cx='116' cy='52' r='4'/><path class='d-guide' d='M90 74l26-22'/><text class='d-label' x='128' y='46'>far mass, large mr²</text><text class='d-label' x='40' y='128'>same mass, different distribution</text><path class='d-line' d='M186 74h120'/><circle class='d-line' cx='246' cy='74' r='24'/><path class='d-accent' d='M270 74h30'/><text class='d-label' x='186' y='128'>v = ωR at the contact</text></svg>",
+      "visual_alt": "A disc with a marked off-centre mass beside a rolling wheel with its contact speed labelled.",
+      "hook": "Two wheels of the same weight can feel completely different to spin, because where the mass sits matters.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Standard results to memorise: disc MR²/2, ring MR², solid sphere 2MR²/5, hollow sphere 2MR²/3, rod about centre ML²/12.",
+      "trap": "A solid sphere and a hollow sphere do not have the same moment of inertia. The hollow one is larger for the same mass and radius.",
+      "recall": [
+        {
+          "q": "The moment of inertia of a solid sphere about a diameter is",
+          "options": ["MR²", "2MR²/5", "MR²/2", "2MR²/3"],
+          "answer": 1,
+          "why": "The standard result for a uniform solid sphere about a diameter is two fifths of MR squared."
+        },
+        {
+          "q": "For a body rolling without slipping, the contact point",
+          "options": ["Moves at v", "Moves at 2v", "Is instantaneously at rest", "Moves at ωR"],
+          "answer": 2,
+          "why": "The translation and rotation cancel exactly at the point of contact, which is the condition for rolling without slipping."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the tabulated moments of inertia against your copy."
+    },
+    {
+      "id": "rotational-dynamics",
+      "ncert_ref": "Ch 6, System of Particles and Rotational Motion: rotational dynamics",
+      "key_phrase": "the same laws, turned around",
+      "meaning": "Every linear law has a rotational twin: force becomes torque, mass becomes moment of inertia, velocity becomes angular velocity, and F = ma becomes τ = Iα. Work and power follow the same pattern, with torque times angular displacement replacing force times distance. The parallel is exact for a rigid body about a fixed axis, which is why one set of equations covers both.",
+      "words": [
+        {
+          "term": "angular acceleration",
+          "meaning": "The rate of change of angular velocity, α.",
+          "breakdown": "It is produced by a net torque, in the same way acceleration is produced by a net force.",
+          "trap": "Angular acceleration is not the same as centripetal acceleration. One changes the spin rate, the other changes the direction of motion."
+        },
+        {
+          "term": "rigid body",
+          "meaning": "A body whose parts keep fixed distances from one another.",
+          "breakdown": "It can translate and rotate, but it cannot stretch or bend in this model.",
+          "trap": "A real body is never perfectly rigid. The model ignores deformation, which is why it fails for a spring or a rubber ball."
+        },
+        {
+          "term": "rotational kinetic energy",
+          "meaning": "The energy of rotation, equal to ½Iω².",
+          "breakdown": "A rolling body has both ½mv² and ½Iω².",
+          "trap": "Using only ½mv² for a rolling body leaves out half the energy and gives the wrong speed at the bottom of a slope."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M160 20v110'/><path class='d-accent' d='M160 84l40-44M186 44l14-4-4 14'/><rect class='d-line' x='150' y='30' width='20' height='20' rx='2'/><text class='d-label' x='196' y='34'>torque</text><text class='d-label' x='196' y='52'>turns the body</text><text class='d-label' x='24' y='120'>τ = Iα, the same shape as F = ma</text></svg>",
+      "visual_alt": "A rigid body on an axis with a torque arrow, captioned with the rotational analogue of Newton's second law.",
+      "hook": "Physics does not invent a second set of laws for spinning. It renames the first set.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Rolling down an incline questions compare accelerations: the body with the smaller I/MR² arrives first, so a solid sphere beats a ring.",
+      "trap": "The acceleration down a slope does not depend on mass or radius, only on the shape factor. That surprises most students.",
+      "recall": [
+        {
+          "q": "A solid sphere and a ring roll down the same incline from rest. Which arrives first?",
+          "options": ["The ring", "The sphere", "Both together", "Depends on their masses"],
+          "answer": 1,
+          "why": "The sphere has the smaller shape factor, so more of its energy goes into forward motion and it accelerates faster."
+        },
+        {
+          "q": "The rotational analogue of F = ma is",
+          "options": ["τ = Iα", "τ = Iω", "L = Iω", "P = τω"],
+          "answer": 0,
+          "why": "Torque replaces force, moment of inertia replaces mass and angular acceleration replaces linear acceleration."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the rolling results against your copy."
+    }
+  ]
+}
