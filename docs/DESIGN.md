@@ -102,7 +102,9 @@ diagram plates are square. Nothing else is rounded.
 | Field | underline only, 1px rule | focus ink underline 2px, error rule + message |
 | Segmented control | rule under the group, selected is a 2px ink bar under the label | hover, focus, selected |
 | Progress | 2px track, subject-filled bar, tabular count beside | any value, including 0 |
-| Chapter row | ruled row, numeral, title, meta, progress hairline | hover band, focus ring |
+| Chapter row | ruled row, right aligned numeral, title, meta, progress hairline | hover band, focus ring |
+| Subject index row | numeral, cover 56px, name, counts, progress, chevron | hover band, focus ring |
+| Masthead | kicker, display title, four figure band, one note | static |
 | Margin note | label + content, hairline above, no box | collapsible on phone |
 | Sheet | native `<dialog>`, panel background, 3px top corners only | open, closing, offline |
 | Toast | bottom band, ink background, one line, one action | auto-dismiss 6s |
@@ -110,6 +112,30 @@ diagram plates are square. Nothing else is rounded.
 | Skeleton | bars shaped like the real content, pulsing 1.4s | reduced motion: static |
 
 Focus is always visible: 3px accent outline, 2px offset. Touch targets are 44px.
+
+## Shell
+
+Three layouts, one code path. The rail renders at every width but is hidden below 1000px, so
+sections never appear twice.
+
+| Width | Navigation | Content |
+| --- | --- | --- |
+| below 760px | top bar with brand and tools, fixed 5 item tab bar at the bottom | one column, 20px gutters |
+| 760 to 999px | top bar with labelled sections | one column, 32px gutters |
+| 1000px and up | fixed 15rem rail: brand, sections, subject counts, search, settings, version | body is offset by the rail, content centred in the remaining width |
+
+The rail is a list of links, not a panel of widgets: no avatars, no counters that animate, no
+collapse control. The active section carries a 2px accent bar on its left edge, the same mark the
+phone tab bar uses underneath.
+
+Home opens with a masthead: a lowercase kicker, the promise at display size, then four figures on
+a shared baseline divided by hairlines. Below it the subject index is a ruled table, one row per
+subject, with its drawn cover at 56px, chapter and paragraph counts, and progress. A three-tile
+band was tried first and removed: three equal cards in a row is the shape every generated page
+reaches for, and ruled rows say "index" more clearly.
+
+Every chapter screen opens with a 2px rule in the subject's ink, then the back link, the title and
+the count. The margin rail begins on the same baseline as the reading text.
 
 ## Diagrams
 

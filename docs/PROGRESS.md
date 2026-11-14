@@ -60,3 +60,23 @@ Verified this session: lint 0, 49 unit tests, build 0, 23 e2e, contrast script p
 regenerated and reviewed at 360 and 1280. Not verified: any page or line reference, because no
 NCERT edition or PDF has been supplied, and the accounts work, which is still blocked on a
 Supabase project.
+
+## 2026-11-14
+
+**Ten more chapters, written to the same standard.** Physics 3 (Motion in a Plane), 5 (Work, Energy
+and Power), 6 (System of Particles and Rotational Motion) and 7 (Gravitation); Chemistry 5
+(Thermodynamics), 6 (Equilibrium) and 7 (Redox Reactions); Biology 1 (The Living World), 2
+(Biological Classification) and 7 (Structural Organisation in Animals). Each has four draft
+paragraphs with a diagram, three tricky words with a trap, an exam note and two recall questions.
+Content is now 19 chapters, 106 paragraphs, 315 words across three subjects. All draft, all with a
+review note, none claiming a page or line.
+
+**Shell rebuilt for desktop.** A fixed 15rem rail now holds the brand, sections, subject counts and
+settings on screens of 1000px and up; the top bar and tab bar stay for phones and tablets. Home
+opens with a masthead: kicker, promise, and a four figure band on shared hairlines. The three tile
+band was removed in favour of a ruled subject index, and chapter numerals are right aligned so
+every row starts on the same axis. The reader opens with a 2px rule in the subject's ink.
+
+Verified: content build 19 chapters, 0 errors; typecheck 0; lint 0; 49 unit tests; 23 e2e; build 0,
+initial JS 112.51 kB gzip; 104 screenshots regenerated and reviewed at 360 and 1280 in both themes.
+Not verified: page and line references, expert review, accounts.
