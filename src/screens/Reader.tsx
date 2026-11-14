@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { chapterIndex, metaOf } from '../content'
 import { inChapterOrder } from '../catalogue'
+import { sectionForChapter } from '../sections'
+import { Crumbs } from '../components/Crumbs'
 import { useChapter } from '../hooks'
 import { Card } from '../components/Card'
 import { Empty, Skeleton } from '../components/States'
@@ -84,6 +86,7 @@ export function Reader({ id, para }: { id: string; para?: string }) {
   }
 
   const p = ch.paragraphs[i]
+  const shelf = sectionForChapter(ch.id)
   const siblings = inChapterOrder(chapterIndex.filter((c) => c.subject === ch.subject))
   const at = siblings.findIndex((c) => c.id === ch.id)
   const next = siblings[at + 1]
@@ -99,9 +102,20 @@ export function Reader({ id, para }: { id: string; para?: string }) {
       }}
     >
       <header className="reader-head">
-        <a className="back" href="#/">
-          <Icon name="left" size={16} /> Chapters
-        </a>
+        <Crumbs
+          items={[
+            { label: 'Home', href: '#/' },
+            { label: ch.subject, href: `#/s/${encodeURIComponent(ch.subject)}` },
+            ...(shelf
+              ? [
+                  {
+                    label: shelf.name,
+                    href: `#/s/${encodeURIComponent(ch.subject)}/${shelf.slug}`,
+                  },
+                ]
+              : []),
+          ]}
+        />
         <h1 className="chapter-title">{ch.title}</h1>
         <p className="chapter-sub">
           Class {ch.class} {ch.subject}

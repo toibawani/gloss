@@ -6,6 +6,7 @@ import { sectionsOf, sectionOf } from '../sections'
 import * as store from '../store'
 import { ChapterList } from '../components/ChapterList'
 import { Cover } from '../components/Cover'
+import { Crumbs } from '../components/Crumbs'
 import { Icon } from '../icons'
 
 export function Library({ only, section }: { only?: string; section?: string }) {
@@ -65,9 +66,14 @@ export function Library({ only, section }: { only?: string; section?: string }) 
     return (
       <>
         <header className="page-head">
-          <a className="back" href={`#/s/${encodeURIComponent(only)}`}>
-            <Icon name="left" size={16} /> {only}
-          </a>
+          <Crumbs
+            items={[
+              { label: 'Home', href: '#/' },
+              { label: 'Library', href: '#/library' },
+              { label: only, href: `#/s/${encodeURIComponent(only)}` },
+              { label: open.name },
+            ]}
+          />
           <p className="hero-subject">
             Section {openAt + 1} of {shelf.length} · Class {list[0]?.class ?? 11} {only}
           </p>
@@ -110,6 +116,11 @@ export function Library({ only, section }: { only?: string; section?: string }) 
 
   return (
     <>
+      {only && (
+        <Crumbs
+          items={[{ label: 'Home', href: '#/' }, { label: 'Library', href: '#/library' }, { label: only }]}
+        />
+      )}
       <header className="page-head">
         <p className="hero-subject">
           {chapterIndex.length} chapters · {totalParagraphs} paragraphs
@@ -120,6 +131,26 @@ export function Library({ only, section }: { only?: string; section?: string }) 
             ? `${only} is organised by section. Open a section to see its chapters; the chapter number is the NCERT number, not a running count.`
             : 'Every chapter written so far, by subject. Chapters that are not here have not been written yet; nothing is listed twice and no chapter is faked.'}
         </p>
+        {!only && (
+          <dl className="masthead-stats library-stats">
+            <div>
+              <dt>subjects written</dt>
+              <dd>{groups.length}</dd>
+            </div>
+            <div>
+              <dt>chapters</dt>
+              <dd>{chapterIndex.length}</dd>
+            </div>
+            <div>
+              <dt>paragraphs</dt>
+              <dd>{totalParagraphs}</dd>
+            </div>
+            <div>
+              <dt>read on this device</dt>
+              <dd>{Object.values(prog).reduce((n, ids) => n + ids.length, 0)}</dd>
+            </div>
+          </dl>
+        )}
       </header>
 
       {shown.length === 0 && <p className="inline-note">No subject matches that name.</p>}
