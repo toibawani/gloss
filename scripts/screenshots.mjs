@@ -40,6 +40,8 @@ const pages = [
   ['reader-visual', '/#/c/bio-11-ch8/what-is-a-cell'],
   ['reader-physics', '/#/c/phy-11-ch1/si-base-units'],
   ['library', '/#/library'],
+  ['subject', '/#/s/Biology'],
+  ['section', '/#/s/Biology/cell-structure-and-function'],
   ['words', '/#/words'],
   ['revise', '/#/revise'],
   ['search', '/#/search'],

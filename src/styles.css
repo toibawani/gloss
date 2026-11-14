@@ -2251,3 +2251,22 @@ fieldset.field > legend {
   font-family: var(--sans);
   font-weight: 600;
 }
+
+/* Section shelves reuse the subject index, minus the cover column. */
+.section-index a {
+  grid-template-columns: 2.5rem minmax(0, 1fr) 1.5rem;
+}
+
+.section-index .index-read {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .section-index a {
+    grid-template-columns: 3rem minmax(0, 1fr) 7rem 1.5rem;
+  }
+
+  .section-index .index-read {
+    display: block;
+  }
+}

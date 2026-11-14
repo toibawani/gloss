@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { chapterIndex, metaOf } from '../content'
+import { inChapterOrder } from '../catalogue'
 import { useChapter } from '../hooks'
 import { Card } from '../components/Card'
 import { Empty, Skeleton } from '../components/States'
@@ -83,7 +84,7 @@ export function Reader({ id, para }: { id: string; para?: string }) {
   }
 
   const p = ch.paragraphs[i]
-  const siblings = chapterIndex.filter((c) => c.subject === ch.subject)
+  const siblings = inChapterOrder(chapterIndex.filter((c) => c.subject === ch.subject))
   const at = siblings.findIndex((c) => c.id === ch.id)
   const next = siblings[at + 1]
 

@@ -1,4 +1,5 @@
-import { chapterIndex, type ChapterMeta } from '../content'
+import type { ChapterMeta } from '../content'
+import { numberOf } from '../catalogue'
 import { Icon } from '../icons'
 import { Meter } from './Meter'
 
@@ -12,8 +13,7 @@ export function ChapterList({ chapters, progress }: { chapters: ChapterMeta[]; p
     <ul className="chapter-list">
       {chapters.map((c) => {
         const read = (progress[c.id] ?? []).length
-        const siblings = chapterIndex.filter((x) => x.subject === c.subject)
-        const no = siblings.findIndex((x) => x.id === c.id) + 1
+        const no = numberOf(c.id)
         return (
           <li key={c.id}>
             <a className="chapter-row" href={`#/c/${c.id}`}>

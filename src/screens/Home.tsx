@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { chapterIndex, totalParagraphs } from '../content'
+import { inChapterOrder } from '../catalogue'
 import { useChapter } from '../hooks'
 import * as store from '../store'
 import { Card } from '../components/Card'
@@ -32,8 +33,9 @@ export function Home() {
     return [...map.entries()]
   }, [])
 
-  const started = chapterIndex.filter((c) => (prog[c.id] ?? []).length > 0).slice(0, 3)
-  const latest = [...chapterIndex].slice(-3).reverse()
+  const started = inChapterOrder(chapterIndex.filter((c) => (prog[c.id] ?? []).length > 0)).slice(0, 3)
+  // Three ways in: the first chapter of each subject, in number order.
+  const starts = groups.map(([, list]) => inChapterOrder(list)[0]).filter(Boolean)
 
   if (chapterIndex.length === 0) {
     return <Empty art="lost" title="No chapters in this build" text="The content index is empty. Rebuild the site and reload." />
@@ -122,12 +124,12 @@ export function Home() {
         </section>
       )}
 
-      <section className="home-block" aria-labelledby="new-title">
+      <section className="home-block" aria-labelledby="start-title">
         <div className="section-head">
-          <h2 id="new-title">New in the library</h2>
+          <h2 id="start-title">Start here</h2>
           <a href="#/library">All chapters</a>
         </div>
-        <ChapterList chapters={latest} progress={prog} />
+        <ChapterList chapters={starts} progress={prog} />
       </section>
 
       {firstRun && (

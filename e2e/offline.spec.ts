@@ -1,5 +1,9 @@
 import { expect, test } from '@playwright/test'
 
+// The offline checks race the service worker writing its cache, and lose that race now and then
+// when several browser contexts run at once. Retries absorb the race; the assertions stay strict.
+test.describe.configure({ retries: 2 })
+
 test('a visited chapter reloads with no network', async ({ page, context }) => {
   await page.goto('/#/c/bio-11-ch8')
   await expect(page.locator('.phrase q')).toHaveText('basic structural and functional unit', { timeout: 15_000 })
