@@ -1,0 +1,201 @@
+{
+  "id": "bio-11-ch7",
+  "subject": "Biology",
+  "class": 11,
+  "title": "Structural Organisation in Animals",
+  "book": "NCERT Biology Class XI",
+  "paragraphs": [
+    {
+      "id": "epithelium",
+      "ncert_ref": "Structural Organisation in Animals: epithelial tissue",
+      "key_phrase": "a sheet with two faces",
+      "meaning": "Epithelial tissue covers surfaces and lines cavities, and every epithelium has a free surface and a base resting on a basement membrane. Its cells are packed tightly with almost no space between them, which is what makes it a barrier. The shape of the cells and the number of layers decide its job: flat cells for exchange, cuboidal for secretion, columnar for absorption.",
+      "words": [
+        {
+          "term": "basement membrane",
+          "meaning": "The thin layer under an epithelium that anchors it to the tissue below.",
+          "breakdown": "It is non-cellular and made of proteins and glycoproteins.",
+          "trap": "The basement membrane is not a cell layer. Calling it a membrane of cells confuses it with the plasma membrane."
+        },
+        {
+          "term": "squamous epithelium",
+          "meaning": "A single layer of flat cells, found where diffusion must be easy.",
+          "breakdown": "It lines the alveoli and blood vessels, and forms the skin's outer layer.",
+          "trap": "Flat does not mean weak. Squamous cells are thin so gases cross quickly, which is the point."
+        },
+        {
+          "term": "goblet cell",
+          "meaning": "A columnar cell that secretes mucus.",
+          "breakdown": "Found in the lining of the intestine and respiratory tract.",
+          "trap": "Goblet cells are unicellular glands within an epithelium, not a separate tissue."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 56h240'/><path class='d-guide' d='M40 46h240'/><rect class='d-line' x='40' y='56' width='36' height='24'/><rect class='d-line' x='80' y='56' width='36' height='24'/><rect class='d-line' x='120' y='56' width='36' height='30'/><rect class='d-line' x='160' y='56' width='36' height='30'/><rect class='d-line' x='200' y='56' width='36' height='44'/><rect class='d-line' x='240' y='56' width='36' height='44'/><text class='d-label' x='40' y='40'>free surface</text><text class='d-label' x='40' y='104'>basement membrane</text><text class='d-label' x='40' y='132'>flat, cuboidal, then tall columnar</text></svg>",
+      "visual_alt": "Epithelial cells drawn in a row, changing from flat to cuboidal to tall columnar, with the free surface and basement membrane labelled.",
+      "hook": "The skin on your hand and the lining of your lung are the same kind of tissue doing two different jobs.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Match structure to location: squamous in alveoli, cuboidal in kidney tubules, ciliated columnar in the respiratory tract.",
+      "trap": "Cilia move mucus; microvilli increase surface area. They look similar in a diagram but do different jobs.",
+      "recall": [
+        {
+          "q": "The alveoli of the lungs are lined by",
+          "options": ["Cuboidal epithelium", "Squamous epithelium", "Columnar epithelium", "Ciliated epithelium"],
+          "answer": 1,
+          "why": "Flat squamous cells give the thinnest barrier, which is what rapid gas exchange needs."
+        },
+        {
+          "q": "Epithelial tissue is attached to the tissue below by",
+          "options": ["Tight junctions only", "A basement membrane", "Cartilage", "Blood vessels"],
+          "answer": 1,
+          "why": "The non-cellular basement membrane anchors the epithelium and separates it from the underlying connective tissue."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and confirm the tissue examples in your printing."
+    },
+    {
+      "id": "connective-tissue",
+      "ncert_ref": "Structural Organisation in Animals: connective tissue",
+      "key_phrase": "cells scattered in a matrix",
+      "meaning": "Connective tissue is defined by its matrix, not its cells: a few cells sit spread out in a large amount of material they secreted. The matrix decides the property, from the flexible gel of loose connective tissue to the hard calcium phosphate of bone. Blood is a connective tissue too, with a liquid matrix and cells floating in it.",
+      "words": [
+        {
+          "term": "matrix",
+          "meaning": "The non-cellular material around connective tissue cells.",
+          "breakdown": "It may be liquid as in blood, gel-like as in areolar tissue, or solid as in bone.",
+          "trap": "The matrix is not empty space. It is secreted by the cells and carries the tissue's mechanical properties."
+        },
+        {
+          "term": "tendon",
+          "meaning": "A cord of dense connective tissue joining muscle to bone.",
+          "breakdown": "Tendons are strong and inelastic, made mostly of collagen fibres.",
+          "trap": "A ligament joins bone to bone and is elastic. Swapping tendon and ligament is the commonest error in this section."
+        },
+        {
+          "term": "adipose tissue",
+          "meaning": "Loose connective tissue with cells packed with fat.",
+          "breakdown": "It stores energy, cushions organs and insulates the body.",
+          "trap": "Fat is not dead tissue. Adipose cells are living and take part in hormone signalling."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='30' y='34' width='80' height='72' rx='2'/><circle class='d-fill' cx='52' cy='56' r='4'/><circle class='d-fill' cx='80' cy='80' r='4'/><path class='d-guide' d='M30 106h80'/><text class='d-label' x='30' y='126'>few cells</text><text class='d-label' x='126' y='52'>matrix</text><text class='d-label' x='126' y='70'>decides the property</text><path class='d-muted' d='M126 96c50 0 60 24 120 24'/><text class='d-label' x='126' y='140'>tendon to bone, ligament bone to bone</text></svg>",
+      "visual_alt": "A connective tissue block with sparse cells in a large matrix, plus a note contrasting tendon and ligament.",
+      "hook": "In most tissues the cells do the work. Here the material between them does.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Questions test the tendon and ligament distinction, and the identity of blood as connective tissue. Both are reliable marks.",
+      "trap": "Blood is connective tissue because of its plasma matrix, not a separate category. This appears in almost every paper.",
+      "recall": [
+        {
+          "q": "A ligament connects",
+          "options": ["Muscle to bone", "Bone to bone", "Muscle to muscle", "Nerve to muscle"],
+          "answer": 1,
+          "why": "Ligaments join bone to bone and are elastic, while tendons join muscle to bone and are inelastic."
+        },
+        {
+          "q": "Blood is classified as connective tissue because",
+          "options": ["It has many cells", "It has a liquid matrix", "It flows", "It carries oxygen"],
+          "answer": 1,
+          "why": "The defining feature of connective tissue is a matrix, and in blood that matrix is plasma."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the tissue descriptions against your copy."
+    },
+    {
+      "id": "muscle-tissue",
+      "ncert_ref": "Structural Organisation in Animals: muscle tissue",
+      "key_phrase": "three kinds, one contractile job",
+      "meaning": "Muscle tissue contracts, and it comes in three forms. Skeletal muscle is striped, has many nuclei per cell and moves under conscious control. Smooth muscle is unstriped with single spindle-shaped cells and works without our will, while cardiac muscle is striped but involuntary and has intercalated discs, so heart cells contract as one unit.",
+      "words": [
+        {
+          "term": "striated muscle",
+          "meaning": "Muscle with alternating light and dark bands visible under a microscope.",
+          "breakdown": "Skeletal and cardiac muscle are striated; smooth muscle is not.",
+          "trap": "Stripes do not mean voluntary. Cardiac muscle is striated and involuntary, which breaks the simple rule."
+        },
+        {
+          "term": "intercalated disc",
+          "meaning": "The junction between adjacent cardiac muscle cells.",
+          "breakdown": "It lets electrical signals pass quickly from cell to cell.",
+          "trap": "Intercalated discs are found only in cardiac muscle. They are not part of skeletal muscle."
+        },
+        {
+          "term": "smooth muscle",
+          "meaning": "Unstriped, involuntary muscle in the walls of hollow organs.",
+          "breakdown": "Found in the stomach, intestine, blood vessels and bladder.",
+          "trap": "Smooth muscle cells are spindle-shaped and single-nucleated, unlike the long multinucleate skeletal fibres."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='26' y='40' width='90' height='30' rx='2'/><path class='d-muted' d='M30 50h82M30 60h82'/><path class='d-accent' d='M30 50h82'/><path class='d-line' d='M26 96h90'/><path class='d-accent' d='M40 96c0-18 20-18 20 0M70 96c0-18 20-18 20 0M100 96c0-18 16-18 16 0'/><rect class='d-line' x='190' y='40' width='90' height='30' rx='2'/><path class='d-guide' d='M232 40v30'/><text class='d-label' x='26' y='86'>skeletal: striped, many nuclei</text><text class='d-label' x='26' y='132'>smooth: unstriped, spindle cells</text><text class='d-label' x='190' y='86'>cardiac: striped, discs</text></svg>",
+      "visual_alt": "Skeletal, smooth and cardiac muscle drawn in three rows, each labelled with its distinguishing feature.",
+      "hook": "Your heart is striped like a leg muscle, and you still cannot tell it to stop.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Cardiac muscle is the exception that appears in every paper: striated but involuntary, with intercalated discs.",
+      "trap": "Skeletal muscle fibres are multinucleate, not single-nucleate. That is one of the standard distinguishing points.",
+      "recall": [
+        {
+          "q": "Cardiac muscle is",
+          "options": ["Striated and voluntary", "Unstriped and involuntary", "Striated and involuntary", "Unstriped and voluntary"],
+          "answer": 2,
+          "why": "It shows stripes like skeletal muscle but is not under conscious control, and its cells are joined by intercalated discs."
+        },
+        {
+          "q": "Intercalated discs are found in",
+          "options": ["Skeletal muscle", "Smooth muscle", "Cardiac muscle", "Nervous tissue"],
+          "answer": 2,
+          "why": "They join cardiac muscle cells so that the heart contracts as a coordinated unit."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the muscle descriptions against your copy."
+    },
+    {
+      "id": "neural-tissue",
+      "ncert_ref": "Structural Organisation in Animals: neural tissue",
+      "key_phrase": "neurons carry, glia support",
+      "meaning": "Nervous tissue is built of neurons, which carry electrical signals, and glial cells, which support and insulate them. A neuron has a cell body, dendrites that receive signals and an axon that carries them away. Many axons are wrapped in myelin, which speeds conduction and gives white matter its colour.",
+      "words": [
+        {
+          "term": "axon",
+          "meaning": "The long process of a neuron that carries impulses away from the cell body.",
+          "breakdown": "It ends in terminals that pass the signal to the next cell.",
+          "trap": "Dendrites carry signals towards the cell body. Reversing the two is the standard slip."
+        },
+        {
+          "term": "myelin sheath",
+          "meaning": "A fatty insulating layer around many axons.",
+          "breakdown": "Formed by Schwann cells outside the brain, and it speeds up conduction.",
+          "trap": "Myelin does not carry the signal. It insulates the axon so the signal jumps between gaps."
+        },
+        {
+          "term": "neuroglia",
+          "meaning": "Supporting cells of nervous tissue that do not conduct impulses themselves.",
+          "breakdown": "They supply nutrients, remove waste and insulate neurons.",
+          "trap": "Glial cells are not neurons. They outnumber neurons but do not fire action potentials in the same way."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='76' cy='74' r='16'/><path class='d-accent' d='M60 62l-20-14M58 74H34M60 86l-18 14'/><path class='d-accent' d='M92 74h120'/><path class='d-muted' d='M104 66h24M136 66h24M168 66h24'/><path class='d-accent' d='M212 68l16 6-16 6'/><text class='d-label' x='26' y='34'>dendrites in</text><text class='d-label' x='196' y='46'>axon out</text><text class='d-label' x='104' y='120'>myelin wraps the axon</text></svg>",
+      "visual_alt": "A neuron with dendrites receiving on the left, an axon leaving right and myelin segments along it.",
+      "hook": "Signals arrive on many branches and leave on one cable.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Label a neuron correctly: dendrite, cell body, axon, myelin, terminal. Direction of impulse is a favourite question.",
+      "trap": "An impulse travels from dendrite to axon, never the other way in a normal neuron. Synapses are one-way junctions.",
+      "recall": [
+        {
+          "q": "Impulses travel along a neuron from",
+          "options": ["Axon to dendrite", "Dendrite to axon", "Either direction", "Only within myelin"],
+          "answer": 1,
+          "why": "Dendrites receive and the axon carries the impulse away towards the next cell, which makes the junction one-way."
+        },
+        {
+          "q": "The myelin sheath",
+          "options": ["Carries the impulse", "Insulates and speeds conduction", "Produces neurotransmitters", "Forms the cell body"],
+          "answer": 1,
+          "why": "Myelin insulates the axon, so the impulse jumps between the gaps and travels faster."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the neuron parts against your copy."
+    }
+  ]
+}

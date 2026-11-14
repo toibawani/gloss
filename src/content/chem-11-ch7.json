@@ -1,0 +1,201 @@
+{
+  "id": "chem-11-ch7",
+  "subject": "Chemistry",
+  "class": 11,
+  "title": "Redox Reactions",
+  "book": "NCERT Chemistry Class XI",
+  "paragraphs": [
+    {
+      "id": "oxidation-numbers",
+      "ncert_ref": "Redox Reactions: oxidation number",
+      "key_phrase": "electrons counted as if fully transferred",
+      "meaning": "Oxidation number is a bookkeeping device: electrons in a bond are assigned to the more electronegative atom, as if the bond were fully ionic. That makes it possible to track electron transfer in molecules where no ions exist. Elements in their free state have zero, oxygen is usually -2, hydrogen is usually +1, and the sum must match the charge on the species.",
+      "words": [
+        {
+          "term": "oxidation number",
+          "meaning": "The charge an atom would have if its bonds were treated as fully ionic.",
+          "breakdown": "It is written with a sign, unlike an ionic charge which is written with the number first in formulae.",
+          "trap": "Oxidation number is not a real charge. In a covalent molecule there is no actual ion to carry it."
+        },
+        {
+          "term": "oxidation",
+          "meaning": "Loss of electrons, shown by an increase in oxidation number.",
+          "breakdown": "It always happens together with reduction, since electrons must go somewhere.",
+          "trap": "Oxidation does not require oxygen. Sodium oxidises when it loses an electron to chlorine."
+        },
+        {
+          "term": "reduction",
+          "meaning": "Gain of electrons, shown by a decrease in oxidation number.",
+          "breakdown": "The oxidising agent is the species that gets reduced.",
+          "trap": "The oxidising agent is reduced, which sounds backwards but is correct. It takes electrons from the other substance."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 118h260M30 118V34'/><circle class='d-fill' cx='90' cy='74' r='5'/><circle class='d-fill' cx='230' cy='74' r='5'/><path class='d-accent' d='M96 66l128 0M212 58l12 8-12 8'/><path class='d-muted' d='M96 86l120 0M104 78l-12 8 12 8'/><text class='d-label' x='110' y='48'>loses electrons: oxidised</text><text class='d-label' x='96' y='106'>gains electrons: reduced</text><text class='d-label' x='30' y='26'>both at once</text></svg>",
+      "visual_alt": "Two species with electrons passing from one to the other, labelled oxidation and reduction happening together.",
+      "hook": "There is no such thing as a half reaction in a beaker. Electrons have to go somewhere.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Find the oxidation number of an element in a compound or ion. Start from the fixed values and make the sum equal the overall charge.",
+      "trap": "Oxygen has a -2 state, not -2 in every compound. In peroxides it is -1, and in OF2 it is positive.",
+      "recall": [
+        {
+          "q": "The oxidation number of chromium in dichromate, Cr2O7 with a 2- charge, is",
+          "options": ["+3", "+6", "+7", "-6"],
+          "answer": 1,
+          "why": "Two chromium atoms plus seven oxygens at -2 must total -2, so each chromium is +6."
+        },
+        {
+          "q": "An oxidising agent is",
+          "options": ["Oxidised itself", "Reduced itself", "Unchanged", "Always a metal"],
+          "answer": 1,
+          "why": "It takes electrons from the other substance, so it gains electrons and is reduced."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the oxidation number rules against your copy."
+    },
+    {
+      "id": "balancing-redox",
+      "ncert_ref": "Redox Reactions: balancing by the half reaction method",
+      "key_phrase": "balance atoms, then charge, then electrons",
+      "meaning": "To balance a redox equation, split it into oxidation and reduction half reactions, balance atoms other than oxygen and hydrogen first, then oxygen with water and hydrogen with hydrogen ions in acidic solution, and finally charge with electrons. Multiply the halves so the electrons cancel, and add. The electron count is the check: if they do not cancel, the equation is not balanced yet.",
+      "words": [
+        {
+          "term": "half reaction",
+          "meaning": "The oxidation or reduction part of a redox reaction, written separately.",
+          "breakdown": "One half shows electrons lost, the other electrons gained.",
+          "trap": "A half reaction is a bookkeeping tool, not something you can bottle. The two halves always occur together."
+        },
+        {
+          "term": "spectator ion",
+          "meaning": "An ion that is present but does not take part in the reaction.",
+          "breakdown": "In ionic equations they are left out of the balanced equation.",
+          "trap": "Spectator ions are not absent from the solution. They are simply unchanged, so they are omitted from the equation."
+        },
+        {
+          "term": "n-factor",
+          "meaning": "The number of electrons gained or lost per formula unit in a redox change.",
+          "breakdown": "It converts moles of substance to equivalents in titration calculations.",
+          "trap": "The n-factor depends on the reaction, not just the compound. Permanganate has different values in acidic and basic media."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='24' y='30' width='120' height='40' rx='2'/><rect class='d-line' x='24' y='80' width='120' height='40' rx='2'/><text class='d-label' x='34' y='54'>oxidation half</text><text class='d-label' x='34' y='104'>reduction half</text><path class='d-accent' d='M150 50h40M150 100h40M186 42l10 8-10 8M186 92l10 8-10 8'/><text class='d-label' x='200' y='58'>electrons must</text><text class='d-label' x='200' y='76'>cancel</text><text class='d-label' x='200' y='104'>then add</text></svg>",
+      "visual_alt": "Two half reactions feeding into a combined equation, with a note that electrons must cancel.",
+      "hook": "If the electrons do not cancel, you have not balanced anything yet.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Balancing in acidic medium uses water and hydrogen ions. In basic medium, add hydroxide to both sides to neutralise the hydrogen ions.",
+      "trap": "Adding water to balance oxygen changes hydrogen too, which then needs more hydrogen ions. Do it in the stated order.",
+      "recall": [
+        {
+          "q": "In acidic medium, oxygen atoms are balanced by adding",
+          "options": ["Hydroxide ions", "Water molecules", "Electrons", "Hydrogen gas"],
+          "answer": 1,
+          "why": "Water supplies the missing oxygen, and the hydrogen it brings is then balanced with hydrogen ions."
+        },
+        {
+          "q": "The number of electrons lost must equal",
+          "options": ["The number of atoms", "The number of electrons gained", "The charge on the ion", "The number of water molecules"],
+          "answer": 1,
+          "why": "Electrons are not created or destroyed, so the oxidation half must release exactly what the reduction half takes."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the medium conventions against your copy."
+    },
+    {
+      "id": "disproportionation",
+      "ncert_ref": "Redox Reactions: disproportionation and types of redox reactions",
+      "key_phrase": "one element goes both ways",
+      "meaning": "In a disproportionation reaction, the same element is oxidised and reduced at once, as chlorine does in cold alkali, forming chloride and hypochlorite. It happens when an intermediate oxidation state is unstable with respect to two others. Combination, decomposition and displacement reactions are also redox, and the chapter sorts them by which atoms change oxidation number.",
+      "words": [
+        {
+          "term": "disproportionation",
+          "meaning": "A redox reaction in which one element is simultaneously oxidised and reduced.",
+          "breakdown": "Chlorine in cold dilute alkali gives chloride and hypochlorite.",
+          "trap": "Disproportionation needs one element in two different products. Two elements changing is not disproportionation."
+        },
+        {
+          "term": "displacement",
+          "meaning": "A reaction in which a more reactive element pushes a less reactive one out of its compound.",
+          "breakdown": "Zinc displaces copper from copper sulphate, and copper deposits.",
+          "trap": "Displacement is redox only when oxidation numbers change. Some metathesis reactions swap partners without any change."
+        },
+        {
+          "term": "comproportionation",
+          "meaning": "The reverse of disproportionation, where two oxidation states of an element combine into one.",
+          "breakdown": "It happens when two species of the same element react to give a single intermediate state.",
+          "trap": "Do not call every reaction with one product comproportionation. The element must start in two different oxidation states."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='140' y='24'>Cl2, zero</text><path class='d-guide' d='M150 32v20'/><path class='d-accent' d='M152 52l-52 34M152 52l52 34'/><text class='d-label' x='62' y='104'>Cl- in chloride, -1</text><text class='d-label' x='206' y='104'>Cl in hypochlorite, +1</text><text class='d-label' x='62' y='134'>same element, both ways, one reaction</text></svg>",
+      "visual_alt": "A chlorine atom splitting into two products with lower and higher oxidation numbers, showing one element going both ways.",
+      "hook": "Chlorine in cold alkali is both the oxidant and the reductant, in the same flask.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Identify disproportionation by checking one element on both sides with two different oxidation numbers. Chlorine, and sometimes nitrogen in nitrite, are the usual examples.",
+      "trap": "Not every reaction with the same element on both sides is disproportionation. The oxidation numbers must move in opposite directions.",
+      "recall": [
+        {
+          "q": "Disproportionation is a reaction in which",
+          "options": ["One element is both oxidised and reduced", "Two compounds exchange ions", "No oxidation number changes", "Only reduction occurs"],
+          "answer": 0,
+          "why": "The element starts at one oxidation state and appears in products at both a higher and a lower one."
+        },
+        {
+          "q": "Adding zinc to copper sulphate solution is an example of",
+          "options": ["Disproportionation", "Displacement", "Neutralisation", "Comproportionation"],
+          "answer": 1,
+          "why": "Zinc, more reactive than copper, displaces it from the solution, and both oxidation numbers change."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the examples against your copy."
+    },
+    {
+      "id": "redox-titration",
+      "ncert_ref": "Redox Reactions: redox titrations",
+      "key_phrase": "equivalents balance, not moles",
+      "meaning": "In a redox titration, the two substances react in a ratio set by the electrons transferred, not by their coefficients alone. That is why calculations use equivalents, moles multiplied by the n-factor, and set the equivalents equal. Permanganate is self-indicating: its purple colour disappears on reduction, so one extra drop marks the end point.",
+      "words": [
+        {
+          "term": "equivalence point",
+          "meaning": "The point at which the reactants have combined in their exact stoichiometric ratio.",
+          "breakdown": "In redox work, it is where the equivalents of oxidant equal the equivalents of reductant.",
+          "trap": "The end point is what you observe, the equivalence point is what is true. They are close but not the same thing."
+        },
+        {
+          "term": "self-indicating",
+          "meaning": "A titration where a reactant's own colour marks the end point.",
+          "breakdown": "Permanganate is purple when oxidised and colourless when reduced.",
+          "trap": "Self-indicating does not mean no indicator is needed in every case. It means this reactant happens to be coloured."
+        },
+        {
+          "term": "iodometry",
+          "meaning": "A titration method in which iodine released or consumed is measured with thiosulphate.",
+          "breakdown": "Starch gives the blue colour that marks the end point near the finish.",
+          "trap": "Iodometry and iodimetry are not the same. Iodometry measures iodine produced by a reaction, iodimetry titrates iodine directly."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M110 30h20v26h-20z'/><path class='d-line' d='M104 56h32v14h-32z'/><path class='d-accent' d='M120 70v6'/><path class='d-fill' d='M60 78h140v42H60z'/><text class='d-label' x='70' y='104'>purple fades to colourless</text><text class='d-label' x='150' y='40'>burette</text><text class='d-label' x='40' y='140'>one extra drop marks the end point</text></svg>",
+      "visual_alt": "A burette dropping permanganate into a flask, with the purple colour fading at the end point.",
+      "hook": "The purple is the indicator. When it stops disappearing, you are finished.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Redox titration numericals use n1V1 = n2V2 only when n-factors are included. Setting moles equal without them is the standard mistake.",
+      "trap": "The n-factor of permanganate is 5 in acidic medium and 3 in neutral or weakly basic medium. Using 5 in basic medium gives a wrong answer.",
+      "recall": [
+        {
+          "q": "In a redox titration, the correct relation uses",
+          "options": ["Moles only", "Equivalents, moles times n-factor", "Volumes only", "Masses only"],
+          "answer": 1,
+          "why": "The reactants combine in electron-equivalent amounts, so moles must be multiplied by the electrons transferred per formula unit."
+        },
+        {
+          "q": "Potassium permanganate acts as a self-indicating titrant because",
+          "options": ["It changes colour on reduction", "It is colourless always", "It needs starch", "It is a weak acid"],
+          "answer": 0,
+          "why": "Permanganate is intensely purple and becomes colourless when reduced, so the end point shows itself."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the n-factor values against your copy."
+    }
+  ]
+}
