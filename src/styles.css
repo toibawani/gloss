@@ -596,35 +596,6 @@ fieldset.field > legend {
 
 /* ------------------------------------------------------------------ today */
 
-.hero {
-  padding-bottom: var(--s-6);
-  border-bottom: 1px solid var(--rule);
-}
-
-/* On a wide screen the promise and the explanation sit side by side, bottom aligned, so the
-   opening fills the page instead of hugging the left edge. */
-@media (min-width: 900px) {
-  .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-    column-gap: 3rem;
-    align-items: end;
-    max-width: none;
-  }
-
-  .hero .hero-subject {
-    grid-column: 1 / -1;
-  }
-
-  .hero h1 {
-    max-width: none;
-  }
-
-  .hero .lede {
-    margin-top: 0;
-    padding-bottom: 0.35rem;
-  }
-}
 
 .hero-subject {
   font-size: var(--fs-sm);
@@ -714,6 +685,9 @@ fieldset.field > legend {
   color: var(--subject);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.04em;
+  /* Right aligned so every numeral ends on the same axis, whatever digit it starts with. */
+  text-align: right;
+  padding-inline-end: 0.5rem;
 }
 
 .chapter-body {
@@ -808,6 +782,8 @@ fieldset.field > legend {
 
 .reader-head {
   margin-bottom: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: 2px solid var(--subject);
 }
 
 .back {
@@ -1636,64 +1612,186 @@ fieldset.field > legend {
 
 /* ------------------------------------------------------------------ covers */
 
-.covers {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  margin-bottom: var(--s-6);
+/* ------------------------------------------------------------------ masthead */
+
+.masthead {
+  padding-bottom: var(--s-5);
 }
 
-.cover-card {
+.masthead-kicker {
+  margin-bottom: var(--s-3);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: lowercase;
+  color: var(--muted);
+}
+
+.masthead h1 {
+  font-family: var(--serif);
+  font-size: var(--fs-display);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  max-width: 16ch;
+  text-wrap: balance;
+}
+
+/* Four figures on one baseline, divided by the rules themselves. */
+.masthead-stats {
   display: grid;
-  justify-items: start;
-  align-content: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: var(--s-6) 0 var(--s-4);
+  background: var(--rule);
+  border-block: 1px solid var(--rule);
+}
+
+.masthead-stats > div {
+  display: flex;
+  flex-direction: column-reverse;
   gap: 2px;
-  padding: var(--s-4) var(--s-3) var(--s-4) var(--s-3);
-  border-right: 1px solid var(--rule);
-  background: color-mix(in srgb, var(--subject) 7%, var(--paper));
-  color: var(--ink);
+  padding: var(--s-3) var(--s-4) var(--s-3) 0;
+  background: var(--paper);
+}
+
+.masthead-stats dt {
+  order: 2;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+
+.masthead-stats dd {
+  order: 1;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--fs-2xl);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.masthead-note {
+  max-width: 36rem;
+  color: var(--muted);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+}
+
+@media (min-width: 760px) {
+  .masthead-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .masthead-stats > div {
+    padding-inline: var(--s-4);
+  }
+
+  .masthead-stats > div:first-child {
+    padding-inline-start: 0;
+  }
+}
+
+/* ------------------------------------------------------------------ subject index */
+
+.subject-index-block {
+  margin-bottom: var(--s-7);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding-bottom: var(--s-2);
+  border-bottom: 1px solid var(--ink);
+}
+
+.section-head h2 {
+  font-family: var(--serif);
+  font-size: var(--fs-xl);
+  letter-spacing: -0.02em;
+}
+
+.section-head span {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+.subject-index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.subject-index a {
+  display: grid;
+  grid-template-columns: 2.5rem 44px minmax(0, 1fr) 1.5rem;
+  align-items: center;
+  gap: var(--s-3);
+  min-height: 84px;
+  border-bottom: 1px solid var(--rule);
+  color: inherit;
   text-decoration: none;
-  transition: background var(--med) var(--ease), transform var(--fast) var(--ease);
 }
 
-.cover-card:hover {
-  background: color-mix(in srgb, var(--subject) 12%, var(--paper));
-  transform: translateY(-2px);
+.subject-index a:hover {
+  background: var(--panel);
 }
 
-.cover-card:hover .cover-art {
-  color: var(--subject);
-}
-
-.cover-card:last-child {
-  border-right: 0;
-}
-
-.cover-card:hover .cover-name {
+.subject-index a:hover .index-name {
   color: var(--accent);
+}
+
+.index-no {
+  font-family: var(--serif);
+  font-size: var(--fs-xl);
+  color: var(--subject);
+  font-variant-numeric: tabular-nums;
+}
+
+.index-name {
+  display: grid;
+  gap: 2px;
+  font-family: var(--serif);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+
+.index-meta {
+  font-family: var(--sans);
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.index-read {
+  display: none;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.index-go {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--muted);
+}
+
+@media (min-width: 760px) {
+  .subject-index a {
+    grid-template-columns: 3rem 56px minmax(0, 1fr) 7rem 1.5rem;
+  }
+
+  .index-read {
+    display: block;
+  }
 }
 
 .cover-art {
   display: block;
   color: var(--ink);
-  margin-bottom: var(--s-2);
   height: 56px;
   width: auto;
-}
-
-.cover-name {
-  font-family: var(--serif);
-  font-size: var(--fs-lg);
-  font-weight: 600;
-  line-height: 1.15;
-}
-
-.cover-meta {
-  color: var(--muted);
-  font-size: var(--fs-xs);
-  line-height: 1.4;
-  font-variant-numeric: tabular-nums;
 }
 
 .library-subject {
@@ -1950,5 +2048,140 @@ fieldset.field > legend {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* ------------------------------------------------------------------ desktop rail */
+
+/* On a wide screen the sections move into a fixed spine. A phone keeps the top bar and
+   the tab bar; neither is rendered twice because the rail is display:none below 1000px. */
+.rail {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  body {
+    padding-left: 15rem;
+  }
+
+  .top,
+  .tabbar {
+    display: none;
+  }
+
+  .rail {
+    position: fixed;
+    inset-block: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-6);
+    width: 15rem;
+    padding: var(--s-5) var(--s-5) var(--s-4);
+    border-right: 1px solid var(--rule);
+    background: var(--paper);
+    overflow-y: auto;
+  }
+
+  .rail-brand {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .rail-brand svg {
+    display: block;
+    height: 26px;
+    width: auto;
+  }
+
+  .rail-nav {
+    display: grid;
+    gap: 2px;
+  }
+
+  .rail-nav a {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: 44px;
+    padding-left: var(--s-3);
+    border-left: 2px solid transparent;
+    color: var(--muted);
+    font-size: var(--fs-base);
+    text-decoration: none;
+  }
+
+  .rail-nav a:hover {
+    color: var(--ink);
+  }
+
+  .rail-nav a[aria-current='page'] {
+    color: var(--ink);
+    font-weight: 600;
+    border-left-color: var(--accent);
+  }
+
+  .rail-block {
+    display: grid;
+    gap: var(--s-1);
+  }
+
+  .rail-subjects {
+    display: grid;
+    gap: 2px;
+  }
+
+  .rail-subjects a {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: 40px;
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    text-decoration: none;
+  }
+
+  .rail-subjects a:hover {
+    color: var(--ink);
+  }
+
+  .rail-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--subject);
+  }
+
+  .rail-count {
+    margin-left: auto;
+    color: var(--rule-strong);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rail-foot {
+    display: grid;
+    gap: var(--s-1);
+    margin-top: auto;
+  }
+
+  .rail-foot a {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: 40px;
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    text-decoration: none;
+  }
+
+  .rail-foot a:hover {
+    color: var(--ink);
+  }
+
+  .rail-foot p {
+    margin-top: var(--s-2);
+    color: var(--muted);
+    font-size: var(--fs-xs);
+    line-height: 1.5;
   }
 }
