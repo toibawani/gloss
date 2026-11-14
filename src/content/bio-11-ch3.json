@@ -1,0 +1,201 @@
+{
+  "id": "bio-11-ch3",
+  "subject": "Biology",
+  "class": 11,
+  "title": "Plant Kingdom",
+  "book": "NCERT Biology Class XI",
+  "paragraphs": [
+    {
+      "id": "algae",
+      "ncert_ref": "Plant Kingdom: algae",
+      "key_phrase": "chlorophyll, water and no true roots",
+      "meaning": "Algae are photosynthetic organisms with a simple body called a thallus and no true roots, stems or leaves. They are grouped by pigment into green, brown and red algae. Their reproduction can be vegetative by fragmentation, asexual by spores, or sexual with gametes, and the group matters beyond botany: agar, carrageenan and much of the oxygen in the atmosphere come from them.",
+      "words": [
+        {
+          "term": "thallus",
+          "meaning": "A plant body not differentiated into root, stem and leaf.",
+          "breakdown": "Algae and bryophytes have a thallus; higher plants do not.",
+          "trap": "A thallus is not a primitive root. It is an undivided body that does the whole job of the plant."
+        },
+        {
+          "term": "agar",
+          "meaning": "A gel extracted from red algae, used in culture media and food.",
+          "breakdown": "It is obtained from genera such as Gelidium and Gracilaria.",
+          "trap": "Agar comes from red algae, and algin from brown algae. The two are different products."
+        },
+        {
+          "term": "isogamy",
+          "meaning": "Sexual reproduction with gametes that look alike.",
+          "breakdown": "Anisogamy has unlike gametes, and oogamy has a large non-motile egg and a small motile sperm.",
+          "trap": "Isogamy does not mean the gametes are identical in behaviour. They may differ in mating type even when they look the same."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M20 120h280'/><path class='d-accent' d='M50 120c-6-40 10-64 26-70 14 12 20 44 12 70'/><path class='d-muted' d='M120 120c6-30 24-56 44-58 16 14 18 42 8 58'/><path class='d-line' d='M212 120c0-34 12-58 32-58s32 24 32 58'/><text class='d-label' x='36' y='140'>green</text><text class='d-label' x='118' y='140'>brown</text><text class='d-label' x='224' y='140'>red</text><text class='d-label' x='20' y='36'>no roots, no stems: a thallus</text></svg>",
+      "visual_alt": "Three algal thalli drawn in a row, labelled green, brown and red, with a note that none has true roots.",
+      "hook": "The oxygen in your next breath may have been made by a single-celled alga in the sea.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Match pigments and storage products: green algae have chlorophyll a and b with starch, brown algae have fucoxanthin with laminarin, red algae have phycoerythrin with floridean starch.",
+      "trap": "Blue-green algae are not algae. They are cyanobacteria, prokaryotes, and belong to Monera.",
+      "recall": [
+        {
+          "q": "Agar is obtained from",
+          "options": ["Brown algae", "Red algae", "Green algae", "Cyanobacteria"],
+          "answer": 1,
+          "why": "Agar is extracted from red algae such as Gelidium and Gracilaria, while brown algae give algin."
+        },
+        {
+          "q": "The plant body of an alga is called a",
+          "options": ["Thallus", "Rhizome", "Frond with roots", "Corm"],
+          "answer": 0,
+          "why": "Algal bodies are undifferentiated thalli, without true roots, stems or leaves."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the examples in your copy."
+    },
+    {
+      "id": "bryophytes",
+      "ncert_ref": "Plant Kingdom: bryophytes",
+      "key_phrase": "gametophyte dominant, water needed",
+      "meaning": "Bryophytes are the amphibians of the plant kingdom: they live on land but need water for their sperm to swim to the egg. The green leafy plant is the gametophyte, and the sporophyte grows out of it and depends on it. Mosses, liverworts and hornworts belong here, and peat moss is harvested on a scale that matters for fuel, soil and carbon storage.",
+      "words": [
+        {
+          "term": "gametophyte",
+          "meaning": "The haploid generation that produces gametes.",
+          "breakdown": "In bryophytes it is the green leafy plant; in ferns and seed plants the sporophyte dominates.",
+          "trap": "The gametophyte is not a gamete. It is a whole plant generation that makes gametes."
+        },
+        {
+          "term": "sporophyte",
+          "meaning": "The diploid generation that produces spores by meiosis.",
+          "breakdown": "In a moss it is the stalked capsule growing from the leafy shoot.",
+          "trap": "In bryophytes the sporophyte is attached to and fed by the gametophyte. It is not an independent plant."
+        },
+        {
+          "term": "peat",
+          "meaning": "Partly decayed moss remains, mainly from Sphagnum, used as fuel and soil conditioner.",
+          "breakdown": "Peat bogs store large amounts of carbon.",
+          "trap": "Peat is not soil. It is accumulated plant material in waterlogged, oxygen-poor conditions."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M20 124h280'/><path class='d-accent' d='M70 124v-40M70 84c-14-8-16-26-4-32 10 8 12 22 4 32'/><path class='d-line' d='M70 84v-34'/><circle class='d-fill' cx='70' cy='46' r='8'/><text class='d-label' x='86' y='44'>capsule, diploid</text><text class='d-label' x='86' y='96'>leafy shoot, haploid</text><text class='d-label' x='20' y='140'>sperm swims in a film of water</text></svg>",
+      "visual_alt": "A moss shoot with a stalked capsule above it, labelled as the haploid shoot and the diploid capsule.",
+      "hook": "A moss cannot reproduce in dry air, which is why it waits for rain.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Bryophytes are tested on the dominant generation, the need for water, and the examples: Funaria and Sphagnum are mosses, Marchantia is a liverwort.",
+      "trap": "Bryophytes have no vascular tissue, so they cannot grow tall. Their small size is not a stage of growth.",
+      "recall": [
+        {
+          "q": "In bryophytes the dominant generation is the",
+          "options": ["Sporophyte", "Gametophyte", "Both equally", "Neither, they are haploid only"],
+          "answer": 1,
+          "why": "The green leafy plant is the gametophyte, and the sporophyte is attached to it and dependent on it."
+        },
+        {
+          "q": "Bryophytes are called amphibians of the plant kingdom because",
+          "options": ["They live in water only", "They need water for fertilisation", "They have vascular tissue", "They are aquatic animals"],
+          "answer": 1,
+          "why": "They live on land but their motile sperm must swim through water to reach the egg."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the examples against your copy."
+    },
+    {
+      "id": "pteridophytes",
+      "ncert_ref": "Plant Kingdom: pteridophytes",
+      "key_phrase": "first vascular plants, spores underneath",
+      "meaning": "Pteridophytes are the first plants with vascular tissue, which is what lets them grow taller than mosses. The leafy fern is the sporophyte, and the gametophyte is a small separate prothallus. Spores form in sporangia, often in clusters called sori on the underside of fronds, and a few genera such as Selaginella and Salvinia produce two kinds of spore, a step towards the seed habit.",
+      "words": [
+        {
+          "term": "sorus",
+          "meaning": "A cluster of sporangia on the underside of a fern frond.",
+          "breakdown": "Sori appear as brown dots or lines under the leaflets.",
+          "trap": "A sorus is not a seed or a fungus. It is a group of spore cases belonging to the fern."
+        },
+        {
+          "term": "heterospory",
+          "meaning": "Producing two kinds of spores, microspores and megaspores.",
+          "breakdown": "Selaginella and Salvinia are heterosporous; most ferns are homosporous.",
+          "trap": "Heterospory is not the same as having two sexes in one plant. It is two spore types, which later development separates into male and female gametophytes."
+        },
+        {
+          "term": "prothallus",
+          "meaning": "The small, free-living gametophyte of a fern.",
+          "breakdown": "It grows from a spore and bears the sex organs.",
+          "trap": "The prothallus is not a young fern. It is a separate haploid generation that the fern sporophyte grows out of."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M20 128h280'/><path class='d-accent' d='M90 128c0-40 20-66 40-66s40 26 40 66'/><path class='d-muted' d='M96 96h68M104 112h52'/><text class='d-label' x='150' y='56'>frond, diploid</text><circle class='d-fill' cx='196' cy='104' r='4'/><circle class='d-fill' cx='206' cy='112' r='4'/><circle class='d-fill' cx='188' cy='116' r='4'/><text class='d-label' x='216' y='112'>sori underneath</text><text class='d-label' x='20' y='142'>vascular tissue lets it stand taller than moss</text></svg>",
+      "visual_alt": "A fern frond with clusters of sori drawn underneath and a note that vascular tissue allows greater height.",
+      "hook": "The brown dots under a fern leaf are not disease. They are the next generation being packed.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Pteridophytes are tested on vascular tissue, the dominant sporophyte, sori and the heterosporous examples Selaginella and Salvinia.",
+      "trap": "Ferns do not produce seeds. The seed habit appears later, in gymnosperms.",
+      "recall": [
+        {
+          "q": "Sori on a fern frond contain",
+          "options": ["Seeds", "Spores", "Eggs", "Roots"],
+          "answer": 1,
+          "why": "A sorus is a cluster of sporangia, and each sporangium produces spores by meiosis."
+        },
+        {
+          "q": "Which pair is heterosporous?",
+          "options": ["Funaria and Marchantia", "Selaginella and Salvinia", "Cycas and Pinus", "Chlamydomonas and Volvox"],
+          "answer": 1,
+          "why": "These two pteridophytes produce microspores and megaspores, unlike the homosporous ferns."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the examples against your copy."
+    },
+    {
+      "id": "seed-plants",
+      "ncert_ref": "Plant Kingdom: gymnosperms and angiosperms",
+      "key_phrase": "seeds enclosed in flowers and fruit",
+      "meaning": "Gymnosperms bear naked seeds on cones, while angiosperms bear seeds inside an ovary that becomes a fruit. Gymnosperm reproduction is slow and the male gametes are carried by pollen tubes, so water is no longer needed for fertilisation. Angiosperms add double fertilisation, where one sperm fuses with the egg and another with two polar nuclei, forming the triploid endosperm that feeds the seed.",
+      "words": [
+        {
+          "term": "naked seed",
+          "meaning": "A seed not enclosed in an ovary or fruit.",
+          "breakdown": "Cycas and Pinus bear seeds on the scales of cones.",
+          "trap": "Naked does not mean unprotected. Gymnosperm seeds have coats; they simply lack an ovary around them."
+        },
+        {
+          "term": "double fertilisation",
+          "meaning": "The fusion of one sperm with the egg and another with two polar nuclei.",
+          "breakdown": "It produces a diploid zygote and a triploid primary endosperm nucleus.",
+          "trap": "Double fertilisation is not two eggs being fertilised. One fusion makes the embryo, the other makes the food store."
+        },
+        {
+          "term": "endosperm",
+          "meaning": "The nutrient tissue that feeds the developing embryo.",
+          "breakdown": "In angiosperms it is usually triploid, formed after double fertilisation.",
+          "trap": "Endosperm is not the same as the cotyledon. Both store food, but the endosperm is a separate tissue formed from the second fusion."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 128h240'/><path class='d-accent' d='M60 128V70l30-24 30 24v58'/><circle class='d-fill' cx='90' cy='90' r='5'/><text class='d-label' x='42' y='58'>cone: naked seeds</text><circle class='d-line' cx='220' cy='96' r='26'/><path class='d-muted' d='M220 70v52M194 96h52'/><text class='d-label' x='188' y='140'>ovary becomes fruit</text><text class='d-label' x='188' y='58'>seed inside</text></svg>",
+      "visual_alt": "A cone beside a flower ovary in cross-section, contrasting naked seeds with seeds enclosed in a fruit.",
+      "hook": "A cone and an apple are two answers to the same problem: how to protect and feed a seed.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Double fertilisation and the triploid endosperm are reliable one-mark answers, along with the examples Cycas and Pinus for gymnosperms.",
+      "trap": "Gymnosperms do not have double fertilisation. It is a defining feature of angiosperms.",
+      "recall": [
+        {
+          "q": "Double fertilisation produces a zygote and",
+          "options": ["Another zygote", "A triploid endosperm nucleus", "A haploid embryo", "A second egg"],
+          "answer": 1,
+          "why": "One sperm fuses with the egg to make the diploid zygote, and the other fuses with two polar nuclei to make the triploid endosperm nucleus."
+        },
+        {
+          "q": "Gymnosperm seeds are called naked because they",
+          "options": ["Have no seed coat", "Are not enclosed in an ovary", "Are always single", "Are produced without fertilisation"],
+          "answer": 1,
+          "why": "They sit on the scales of cones rather than inside an ovary, though they still have their own seed coats."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the fertilisation description against your copy."
+    }
+  ]
+}

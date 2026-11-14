@@ -1,0 +1,201 @@
+{
+  "id": "bio-11-ch4",
+  "subject": "Biology",
+  "class": 11,
+  "title": "Animal Kingdom",
+  "book": "NCERT Biology Class XI",
+  "paragraphs": [
+    {
+      "id": "basis-of-classification",
+      "ncert_ref": "Animal Kingdom: basis of classification",
+      "key_phrase": "body plan decides the phylum",
+      "meaning": "Animals are grouped by features of the body plan rather than by habitat or size. The main criteria are the level of organisation, the symmetry of the body, the number of germ layers, the presence of a body cavity and its lining, segmentation, and the notochord. Each criterion narrows the group, which is why a flatworm and an earthworm differ in more than shape.",
+      "words": [
+        {
+          "term": "coelom",
+          "meaning": "A body cavity lined by tissue derived from the mesoderm.",
+          "breakdown": "True coelomates include annelids and chordates. Pseudocoelomates have a cavity not lined by mesoderm.",
+          "trap": "A body cavity is not automatically a coelom. The lining matters, which is why roundworms are pseudocoelomates, not coelomates."
+        },
+        {
+          "term": "radial symmetry",
+          "meaning": "A body plan that can be divided into similar halves by more than one plane through the centre.",
+          "breakdown": "Cnidarians and adult echinoderms are radially symmetrical.",
+          "trap": "Radial symmetry does not mean no direction. A sea anemone still has a top and a bottom, just no left and right."
+        },
+        {
+          "term": "diploblastic",
+          "meaning": "Having two germ layers, ectoderm and endoderm, with mesoglea between them.",
+          "breakdown": "Cnidarians are diploblastic; most other animals are triploblastic.",
+          "trap": "Mesoglea is not a third germ layer. It is a jelly-like layer between the two, so cnidarians remain diploblastic."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='70' cy='74' r='30'/><path class='d-muted' d='M70 44v60M40 74h60'/><path class='d-line' d='M150 44h60v60h-60z'/><path class='d-accent' d='M150 74h60'/><circle class='d-line' cx='264' cy='74' r='26'/><path class='d-accent' d='M238 74h52'/><circle class='d-fill' cx='264' cy='74' r='6'/><text class='d-label' x='40' y='126'>radial</text><text class='d-label' x='146' y='126'>bilateral</text><text class='d-label' x='240' y='126'>coelom inside</text></svg>",
+      "visual_alt": "Three body plans side by side: radial, bilateral and a cross-section showing a body cavity.",
+      "hook": "You can tell a lot about an animal from which way its mouth points.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Match the phylum to its coelom type and symmetry. Acoelomate flatworms, pseudocoelomate roundworms and coelomate annelids is the standard trio.",
+      "trap": "Echinoderm adults are radially symmetrical but their larvae are bilateral. The phylum is still grouped with the bilaterians.",
+      "recall": [
+        {
+          "q": "An animal with a body cavity not lined by mesoderm is",
+          "options": ["Coelomate", "Pseudocoelomate", "Acoelomate", "Diploblastic"],
+          "answer": 1,
+          "why": "The cavity exists but lacks a mesodermal lining, which is the definition of a pseudocoelom, as in roundworms."
+        },
+        {
+          "q": "Cnidarians are diploblastic because they have",
+          "options": ["Two body layers and mesoglea", "Three germ layers", "No germ layers", "A true coelom"],
+          "answer": 0,
+          "why": "They have ectoderm and endoderm with mesoglea between them, and mesoglea is not counted as a third germ layer."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the criteria list against your copy."
+    },
+    {
+      "id": "porifera-cnidaria",
+      "ncert_ref": "Animal Kingdom: Porifera and Cnidaria",
+      "key_phrase": "pores that filter, stings that catch",
+      "meaning": "Sponges have no tissues or organs: water enters through pores, passes through a canal system lined with collar cells, and leaves through a larger opening, with food filtered on the way. Cnidarians have tissues and a sac-like body with a single opening surrounded by tentacles, and their stinging cells fire a thread to capture prey. Both are simple, but only cnidarians have nerve cells and muscle-like tissue.",
+      "words": [
+        {
+          "term": "choanocyte",
+          "meaning": "A collar cell that lines the water canals of a sponge and drives the flow.",
+          "breakdown": "Its beating flagellum moves water, and its collar traps food particles.",
+          "trap": "Choanocytes are not stinging cells. Stinging cells belong to cnidarians, a different phylum."
+        },
+        {
+          "term": "cnidoblast",
+          "meaning": "A stinging cell containing a coiled thread that fires on contact.",
+          "breakdown": "Found on the tentacles of jellyfish, corals and sea anemones.",
+          "trap": "The sting is not venom injected by a mouth. The thread delivers the toxin, and the same single opening also takes in food."
+        },
+        {
+          "term": "metagenesis",
+          "meaning": "The alternation of a polyp generation and a medusa generation in cnidarians.",
+          "breakdown": "The polyp is fixed and the medusa swims, as in Obelia.",
+          "trap": "Metagenesis is not the same as alternation of generations in plants. Here both forms are diploid animals."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 46c40-16 80-16 110 0v56c-34 16-72 16-110 0z'/><circle class='d-muted' cx='70' cy='70' r='4'/><circle class='d-muted' cx='96' cy='84' r='4'/><circle class='d-muted' cx='118' cy='64' r='4'/><path class='d-accent' d='M150 74h14'/><text class='d-label' x='40' y='128'>sponge: pores and canals</text><circle class='d-line' cx='240' cy='60' r='18'/><path class='d-accent' d='M240 78c-10 14-10 26 0 40M240 78c10 14 10 26 0 40M226 92c-8 8-10 18-6 26M254 92c8 8 10 18 6 26'/><text class='d-label' x='196' y='136'>cnidarian: one opening, stinging tentacles</text></svg>",
+      "visual_alt": "A sponge with pores and canals beside a cnidarian with a single opening and stinging tentacles.",
+      "hook": "A sponge is a filter with no organs. A jellyfish is a stomach with stings around the door.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Sponges are tested on the canal system, choanocytes and spicules or spongin. Cnidarians on cnidoblasts, polyp and medusa, and metagenesis in Obelia.",
+      "trap": "Sponges are not colonies of protists. They are multicellular animals at the cellular level of organisation.",
+      "recall": [
+        {
+          "q": "Water flow in a sponge is driven by",
+          "options": ["Cnidoblasts", "Choanocytes", "Nephridia", "Flame cells"],
+          "answer": 1,
+          "why": "The flagella of collar cells beat to move water through the canal system, filtering food as it passes."
+        },
+        {
+          "q": "The single opening of a cnidarian serves",
+          "options": ["Only as a mouth", "Only as an anus", "For both intake and output", "For gas exchange only"],
+          "answer": 2,
+          "why": "The sac-like body has one opening, so food enters and undigested waste leaves through the same structure."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the examples against your copy."
+    },
+    {
+      "id": "platyhelminthes-annelida",
+      "ncert_ref": "Animal Kingdom: Platyhelminthes and Annelida",
+      "key_phrase": "flat and unsegmented, then tubed and segmented",
+      "meaning": "Flatworms are flattened, unsegmented and acoelomate, with a blind gut and a single opening, and they excrete through flame cells. Annelids are the first animals with true metameric segmentation: the body is divided into repeating segments, each with its own set of organs, and a closed circulatory system runs along the length. That repetition is what lets an earthworm burrow by contracting segments in waves.",
+      "words": [
+        {
+          "term": "flame cell",
+          "meaning": "A specialised cell with a tuft of cilia that drives fluid through the excretory canals of flatworms.",
+          "breakdown": "The beating tuft looks like a flame under a microscope.",
+          "trap": "Flame cells are excretory, not respiratory. Flatworms exchange gases across the body surface."
+        },
+        {
+          "term": "metameric segmentation",
+          "meaning": "A body divided into similar repeated segments, each with its own organs.",
+          "breakdown": "Annelids show it clearly; the segments are visible as rings.",
+          "trap": "Segmentation is not the same as a segmented shell or a jointed leg. It is repeated body units, internal as well as external."
+        },
+        {
+          "term": "closed circulation",
+          "meaning": "A system in which blood stays inside vessels throughout its circuit.",
+          "breakdown": "Annelids and vertebrates have it; arthropods and molluscs mostly have an open system.",
+          "trap": "Closed circulation does not mean a four-chambered heart. An earthworm has several simple hearts and still has closed circulation."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M26 76c20-22 60-22 86 0-26 22-66 22-86 0z'/><path class='d-accent' d='M70 76h30'/><text class='d-label' x='26' y='120'>flatworm: flat, one opening, no coelom</text><path class='d-line' d='M180 54h108M180 100h108M180 54v46M180 70h108M180 86h108'/><text class='d-label' x='180' y='132'>annelid: repeating segments, closed vessels</text></svg>",
+      "visual_alt": "A flattened flatworm beside a segmented annelid with repeated body rings and vessels.",
+      "hook": "An earthworm is built from repeated parts, which is why it can move without legs.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Flatworm features (acoelomate, flame cells, blind gut) and annelid features (segments, nephridia, closed circulation) are asked as matching pairs.",
+      "trap": "An earthworm's body is segmented internally as well as externally. Counting rings on the outside is not the whole definition.",
+      "recall": [
+        {
+          "q": "Flame cells are found in",
+          "options": ["Annelids", "Flatworms", "Sponges", "Cnidarians"],
+          "answer": 1,
+          "why": "Platyhelminthes use flame cells to drive fluid through their excretory canals."
+        },
+        {
+          "q": "A closed circulatory system is a feature of",
+          "options": ["Arthropods", "Annelids", "Molluscs only", "Cnidarians"],
+          "answer": 1,
+          "why": "Annelids keep blood inside vessels all round the circuit, unlike the open systems of arthropods and most molluscs."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the phylum features against your copy."
+    },
+    {
+      "id": "arthropods-and-chordates",
+      "ncert_ref": "Animal Kingdom: Arthropoda, Mollusca, Echinodermata and Chordata",
+      "key_phrase": "jointed legs, then a stiff rod",
+      "meaning": "Arthropods are the largest phylum, with a chitinous exoskeleton, jointed appendages and a segmented body that is grouped into head, thorax and abdomen. Molluscs have a soft body with a muscular foot and a mantle that often secretes a shell. Echinoderms are spiny, radially symmetrical adults with a water vascular system, while chordates are defined by a notochord, a dorsal hollow nerve cord, pharyngeal gill slits and a post-anal tail at some stage of life.",
+      "words": [
+        {
+          "term": "notochord",
+          "meaning": "A stiff rod along the back that supports the body in chordates.",
+          "breakdown": "In vertebrates it is replaced largely by the vertebral column during development.",
+          "trap": "A notochord is not a backbone. It is a flexible rod, and the backbone is a later vertebrate feature that partly replaces it."
+        },
+        {
+          "term": "water vascular system",
+          "meaning": "A network of water-filled canals used for movement and feeding in echinoderms.",
+          "breakdown": "Tube feet are extended by water pressure.",
+          "trap": "The water vascular system is not a circulatory system for blood. It moves water, and echinoderms have a separate blood system."
+        },
+        {
+          "term": "mantle",
+          "meaning": "The fold of body wall in molluscs that covers the visceral mass and secretes the shell.",
+          "breakdown": "In snails and clams it builds the shell; in squid it surrounds the body.",
+          "trap": "The mantle is not the shell itself. It is the tissue that makes the shell."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M26 78h44M26 78l-8 10M26 78l-8-10M70 62v32M70 68l16-10M70 88l16 10M70 78l16 0'/><text class='d-label' x='22' y='132'>arthropod: jointed legs</text><path class='d-line' d='M132 96c0-24 18-38 40-38s40 14 40 38z'/><path class='d-accent' d='M172 96v-28'/><text class='d-label' x='128' y='132'>mollusc: foot and mantle</text><path class='d-accent' d='M236 44v62'/><path class='d-muted' d='M236 56h34M236 72h34M236 88h34'/><text class='d-label' x='226' y='132'>chordate: notochord and nerve cord</text></svg>",
+      "visual_alt": "Three body plans: an arthropod with jointed legs, a mollusc with a foot and mantle, and a chordate with a notochord.",
+      "hook": "More than half of all known animals are arthropods, and you have probably swatted one today.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Chordate characters are asked as a set of four. Protochordates are chordates without a vertebral column, and vertebrates add the backbone and a cranium.",
+      "trap": "All vertebrates are chordates but not all chordates are vertebrates. Saying the two groups are the same is the common error.",
+      "recall": [
+        {
+          "q": "Which is a chordate character?",
+          "options": ["Jointed appendages", "Dorsal hollow nerve cord", "Water vascular system", "Radula"],
+          "answer": 1,
+          "why": "A dorsal hollow nerve cord is one of the four defining chordate features, along with the notochord, gill slits and post-anal tail."
+        },
+        {
+          "q": "Tube feet in echinoderms are part of the",
+          "options": ["Water vascular system", "Closed circulatory system", "Excretory system", "Nervous system"],
+          "answer": 0,
+          "why": "Water pressure in the canal system extends the tube feet, which the animal uses to move and to handle food."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the chordate characters against your copy."
+    }
+  ]
+}

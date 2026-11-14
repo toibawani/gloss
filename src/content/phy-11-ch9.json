@@ -1,0 +1,201 @@
+{
+  "id": "phy-11-ch9",
+  "subject": "Physics",
+  "class": 11,
+  "title": "Mechanical Properties of Fluids",
+  "book": "NCERT Physics Class XI",
+  "paragraphs": [
+    {
+      "id": "pressure-depth",
+      "ncert_ref": "Ch 9, Mechanical Properties of Fluids: pressure and depth",
+      "key_phrase": "depth sets the gauge pressure",
+      "meaning": "In a fluid at rest the pressure at a point depends on the depth below the surface, not on the shape or width of the container. That is why a narrow tube and a wide tank filled to the same height have the same pressure at the bottom. The relation is p = p0 + ρgh, where p0 is the pressure at the surface and ρgh is the extra pressure from the fluid above.",
+      "words": [
+        {
+          "term": "gauge pressure",
+          "meaning": "The pressure above atmospheric pressure, equal to ρgh.",
+          "breakdown": "A tyre gauge reads gauge pressure, not absolute pressure.",
+          "trap": "Gauge pressure ignores the atmosphere. Absolute pressure includes it, so the two differ by about 10^5 Pa at sea level."
+        },
+        {
+          "term": "hydraulic lift",
+          "meaning": "A machine that multiplies force using pressure transmitted through a fluid.",
+          "breakdown": "The same pressure acts on a larger piston, so the force is larger by the ratio of areas.",
+          "trap": "A hydraulic lift multiplies force but not work. The larger piston moves a smaller distance."
+        },
+        {
+          "term": "atmospheric pressure",
+          "meaning": "The pressure exerted by the weight of the air above a point.",
+          "breakdown": "About 1.013 × 10^5 Pa at sea level, which supports 76 cm of mercury.",
+          "trap": "Atmospheric pressure falls with altitude but does not vanish in an aeroplane. Cabins are pressurised for comfort, not because the outside is a vacuum."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 40h240'/><path class='d-fill' d='M40 40h240v80H40z'/><path class='d-accent' d='M160 40v46'/><path class='d-guide' d='M120 86h80'/><text class='d-label' x='168' y='66'>depth h</text><text class='d-label' x='40' y='140'>pressure at the bottom: p0 + ρgh</text><text class='d-label' x='240' y='30'>surface</text></svg>",
+      "visual_alt": "A tank of fluid with a depth marked and the pressure at the bottom written as surface pressure plus rho g h.",
+      "hook": "The dam is thickest at the bottom because that is where the water presses hardest.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions use p = p0 + ρgh for tanks and barometers, and the same pressure at the same level in a connected fluid for U-tubes.",
+      "trap": "Pressure depends on vertical depth, not on the length of a slanted tube. A longer slanted column at the same height gives the same pressure.",
+      "recall": [
+        {
+          "q": "The pressure at a depth of 10 m in water, ignoring the atmosphere, is about",
+          "options": ["10^3 Pa", "10^4 Pa", "10^5 Pa", "10^6 Pa"],
+          "answer": 2,
+          "why": "Using ρgh with 1000 kg/m³, 10 m/s² and 10 m gives 10^5 Pa."
+        },
+        {
+          "q": "Two containers of different shapes hold water to the same height. The pressure at the bottom is",
+          "options": ["Larger in the wider one", "Larger in the narrower one", "The same in both", "Zero in the wider one"],
+          "answer": 2,
+          "why": "Pressure at a depth depends only on depth and density, not on the amount or shape of the fluid above."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the pressure values against your copy."
+    },
+    {
+      "id": "bernoulli",
+      "ncert_ref": "Ch 9, Mechanical Properties of Fluids: Bernoulli's principle",
+      "key_phrase": "faster flow, lower pressure",
+      "meaning": "For an ideal fluid in steady flow, the sum of pressure, kinetic energy per unit volume and potential energy per unit volume stays constant along a streamline. That is Bernoulli's equation, and it explains why a speeding fluid has lower pressure: where the pipe narrows, the speed rises and the pressure falls. It is the basis of the aerofoil, the carburettor and the curve of a spinning ball.",
+      "words": [
+        {
+          "term": "equation of continuity",
+          "meaning": "The statement that the same mass of fluid passes every cross-section per second, so Av is constant.",
+          "breakdown": "A narrow section means a faster flow.",
+          "trap": "Continuity is about mass flow, not pressure. Using it to find pressure directly gives nonsense."
+        },
+        {
+          "term": "streamline",
+          "meaning": "The path followed by a fluid particle in steady flow.",
+          "breakdown": "Streamlines never cross, because a particle cannot go two ways at once.",
+          "trap": "Bernoulli applies along a streamline, not across different streamlines in a turbulent flow."
+        },
+        {
+          "term": "Torricelli's law",
+          "meaning": "The speed of efflux from a small hole is the square root of 2gh.",
+          "breakdown": "It follows from Bernoulli with the surface speed taken as nearly zero.",
+          "trap": "The efflux speed does not depend on the density of the liquid, and it does not depend on the size of the hole, only on the depth."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 40h60v20H30v30h60v20H30'/><path class='d-line' d='M30 40h60v20H30M30 90h60v20H30'/><path class='d-accent' d='M44 58h34M40 100h42M118 68l54 0M166 62l8 6-8 6'/><circle class='d-fill' cx='200' cy='68' r='4'/><text class='d-label' x='30' y='132'>narrow: faster, lower pressure</text><text class='d-label' x='150' y='40'>same mass flow</text></svg>",
+      "visual_alt": "A pipe that narrows in the middle with faster flow and lower pressure in the narrow section.",
+      "hook": "A shower curtain pulls inward because the falling water speeds up the air beside it.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Venturi and efflux questions apply Bernoulli between two points, with the velocity found from continuity. Keep the height terms, they are where marks are lost.",
+      "trap": "Bernoulli assumes an ideal fluid: steady, incompressible, non-viscous flow. Applying it to a viscous flow or a leaky pipe gives the wrong answer.",
+      "recall": [
+        {
+          "q": "Where a horizontal pipe narrows, the fluid speed rises and the pressure",
+          "options": ["Rises", "Falls", "Stays the same", "Becomes zero"],
+          "answer": 1,
+          "why": "With height unchanged, a rise in kinetic energy per unit volume must be paid for by a fall in pressure."
+        },
+        {
+          "q": "Water flows out of a hole 5 m below the surface. The efflux speed is about",
+          "options": ["5 m/s", "10 m/s", "50 m/s", "1 m/s"],
+          "answer": 1,
+          "why": "Torricelli gives the square root of 2gh, and the square root of 2 times 10 times 5 is 10 m/s."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the assumptions listed in your copy."
+    },
+    {
+      "id": "viscosity",
+      "ncert_ref": "Ch 9, Mechanical Properties of Fluids: viscosity and terminal velocity",
+      "key_phrase": "internal friction between layers",
+      "meaning": "Viscosity is a fluid's internal friction, resisting the sliding of one layer over another. The viscous force is proportional to the velocity gradient and the area, with the constant of proportionality being the coefficient of viscosity. A falling object speeds up until the viscous drag plus buoyancy balances its weight, and that steady speed is the terminal velocity.",
+      "words": [
+        {
+          "term": "coefficient of viscosity",
+          "meaning": "The constant relating viscous force to area and velocity gradient.",
+          "breakdown": "Unit is the pascal second, also called the poiseuille.",
+          "trap": "Viscosity is not the same as density. Mercury is dense but far less viscous than honey."
+        },
+        {
+          "term": "terminal velocity",
+          "meaning": "The constant speed reached when drag and buoyancy balance weight.",
+          "breakdown": "For a sphere by Stokes' law it grows as the square of the radius.",
+          "trap": "Terminal velocity is not the speed at which the object stops. It keeps falling, just without accelerating."
+        },
+        {
+          "term": "Stokes' law",
+          "meaning": "The drag on a small sphere moving slowly through a viscous fluid, 6πηrv.",
+          "breakdown": "It holds for slow, smooth flow around a small sphere.",
+          "trap": "Stokes' law fails at high speed or for large objects, where the flow becomes turbulent and drag grows faster."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 30v94M40 30h80'/><path class='d-accent' d='M60 54v46M60 54l-6 10M60 54l6 10M60 100l-6-10M60 100l6-10'/><circle class='d-fill' cx='60' cy='76' r='6'/><text class='d-label' x='76' y='50'>drag up</text><text class='d-label' x='76' y='98'>weight down</text><text class='d-label' x='130' y='60'>balanced:</text><text class='d-label' x='130' y='78'>steady speed</text><text class='d-label' x='40' y='140'>viscous fluid</text></svg>",
+      "visual_alt": "A sphere in a viscous fluid with drag upward and weight downward, equal at terminal velocity.",
+      "hook": "A raindrop does not keep accelerating all the way down. It reaches a speed and stays there.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Terminal velocity questions use 6πηrv = mg, with the effective weight reduced by buoyancy. Radius appears squared, so doubling it quadruples the terminal speed.",
+      "trap": "Viscous force is not constant. It grows with speed, which is why terminal velocity exists at all.",
+      "recall": [
+        {
+          "q": "A sphere falls at terminal velocity. Its acceleration is",
+          "options": ["g", "Zero", "Increasing", "Downward but less than g"],
+          "answer": 1,
+          "why": "At terminal velocity the drag plus buoyancy exactly balances weight, so the net force and acceleration are zero."
+        },
+        {
+          "q": "If the radius of a falling sphere is doubled, its terminal velocity becomes",
+          "options": ["Double", "Half", "Four times", "The same"],
+          "answer": 2,
+          "why": "Terminal velocity by Stokes' law goes as the square of the radius, so doubling r multiplies it by four."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the Stokes expression against your copy."
+    },
+    {
+      "id": "surface-tension",
+      "ncert_ref": "Ch 9, Mechanical Properties of Fluids: surface tension and capillarity",
+      "key_phrase": "the surface behaves like a stretched sheet",
+      "meaning": "Molecules at a liquid surface have fewer neighbours above them, so they are pulled inward and the surface behaves like a stretched film. Surface tension is the force per unit length along the surface, and it is also the energy needed to create new surface area. That is why small drops are spherical and why water climbs a narrow tube, a rise described by capillarity.",
+      "words": [
+        {
+          "term": "surface tension",
+          "meaning": "The force per unit length acting along a liquid surface.",
+          "breakdown": "Units are newtons per metre, also joules per square metre.",
+          "trap": "Surface tension and surface energy are numerically equal but are different quantities: one is a force per unit length, the other an energy per unit area."
+        },
+        {
+          "term": "capillary rise",
+          "meaning": "The climb of a liquid in a narrow tube due to surface tension.",
+          "breakdown": "h = 2T cos θ / (ρgr). Narrower tube, higher rise.",
+          "trap": "Water rises in glass because it wets it; mercury is depressed because it does not. The sign of cos θ decides the direction."
+        },
+        {
+          "term": "angle of contact",
+          "meaning": "The angle between the liquid surface and the solid at the contact line.",
+          "breakdown": "Less than 90 degrees means the liquid wets the solid; more means it does not.",
+          "trap": "A zero contact angle does not mean zero surface tension. It means the liquid wets the surface completely."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M110 30v96M150 30v96'/><path class='d-fill' d='M110 72h40v54h-40z'/><path class='d-accent' d='M110 72c10-8 30-8 40 0'/><path class='d-guide' d='M170 72h50M170 126h50'/><text class='d-label' x='176' y='66'>capillary rise</text><text class='d-label' x='34' y='86'>water wets glass</text><text class='d-label' x='34' y='140'>narrow tube, higher climb</text></svg>",
+      "visual_alt": "Water rising in a narrow glass tube with the curved meniscus and the rise height marked.",
+      "hook": "A water strider stands on a surface that is a film, not a floor.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions ask for the excess pressure inside a drop, 2T/r, or a bubble, 4T/r, and for the height of capillary rise.",
+      "trap": "A soap bubble has two surfaces, so its excess pressure is 4T/r, not 2T/r. A liquid drop has only one surface.",
+      "recall": [
+        {
+          "q": "The excess pressure inside a liquid drop of radius r is",
+          "options": ["T/r", "2T/r", "4T/r", "T/2r"],
+          "answer": 1,
+          "why": "A drop has one surface, so the excess pressure is twice the surface tension divided by the radius."
+        },
+        {
+          "q": "Capillary rise is greater when the tube is",
+          "options": ["Wider", "Narrower", "Longer", "Tilted"],
+          "answer": 1,
+          "why": "The rise is inversely proportional to the radius, so a narrower tube lifts the liquid higher."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the excess pressure expressions against your copy."
+    }
+  ]
+}
