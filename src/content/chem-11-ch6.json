@@ -1,0 +1,201 @@
+{
+  "id": "chem-11-ch6",
+  "subject": "Chemistry",
+  "class": 11,
+  "title": "Equilibrium",
+  "book": "NCERT Chemistry Class XI",
+  "paragraphs": [
+    {
+      "id": "equilibrium-constant",
+      "ncert_ref": "Equilibrium: the law of mass action and K",
+      "key_phrase": "the ratio settles, the amounts do not have to",
+      "meaning": "At equilibrium the forward and reverse reactions run at the same rate, so concentrations stop changing even though both reactions continue. The law of mass action turns that into an expression: products over reactants, each raised to its coefficient, gives a constant at a given temperature. K does not depend on the starting amounts, only on temperature and the reaction itself.",
+      "words": [
+        {
+          "term": "equilibrium constant",
+          "meaning": "The value of the products-over-reactants ratio at equilibrium, for a given temperature.",
+          "breakdown": "Kc uses concentrations, Kp uses partial pressures. Solids and pure liquids are left out.",
+          "trap": "K is not a rate constant. It says where the balance lies, not how fast it is reached."
+        },
+        {
+          "term": "dynamic equilibrium",
+          "meaning": "A state where both reactions continue at equal rates, so nothing appears to change.",
+          "breakdown": "It needs a closed system, otherwise products escape and the balance shifts.",
+          "trap": "Equilibrium is not the point where the reaction stops. Labelling molecules would show both directions still running."
+        },
+        {
+          "term": "Kp and Kc",
+          "meaning": "The equilibrium constant written with partial pressures or with concentrations.",
+          "breakdown": "They are related by Kp = Kc(RT)^Δn, where Δn is the change in moles of gas.",
+          "trap": "When Δn is zero the two are equal. Writing a conversion factor then is unnecessary but harmless; getting Δn wrong is not."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 118h260M30 118V32'/><path class='d-accent' d='M36 44l70 40'/><path class='d-muted' d='M36 110l70-26'/><circle class='d-fill' cx='116' cy='86' r='4'/><path class='d-guide' d='M116 86V118'/><text class='d-label' x='124' y='70'>forward</text><text class='d-label' x='124' y='108'>reverse</text><text class='d-label' x='76' y='134'>rates equal here</text></svg>",
+      "visual_alt": "Forward and reverse rate curves meeting and staying equal at equilibrium.",
+      "hook": "Nothing changes at equilibrium except that everything is still changing.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Writing K correctly is the mark: products on top, coefficients as powers, pure solids and liquids omitted. K for a reversed reaction is 1/K.",
+      "trap": "Doubling a reaction squares its K, and halving it takes the square root. The exponent follows the coefficients you write.",
+      "recall": [
+        {
+          "q": "If the equation is reversed, the equilibrium constant becomes",
+          "options": ["The same", "Negative", "Its reciprocal", "Its square"],
+          "answer": 2,
+          "why": "Reversing swaps products and reactants, so the ratio is inverted and K becomes 1/K."
+        },
+        {
+          "q": "Pure solids are omitted from the equilibrium expression because",
+          "options": ["They do not react", "Their concentration is effectively constant", "They have no mass", "They are always products"],
+          "answer": 1,
+          "why": "The amount of a pure solid per unit volume does not change, so it folds into the constant instead of appearing in the ratio."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the Kp and Kc relation against your copy."
+    },
+    {
+      "id": "reaction-quotient",
+      "ncert_ref": "Equilibrium: predicting the direction of change",
+      "key_phrase": "compare Q with K",
+      "meaning": "The reaction quotient Q has exactly the same form as K, but is calculated with the concentrations at this moment, not at equilibrium. If Q is smaller than K the reaction must make more products, so it moves forward; if Q is larger it moves back. Equilibrium is simply the case where the two numbers are equal.",
+      "words": [
+        {
+          "term": "reaction quotient",
+          "meaning": "The products-over-reactants ratio at any moment, not necessarily at equilibrium.",
+          "breakdown": "Q uses current concentrations; K uses equilibrium ones.",
+          "trap": "Q is not sprinkled on the answer. It is a test value, and the comparison with K is the whole point."
+        },
+        {
+          "term": "shifts right",
+          "meaning": "Net reaction in the forward direction, producing more products.",
+          "breakdown": "Happens when Q is less than K.",
+          "trap": "A shift right does not mean the reverse reaction stops. Both continue, at unequal rates."
+        },
+        {
+          "term": "reaction quotient for gases",
+          "meaning": "The same ratio written with partial pressures.",
+          "breakdown": "Compare Qp with Kp, and Qc with Kc; do not mix the two.",
+          "trap": "Comparing a pressure quotient with a concentration constant is meaningless unless you convert one of them first."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 118h240M40 118V32'/><path class='d-accent' d='M60 100h200'/><circle class='d-fill' cx='110' cy='100' r='5'/><circle class='d-fill' cx='210' cy='100' r='5'/><text class='d-label' x='78' y='84'>Q below K</text><text class='d-label' x='178' y='84'>Q above K</text><text class='d-label' x='78' y='134'>runs forward</text><text class='d-label' x='178' y='134'>runs backward</text></svg>",
+      "visual_alt": "A number line of Q with K marked, showing forward reaction below K and reverse above it.",
+      "hook": "Q is where you are. K is where you are going.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions give initial concentrations and ask the direction. Compute Q, compare with K, and state the direction in words.",
+      "trap": "The comparison is with the same temperature's K. Using a K from a different temperature gives the wrong direction.",
+      "recall": [
+        {
+          "q": "If Q is less than K, the reaction",
+          "options": ["Is at equilibrium", "Proceeds forward", "Proceeds backward", "Stops"],
+          "answer": 1,
+          "why": "Too few products are present relative to the equilibrium ratio, so the forward reaction must run to raise Q towards K."
+        },
+        {
+          "q": "Equilibrium corresponds to",
+          "options": ["Q greater than K", "Q less than K", "Q equal to K", "Q equal to zero"],
+          "answer": 2,
+          "why": "At equilibrium the current ratio is the equilibrium ratio, so the two values are identical."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the direction criterion against your copy."
+    },
+    {
+      "id": "le-chatelier",
+      "ncert_ref": "Equilibrium: Le Chatelier's principle",
+      "key_phrase": "the system opposes the change",
+      "meaning": "Le Chatelier's principle says that when a system at equilibrium is disturbed, it shifts in the direction that reduces the disturbance. Adding a reactant pushes the reaction forward, raising the pressure favours the side with fewer gas molecules, and heating favours the endothermic direction. A catalyst does none of these things: it only shortens the time taken to reach the same equilibrium.",
+      "words": [
+        {
+          "term": "Le Chatelier's principle",
+          "meaning": "A system at equilibrium shifts to oppose any change imposed on it.",
+          "breakdown": "Changes in concentration, pressure, volume or temperature all count.",
+          "trap": "A catalyst is not on this list. It changes the rate, never the position of equilibrium."
+        },
+        {
+          "term": "exothermic direction",
+          "meaning": "The direction of reaction that releases heat.",
+          "breakdown": "Cooling favours it; heating favours the endothermic direction.",
+          "trap": "Heating does not always push the reaction forward. It pushes it in the endothermic direction, whichever side that is."
+        },
+        {
+          "term": "pressure change",
+          "meaning": "A change in total pressure that shifts the side with fewer gas moles when pressure rises.",
+          "breakdown": "Only gases count, and only when the numbers of gas moles differ on the two sides.",
+          "trap": "Adding an inert gas at constant volume changes nothing, because the partial pressures of the reacting gases are unchanged."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 118h260'/><rect class='d-line' x='70' y='46' width='60' height='40' rx='2'/><path class='d-accent' d='M134 66h22M150 58l10 8-10 8'/><rect class='d-line' x='160' y='56' width='60' height='20' rx='2'/><text class='d-label' x='70' y='104'>2 gas moles</text><text class='d-label' x='160' y='104'>1 gas mole</text><text class='d-label' x='70' y='34'>raise pressure: shift right</text></svg>",
+      "visual_alt": "Two sides of a reaction with different numbers of gas moles, with an arrow showing a pressure increase shifting to the side with fewer.",
+      "hook": "Squeeze a gas equilibrium and it moves to the side with less room taken up.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "The Haber process is the standard case: high pressure and moderate temperature, with the compromise explained by rate against yield.",
+      "trap": "Pressure increase does not always shift right. It shifts towards fewer gas moles, which may be the reactant side.",
+      "recall": [
+        {
+          "q": "Adding a catalyst to a system at equilibrium",
+          "options": ["Shifts it forward", "Shifts it backward", "Changes the equilibrium constant", "Changes neither the position nor K"],
+          "answer": 3,
+          "why": "A catalyst speeds both directions equally, so the system reaches the same equilibrium sooner but does not move it."
+        },
+        {
+          "q": "For an exothermic reaction at equilibrium, raising the temperature",
+          "options": ["Shifts it forward", "Shifts it backward", "Has no effect", "Increases K"],
+          "answer": 1,
+          "why": "Heating favours the endothermic direction, which is the reverse for an exothermic reaction, so K falls."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the Haber conditions against your copy."
+    },
+    {
+      "id": "acids-and-buffers",
+      "ncert_ref": "Equilibrium: ionic equilibrium, pH and buffers",
+      "key_phrase": "pH is minus log of hydrogen ion concentration",
+      "meaning": "Water ionises slightly, and the product of hydrogen and hydroxide ion concentrations is 10^-14 at room temperature. That single number defines pH and links acids and bases: adding acid raises hydrogen ion concentration and lowers pH. A buffer resists that change because it contains both a weak acid and its conjugate base, so added acid is consumed by the base and added base by the acid.",
+      "words": [
+        {
+          "term": "pH",
+          "meaning": "The negative logarithm of the hydrogen ion concentration.",
+          "breakdown": "pH 7 is neutral at 25 °C, below 7 acidic, above 7 basic.",
+          "trap": "pH 7 is neutral only near 25 °C. At higher temperatures the neutral point is slightly below 7."
+        },
+        {
+          "term": "buffer",
+          "meaning": "A solution that resists a change in pH when small amounts of acid or base are added.",
+          "breakdown": "Usually a weak acid with its salt, or a weak base with its salt.",
+          "trap": "A buffer is not unlimited. Adding enough acid exhausts the base component and the pH then falls sharply."
+        },
+        {
+          "term": "solubility product",
+          "meaning": "The product of ion concentrations in a saturated solution of a sparingly soluble salt.",
+          "breakdown": "Ksp for silver chloride is the product of silver and chloride ion concentrations.",
+          "trap": "Ksp is not a solubility in grams per litre. It is an ion product, and its units depend on the salt."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 116h260M30 116V32'/><path class='d-accent' d='M40 108h90'/><path class='d-accent' d='M146 108v-30c0-12 30-12 30 0v30'/><path class='d-muted' d='M202 108c0-40 24-58 52-66'/><text class='d-label' x='40' y='126'>add acid</text><text class='d-label' x='150' y='70'>buffer holds</text><text class='d-label' x='200' y='36'>no buffer: pH falls</text></svg>",
+      "visual_alt": "A pH curve that stays flat with a buffer and drops sharply without one as acid is added.",
+      "hook": "A buffer does not stop the acid. It spends itself soaking it up.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Buffer pH uses the Henderson equation, pH equals pKa plus log of salt over acid. The ratio matters, not the absolute amounts.",
+      "trap": "A strong acid has a very low pH but not a negative one in normal solutions. Concentrated acids are still below pH 1 only in extreme cases.",
+      "recall": [
+        {
+          "q": "A solution of pH 3 has a hydrogen ion concentration of",
+          "options": ["3 M", "10^-3 M", "10^3 M", "0.3 M"],
+          "answer": 1,
+          "why": "pH is minus log of the hydrogen ion concentration, so pH 3 means 10 to the power minus 3 molar."
+        },
+        {
+          "q": "A buffer works because it contains",
+          "options": ["A strong acid only", "A weak acid and its conjugate base", "Pure water", "A strong base only"],
+          "answer": 1,
+          "why": "Both components are needed so that added acid is neutralised by the base and added base by the acid."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the ionic product value at the temperature stated in your copy."
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "chem-11-ch5",
+  "subject": "Chemistry",
+  "class": 11,
+  "title": "Thermodynamics",
+  "book": "NCERT Chemistry Class XI",
+  "paragraphs": [
+    {
+      "id": "first-law",
+      "ncert_ref": "Thermodynamics: the first law and internal energy",
+      "key_phrase": "energy moves as heat or work",
+      "meaning": "The first law says the internal energy of a system changes only by heat exchanged and work done, never by vanishing. Writing it as ΔU = q + w fixes a convention: heat added to the system is positive and work done on the system is positive. Internal energy is a state function, so its change depends only on the initial and final states, while heat and work depend on the path.",
+      "words": [
+        {
+          "term": "state function",
+          "meaning": "A property that depends only on the current state, not on how it was reached.",
+          "breakdown": "U, H, S, G are state functions. q and w are not.",
+          "trap": "A system can have the same internal energy after two different routes, but different heat and work values. Only U is fixed."
+        },
+        {
+          "term": "internal energy",
+          "meaning": "The total energy of the particles of a system, excluding bulk motion and external fields.",
+          "breakdown": "Only changes in U can be measured, never its absolute value.",
+          "trap": "Internal energy is not the same as temperature. Two different gases at the same temperature can have different internal energies."
+        },
+        {
+          "term": "sign convention",
+          "meaning": "The agreed rules for heat and work in the first law.",
+          "breakdown": "Heat into the system is positive, work done on the system is positive in the chemistry convention.",
+          "trap": "Physics texts often use ΔU = q - w. Mixing the two conventions flips answers, so state which one you are using."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='96' y='46' width='120' height='64' rx='2'/><path class='d-accent' d='M96 60H56M70 52l-12 8 12 8'/><path class='d-muted' d='M216 92h40M244 84l12 8-12 8'/><text class='d-label' x='26' y='44'>heat in</text><text class='d-label' x='230' y='72'>work out</text><text class='d-label' x='120' y='84'>system</text></svg>",
+      "visual_alt": "A system box with heat entering and work leaving, the two ways its internal energy can change.",
+      "hook": "You cannot get energy from nowhere, and you cannot lose it. You can only move it or convert it.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions give q and w with signs and ask for ΔU. Substitute with the chemistry convention and keep the signs, without rewriting the equation.",
+      "trap": "Work done by the system during expansion is negative in this convention, so ΔU is less than q for an expansion.",
+      "recall": [
+        {
+          "q": "A system absorbs 200 J of heat and does 50 J of work. Its change in internal energy is",
+          "options": ["250 J", "150 J", "-150 J", "50 J"],
+          "answer": 1,
+          "why": "In the chemistry convention w is -50 J because the system does work, so ΔU is 200 minus 50, which is 150 J."
+        },
+        {
+          "q": "Which of these is not a state function?",
+          "options": ["Internal energy", "Enthalpy", "Work", "Entropy"],
+          "answer": 2,
+          "why": "Work depends on the path taken between two states, while the other three depend only on the states themselves."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the sign convention used in your copy."
+    },
+    {
+      "id": "enthalpy",
+      "ncert_ref": "Thermodynamics: enthalpy and Hess's law",
+      "key_phrase": "heat at constant pressure",
+      "meaning": "Enthalpy is internal energy plus the pressure-volume term, and at constant pressure its change equals the heat exchanged. That is why chemists quote ΔH rather than ΔU for reactions in open vessels. Because enthalpy is a state function, a reaction can be broken into imaginary steps and the enthalpy changes added, which is Hess's law.",
+      "words": [
+        {
+          "term": "enthalpy",
+          "meaning": "The sum U + pV of a system, whose change at constant pressure equals the heat exchanged.",
+          "breakdown": "ΔH negative means heat is released, exothermic; positive means absorbed, endothermic.",
+          "trap": "The sign of ΔH is from the system's point of view. An exothermic reaction has a negative ΔH even though it feels hot."
+        },
+        {
+          "term": "Hess's law",
+          "meaning": "The enthalpy change of a reaction is the same whatever route is taken.",
+          "breakdown": "It follows from enthalpy being a state function, and allows ΔH to be found from formation enthalpies.",
+          "trap": "When reversing a step, reverse the sign of its ΔH. When multiplying a step, multiply the value too."
+        },
+        {
+          "term": "standard enthalpy of formation",
+          "meaning": "The enthalpy change when one mole of a compound forms from its elements in standard states.",
+          "breakdown": "Elements in their standard states have a formation enthalpy of zero by definition.",
+          "trap": "The formation reaction must produce exactly one mole of the compound. Producing two moles doubles the value."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 118h240'/><path class='d-accent' d='M80 118V70h60v48'/><path class='d-muted' d='M140 118V44h60v74'/><path class='d-guide' d='M200 44h40'/><text class='d-label' x='54' y='64'>reactants</text><text class='d-label' x='150' y='38'>either route</text><text class='d-label' x='216' y='38'>same ΔH</text><text class='d-label' x='40' y='140'>products</text></svg>",
+      "visual_alt": "An enthalpy diagram with two routes from reactants to products, both ending at the same energy level.",
+      "hook": "You do not have to measure a reaction to know its heat. Build it from reactions you have measured.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Hess's law questions give three or four equations with ΔH values and ask for the target equation. Reverse and scale carefully, then add.",
+      "trap": "Bond breaking absorbs energy and bond forming releases it. Forgetting the signs makes the estimate come out the wrong way round.",
+      "recall": [
+        {
+          "q": "For an exothermic reaction at constant pressure",
+          "options": ["ΔH is positive", "ΔH is negative", "ΔH is zero", "ΔU is always zero"],
+          "answer": 1,
+          "why": "Exothermic means heat leaves the system, so the enthalpy change of the system is negative."
+        },
+        {
+          "q": "Hess's law is a consequence of",
+          "options": ["Enthalpy being a state function", "The first law only", "Entropy increasing", "Pressure being constant"],
+          "answer": 0,
+          "why": "Because enthalpy depends only on the state, the route between reactants and products does not change the total."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the definition of standard state against your copy."
+    },
+    {
+      "id": "entropy-and-gibbs",
+      "ncert_ref": "Thermodynamics: entropy, spontaneity and Gibbs energy",
+      "key_phrase": "spontaneous needs the universe to gain entropy",
+      "meaning": "The second law says the entropy of the universe increases in every spontaneous change, which is why heat flows from hot to cold and never the reverse on its own. For a reaction, the useful test is the Gibbs energy change: ΔG equals ΔH minus TΔS, and a negative value means the reaction can go forward. Temperature decides which term wins, which is why some reactions switch from non-spontaneous to spontaneous when heated.",
+      "words": [
+        {
+          "term": "entropy",
+          "meaning": "A measure of the dispersal of energy, in joules per kelvin.",
+          "breakdown": "It rises when a solid melts, a liquid vaporises or a gas expands.",
+          "trap": "Entropy is not disorder in a vague sense. It is counted in accessible microstates, and it is a state function."
+        },
+        {
+          "term": "Gibbs energy",
+          "meaning": "The quantity G = H - TS, whose decrease at constant temperature and pressure marks a spontaneous change.",
+          "breakdown": "ΔG negative is spontaneous, zero is equilibrium, positive is non-spontaneous.",
+          "trap": "A negative ΔG says the reaction can proceed, not that it will proceed quickly. Kinetics decides the rate."
+        },
+        {
+          "term": "equilibrium",
+          "meaning": "The state where ΔG is zero and forward and reverse rates are equal.",
+          "breakdown": "It links to the equilibrium constant through ΔG° = -RT ln K.",
+          "trap": "At equilibrium the concentrations are not equal, only constant. Equal rates do not mean equal amounts."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M24 120h272M24 120V32'/><path class='d-accent' d='M30 54l60 46'/><path class='d-muted' d='M200 116l60-50'/><circle class='d-fill' cx='124' cy='94' r='4'/><text class='d-label' x='132' y='88'>negative ΔG, forward</text><text class='d-label' x='210' y='56'>positive, reverse</text><text class='d-label' x='30' y='26'>G</text><text class='d-label' x='266' y='136'>reaction</text></svg>",
+      "visual_alt": "A Gibbs energy curve falling then rising, with the minimum marked where the reaction reaches equilibrium.",
+      "hook": "A reaction runs downhill in Gibbs energy, and it stops exactly at the bottom of the valley.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions give signs of ΔH and ΔS and ask at which temperature the reaction becomes spontaneous. The switch point is T = ΔH/ΔS.",
+      "trap": "Spontaneity does not require a negative ΔH. An endothermic reaction can be spontaneous if the entropy term is large and positive.",
+      "recall": [
+        {
+          "q": "A reaction has ΔH positive and ΔS positive. It is spontaneous",
+          "options": ["At all temperatures", "At no temperature", "At high temperature", "At low temperature"],
+          "answer": 2,
+          "why": "The entropy term -TΔS becomes large and negative as T rises, so it eventually outweighs the positive ΔH."
+        },
+        {
+          "q": "At equilibrium, ΔG is",
+          "options": ["Negative", "Positive", "Zero", "Equal to ΔH"],
+          "answer": 2,
+          "why": "There is no further tendency to change in either direction, which is exactly ΔG equal to zero."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the Gibbs equation as printed in your copy."
+    },
+    {
+      "id": "calorimetry",
+      "ncert_ref": "Thermodynamics: measuring heat, calorimetry",
+      "key_phrase": "heat equals mass times specific heat times change",
+      "meaning": "Calorimetry measures heat by watching a temperature change in a known mass of a substance with a known specific heat, using q = mcΔT. A bomb calorimeter does this at constant volume, so it measures ΔU, while a coffee-cup calorimeter at constant pressure measures ΔH. The method is only as good as its insulation, because any heat lost to the room is heat the calculation cannot see.",
+      "words": [
+        {
+          "term": "specific heat",
+          "meaning": "The heat needed to raise one gram of a substance by one kelvin.",
+          "breakdown": "Water has a high value, about 4.18 J per gram per kelvin, which is why it is used in calorimeters.",
+          "trap": "Specific heat is per gram, molar heat capacity is per mole. Mixing them changes the answer by the molar mass."
+        },
+        {
+          "term": "bomb calorimeter",
+          "meaning": "A sealed constant-volume calorimeter used for combustion reactions.",
+          "breakdown": "It measures q at constant volume, which equals ΔU.",
+          "trap": "A bomb calorimeter does not measure ΔH directly. The pressure term has to be added to convert."
+        },
+        {
+          "term": "heat capacity",
+          "meaning": "The heat needed to raise the temperature of a whole object by one kelvin.",
+          "breakdown": "It is specific heat multiplied by mass, so it belongs to the object, not the material.",
+          "trap": "Two objects of the same material can have different heat capacities if their masses differ."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='90' y='40' width='90' height='70' rx='2'/><path class='d-accent' d='M104 96h62'/><path class='d-muted' d='M120 96V72h30v24'/><circle class='d-line' cx='136' cy='66' r='4'/><text class='d-label' x='196' y='58'>thermometer</text><text class='d-label' x='196' y='80'>stirrer</text><text class='d-label' x='90' y='132'>known mass, known specific heat</text></svg>",
+      "visual_alt": "A calorimeter with a thermometer and stirrer, labelled with known mass and specific heat.",
+      "hook": "You cannot weigh heat. You can only watch what it warms.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Mixing problems set heat lost equal to heat gained and solve for the final temperature. Keep the signs consistent with hot losing and cold gaining.",
+      "trap": "The temperature change is in kelvin or Celsius, and both give the same number. Converting to Fahrenheit breaks the formula.",
+      "recall": [
+        {
+          "q": "A bomb calorimeter measures",
+          "options": ["ΔH directly", "ΔU at constant volume", "Entropy", "Gibbs energy"],
+          "answer": 1,
+          "why": "It is sealed, so the volume is constant and no pressure-volume work is done, which makes the heat it measures equal to ΔU."
+        },
+        {
+          "q": "The heat needed to raise 100 g of water by 10 K is about",
+          "options": ["418 J", "4180 J", "41.8 J", "41800 J"],
+          "answer": 1,
+          "why": "Using q = mcΔT with c about 4.18 J per gram per kelvin gives 100 times 4.18 times 10, which is 4180 J."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the specific heat value against your copy."
+    }
+  ]
+}

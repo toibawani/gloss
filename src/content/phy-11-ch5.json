@@ -1,0 +1,201 @@
+{
+  "id": "phy-11-ch5",
+  "subject": "Physics",
+  "class": 11,
+  "title": "Work, Energy and Power",
+  "book": "NCERT Physics Class XI",
+  "paragraphs": [
+    {
+      "id": "work-and-theorem",
+      "ncert_ref": "Ch 5, Work, Energy and Power: work and the work-energy theorem",
+      "key_phrase": "work is force times displacement along it",
+      "meaning": "Work is the product of force and the displacement along the force, so a force perpendicular to the motion does no work at all. That is why carrying a bag on level ground is work for your muscles but zero work as physics defines it. The work-energy theorem ties the two ideas together: the net work on a body equals its change in kinetic energy, whatever the forces were.",
+      "words": [
+        {
+          "term": "work",
+          "meaning": "Force times displacement times the cosine of the angle between them.",
+          "breakdown": "W = Fd cos θ, a scalar with the unit joule.",
+          "trap": "Work can be negative, as friction does on a sliding block. A negative value means energy is being removed, not that the displacement is reversed."
+        },
+        {
+          "term": "work-energy theorem",
+          "meaning": "The net work done on a body equals the change in its kinetic energy.",
+          "breakdown": "W net = ½mv² - ½mu², valid even when the force varies.",
+          "trap": "The theorem uses net work, so every force counts, including gravity and friction. Using only the applied force gives the wrong speed."
+        },
+        {
+          "term": "variable force",
+          "meaning": "A force whose value changes with position, so work is found from the area under its graph.",
+          "breakdown": "W = area under the force-displacement curve.",
+          "trap": "You cannot use Fd for a variable force unless F is replaced by its average over the displacement."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 116h260M30 116V30'/><path class='d-fill' d='M30 116h150v-24H30Z'/><path class='d-accent' d='M30 116c90 0 120-10 150-42'/><rect class='d-line' x='70' y='86' width='56' height='30' rx='2'/><path class='d-accent' d='M130 100h34M154 92l10 8-10 8'/><text class='d-label' x='34' y='26'>F</text><text class='d-label' x='196' y='120'>x</text><text class='d-label' x='176' y='74'>area is the work</text></svg>",
+      "visual_alt": "A force-displacement curve with the area under it shaded, labelled as the work done.",
+      "hook": "Push a wall all day and you have done nothing, as far as the wall is concerned.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Most questions give a force-displacement graph and ask for the speed at a point. Area gives the work, and the theorem gives the speed.",
+      "trap": "Work is done by the component of force along the displacement. Multiplying the full force by distance overcounts.",
+      "recall": [
+        {
+          "q": "A coolie carries a load horizontally at constant speed. The work done by him on the load is",
+          "options": ["Positive and large", "Zero", "Negative", "Equal to the weight"],
+          "answer": 1,
+          "why": "The force he exerts on the load is upward and the displacement is horizontal, so the angle is 90 degrees and the work is zero."
+        },
+        {
+          "q": "The work-energy theorem states that net work equals",
+          "options": ["Change in momentum", "Change in kinetic energy", "Change in potential energy", "Power times time only"],
+          "answer": 1,
+          "why": "Net work changes the kinetic energy by ½mv² minus ½mu², which is the statement of the theorem."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the theorem statement against your copy."
+    },
+    {
+      "id": "potential-energy",
+      "ncert_ref": "Ch 5, Work, Energy and Power: potential energy and conservative forces",
+      "key_phrase": "path does not matter for conservative forces",
+      "meaning": "A conservative force is one whose work depends only on the end points, not on the route taken, which is why it can be described by a potential energy. Gravity and spring force qualify; friction does not, because a longer path means more work lost. Potential energy belongs to the system, not to the object alone, and only changes in it are measurable.",
+      "words": [
+        {
+          "term": "conservative force",
+          "meaning": "A force for which the work done around a closed path is zero.",
+          "breakdown": "Gravity and electrostatic force are conservative; friction and air drag are not.",
+          "trap": "A force is not conservative just because it is constant. Friction is constant yet dissipative."
+        },
+        {
+          "term": "potential energy",
+          "meaning": "Energy stored in the configuration of a system because of a conservative force.",
+          "breakdown": "Spring: ½kx². Near the Earth: mgh. Gravity in general: -GMm/r.",
+          "trap": "The zero of potential energy is your choice, so a negative value is fine. Only differences enter the physics."
+        },
+        {
+          "term": "mechanical energy",
+          "meaning": "The sum of kinetic and potential energy of a system.",
+          "breakdown": "It stays constant when only conservative forces act.",
+          "trap": "Mechanical energy is not conserved when friction acts, though total energy always is."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M24 122h272'/><path class='d-accent' d='M60 122c0-56 40-56 40 0'/><path class='d-muted' d='M60 122c30-30 90-30 120 0'/><circle class='d-fill' cx='100' cy='72' r='5'/><text class='d-label' x='112' y='54'>same height,</text><text class='d-label' x='112' y='70'>any route</text><text class='d-label' x='188' y='112'>the hump costs nothing extra</text></svg>",
+      "visual_alt": "Two routes between the same two heights, a direct arc and a humped path, showing equal work for a conservative force.",
+      "hook": "Climb to the first floor by the stairs or the lift: gravity charges the same fare.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Spring problems use ½kx² and set it equal to kinetic energy. Incline problems use mgh and ignore the path.",
+      "trap": "The spring constant in ½kx² is force per unit extension, so k is in newtons per metre, not newtons.",
+      "recall": [
+        {
+          "q": "The work done by a conservative force around a closed loop is",
+          "options": ["Positive", "Negative", "Zero", "Equal to the potential energy"],
+          "answer": 2,
+          "why": "That is the defining property of a conservative force: the start and end points coincide, so the work is zero."
+        },
+        {
+          "q": "A spring of constant 200 N/m is stretched by 0.1 m. The energy stored is",
+          "options": ["2 J", "1 J", "20 J", "0.2 J"],
+          "answer": 1,
+          "why": "Energy is ½kx², which is 0.5 times 200 times 0.01, giving 1 J."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the spring example against your copy."
+    },
+    {
+      "id": "power",
+      "ncert_ref": "Ch 5, Work, Energy and Power: power",
+      "key_phrase": "power is how fast work is done",
+      "meaning": "Power is the rate of doing work, measured in watts, and for a body moving at velocity v under force F it equals Fv. Two machines can do the same work with very different power, which is why a lifts motor is rated in kilowatts and not in joules. Efficiency compares the useful output with the total input and is always less than one in a real machine.",
+      "words": [
+        {
+          "term": "power",
+          "meaning": "The rate at which work is done or energy is transferred.",
+          "breakdown": "P = W/t, and P = Fv when the force and velocity are along the same line.",
+          "trap": "Power is not energy. A low power motor can do a large amount of work if it runs long enough."
+        },
+        {
+          "term": "watt",
+          "meaning": "One joule per second, the SI unit of power.",
+          "breakdown": "1 kW is 1000 W. Electrical billing uses the kilowatt hour, which is energy, not power.",
+          "trap": "A kilowatt hour is 3.6 million joules. Treating it as a power unit is a common slip."
+        },
+        {
+          "term": "efficiency",
+          "meaning": "The ratio of useful energy output to total energy input.",
+          "breakdown": "It is dimensionless and below one for any real device.",
+          "trap": "Efficiency can never exceed 100 percent, so an answer above one means the inputs were mixed up."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='30' y='40' width='80' height='56' rx='2'/><path class='d-accent' d='M118 68h24M134 60l10 8-10 8'/><rect class='d-line' x='190' y='58' width='80' height='20' rx='2'/><text class='d-label' x='34' y='112'>same work, slow</text><text class='d-label' x='190' y='112'>same work, fast</text><text class='d-label' x='190' y='46'>more power</text></svg>",
+      "visual_alt": "Two identical blocks moved the same distance, one slowly and one quickly, with the faster labelled as more power.",
+      "hook": "Work is the fare. Power is how fast you paid it.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions ask for the power needed to pull a mass up a slope at constant speed. Use P = Fv with F equal to the component of weight plus friction.",
+      "trap": "At constant speed the net force is zero, but the applied force is not zero. Power uses the applied force, not the net force.",
+      "recall": [
+        {
+          "q": "A pump lifts 100 kg of water 10 m in 20 s. Its useful power is about",
+          "options": ["50 W", "500 W", "1000 W", "5000 W"],
+          "answer": 1,
+          "why": "Work is mgh, about 100 times 10 times 10, which is 10 000 J. Divided by 20 s that is 500 W."
+        },
+        {
+          "q": "Power can be written as",
+          "options": ["Fv", "F/v", "mv", "mgh"],
+          "answer": 0,
+          "why": "Work per unit time is force times distance per unit time, which is force times velocity."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the unit conversions against your copy."
+    },
+    {
+      "id": "collisions",
+      "ncert_ref": "Ch 5, Work, Energy and Power: collisions",
+      "key_phrase": "momentum always, kinetic energy sometimes",
+      "meaning": "In every collision, momentum is conserved because the forces act only between the bodies. Kinetic energy is conserved only in an elastic collision; in a perfectly inelastic one the bodies stick together and the lost energy becomes heat and sound. The coefficient of restitution measures how much of the approach speed comes back as separation speed.",
+      "words": [
+        {
+          "term": "elastic collision",
+          "meaning": "A collision in which kinetic energy is conserved.",
+          "breakdown": "For equal masses, an elastic head-on collision simply exchanges velocities.",
+          "trap": "Elastic does not mean the bodies bounce apart gently. It means no kinetic energy is converted."
+        },
+        {
+          "term": "perfectly inelastic",
+          "meaning": "A collision in which the bodies stick together and move with one common velocity.",
+          "breakdown": "Maximum kinetic energy is lost, but momentum is still conserved.",
+          "trap": "The lost kinetic energy does not disappear. It becomes deformation, heat and sound."
+        },
+        {
+          "term": "coefficient of restitution",
+          "meaning": "The ratio of relative speed after to relative speed before the collision.",
+          "breakdown": "e = 1 for elastic, e = 0 for perfectly inelastic, between for real collisions.",
+          "trap": "A ball bouncing to a lower height has e below one, but its momentum was still conserved in the collision with the floor."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M20 116h280'/><circle class='d-line' cx='80' cy='96' r='16'/><circle class='d-line' cx='140' cy='96' r='16'/><path class='d-accent' d='M96 96h28M118 88l10 8-10 8'/><circle class='d-line' cx='220' cy='96' r='16'/><circle class='d-line' cx='248' cy='96' r='16'/><text class='d-label' x='56' y='136'>before</text><text class='d-label' x='200' y='136'>stuck, slower</text><text class='d-label' x='196' y='56'>energy lost</text></svg>",
+      "visual_alt": "Two masses approaching, then a perfectly inelastic collision where they move together more slowly.",
+      "hook": "Momentum balances the books in every collision. Kinetic energy does not.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "A bullet embedding in a block is the standard perfectly inelastic case: momentum before equals momentum after, then energy or height follows.",
+      "trap": "Never use energy conservation through an inelastic collision. Use momentum first, then energy for what happens afterwards.",
+      "recall": [
+        {
+          "q": "A 2 kg body at 3 m/s hits a stationary 4 kg body and sticks to it. Their common speed is",
+          "options": ["1 m/s", "1.5 m/s", "3 m/s", "0.5 m/s"],
+          "answer": 0,
+          "why": "Momentum is 6 kg m/s before and the total mass is 6 kg after, so the speed is 1 m/s."
+        },
+        {
+          "q": "In a perfectly elastic collision, which quantity is conserved?",
+          "options": ["Kinetic energy only", "Momentum only", "Both momentum and kinetic energy", "Neither"],
+          "answer": 2,
+          "why": "Momentum is conserved in all collisions, and by definition kinetic energy is also conserved in an elastic one."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the collision examples against your copy."
+    }
+  ]
+}
