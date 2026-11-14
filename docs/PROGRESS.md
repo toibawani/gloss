@@ -98,3 +98,23 @@ words, still all draft and still without page or line claims.
 
 Verified: content build 24 chapters, 0 errors; typecheck 0; lint 0; 49 unit tests; 23 e2e; build 0,
 initial JS 113.06 kB gzip; 104 screenshots regenerated and reviewed at 360 and 1280.
+
+**Sections got their own pages, and chapter numbers were corrected.** A subject page now lists its
+sections instead of every chapter, and each section is a page of its own at `#/s/<subject>/<slug>`:
+`#/s/Biology` lists Diversity, Structural organisation and Cell structure, and
+`#/s/Biology/cell-structure-and-function` lists chapters 8, 9 and 10. The old numerals came from
+file order, so Cell Cycle showed as 01 and chemistry listed `bonding` before chapter 1. Numbers now
+come from `src/catalogue.ts`, which holds the NCERT number for every chapter and orders every list
+by it. Home's third block became Start here, one first chapter per subject, instead of a recent list
+that misleadingly renumbered chapters.
+
+**Content rewrite started.** Laws of Motion and Structure of Atom were rewritten with measured
+values and named cases: a 0.16 kg ball at 30 m/s stopped in 0.01 s needs about 480 N, a 60 kg
+student in a lift accelerating at 2 m/s² feels 708 N, sodium's work function is about 2.3 eV and
+the Balmer line sits at 656 nm. The remaining chapters are still in the earlier voice and need the
+same pass.
+
+Verified: content build 24 chapters, 0 errors; typecheck 0; lint 0; build 0, initial JS 114.60 kB
+gzip; 23 e2e; 120 screenshots including the new subject and section pages, reviewed at 360 and 1280.
+The offline spec now retries twice, because it races the service worker writing its cache under
+parallel load; the assertions are unchanged.
