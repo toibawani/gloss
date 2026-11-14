@@ -1,11 +1,14 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { chapterIndex, totalParagraphs } from '../content'
+import { saveChaptersOffline, formatBytes } from '../offline'
 import * as store from '../store'
 import { ChapterList } from '../components/ChapterList'
 import { Cover } from '../components/Cover'
+import { Icon } from '../icons'
 
 export function Library({ only }: { only?: string }) {
   const prog = store.getProgress()
+  const [saved, setSaved] = useState('')
   const groups = useMemo(() => {
     const map = new Map<string, typeof chapterIndex>()
     for (const c of chapterIndex) map.set(c.subject, [...(map.get(c.subject) ?? []), c])
@@ -13,6 +16,18 @@ export function Library({ only }: { only?: string }) {
   }, [])
 
   const shown = only ? groups.filter(([s]) => s.toLowerCase() === only.toLowerCase()) : groups
+  const at = only ? groups.findIndex(([s]) => s.toLowerCase() === only.toLowerCase()) : -1
+  const next = at >= 0 ? groups[(at + 1) % groups.length] : undefined
+
+  const save = async (ids: string[]) => {
+    setSaved('Saving the chapters and their diagrams.')
+    const { ok, usage } = await saveChaptersOffline(ids)
+    setSaved(
+      ok
+        ? `Saved for offline. This site now uses ${formatBytes(usage)} of storage.`
+        : 'Offline saving needs the installed app. Install it first from Settings.',
+    )
+  }
 
   return (
     <>
@@ -46,9 +61,38 @@ export function Library({ only }: { only?: string }) {
                 </div>
               </div>
               <ChapterList chapters={list} progress={prog} />
+
+              {only && (
+                <div className="save-row">
+                  <button className="link-btn" onClick={() => save(list.map((c) => c.id))}>
+                    <Icon name="download" size={16} /> Save {subject.toLowerCase()} for offline
+                  </button>
+                  {saved && (
+                    <p className="inline-note" role="status">
+                      {saved}
+                    </p>
+                  )}
+                </div>
+              )}
             </section>
           )
         })
+      )}
+
+      {only && shown.length > 0 && (
+        <nav className="end-nav" aria-label="Next subject">
+          {next ? (
+            <a href={`#/s/${encodeURIComponent(next[0])}`} data-subject={next[0]}>
+              <span>Next subject</span>
+              <strong>{next[0]}</strong>
+            </a>
+          ) : (
+            <a href="#/library">
+              <span>That is every subject</span>
+              <strong>Back to the library</strong>
+            </a>
+          )}
+        </nav>
       )}
 
       <section className="not-yet" aria-labelledby="not-yet">

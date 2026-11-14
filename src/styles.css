@@ -2185,3 +2185,69 @@ fieldset.field > legend {
     line-height: 1.5;
   }
 }
+
+/* ------------------------------------------------------------------ home blocks and onward links */
+
+.home-block {
+  margin-top: var(--s-7);
+}
+
+.section-head a {
+  color: var(--accent);
+  font-size: var(--fs-sm);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.save-row {
+  display: grid;
+  gap: var(--s-2);
+  margin-top: var(--s-4);
+}
+
+/* The end of a chapter or subject: one clear step onward, in the same ruled language. */
+.end-nav {
+  display: grid;
+  gap: var(--s-3);
+  margin-top: var(--s-7);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--ink);
+}
+
+.end-nav a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-4);
+  min-height: 44px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.end-nav span {
+  order: 2;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+}
+
+.end-nav strong {
+  font-family: var(--serif);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+
+.end-nav a:hover strong {
+  color: var(--accent);
+}
+
+.end-nav .end-quiet {
+  border-top: 1px solid var(--rule);
+  padding-top: var(--s-3);
+}
+
+.end-nav .end-quiet strong {
+  font-size: var(--fs-base);
+  font-family: var(--sans);
+  font-weight: 600;
+}

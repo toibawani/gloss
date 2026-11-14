@@ -1,7 +1,6 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { chapterIndex, totalParagraphs } from '../content'
 import { useChapter } from '../hooks'
-import { saveChaptersOffline, formatBytes } from '../offline'
 import * as store from '../store'
 import { Card } from '../components/Card'
 import { ChapterList } from '../components/ChapterList'
@@ -22,10 +21,10 @@ export function Home() {
   const prog = store.getProgress()
   const words = store.getWords()
   const due = dueCount()
-  const firstRun = words.length === 0 && Object.values(prog).every((a) => a.length === 0)
+  const read = Object.values(prog).reduce((n, ids) => n + ids.length, 0)
+  const firstRun = words.length === 0 && read === 0
   const first = chapterIndex[0]
   const sample = useChapter(first?.id ?? '')
-  const [saved, setSaved] = useState<Record<string, string>>({})
 
   const groups = useMemo(() => {
     const map = new Map<string, typeof chapterIndex>()
@@ -33,23 +32,12 @@ export function Home() {
     return [...map.entries()]
   }, [])
 
+  const started = chapterIndex.filter((c) => (prog[c.id] ?? []).length > 0).slice(0, 3)
+  const latest = [...chapterIndex].slice(-3).reverse()
+
   if (chapterIndex.length === 0) {
     return <Empty art="lost" title="No chapters in this build" text="The content index is empty. Rebuild the site and reload." />
   }
-
-  const save = async (subject: string, ids: string[]) => {
-    setSaved((s) => ({ ...s, [subject]: 'Saving the chapters and their diagrams.' }))
-    const { ok, usage } = await saveChaptersOffline(ids)
-    setSaved((s) => ({
-      ...s,
-      [subject]: ok
-        ? `Saved for offline. This site now uses ${formatBytes(usage)} of storage.`
-        : 'Offline saving needs the installed app. Install it first from Settings.',
-    }))
-  }
-
-  const read = Object.values(prog).reduce((n, ids) => n + ids.length, 0)
-  const subjects = groups.length
 
   return (
     <>
@@ -59,7 +47,7 @@ export function Home() {
         <dl className="masthead-stats">
           <div>
             <dt>subjects written</dt>
-            <dd>{subjects}</dd>
+            <dd>{groups.length}</dd>
           </div>
           <div>
             <dt>chapters</dt>
@@ -75,8 +63,8 @@ export function Home() {
           </div>
         </dl>
         <p className="masthead-note">
-          NCERT lines explained where students get stuck. Every paragraph is a draft until a subject expert checks it
-          against the book.
+          NCERT lines explained where students get stuck. Choose a subject to see its chapters. Every paragraph is a
+          draft until a subject expert checks it against the book.
         </p>
       </header>
 
@@ -122,37 +110,25 @@ export function Home() {
         </a>
       )}
 
-      {groups.map(([subject, list]) => {
-        const seen = list.reduce((n, c) => n + (prog[c.id] ?? []).length, 0)
-        const total = list.reduce((n, c) => n + c.paragraphs, 0)
-        return (
-          <section className="group" key={subject} data-subject={subject} aria-labelledby={`subject-${subject}`}>
-            <div className="group-head">
-              <h2 id={`subject-${subject}`}>{subject}</h2>
-              <span className="group-count">
-                {list.length} {list.length === 1 ? 'chapter' : 'chapters'} · {seen} of {total} paragraphs read
-              </span>
-            </div>
+      {started.length > 0 && (
+        <section className="home-block" aria-labelledby="continue-title">
+          <div className="section-head">
+            <h2 id="continue-title">Continue</h2>
+            <span>
+              {read} of {totalParagraphs} paragraphs read on this device
+            </span>
+          </div>
+          <ChapterList chapters={started} progress={prog} />
+        </section>
+      )}
 
-            <ChapterList chapters={list} progress={prog} />
-
-            <div className="row">
-              <button className="link-btn" onClick={() => save(subject, list.map((c) => c.id))}>
-                <Icon name="download" size={16} /> Save {subject.toLowerCase()} for offline
-              </button>
-              <a className="link-btn" href={`#/s/${encodeURIComponent(subject)}`}>
-                All {subject.toLowerCase()} chapters <Icon name="right" size={14} />
-              </a>
-            </div>
-
-            {saved[subject] && (
-              <p className="inline-note" role="status">
-                {saved[subject]}
-              </p>
-            )}
-          </section>
-        )
-      })}
+      <section className="home-block" aria-labelledby="new-title">
+        <div className="section-head">
+          <h2 id="new-title">New in the library</h2>
+          <a href="#/library">All chapters</a>
+        </div>
+        <ChapterList chapters={latest} progress={prog} />
+      </section>
 
       {firstRun && (
         <section className="sample" aria-labelledby="sample-title">
@@ -162,9 +138,7 @@ export function Home() {
           </div>
           {sample.loading && <Skeleton lines={6} rail />}
           {sample.ch && sample.ch.paragraphs[0] && <Card ch={sample.ch} p={sample.ch.paragraphs[0]} index={0} sample />}
-          {sample.error && (
-            <p className="inline-note">The sample did not load. Open chapter 8 from the list above.</p>
-          )}
+          {sample.error && <p className="inline-note">The sample did not load. Open a chapter from the library.</p>}
         </section>
       )}
 

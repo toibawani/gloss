@@ -18,7 +18,7 @@ test('exports a backup, clears data and imports it again', async ({ page }) => {
   await page.locator('#import-file').setInputFiles(path!)
   await expect(page.getByText(/Imported\./)).toBeVisible()
 
-  await page.getByRole('link', { name: 'Home' }).click()
+  await page.goto('/#/s/Biology')
   await expect(page.getByRole('link', { name: /Cell: The Unit of Life/ })).toContainText('1 read')
 })
 

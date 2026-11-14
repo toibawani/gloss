@@ -4,6 +4,8 @@ test('opens a chapter, taps a word and answers a question', async ({ page }) => 
   await page.goto('/')
   await expect(page.getByRole('heading', { name: 'Every paragraph, with a margin note.' })).toBeVisible()
 
+  // Home lists subjects; the chapters live on the subject page.
+  await page.goto('/#/s/Biology')
   await page.getByRole('link', { name: /Cell: The Unit of Life/ }).click()
   await expect(page.getByRole('heading', { name: 'Cell: The Unit of Life' })).toBeVisible()
   await expect(page.locator('.phrase q')).toHaveText('basic structural and functional unit')
@@ -24,7 +26,7 @@ test('keeps progress and opened words on this device', async ({ page }) => {
   await page.goto('/#/words')
   await expect(page.getByRole('heading', { name: 'Words you opened' })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'nucleoid' })).toBeVisible()
-  await page.goto('/#/')
+  await page.goto('/#/s/Biology')
   await expect(page.getByRole('link', { name: /Cell: The Unit of Life/ })).toContainText('1 read')
 })
 

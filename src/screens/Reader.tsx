@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { metaOf } from '../content'
+import { chapterIndex, metaOf } from '../content'
 import { useChapter } from '../hooks'
 import { Card } from '../components/Card'
 import { Empty, Skeleton } from '../components/States'
@@ -83,6 +83,9 @@ export function Reader({ id, para }: { id: string; para?: string }) {
   }
 
   const p = ch.paragraphs[i]
+  const siblings = chapterIndex.filter((c) => c.subject === ch.subject)
+  const at = siblings.findIndex((c) => c.id === ch.id)
+  const next = siblings[at + 1]
 
   return (
     <section
@@ -131,6 +134,25 @@ export function Reader({ id, para }: { id: string; para?: string }) {
         <button className="btn btn-quiet" onClick={() => go(1)} disabled={i === n - 1}>
           Next paragraph
         </button>
+      </nav>
+
+      {/* The end of a chapter is a junction, not a wall: offer the next one, or the subject. */}
+      <nav className="end-nav" aria-label="Chapter">
+        {next ? (
+          <a href={`#/c/${next.id}`} data-subject={ch.subject}>
+            <span>Next chapter</span>
+            <strong>{next.title}</strong>
+          </a>
+        ) : (
+          <a href={`#/s/${encodeURIComponent(ch.subject)}`} data-subject={ch.subject}>
+            <span>Last chapter in this subject</span>
+            <strong>All {ch.subject.toLowerCase()} chapters</strong>
+          </a>
+        )}
+        <a className="end-quiet" href={`#/s/${encodeURIComponent(ch.subject)}`}>
+          <span>Subject</span>
+          <strong>{ch.subject}</strong>
+        </a>
       </nav>
     </section>
   )
