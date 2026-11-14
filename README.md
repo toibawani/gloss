@@ -12,8 +12,8 @@ the device it runs on.
 
 Usable for reading and revision, with two honest limits:
 
-- **All content is draft.** 34 paragraphs across Class 11 Biology chapters 8 and 9 have not been
-  checked by a subject expert. The app says so on every card.
+- **All content is draft.** 126 paragraphs across 24 chapters of Class 11 Physics, Chemistry and
+  Biology have not been checked by a subject expert. The app says so on every card.
 - **Page and line references are unverified.** They stay out until the exact NCERT edition is
   supplied. `npm run content:verify` reports SKIPPED until then.
 
@@ -24,7 +24,8 @@ saved words and review dates live in `localStorage`.
 
 - A reader built around one paragraph at a time: meaning, tricky words, exam lens, a diagram and a
   memory hook in the margin rail on tablet and desktop, stacked under the paragraph on a phone.
-- 34 draft paragraphs in two chapters, loaded on demand as separate 15 kB chunks.
+- 24 chapters split into 10 syllabus sections, loaded on demand one chunk per chapter.
+- Four levels of page: library, subject, section, chapter, each with breadcrumbs and a next step.
 - Spaced repetition on a day boundary (1, 3, 7, 21 days) with a revision screen that explains an
   empty day.
 - Local search across paragraphs, tricky words and hooks.
@@ -32,7 +33,7 @@ saved words and review dates live in `localStorage`.
 - Settings for theme, text size, line spacing and exam goal, applied before first paint.
 - Installable PWA with a hand-written service worker: visited chapters reopen with no network, and
   the update bar waits for a tap before reloading.
-- Self-hosted fonts, a hand-drawn icon set, and a paper-and-ink palette with one 3px radius.
+- Self-hosted fonts, a hand-drawn icon set, and a cool paper palette with one 3px radius.
 
 ## Stack
 
@@ -52,7 +53,7 @@ npm run dev
 | Command | What it does |
 | --- | --- |
 | `npm run dev` | dev server on 5173 |
-| `npm test` | 47 unit tests |
+| `npm test` | 49 unit tests |
 | `npm run test:e2e` | 23 Playwright tests against a production build |
 | `npm run lint` | ESLint with jsx-a11y and react-hooks |
 | `npm run build` | content check, typecheck, bundle into `dist/` |
@@ -62,13 +63,13 @@ npm run dev
 
 ## Measured, not claimed
 
-From `npm run build` and `npm run lighthouse` on 13 November 2026:
+From `npm run build` on 14 November 2026:
 
-- Initial JavaScript: 354,252 B raw, **106,598 B gzip**.
-- Home: Lighthouse 100 performance, 100 accessibility, 100 best practices.
-- Chapter route: 96–97 performance, 100 accessibility.
-- Cumulative layout shift 0.000; total blocking time 3 ms on the chapter route.
-- Largest contentful paint on the chapter route is 2.6 s against a 2.5 s budget. The full audit,
+- Initial JavaScript: 383,424 B raw, **114,602 B gzip**, well inside the 200 kB budget.
+- 24 chapters, 126 paragraphs, 10 sections, 120 review screenshots.
+- Lighthouse was last run on 13 November 2026: 100 accessibility and best practices on Home, 96–97
+  performance on the chapter route, CLS 0.000, LCP 2.6 s against a 2.5 s budget. It has not been
+  re-run since the section pages landed, so treat those figures as historical. The full audit,
   including what was not tested, is in [`docs/AUDIT.md`](docs/AUDIT.md).
 
 ## Add a chapter
@@ -88,6 +89,17 @@ line reference against the current NCERT edition, and each recall answer. Record
 and when in the pull request. Until then it stays draft. See
 [`docs/SCIENCE-REVIEW.md`](docs/SCIENCE-REVIEW.md) and [`content/REVIEW.md`](content/REVIEW.md).
 
+## Pages
+
+| Route | Page |
+| --- | --- |
+| `#/` | landing: what Gloss is, three ways in, a sample paragraph |
+| `#/library` | every chapter, by subject, plus what is not written |
+| `#/s/Biology` | the subject's sections |
+| `#/s/Biology/cell-structure-and-function` | the chapters of one section |
+| `#/c/bio-11-ch8/cell-theory` | one paragraph and its margin note |
+| `#/revise`, `#/words`, `#/search`, `#/settings` | revision, saved words, search, preferences |
+
 ## Security
 
 `public/_headers` carries the CSP, `X-Content-Type-Options`, `Referrer-Policy`,
@@ -101,6 +113,8 @@ and never injected as HTML. Report problems as described in [`SECURITY.md`](SECU
 - [`docs/RUNBOOK.md`](docs/RUNBOOK.md): setup, content pipeline, releasing, deploying, problems.
 - [`docs/AUDIT.md`](docs/AUDIT.md): performance, accessibility and dependency audit.
 - [`docs/PENTEST.md`](docs/PENTEST.md): the manual security pass and what it did not cover.
+- [`docs/SECURITY-AUDIT-2026-11-14.md`](docs/SECURITY-AUDIT-2026-11-14.md): production-readiness
+  audit with a status and a reason for every checklist item.
 - [`docs/SCIENCE-REVIEW.md`](docs/SCIENCE-REVIEW.md): what draft means and how review works.
 - [`docs/BRANCHING.md`](docs/BRANCHING.md): branches, commits, pull requests, releases.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CHANGELOG.md`](CHANGELOG.md).
