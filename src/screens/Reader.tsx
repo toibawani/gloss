@@ -50,7 +50,7 @@ export function Reader({ id, para }: { id: string; para?: string }) {
     // The title comes from the index, so the page paints its heading before the chapter
     // chunk arrives. That keeps the largest text on screen early and the layout stable.
     return (
-      <section>
+      <section data-subject={meta?.subject}>
         <header className="reader-head">
           <a className="back" href="#/">
             <Icon name="left" size={16} /> Chapters
@@ -87,6 +87,7 @@ export function Reader({ id, para }: { id: string; para?: string }) {
   return (
     <section
       className="reader"
+      data-subject={ch.subject}
       onTouchStart={(e) => (x0.current = e.touches[0].clientX)}
       onTouchEnd={(e) => {
         const dx = e.changedTouches[0].clientX - x0.current

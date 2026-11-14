@@ -14,18 +14,11 @@ import { Privacy, Terms } from './Legal'
 import { Library } from './screens/Library'
 import { StyleGuide } from './screens/StyleGuide'
 import { Wordmark } from './components/Brand'
-import { Icon, type IconName } from './icons'
+import { Icon } from './icons'
+import { Rail } from './components/Rail'
+import { NAV, TABS } from './nav'
 
 initSettings()
-
-const NAV: { route: string; href: string; label: string; icon: IconName }[] = [
-  { route: '', href: '#/', label: 'Home', icon: 'home' },
-  { route: 'library', href: '#/library', label: 'Library', icon: 'library' },
-  { route: 'revise', href: '#/revise', label: 'Revise', icon: 'revise' },
-  { route: 'words', href: '#/words', label: 'Words', icon: 'words' },
-]
-
-const TABS = [...NAV, { route: 'settings', href: '#/settings', label: 'Settings', icon: 'settings' as IconName }]
 
 export default function App() {
   const h = useHash()
@@ -50,6 +43,7 @@ export default function App() {
       <a className="skip" href="#main">
         Skip to content
       </a>
+      <Rail route={current} />
       <header className="top">
         <div className="top-inner">
           <a className="brand" href="#/" aria-label="Gloss">

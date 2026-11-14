@@ -6,8 +6,8 @@ import * as store from '../store'
 import { Card } from '../components/Card'
 import { ChapterList } from '../components/ChapterList'
 import { Cover } from '../components/Cover'
-import { Empty, Skeleton } from '../components/States'
 import { Icon } from '../icons'
+import { Empty, Skeleton } from '../components/States'
 import { isDue, usableCard } from '../srs'
 
 function dueCount(): number {
@@ -53,29 +53,64 @@ export function Home() {
 
   return (
     <>
-      <header className="page-head hero">
-        <p className="hero-subject">Class 11 · Physics, Chemistry and Biology</p>
+      <header className="masthead">
+        <p className="masthead-kicker">Class 11 · Physics, Chemistry and Biology</p>
         <h1>Every paragraph, with a margin note.</h1>
-        <p className="lede">
-          NCERT lines explained where students get stuck. {subjects} subjects, {chapterIndex.length} chapters and{' '}
-          {totalParagraphs} paragraphs are written so far. Every one is a draft until a subject expert checks it.
+        <dl className="masthead-stats">
+          <div>
+            <dt>subjects written</dt>
+            <dd>{subjects}</dd>
+          </div>
+          <div>
+            <dt>chapters</dt>
+            <dd>{chapterIndex.length}</dd>
+          </div>
+          <div>
+            <dt>paragraphs</dt>
+            <dd>{totalParagraphs}</dd>
+          </div>
+          <div>
+            <dt>read on this device</dt>
+            <dd>{read}</dd>
+          </div>
+        </dl>
+        <p className="masthead-note">
+          NCERT lines explained where students get stuck. Every paragraph is a draft until a subject expert checks it
+          against the book.
         </p>
       </header>
 
-      <section className="covers" aria-label="Subjects">
-        {groups.map(([subject, list]) => {
-          const total = list.reduce((n, c) => n + c.paragraphs, 0)
-          const seen = list.reduce((n, c) => n + (prog[c.id] ?? []).length, 0)
-          return (
-            <a className="cover-card" key={subject} href={`#/s/${encodeURIComponent(subject)}`} data-subject={subject}>
-              <Cover subject={subject} size={96} />
-              <span className="cover-name">{subject}</span>
-              <span className="cover-meta">
-                {list.length} {list.length === 1 ? 'chapter' : 'chapters'} · {seen} of {total} read
-              </span>
-            </a>
-          )
-        })}
+      <section className="subject-index-block" aria-labelledby="subjects-title">
+        <div className="section-head">
+          <h2 id="subjects-title">Subjects</h2>
+          <span>Three books, one reference for each line</span>
+        </div>
+        <ul className="subject-index">
+          {groups.map(([subject, list], n) => {
+            const total = list.reduce((sum, c) => sum + c.paragraphs, 0)
+            const seen = list.reduce((sum, c) => sum + (prog[c.id] ?? []).length, 0)
+            return (
+              <li key={subject}>
+                <a href={`#/s/${encodeURIComponent(subject)}`} data-subject={subject}>
+                  <span className="index-no" aria-hidden="true">
+                    {String(n + 1).padStart(2, '0')}
+                  </span>
+                  <Cover subject={subject} size={56} />
+                  <span className="index-name">
+                    {subject}
+                    <span className="index-meta">
+                      {list.length} {list.length === 1 ? 'chapter' : 'chapters'} · {total} paragraphs
+                    </span>
+                  </span>
+                  <span className="index-read">{seen} read</span>
+                  <span className="index-go" aria-hidden="true">
+                    <Icon name="right" size={18} />
+                  </span>
+                </a>
+              </li>
+            )
+          })}
+        </ul>
       </section>
 
       {due > 0 && (
