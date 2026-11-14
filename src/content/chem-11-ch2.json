@@ -9,93 +9,93 @@
       "id": "photoelectric-effect",
       "ncert_ref": "Structure of Atom: photoelectric effect and dual nature",
       "key_phrase": "light arrives in packets",
-      "meaning": "Shine light on a metal and electrons leave only above a threshold frequency, no matter how bright the light is. Brightness changes how many electrons leave, not how fast they leave. Einstein explained this by treating light as packets of energy, hν, each packet knocking out one electron, which is why the effect is instant even at low intensity.",
+      "meaning": "Shine light on a clean metal surface and electrons leave only above a threshold frequency, whatever the brightness. Sodium needs light shorter than roughly 540 nm, so red light ejects nothing however intense it is, while dim violet works at once. Einstein explained this by treating light as packets of energy hν, each packet freeing one electron, which is why the effect is instantaneous rather than gradual.",
       "words": [
         {
           "term": "threshold frequency",
           "meaning": "The minimum frequency of light that can eject an electron from a metal.",
-          "breakdown": "Below it, no electrons leave at any intensity.",
-          "trap": "Bright red light will not eject electrons from a metal that needs blue. More photons below the threshold still carry too little energy each."
+          "breakdown": "Below it, no electrons leave at any intensity. Each metal has its own value.",
+          "trap": "Bright red light will not free electrons from a metal that needs blue. More photons below the threshold still carry too little energy each."
         },
         {
           "term": "work function",
           "meaning": "The minimum energy needed to remove an electron from a metal surface.",
-          "breakdown": "Denoted hν0, measured in electron volts for convenience.",
-          "trap": "The work function depends on the metal, not on the light. Changing the intensity changes nothing."
+          "breakdown": "Written hν0 and usually quoted in electron volts: about 2.3 eV for sodium, 2.1 eV for caesium.",
+          "trap": "The work function belongs to the metal, not the light. Turning up the brightness changes nothing about it."
         },
         {
           "term": "photon",
           "meaning": "A quantum of light carrying energy hν.",
           "breakdown": "h is Planck's constant, 6.626 × 10^-34 J s.",
-          "trap": "A photon has energy and momentum but no rest mass. Calling it a small particle with weight is wrong."
+          "trap": "A photon carries energy and momentum but has no rest mass. Calling it a tiny particle with weight is wrong."
         }
       ],
-      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 30h70v80H30z'/><path class='d-accent' d='M104 52l22 10M104 74l22 10M104 96l22 10'/><circle class='d-fill' cx='150' cy='62' r='4'/><circle class='d-fill' cx='158' cy='86' r='4'/><circle class='d-fill' cx='150' cy='110' r='4'/><text class='d-label' x='30' y='130'>metal</text><text class='d-label' x='150' y='44'>electrons leave</text><text class='d-label' x='150' y='136'>only above threshold frequency</text></svg>",
-      "visual_alt": "Light packets hitting a metal plate with electrons leaving, labelled that emission happens only above a threshold frequency.",
+      "visual_svg": "<svg viewBox='0 0 320 150'><rect class='d-line' x='30' y='30' width='70' height='80'/><path class='d-accent' d='M104 52l22 10M104 74l22 10M104 96l22 10'/><circle class='d-fill' cx='150' cy='62' r='4'/><circle class='d-fill' cx='158' cy='86' r='4'/><circle class='d-fill' cx='150' cy='110' r='4'/><text class='d-label' x='30' y='130'>metal</text><text class='d-label' x='150' y='44'>electrons leave</text><text class='d-label' x='150' y='138'>only above the threshold frequency</text></svg>",
+      "visual_alt": "Light packets striking a metal plate with electrons leaving, labelled that emission needs a threshold frequency.",
       "hook": "A hundred soft throws will not break a window that resists one hard stone.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "The question that catches students: increasing intensity increases the number of electrons but not their kinetic energy. Only frequency changes the energy.",
-      "trap": "Kinetic energy depends on frequency, current on intensity. Mixing them is the standard error.",
+      "exam_note": "The trap is intensity against frequency: doubling the brightness doubles the current, not the kinetic energy of each electron.",
+      "trap": "Kinetic energy depends on frequency; the photocurrent depends on intensity. Swapping them loses the mark.",
       "recall": [
         {
           "q": "Doubling the intensity of light above the threshold frequency",
           "options": ["Doubles the kinetic energy of each electron", "Doubles the number of electrons emitted", "Stops emission", "Changes the threshold frequency"],
           "answer": 1,
-          "why": "More photons arrive per second, so more electrons leave, but each photon still has the same energy hν."
+          "why": "More photons arrive per second, so more electrons leave, but each photon still carries the same energy hν."
         },
         {
           "q": "The maximum kinetic energy of an emitted electron is",
           "options": ["hν", "hν - hν0", "hν0", "Independent of frequency"],
           "answer": 1,
-          "why": "The electron uses hν0 to escape the metal, and the rest appears as kinetic energy, so KE max is hν minus the work function."
+          "why": "The electron spends hν0 escaping the metal, and whatever remains appears as kinetic energy."
         }
       ],
       "review_status": "draft",
-      "review_note": "Verify page and line against your edition, and confirm the chapter number and the value of Planck's constant used in your copy."
+      "review_note": "Verify page and line against your edition, and confirm the work function values against your copy."
     },
     {
       "id": "bohr-model",
       "ncert_ref": "Structure of Atom: Bohr model of the hydrogen atom",
       "key_phrase": "angular momentum comes in whole units",
-      "meaning": "Bohr kept the nuclear atom and added one rule: an electron in a stable orbit has angular momentum in whole multiples of h/2π. That restriction allows only certain orbits, each with a fixed energy, and light is emitted or absorbed only when the electron jumps between them. The model explains the hydrogen spectrum and predicts the 13.6 eV ionisation energy, but it fails for any atom with more than one electron.",
+      "meaning": "Bohr allowed the electron only those orbits in which its angular momentum is a whole multiple of h/2π, which forces the energies to be -13.6/n² electron volts for hydrogen. The ground state sits at -13.6 eV, the first excited state at -3.4 eV, and the Balmer line at 656 nm comes from the drop from n = 3 to n = 2. The model reproduces the hydrogen spectrum and the ionisation energy, but fails for helium and everything heavier.",
       "words": [
         {
           "term": "stationary orbit",
-          "meaning": "An allowed orbit in which the electron does not radiate energy.",
-          "breakdown": "Classical physics says an accelerating charge radiates, so Bohr simply forbade it in these orbits.",
-          "trap": "Stationary does not mean at rest. The electron is moving, but its energy is fixed."
+          "meaning": "An allowed orbit in which the electron does not radiate.",
+          "breakdown": "Classical physics says an accelerating charge radiates, so Bohr simply forbade radiation in these orbits.",
+          "trap": "Stationary does not mean the electron is still. It moves, but its energy is fixed and it does not spiral inward."
         },
         {
           "term": "quantisation",
           "meaning": "A quantity that can take only certain discrete values.",
-          "breakdown": "Angular momentum is quantised here: L = nh/2π, n = 1, 2, 3 and so on.",
-          "trap": "Quantisation is not rounding. Values between the allowed ones do not exist, they are not merely unlikely."
+          "breakdown": "Here angular momentum is nh/2π, with n equal to 1, 2, 3 and so on.",
+          "trap": "Quantisation is not rounding to convenient numbers. Values between the allowed ones simply do not exist."
         },
         {
           "term": "line spectrum",
           "meaning": "A spectrum of separate wavelengths rather than a continuous band.",
-          "breakdown": "Each line is one transition between energy levels, with energy hν.",
-          "trap": "The lines are not the electron's path. They are energy differences between levels."
+          "breakdown": "Each line is one transition, with energy hν equal to the difference between two levels.",
+          "trap": "The lines are not the electron's path. They are energy differences between orbits, seen as light."
         }
       ],
       "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='90' cy='74' r='14'/><circle class='d-line' cx='90' cy='74' r='30'/><circle class='d-line' cx='90' cy='74' r='46'/><circle class='d-accent' cx='90' cy='74' r='5'/><path class='d-accent' d='M136 50h40M168 42l10 8-10 8'/><text class='d-label' x='136' y='34'>jump down</text><path class='d-muted' d='M210 40h90M210 70h90M210 100h90'/><text class='d-label' x='210' y='128'>each line is one jump</text></svg>",
-      "visual_alt": "Concentric allowed orbits around a nucleus, with an electron jumping inward and the resulting lines drawn beside it.",
-      "hook": "Bohr did not explain why the orbits are allowed. He described the staircase and left the builder unknown.",
+      "visual_alt": "Concentric allowed orbits with an electron jumping inward and the emitted lines drawn beside them.",
+      "hook": "Bohr described the staircase of allowed energies and never explained why the steps are where they are.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "Energy calculations use E = -13.6/n² eV for hydrogen, and the ionisation energy from n = 1 is 13.6 eV. The failure of the model for multi-electron atoms is a standard one-liner.",
-      "trap": "The Bohr model works for hydrogen and hydrogen-like ions such as He+, not for helium with two electrons. Saying it explains all atoms is wrong.",
+      "exam_note": "Energy questions use -13.6/n² eV. The ionisation energy from the ground state is 13.6 eV and the first excitation energy is 10.2 eV.",
+      "trap": "The model works for hydrogen and hydrogen-like ions such as He+, not for helium with two electrons, where electron-electron repulsion breaks it.",
       "recall": [
         {
           "q": "Bohr's model could not explain",
           "options": ["The hydrogen line spectrum", "The ionisation energy of hydrogen", "The spectrum of multi-electron atoms", "The radius of the hydrogen orbit"],
           "answer": 2,
-          "why": "It treats one electron around one nucleus. Electron-electron repulsion in larger atoms breaks the model."
+          "why": "It treats a single electron around a single nucleus, and electron-electron repulsion in larger atoms is not included."
         },
         {
           "q": "The energy of the hydrogen ground state is",
           "options": ["-13.6 eV", "13.6 eV", "0 eV", "-3.4 eV"],
           "answer": 0,
-          "why": "Substituting n = 1 into E = -13.6/n² gives -13.6 eV. The negative sign means the electron is bound."
+          "why": "Substituting n = 1 into -13.6/n² gives -13.6 eV, and the negative sign means the electron is bound."
         }
       ],
       "review_status": "draft",
@@ -105,45 +105,45 @@
       "id": "quantum-numbers",
       "ncert_ref": "Structure of Atom: quantum numbers and orbitals",
       "key_phrase": "four numbers describe one electron",
-      "meaning": "Four quantum numbers describe an electron completely. The principal number n sets the shell and its energy, l sets the shape of the subshell and runs from 0 to n-1, m gives the orientation of the orbital, and spin settles the last two electrons in one orbital. An orbital holds at most two electrons, which is why a shell with number n holds at most 2n² electrons.",
+      "meaning": "Four quantum numbers fix an electron completely: n sets the shell and its energy, l sets the subshell shape, m sets the orientation, and spin settles the last two electrons in an orbital. The subshell capacities 2, 6, 10 and 14 follow from the allowed m values for l equal to 0, 1, 2 and 3, which is why a d subshell holds ten electrons in five orbitals and a shell with number n holds at most 2n².",
       "words": [
         {
           "term": "azimuthal number",
           "meaning": "The quantum number l that gives the subshell and its shape.",
-          "breakdown": "l = 0 is s, 1 is p, 2 is d, 3 is f. For n = 3, l can be 0, 1 or 2.",
-          "trap": "l can never equal n. An option with n = 2 and l = 2 is impossible."
+          "breakdown": "l is 0 for s, 1 for p, 2 for d, 3 for f. For n = 3, l can be 0, 1 or 2 only.",
+          "trap": "l can never equal n. A set with n = 2 and l = 2 is impossible, not merely unusual."
         },
         {
           "term": "orbital",
-          "meaning": "A region where the probability of finding an electron is high, holding up to two electrons.",
-          "breakdown": "Each orbital is fixed by n, l and m; the two electrons differ only in spin.",
-          "trap": "An orbit is a path in the Bohr model. An orbital is a probability region and has no path."
+          "meaning": "A region where the probability of finding an electron is high, holding at most two electrons.",
+          "breakdown": "Each orbital is fixed by n, l and m, and the two electrons in it differ only in spin.",
+          "trap": "An orbit is a path in the Bohr model. An orbital is a probability distribution and has no path at all."
         },
         {
           "term": "spin",
           "meaning": "The fourth quantum number, either +1/2 or -1/2.",
-          "breakdown": "Two electrons in one orbital must have opposite spins, which is the Pauli rule for that orbital.",
-          "trap": "Spin is not the electron physically twirling. The name is historical, and the values are all that matter."
+          "breakdown": "Two electrons in one orbital must have opposite spins, which is Pauli's rule applied to that orbital.",
+          "trap": "Spin does not mean the electron physically rotates. The name is historical and only the two values matter."
         }
       ],
-      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='24'>n = 3</text><rect class='d-line' x='12' y='34' width='60' height='28'/><text class='d-label' x='20' y='53'>l = 0, 1, 2</text><path class='d-accent' d='M84 48h24M100 42l8 6-8 6'/><text class='d-label' x='122' y='24'>l = 2 has five orientations</text><rect class='d-line' x='122' y='34' width='70' height='28'/><text class='d-label' x='130' y='53'>m = -2 to +2</text><path class='d-guide' d='M84 74v54h150'/><text class='d-label' x='12' y='120'>each orbital holds two electrons</text><text class='d-label' x='12' y='140'>opposite spins</text></svg>",
-      "visual_alt": "The allowed values of l for n equals three and the five orientations for l equals two, with a note that each orbital holds two electrons of opposite spin.",
+      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='24'>n = 3</text><rect class='d-line' x='12' y='34' width='60' height='28'/><text class='d-label' x='20' y='53'>l = 0, 1, 2</text><path class='d-accent' d='M84 48h24M100 42l8 6-8 6'/><text class='d-label' x='122' y='24'>l = 2 has five orientations</text><rect class='d-line' x='122' y='34' width='70' height='28'/><text class='d-label' x='130' y='53'>m = -2 to +2</text><path class='d-guide' d='M84 74v54h150'/><text class='d-label' x='12' y='120'>each orbital holds two electrons</text><text class='d-label' x='12' y='140'>with opposite spins</text></svg>",
+      "visual_alt": "The allowed values of l for n equals three and the five orientations for l equals two, with two electrons per orbital.",
       "hook": "The four numbers are a postal address. The address is not the house, and the orbital is not the electron.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "Questions give a set of quantum numbers and ask if it is allowed. Checking l < n and the range of m catches almost every wrong option.",
-      "trap": "The maximum number of electrons in a shell is 2n², but the maximum in a subshell is 2(2l+1). Using 2n² for a subshell is a frequent error.",
+      "exam_note": "Questions give a set of quantum numbers and ask whether it is allowed. Checking l < n and the range of m catches almost every wrong option.",
+      "trap": "The maximum in a shell is 2n², but the maximum in a subshell is 2(2l+1). Using 2n² for a subshell is a frequent error.",
       "recall": [
         {
           "q": "Which set of quantum numbers is not allowed?",
           "options": ["n = 2, l = 1, m = 0", "n = 3, l = 2, m = -2", "n = 2, l = 2, m = 1", "n = 4, l = 0, m = 0"],
           "answer": 2,
-          "why": "For n = 2 the largest allowed l is 1. A set with l equal to n violates the rule that l runs only up to n-1."
+          "why": "For n = 2 the largest allowed l is 1, so l equal to n violates the rule that l runs only up to n-1."
         },
         {
           "q": "How many electrons can the 3d subshell hold?",
           "options": ["2", "6", "10", "14"],
           "answer": 2,
-          "why": "For d, l = 2, so there are 2l+1 = 5 orbitals, and each holds two electrons, giving 10."
+          "why": "For d, l = 2 and there are five orbitals, each holding two electrons, giving ten."
         }
       ],
       "review_status": "draft",
@@ -153,45 +153,45 @@
       "id": "filling-orbitals",
       "ncert_ref": "Structure of Atom: Aufbau principle, Pauli exclusion and Hund's rule",
       "key_phrase": "fill lowest first, never pair early",
-      "meaning": "Electrons fill orbitals in order of increasing energy, following the n+l rule, which is the Aufbau principle. Pauli's exclusion principle forbids two electrons in the same atom from sharing all four quantum numbers. Hund's rule keeps electrons unpaired in degenerate orbitals for as long as possible, which is why nitrogen has three unpaired 2p electrons rather than one pair.",
+      "meaning": "Electrons occupy the lowest available energy orbital first, following the n+l rule, which is why 4s fills before 3d. Pauli's exclusion principle forbids two electrons in the same atom from sharing all four quantum numbers, and Hund's rule keeps degenerate orbitals singly occupied with parallel spins. Nitrogen is the clean example: 1s² 2s² 2p³ has one electron in each 2p orbital, so it has three unpaired electrons and is paramagnetic.",
       "words": [
         {
           "term": "Aufbau principle",
           "meaning": "Electrons occupy the lowest available energy orbital first.",
-          "breakdown": "Compare n+l; for a tie, the lower n fills first. 4s fills before 3d.",
-          "trap": "The order is by (n+l), not by n alone. That is why 4s comes before 3d."
+          "breakdown": "Compare n+l, and for a tie use the lower n. That puts 4s (n+l = 4) before 3d (n+l = 5).",
+          "trap": "The filling order is not simply by n. If it were, 3d would fill before 4s, which is not what happens."
         },
         {
           "term": "Pauli exclusion",
           "meaning": "No two electrons in one atom can have the same four quantum numbers.",
           "breakdown": "It limits an orbital to two electrons with opposite spins.",
-          "trap": "It is not a force and it does not say electrons repel. It is a rule about allowed states."
+          "trap": "It is not a force and it does not say electrons repel. It is a rule about which states are allowed."
         },
         {
           "term": "Hund's rule",
           "meaning": "Degenerate orbitals are singly occupied with parallel spins before any pairing.",
-          "breakdown": "This minimises electron-electron repulsion in the same region.",
-          "trap": "Hund's rule applies to orbitals of the same energy, such as the three 2p orbitals, not across subshells."
+          "breakdown": "It minimises repulsion between electrons in the same region of space.",
+          "trap": "Hund's rule applies to orbitals of equal energy, such as the three 2p orbitals, not across different subshells."
         }
       ],
-      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='24'>nitrogen, 2p3</text><rect class='d-line' x='12' y='36' width='52' height='26'/><rect class='d-line' x='70' y='36' width='52' height='26'/><rect class='d-line' x='128' y='36' width='52' height='26'/><path class='d-accent' d='M26 49v-6M84 49v-6M142 49v-6'/><text class='d-label' x='12' y='88'>one electron in each, same spin</text><text class='d-label' x='12' y='118'>not two in one box and one empty</text><text class='d-label' x='12' y='140'>that would break Hund's rule</text></svg>",
-      "visual_alt": "Three 2p boxes each holding one electron with the same spin for nitrogen, contrasted with the wrong pairing arrangement.",
-      "hook": "Electrons are passengers who take an empty row before sitting next to a stranger.",
+      "visual_svg": "<svg viewBox='0 0 320 150'><text class='d-label' x='12' y='24'>nitrogen, 2p3</text><rect class='d-line' x='12' y='36' width='52' height='26'/><rect class='d-line' x='70' y='36' width='52' height='26'/><rect class='d-line' x='128' y='36' width='52' height='26'/><path class='d-accent' d='M26 49v-6M84 49v-6M142 49v-6'/><text class='d-label' x='12' y='88'>one electron in each, same spin</text><text class='d-label' x='12' y='118'>three unpaired electrons</text><text class='d-label' x='12' y='140'>so nitrogen is paramagnetic</text></svg>",
+      "visual_alt": "Three 2p boxes each holding one electron with the same spin for nitrogen, noted as three unpaired electrons.",
+      "hook": "Electrons take an empty row in the theatre before sitting next to a stranger.",
       "exam_tags": ["NEET", "JEE"],
-      "exam_note": "Questions ask for the electron configuration of an element or the number of unpaired electrons. The n+l rule and Hund's rule together give both answers.",
-      "trap": "The 4s orbital fills before 3d but empties after it when a transition metal ion forms. Writing the ion configuration in the same order as the atom is the usual slip.",
+      "exam_note": "Configuration questions usually also ask for the number of unpaired electrons, so apply Hund's rule rather than just counting pairs.",
+      "trap": "4s fills before 3d but empties before it when a transition metal forms a cation. Writing the ion configuration in the atom's order is the usual slip.",
       "recall": [
         {
           "q": "How many unpaired electrons does a nitrogen atom have?",
           "options": ["1", "2", "3", "0"],
           "answer": 2,
-          "why": "Nitrogen is 1s² 2s² 2p³, and Hund's rule puts one electron in each of the three 2p orbitals, giving three unpaired electrons."
+          "why": "Nitrogen is 1s² 2s² 2p³, and Hund's rule places one electron in each 2p orbital, so all three are unpaired."
         },
         {
           "q": "Which orbital fills first, 3d or 4s?",
           "options": ["3d", "4s", "They fill together", "It depends on the element"],
           "answer": 1,
-          "why": "The n+l values are 5 for 3d and 4 for 4s, so 4s is lower in energy and fills first."
+          "why": "The n+l values are 5 for 3d and 4 for 4s, so 4s is lower in energy at that point and fills first."
         }
       ],
       "review_status": "draft",
