@@ -88,7 +88,7 @@ export default function App() {
           ) : route === 'library' ? (
             <Library />
           ) : route === 's' ? (
-            <Library only={id} />
+            <Library only={id} section={parts[2]} />
           ) : route === 'words' ? (
             <Words />
           ) : route === 'revise' ? (
