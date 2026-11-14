@@ -1,26 +1,24 @@
-import type { ChapterMeta } from '../content'
+import { chapterIndex, type ChapterMeta } from '../content'
 import { Icon } from '../icons'
 import { Meter } from './Meter'
 
-/** One ruled row per chapter. No boxes; the rule is the separator. */
-export function ChapterList({
-  chapters,
-  progress,
-  offset = 0,
-}: {
-  chapters: ChapterMeta[]
-  progress: Record<string, string[]>
-  offset?: number
-}) {
+/**
+ * One ruled row per chapter. No boxes; the rule is the separator.
+ * The numeral is the chapter's real position inside its subject, so a partial list on Home
+ * never renumbers a chapter as if it were first.
+ */
+export function ChapterList({ chapters, progress }: { chapters: ChapterMeta[]; progress: Record<string, string[]> }) {
   return (
     <ul className="chapter-list">
-      {chapters.map((c, n) => {
+      {chapters.map((c) => {
         const read = (progress[c.id] ?? []).length
+        const siblings = chapterIndex.filter((x) => x.subject === c.subject)
+        const no = siblings.findIndex((x) => x.id === c.id) + 1
         return (
           <li key={c.id}>
             <a className="chapter-row" href={`#/c/${c.id}`}>
               <span className="chapter-no" aria-hidden="true">
-                {String(offset + n + 1).padStart(2, '0')}
+                {String(no).padStart(2, '0')}
               </span>
               <span className="chapter-body">
                 <span className="chapter-name">{c.title}</span>
