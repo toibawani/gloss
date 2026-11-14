@@ -134,6 +134,15 @@ subject, with its drawn cover at 56px, chapter and paragraph counts, and progres
 band was tried first and removed: three equal cards in a row is the shape every generated page
 reaches for, and ruled rows say "index" more clearly.
 
+Home is an overview, not the library. It shows the subjects, then at most three chapters in
+progress and three that were written last, and stops. Every chapter lives on its subject page, and
+the Library lists all of them. Chapter numerals are always the real position inside the subject, so
+a partial list never labels chapter nine as one.
+
+Every dead end gets a door. A chapter ends with the next chapter in the same subject, or the
+subject index if it was the last. A subject page ends with the next subject, and the library ends
+with what has not been written yet. Nothing asks the reader to go back to the top bar to continue.
+
 Every chapter screen opens with a 2px rule in the subject's ink, then the back link, the title and
 the count. The margin rail begins on the same baseline as the reading text.
 

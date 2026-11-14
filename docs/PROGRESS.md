@@ -80,3 +80,21 @@ every row starts on the same axis. The reader opens with a 2px rule in the subje
 Verified: content build 19 chapters, 0 errors; typecheck 0; lint 0; 49 unit tests; 23 e2e; build 0,
 initial JS 112.51 kB gzip; 104 screenshots regenerated and reviewed at 360 and 1280 in both themes.
 Not verified: page and line references, expert review, accounts.
+
+**Home became an overview, and every screen gained a way onward.** Home was printing the whole
+library under the subject index, so it read like one endless page. It now shows the masthead, the
+subject index, at most three chapters in progress and three recent ones. All chapters live on their
+subject page. Chapter numerals are the real position inside the subject, so a three row list cannot
+relabel chapter nine as chapter one. A chapter now ends with the next chapter in its subject (or the
+subject index), a subject page ends with the next subject, and the Library ends with what has not
+been written yet.
+
+**Five chapters added, numbered against the rationalised NCERT sequence.** Physics 8 (Mechanical
+Properties of Solids) and 9 (Mechanical Properties of Fluids), Chemistry 3 (Classification of
+Elements and Periodicity), Biology 3 (Plant Kingdom) and 4 (Animal Kingdom). The chapter numbers
+and ordering were checked against the NCERT rationalised content list for Class 11, which is why
+Physics Part I runs 1 to 7 and Part II 8 to 14. Content is now 24 chapters, 126 paragraphs and 375
+words, still all draft and still without page or line claims.
+
+Verified: content build 24 chapters, 0 errors; typecheck 0; lint 0; 49 unit tests; 23 e2e; build 0,
+initial JS 113.06 kB gzip; 104 screenshots regenerated and reviewed at 360 and 1280.
