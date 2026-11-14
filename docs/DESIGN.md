@@ -104,6 +104,7 @@ diagram plates are square. Nothing else is rounded.
 | Progress | 2px track, subject-filled bar, tabular count beside | any value, including 0 |
 | Chapter row | ruled row, right aligned numeral, title, meta, progress hairline | hover band, focus ring |
 | Subject index row | numeral, cover 56px, name, counts, progress, chevron | hover band, focus ring |
+| Section row | numeral, name, chapter and paragraph counts, progress, chevron | hover band, focus ring |
 | Masthead | kicker, display title, four figure band, one note | static |
 | Margin note | label + content, hairline above, no box | collapsible on phone |
 | Sheet | native `<dialog>`, panel background, 3px top corners only | open, closing, offline |
@@ -142,6 +143,24 @@ a partial list never labels chapter nine as one.
 Every dead end gets a door. A chapter ends with the next chapter in the same subject, or the
 subject index if it was the last. A subject page ends with the next subject, and the library ends
 with what has not been written yet. Nothing asks the reader to go back to the top bar to continue.
+
+### Three levels of page
+
+| Page | Route | Holds |
+| --- | --- | --- |
+| Library | `#/library` | every chapter, by subject, plus what is not written yet |
+| Subject | `#/s/Biology` | the subject's sections, with chapter counts and progress |
+| Section | `#/s/Biology/cell-structure-and-function` | the chapters of one section, in NCERT number order |
+| Chapter | `#/c/bio-11-ch8/cell-theory` | one paragraph at a time, with its margin note |
+
+A section is a syllabus shelf, not a new classification: `src/sections.ts` maps chapters to the
+shelves the book already uses, and a chapter keeps its own NCERT number wherever it is listed.
+The numbers come from `src/catalogue.ts`, never from file order, because alphabetical file names
+would otherwise call Cell Cycle chapter one.
+
+A section page has no cover art. It carries the section number, the chapter and paragraph counts
+and the number of paragraphs read, in the same ruled rows the subject list uses, so the hierarchy
+reads as one table at three zooms.
 
 Every chapter screen opens with a 2px rule in the subject's ink, then the back link, the title and
 the count. The margin rail begins on the same baseline as the reading text.
