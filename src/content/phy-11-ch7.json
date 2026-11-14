@@ -1,0 +1,201 @@
+{
+  "id": "phy-11-ch7",
+  "subject": "Physics",
+  "class": 11,
+  "title": "Gravitation",
+  "book": "NCERT Physics Class XI",
+  "paragraphs": [
+    {
+      "id": "newtons-law",
+      "ncert_ref": "Ch 7, Gravitation: Newton's law of gravitation",
+      "key_phrase": "inverse square, along the line joining",
+      "meaning": "Every pair of masses attracts every other with a force proportional to both masses and inversely proportional to the square of the distance between their centres. The force acts along the line joining them and comes in an equal and opposite pair. G is universal, which is why the same constant describes a falling apple and the orbit of the Moon.",
+      "words": [
+        {
+          "term": "universal constant G",
+          "meaning": "The constant of proportionality in Newton's law of gravitation.",
+          "breakdown": "G is about 6.67 × 10^-11 N m²/kg², measured by Cavendish.",
+          "trap": "G is not g. G is a universal constant; g varies with height, depth and latitude."
+        },
+        {
+          "term": "centre of mass",
+          "meaning": "The point where the whole mass of a body can be treated as concentrated for external forces.",
+          "breakdown": "For spheres the distance is measured between centres, not between surfaces.",
+          "trap": "Using the surface-to-surface distance for a planet gives a much larger force. Distance is between centres."
+        },
+        {
+          "term": "principle of superposition",
+          "meaning": "The total gravitational force on a body is the vector sum of the forces from each other body.",
+          "breakdown": "This lets you add the pulls of several masses without changing the law itself.",
+          "trap": "Superposition adds forces as vectors. Adding magnitudes is wrong unless they are along the same line."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='84' cy='74' r='26'/><circle class='d-line' cx='236' cy='74' r='14'/><path class='d-accent' d='M112 74h96M196 66l12 8-12 8'/><path class='d-guide' d='M84 34v80M236 34v80'/><text class='d-label' x='130' y='56'>F on each, equal</text><text class='d-label' x='104' y='132'>distance between centres</text></svg>",
+      "visual_alt": "Two spheres with equal and opposite force arrows along the line joining their centres, with the centre-to-centre distance marked.",
+      "hook": "The Earth pulls you up as hard as you pull it down. It simply has far more mass to move.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Variation of g with height uses g' = gR²/(R+h)², and with depth g' = g(1 - d/R). Questions expect the linear depth result.",
+      "trap": "Doubling the distance between two masses quarters the force, it does not halve it. The square is where marks are lost.",
+      "recall": [
+        {
+          "q": "If the distance between two masses is doubled, the gravitational force becomes",
+          "options": ["Double", "Half", "One quarter", "Four times"],
+          "answer": 2,
+          "why": "The force goes as one over distance squared, so doubling the distance divides the force by four."
+        },
+        {
+          "q": "The value of g at the centre of the Earth is",
+          "options": ["Zero", "9.8 m/s²", "Infinite", "Half of the surface value"],
+          "answer": 0,
+          "why": "At the centre the pull from every direction cancels, so the effective g is zero."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the constant's value against your copy."
+    },
+    {
+      "id": "orbits",
+      "ncert_ref": "Ch 7, Gravitation: orbital motion and Kepler's laws",
+      "key_phrase": "gravity supplies the centripetal force",
+      "meaning": "A satellite stays in orbit because gravity provides exactly the inward force needed for its circular path, so GMm/r² equals mv²/r. That gives an orbital speed that depends only on the mass of the central body and the radius of the orbit, not on the satellite's mass. Kepler's third law follows from the same equation: the square of the period is proportional to the cube of the orbital radius.",
+      "words": [
+        {
+          "term": "orbital velocity",
+          "meaning": "The speed needed to maintain a circular orbit at a given radius.",
+          "breakdown": "v = square root of GM/r. Near the Earth's surface it is about 7.9 km/s.",
+          "trap": "Orbital speed does not depend on the satellite's mass, though the energy needed to lift it does."
+        },
+        {
+          "term": "escape velocity",
+          "meaning": "The minimum launch speed for a body to leave a planet's gravity without returning.",
+          "breakdown": "It is the square root of 2GM/R, which is root two times the orbital speed at the surface.",
+          "trap": "Escape velocity does not depend on the direction of launch, only on the planet's mass and radius."
+        },
+        {
+          "term": "Kepler's third law",
+          "meaning": "The square of the orbital period is proportional to the cube of the semi-major axis.",
+          "breakdown": "T²/r³ is the same for every satellite of the same central body.",
+          "trap": "The constant in T²/r³ changes when the central body changes. It is not the same for the Moon and for a satellite of Jupiter."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><circle class='d-line' cx='130' cy='76' r='14'/><circle class='d-line' cx='130' cy='76' r='42'/><circle class='d-fill' cx='172' cy='76' r='4'/><path class='d-accent' d='M172 76l-14 0M164 70l-8 6 8 6'/><path class='d-guide' d='M130 76h42'/><text class='d-label' x='176' y='54'>gravity points in</text><text class='d-label' x='176' y='106'>speed stays tangent to the path</text></svg>",
+      "visual_alt": "A satellite on a circular orbit with the inward gravitational force and a tangent velocity arrow.",
+      "hook": "A satellite is not escaping gravity. It is falling around the planet and missing it.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Earth's escape velocity is about 11.2 km/s and orbital velocity about 7.9 km/s, and their ratio is root two. Memorise the ratio, not just the numbers.",
+      "trap": "Weightlessness in orbit does not mean no gravity. It means the satellite and everything inside are falling together.",
+      "recall": [
+        {
+          "q": "Escape velocity from Earth is related to orbital velocity at the surface by a factor of",
+          "options": ["1", "Square root of 2", "2", "4"],
+          "answer": 1,
+          "why": "Escape velocity is the square root of 2GM/R and orbital velocity is the square root of GM/R, so the ratio is root two."
+        },
+        {
+          "q": "An astronaut in an orbiting station feels weightless because",
+          "options": ["There is no gravity in space", "The station and astronaut fall together", "The station is beyond Earth's gravity", "Gravity is cancelled by the orbit"],
+          "answer": 1,
+          "why": "Gravity still pulls them both, but with the same acceleration, so there is no normal force between them and they feel weightless."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the numerical values against your copy."
+    },
+    {
+      "id": "gravitational-potential",
+      "ncert_ref": "Ch 7, Gravitation: gravitational potential energy",
+      "key_phrase": "zero at infinity, negative below",
+      "meaning": "Gravitational potential energy is taken as zero at infinity, so every bound object has negative energy, with U equal to minus GMm/r. The negative sign is not a mistake: energy must be supplied to remove an object from a planet's pull. The escape condition follows directly, because a total energy of zero is exactly the boundary between bound and free.",
+      "words": [
+        {
+          "term": "gravitational potential",
+          "meaning": "Potential energy per unit mass at a point, -GM/r.",
+          "breakdown": "It is a scalar, so potentials add directly, unlike fields.",
+          "trap": "Potential is not potential energy. Multiplying by the mass of the second body is the step people skip."
+        },
+        {
+          "term": "binding energy",
+          "meaning": "The energy needed to remove a body from a gravitational system completely.",
+          "breakdown": "For a satellite it equals the magnitude of its total energy, GMm/2r.",
+          "trap": "The binding energy is not the same as the potential energy. For a circular orbit it is half the magnitude."
+        },
+        {
+          "term": "geostationary orbit",
+          "meaning": "An equatorial orbit whose period is exactly one day, so the satellite stays above one point.",
+          "breakdown": "It must be equatorial, and its radius follows from T² proportional to r³.",
+          "trap": "A geostationary satellite cannot sit above any city you like. Only the equator allows a fixed point on the ground."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M24 40h272M24 40V126'/><path class='d-accent' d='M40 52c40 34 90 44 240 52'/><text class='d-label' x='34' y='28'>U</text><text class='d-label' x='236' y='126'>r</text><text class='d-label' x='46' y='118'>deep in the well</text><text class='d-label' x='196' y='86'>zero at infinity</text></svg>",
+      "visual_alt": "A gravitational potential well curve rising towards zero at large distance, labelled that bound objects sit below zero.",
+      "hook": "Being bound is a debt. Escape is paying it off exactly.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Total energy of a circular orbit is -GMm/2r, kinetic is +GMm/2r and potential is -GMm/r. The three values appear together in objective questions.",
+      "trap": "For a satellite, kinetic energy is half the magnitude of the potential energy, so total energy is negative. Sign errors are the usual cause of failure here.",
+      "recall": [
+        {
+          "q": "For a satellite in a circular orbit, the total energy is",
+          "options": ["Positive", "Zero", "Negative", "Equal to kinetic energy"],
+          "answer": 2,
+          "why": "Kinetic energy is positive GMm/2r and potential is negative GMm/r, so the total is negative GMm/2r."
+        },
+        {
+          "q": "Gravitational potential at infinity is taken as",
+          "options": ["Zero", "Infinite", "Negative", "Equal to g"],
+          "answer": 0,
+          "why": "The reference is fixed at zero at infinity so that bound states, which require energy to escape, come out negative."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the energy expressions against your copy."
+    },
+    {
+      "id": "tides-and-shape",
+      "ncert_ref": "Ch 7, Gravitation: tides and the Earth's shape",
+      "key_phrase": "the near side is pulled harder",
+      "meaning": "The Moon pulls harder on the side of the Earth facing it than on the far side, and that difference in pull raises two tidal bulges, one facing the Moon and one opposite. The Earth spins through both bulges roughly twice a day, which is why most coasts see two high tides. The same difference of pull is what stretches a comet or a moon that comes too close to a planet.",
+      "words": [
+        {
+          "term": "tide",
+          "meaning": "The periodic rise and fall of sea level caused mainly by the Moon's differential pull.",
+          "breakdown": "Two bulges, so two high tides per lunar day in most places.",
+          "trap": "Tides are not caused by the Moon's pull alone, but by how much that pull differs across the Earth. A uniform pull would move the whole planet and raise nothing."
+        },
+        {
+          "term": "spring tide",
+          "meaning": "The extra large tide at new and full moon, when Sun and Moon pull along the same line.",
+          "breakdown": "Sun and Moon add their tidal effects.",
+          "trap": "Spring tide has nothing to do with the season of spring. The name means the tide springs up."
+        },
+        {
+          "term": "neap tide",
+          "meaning": "The smallest tide, at the quarter moons, when the Sun and Moon pull at right angles.",
+          "breakdown": "The two tidal effects partly cancel.",
+          "trap": "Neap tides still happen twice a month, and the sea still rises and falls. They are simply smaller."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><ellipse class='d-line' cx='150' cy='76' rx='86' ry='40'/><circle class='d-line' cx='150' cy='76' r='16'/><circle class='d-fill' cx='286' cy='76' r='8'/><text class='d-label' x='122' y='60'>Earth</text><text class='d-label' x='258' y='50'>Moon</text><text class='d-label' x='24' y='140'>two bulges, two high tides a day</text></svg>",
+      "visual_alt": "An exaggerated tidal ellipse around the Earth with the Moon to one side, showing bulges on the near and far sides.",
+      "hook": "The sea rises on the far side too, because the far side is being left behind.",
+      "exam_tags": ["NEET"],
+      "exam_note": "Tides are a common one-mark question: two bulges, spring at syzygy, neap at quadrature. The differential nature of the force is the explanation they want.",
+      "trap": "The far-side bulge is not caused by the Moon pushing water away. It is caused by the far side being pulled less than the Earth as a whole.",
+      "recall": [
+        {
+          "q": "Spring tides occur when",
+          "options": ["The Moon is at first quarter", "Sun, Moon and Earth are in a line", "Sun and Moon are at right angles", "The Earth is closest to the Sun"],
+          "answer": 1,
+          "why": "When the Sun and Moon pull along the same line their tidal effects add, giving the largest tides."
+        },
+        {
+          "q": "Tides occur mainly because",
+          "options": ["The Moon's pull is the same everywhere", "The Moon's pull differs across the Earth", "The Earth's rotation creates gravity", "The Sun has no gravity"],
+          "answer": 1,
+          "why": "A uniform pull would accelerate the whole Earth equally and raise no water. Tides come from the difference in pull across the planet."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the tide terminology against your copy."
+    }
+  ]
+}
