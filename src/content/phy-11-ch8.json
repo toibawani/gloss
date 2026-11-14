@@ -1,0 +1,201 @@
+{
+  "id": "phy-11-ch8",
+  "subject": "Physics",
+  "class": 11,
+  "title": "Mechanical Properties of Solids",
+  "book": "NCERT Physics Class XI",
+  "paragraphs": [
+    {
+      "id": "stress-and-strain",
+      "ncert_ref": "Ch 8, Mechanical Properties of Solids: stress and strain",
+      "key_phrase": "force per area, change per length",
+      "meaning": "Stress is the internal force per unit area set up when a solid is deformed, and strain is the fractional change in its dimensions. Strain has no unit, which is why stress and strain are different kinds of quantity even though they rise together. Within the proportional limit the two are directly proportional, and that proportionality is Hooke's law for solids.",
+      "words": [
+        {
+          "term": "stress",
+          "meaning": "The restoring force per unit area inside a deformed body.",
+          "breakdown": "Units are pascals. Longitudinal stress is force along the length divided by area.",
+          "trap": "Stress is not the same as pressure. Pressure is one particular stress, the same in all directions, acting on a fluid at rest."
+        },
+        {
+          "term": "strain",
+          "meaning": "The fractional change in length, volume or shape.",
+          "breakdown": "Longitudinal strain is ΔL/L, a pure number with no unit.",
+          "trap": "Strain is not measured in metres. A wire stretched by 1 mm has a strain of about 0.001, not 1 mm."
+        },
+        {
+          "term": "proportional limit",
+          "meaning": "The largest stress for which stress stays proportional to strain.",
+          "breakdown": "Beyond it, the curve bends, and Hooke's law no longer holds.",
+          "trap": "The proportional limit is not the breaking point. The material survives beyond it by deforming permanently."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M40 46h100v60H40z'/><path class='d-accent' d='M140 76h44M172 68l12 8-12 8'/><path class='d-muted' d='M40 116h100'/><text class='d-label' x='44' y='34'>area A</text><text class='d-label' x='150' y='60'>force F</text><text class='d-label' x='40' y='140'>stress = F / A, strain = change in length / length</text></svg>",
+      "visual_alt": "A block pulled by a force with its cross-sectional area marked, captioned with the definitions of stress and strain.",
+      "hook": "The same force on a thin wire and a thick rod is the same force but not the same stress.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions convert between force and stress using the cross-sectional area, and often expect the area of a wire in square millimetres converted to square metres first.",
+      "trap": "Doubling the diameter of a wire quarters the stress for the same load, because area goes as the square of the radius.",
+      "recall": [
+        {
+          "q": "A wire of cross-section 1 mm² carries a load of 10 N. The stress is",
+          "options": ["10 Pa", "10^4 Pa", "10^7 Pa", "10^6 Pa"],
+          "answer": 2,
+          "why": "One square millimetre is 10^-6 m², so 10 N divided by 10^-6 m² gives 10^7 Pa."
+        },
+        {
+          "q": "Strain is",
+          "options": ["Force per unit area", "A fractional change with no unit", "Measured in newtons", "Measured in pascals"],
+          "answer": 1,
+          "why": "Strain is a ratio of two lengths or volumes, so the units cancel and the result is dimensionless."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the chapter number in your printing."
+    },
+    {
+      "id": "youngs-modulus",
+      "ncert_ref": "Ch 8, Mechanical Properties of Solids: Young's modulus",
+      "key_phrase": "stiffness is stress over strain",
+      "meaning": "Young's modulus is longitudinal stress divided by longitudinal strain, so it measures how stiff a material is rather than how strong it is. Steel has a modulus around 2 × 10^11 Pa, roughly twenty times that of concrete and far above rubber. A stiff material hardly stretches under a load; a strong one survives a large load before breaking, and the two properties are not the same.",
+      "words": [
+        {
+          "term": "Young's modulus",
+          "meaning": "The ratio of longitudinal stress to longitudinal strain within the elastic limit.",
+          "breakdown": "Y = FL/(AΔL). Larger Y means a stiffer material.",
+          "trap": "Young's modulus is a property of the material, not of the wire. A longer or thicker steel wire has the same Y as a short thin one."
+        },
+        {
+          "term": "elastic limit",
+          "meaning": "The greatest stress from which a body returns to its original shape when unloaded.",
+          "breakdown": "Below it the deformation is elastic; above it some deformation is permanent.",
+          "trap": "Elastic does not mean easy to stretch. Steel is elastic up to a high stress, rubber is elastic at low stress."
+        },
+        {
+          "term": "bulk modulus",
+          "meaning": "The ratio of pressure change to the fractional change in volume.",
+          "breakdown": "It applies to solids, liquids and gases under compression.",
+          "trap": "Bulk modulus is not the same as Young's modulus. It resists volume change, while Y resists length change."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M30 116h260M30 116V32'/><path class='d-accent' d='M40 104l180-64'/><path class='d-guide' d='M220 100h40M220 40h40'/><text class='d-label' x='40' y='26'>stress</text><text class='d-label' x='228' y='136'>strain</text><text class='d-label' x='84' y='72'>slope is Y</text><text class='d-label' x='40' y='140'>steep: stiff material, flat: soft material</text></svg>",
+      "visual_alt": "A straight stress-strain line with a steep slope marked as a stiff material and a shallow slope as a soft one.",
+      "hook": "A steel rod and a rubber band can both be strong, but only one of them is stiff.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "A wire of the same material but double the length stretches twice as much under the same load, because ΔL is proportional to L.",
+      "trap": "Young's modulus does not depend on the dimensions of the sample. Many answers wrongly include length or area in Y itself.",
+      "recall": [
+        {
+          "q": "Two wires of the same material have the same length, but one has twice the diameter. Under the same load, the thicker wire stretches",
+          "options": ["Twice as much", "Half as much", "One quarter as much", "The same"],
+          "answer": 2,
+          "why": "Extension is inversely proportional to area, and doubling the diameter quadruples the area, so the extension falls to a quarter."
+        },
+        {
+          "q": "A material with a very large Young's modulus is",
+          "options": ["Very strong", "Very stiff", "Very ductile", "Very brittle"],
+          "answer": 1,
+          "why": "A large Y means a large stress produces only a small strain, which is the definition of stiffness."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the modulus value against your copy."
+    },
+    {
+      "id": "stress-strain-curve",
+      "ncert_ref": "Ch 8, Mechanical Properties of Solids: the stress-strain curve",
+      "key_phrase": "proportional, then plastic, then break",
+      "meaning": "A stress-strain curve starts straight, bends at the proportional limit, passes a yield point where permanent deformation begins, and ends at fracture. A ductile material such as copper stretches a long way before breaking, while a brittle one such as glass snaps soon after its elastic limit. Elastomers such as rubber do not follow Hooke's law at all: their curve bends the other way and shows hysteresis when unloaded.",
+      "words": [
+        {
+          "term": "yield point",
+          "meaning": "The stress at which a material begins to deform permanently.",
+          "breakdown": "Beyond it, unloading leaves a permanent set.",
+          "trap": "The yield point is not the fracture point. A ductile wire keeps carrying load after yielding, and may even get stronger."
+        },
+        {
+          "term": "ductile",
+          "meaning": "Able to be drawn into a wire without breaking.",
+          "breakdown": "Copper and mild steel are ductile; they show a long plastic region.",
+          "trap": "Ductile is not the same as elastic. A ductile material deforms permanently before it breaks."
+        },
+        {
+          "term": "elastomer",
+          "meaning": "A material that stretches enormously and recovers, without obeying Hooke's law.",
+          "breakdown": "Rubber and vulcanised rubber are elastomers; their behaviour is due to long tangled chains straightening.",
+          "trap": "Elastomers are not simply soft springs. Their stress-strain curve is not a straight line, so Y is not useful across the whole range."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M28 118h264M28 118V26'/><path class='d-accent' d='M32 112l70-52 40 8 60 26 34 18'/><circle class='d-fill' cx='102' cy='60' r='4'/><circle class='d-fill' cx='142' cy='68' r='4'/><text class='d-label' x='78' y='44'>proportional limit</text><text class='d-label' x='150' y='96'>yield</text><text class='d-label' x='244' y='124'>fracture</text><text class='d-label' x='28' y='140'>strain</text></svg>",
+      "visual_alt": "A stress-strain curve with a straight elastic region, a yield point and a fracture point, labelled in order.",
+      "hook": "Bend a paper clip a little and it springs back. Bend it too far and it never does again.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Questions ask which region corresponds to elastic behaviour or to permanent deformation. The proportional limit and yield point are the boundary marks they test.",
+      "trap": "The elastic region ends at the elastic limit, not at the proportional limit. Between the two, stress and strain are no longer proportional but the material still recovers.",
+      "recall": [
+        {
+          "q": "Permanent deformation begins at the",
+          "options": ["Proportional limit", "Yield point", "Fracture point", "Origin"],
+          "answer": 1,
+          "why": "The yield point marks the onset of plastic behaviour, after which the material does not return fully to its original shape."
+        },
+        {
+          "q": "A glass rod breaks soon after its elastic limit. Glass is",
+          "options": ["Ductile", "Brittle", "An elastomer", "Perfectly plastic"],
+          "answer": 1,
+          "why": "Brittle materials show very little plastic deformation before fracture, unlike ductile ones which stretch a long way."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the curve terminology against your copy."
+    },
+    {
+      "id": "elastic-energy",
+      "ncert_ref": "Ch 8, Mechanical Properties of Solids: elastic potential energy",
+      "key_phrase": "stretched solids store energy",
+      "meaning": "A stretched spring or wire stores elastic potential energy equal to half the force times the extension, which for a wire can be written as half stress times strain times volume. That energy density is the area under the stress-strain curve, so a material that stretches further before yielding stores more per unit volume. It is why a bow returns the work you put into bending it.",
+      "words": [
+        {
+          "term": "elastic potential energy",
+          "meaning": "Energy stored in a deformed elastic body.",
+          "breakdown": "For a spring, ½kx². For a wire, ½ × stress × strain × volume.",
+          "trap": "The stored energy is not force times extension. That would double the true value, because the force grows from zero to its final size."
+        },
+        {
+          "term": "energy density",
+          "meaning": "Elastic energy stored per unit volume of material.",
+          "breakdown": "It equals the area under the stress-strain curve up to the strain reached.",
+          "trap": "Energy density is per unit volume, not per unit mass. Dividing by mass gives specific energy, a different quantity."
+        },
+        {
+          "term": "resilience",
+          "meaning": "The ability of a material to store elastic energy and release it.",
+          "breakdown": "A spring steel has high resilience; putty has almost none.",
+          "trap": "Resilience is not toughness. Toughness is the total energy absorbed before fracture, including plastic work."
+        }
+      ],
+      "visual_svg": "<svg viewBox='0 0 320 150'><path class='d-line' d='M28 118h264M28 118V28'/><path class='d-fill' d='M32 112l110-72v72Z'/><path class='d-accent' d='M32 112l110-72'/><text class='d-label' x='58' y='86'>area is the energy stored</text><text class='d-label' x='28' y='140'>extension</text><text class='d-label' x='236' y='60'>½ × stress × strain</text></svg>",
+      "visual_alt": "A force-extension triangle with its area shaded and labelled as the elastic energy stored.",
+      "hook": "The energy in a drawn bow was put there by your arms, and it leaves with the arrow.",
+      "exam_tags": ["NEET", "JEE"],
+      "exam_note": "Numericals give a wire's length, area, extension and modulus and ask for the stored energy. Work through stress, then strain, then the half product.",
+      "trap": "Using the final force times the full extension overcounts by a factor of two for a linear spring, because the average force is half the final force.",
+      "recall": [
+        {
+          "q": "A spring of constant 100 N/m is stretched 0.2 m. The energy stored is",
+          "options": ["20 J", "10 J", "2 J", "40 J"],
+          "answer": 2,
+          "why": "Energy is ½kx², which is 0.5 times 100 times 0.04, giving 2 J."
+        },
+        {
+          "q": "Elastic energy density is",
+          "options": ["Force times extension", "Half stress times strain", "Stress divided by strain", "Force divided by area"],
+          "answer": 1,
+          "why": "Per unit volume, the stored energy is the area under the stress-strain curve, which for a straight line is half the final stress times the final strain."
+        }
+      ],
+      "review_status": "draft",
+      "review_note": "Verify page and line against your edition, and check the energy expressions against your copy."
+    }
+  ]
+}
